@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "./button";
+import { FaShoppingCart } from "react-icons/fa";
 
 interface ProductCardProps {
   id: string;
@@ -22,13 +23,6 @@ export function ProductCard({
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-pink-100 via-purple-50 to-blue-50 opacity-80" />
 
-      {/* Wishlist Icon */}
-      <button className="absolute top-6 right-6 z-20 w-10 h-10 rounded-full bg-white/40 backdrop-blur-md flex items-center justify-center text-white hover:bg-white/60 transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-        </svg>
-      </button>
-
       {/* Product Image - Full Height Background */}
       <div className="absolute inset-0 z-10">
         <Link href={`/product/${slug}`} className="relative w-full h-full block">
@@ -47,10 +41,10 @@ export function ProductCard({
         </Link>
       </div>
 
-      {/* Content Overlay - Pink Tinted Blur */}
-      <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-pink-900/80 via-pink-800/40 to-transparent backdrop-blur-[2px] z-20 p-6 flex flex-col justify-end">
+      {/* Content Overlay - Dark Gradient */}
+      <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/90 via-black/50 to-transparent backdrop-blur-[2px] z-20 p-6 flex flex-col justify-end">
         <Link href={`/product/${slug}`} className="block">
-          <h3 className="text-2xl font-black text-white drop-shadow-md mb-1 truncate tracking-wide">{name}</h3>
+          <h3 style={{ color: "white"!important }} className="text-2xl font-bold capitalize drop-shadow-md mb-1 truncate tracking-wide">{name}</h3>
           <p className="text-white/90 text-sm mb-4 line-clamp-2 drop-shadow-sm font-medium">
             Handcrafted silicone reborn baby with lifelike details.
           </p>
@@ -62,11 +56,9 @@ export function ProductCard({
           </span>
           <Button
             href={`/product/${slug}`}
-            className="bg-white/90 hover:bg-white text-pink-900 border-none rounded-full px-5 py-2 h-10 font-bold shadow-lg flex items-center gap-2 text-sm backdrop-blur-sm transition-all hover:scale-105"
+            className="bg-white/90 hover:bg-white text-gray-900 border-none rounded-full px-5 py-2 h-10 font-bold shadow-lg flex items-center gap-2 text-sm backdrop-blur-sm transition-all hover:scale-105"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-            </svg>
+            <FaShoppingCart className="text-lg" />
             Add to Cart
           </Button>
         </div>
