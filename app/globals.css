@@ -31,20 +31,23 @@ h3,
 h4,
 h5,
 h6 {
-  color: #000000;
+  color: inherit;
   line-height: 1.2;
   letter-spacing: -0.01em;
   margin-top: 0;
   margin-bottom: 0;
+  font-family: sans-serif !important;
 }
 
 h1 {
-  font-size: 40px; /* 2.5x body (16px * 2.5 = 40px) */
+  font-size: 40px;
+  /* 2.5x body (16px * 2.5 = 40px) */
   font-weight: 700;
 }
 
 h2 {
-  font-size: 28px; /* 1.75x body (16px * 1.75 = 28px) */
+  font-size: 28px;
+  /* 1.75x body (16px * 1.75 = 28px) */
   font-weight: 600;
 }
 
@@ -71,16 +74,6 @@ label {
   margin-bottom: 8px;
 }
 
-/* Links */
-a {
-  color: #000000;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #666666;
-}
-
 /* Images */
 img,
 svg {
@@ -98,8 +91,10 @@ svg {
 button:focus,
 input:focus,
 select:focus,
-textarea:focus,
-
+textarea:focus {
+  outline: 2px solid #f08ba8;
+  outline-offset: 2px;
+}
 
 /* Smooth scrolling */
 html {
@@ -118,7 +113,6 @@ html {
 }
 
 /* Pink accent colors for interactive elements */
-a:hover,
 button:hover {
   color: #f08ba8;
 }

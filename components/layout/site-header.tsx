@@ -12,9 +12,7 @@ export default function SiteHeader() {
   const { getItemCount } = useCart();
   const itemCount = getItemCount();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const searchInputRef = useRef<HTMLInputElement>(null);
+  const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -31,38 +29,41 @@ export default function SiteHeader() {
   };
 
   useEffect(() => {
-    if (searchOpen && searchInputRef.current) {
-      searchInputRef.current.focus();
-    }
-  }, [searchOpen]);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
 
-  const handleSearchSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      router.push(`/shop?search=${encodeURIComponent(searchQuery)}`);
-      setSearchOpen(false);
-      setSearchQuery("");
-    }
-  };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   if (pathname?.startsWith("/admin")) {
     return null;
   }
 
+  const isHome = pathname === "/";
+  const headerBg = isHome && !scrolled ? "bg-transparent" : "bg-white shadow-sm";
+  const textColor = isHome && !scrolled ? "!text-white" : "text-black";
+  const hoverColor = isHome && !scrolled ? "hover:text-pink-200" : "hover:text-pink-600";
+  const activeColor = isHome && !scrolled ? "!text-white" : "text-pink-600";
+  const activeBorder = isHome && !scrolled ? "border-white" : "border-pink-500";
+  const borderColor = isHome && !scrolled ? "border-transparent" : "border-pink-200";
+  const positionClass = isHome ? "fixed top-0 left-0 right-0" : "sticky top-0";
+
   return (
-    <header className="h-[60px] flex justify-between items-center border-b border-pink-200 px-6 mb-12 sticky top-0 z-50 bg-white shadow-sm">
-      <Link href="/" className="text-2xl font-bold text-black no-underline hover:no-underline z-20">
+    <header className={`h-[60px] flex justify-between items-center px-6 z-50 transition-all duration-300 ${positionClass} ${headerBg} ${borderColor} border-b`}>
+      <Link href="/" className={`text-2xl font-bold no-underline hover:no-underline z-20 ${textColor}`}>
         REBORN BABIES
       </Link>
 
       {/* Desktop Navigation */}
-      <nav className={`hidden md:flex gap-6 transition-opacity duration-300 ${searchOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+      <nav className="hidden md:flex gap-6">
         {navLinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className={`text-base font-medium text-black no-underline px-1 py-0 hover:bg-pink-50 hover:text-pink-600 transition-colors rounded ${isActive(link.href)
-              ? "font-bold border-b-2 border-pink-500 pb-0.5 text-pink-600"
+            className={`text-base font-medium no-underline px-1 py-0 transition-colors rounded ${textColor} ${hoverColor} ${isActive(link.href)
+              ? `font-bold border-b-2 ${activeBorder} pb-0.5 ${activeColor}`
               : ""
               }`}
           >
@@ -71,39 +72,12 @@ export default function SiteHeader() {
         ))}
       </nav>
 
-      {/* Desktop Icons & Search */}
+      {/* Desktop Icons */}
       <div className="hidden md:flex items-center gap-6 relative">
-        {/* Sliding Search Input */}
-        <div
-          className={`flex items-center absolute right-16 transition-all duration-300 ease-in-out overflow-hidden ${searchOpen ? "w-64 opacity-100" : "w-0 opacity-0"
-            }`}
-        >
-          <form onSubmit={handleSearchSubmit} className="w-full">
-            <input
-              ref={searchInputRef}
-              type="text"
-              placeholder="Search..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              onBlur={() => !searchQuery && setSearchOpen(false)}
-              className="w-full h-9 px-3 py-1 text-sm border border-pink-300 rounded-full focus:outline-none focus:border-pink-500 bg-pink-50/50"
-            />
-          </form>
-        </div>
-
-        <button
-          type="button"
-          aria-label="Search"
-          onClick={() => setSearchOpen(!searchOpen)}
-          className={`text-xl text-black cursor-pointer hover:text-gray-500 bg-transparent border-0 p-0 z-20 transition-colors ${searchOpen ? 'text-pink-600' : ''}`}
-        >
-          {searchOpen ? <FaTimes /> : <FaSearch />}
-        </button>
-
         <Link
           href="/cart"
           aria-label="Shopping cart"
-          className="text-xl text-black hover:text-gray-500 no-underline relative z-20"
+          className={`text-xl hover:text-gray-500 no-underline relative z-20 ${textColor}`}
         >
           <FaShoppingCart />
           {itemCount > 0 && (
@@ -118,7 +92,7 @@ export default function SiteHeader() {
       <button
         type="button"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        className="md:hidden text-xl text-black cursor-pointer hover:text-gray-500 bg-transparent border-0 p-2 z-20"
+        className={`md:hidden text-xl cursor-pointer hover:text-gray-500 bg-transparent border-0 p-2 z-20 ${textColor}`}
         aria-label="Toggle menu"
       >
         {mobileMenuOpen ? <FaTimes /> : <FaBars />}
@@ -139,25 +113,8 @@ export default function SiteHeader() {
                 {link.label}
               </Link>
             ))}
-            <div className="px-6 py-4 border-b border-gray-200">
-              <form onSubmit={(e) => {
-                handleSearchSubmit(e);
-                setMobileMenuOpen(false);
-              }} className="relative">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full h-10 pl-4 pr-10 text-sm border border-gray-300 rounded-md focus:outline-none focus:border-pink-500"
-                />
-                <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
-                  <FaSearch />
-                </button>
-              </form>
-            </div>
             <div className="flex items-center justify-between px-6 py-4">
-              <span className="font-medium">Cart</span>
+              <span className="font-medium text-black">Cart</span>
               <Link
                 href="/cart"
                 onClick={() => setMobileMenuOpen(false)}

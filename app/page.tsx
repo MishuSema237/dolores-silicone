@@ -62,61 +62,84 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="relative h-[500px] md:h-[600px] mb-12 overflow-hidden group w-full">
-        {heroImages.length > 0 ? (
-          <>
-            {heroImages.map((image, index) => (
-              <div
-                key={image._id}
-                className={`absolute inset-0 transition-opacity duration-1000 ${index === currentHeroIndex ? "opacity-100" : "opacity-0"
-                  }`}
-              >
-                <div className="absolute inset-0 bg-black/40 z-10" />
-                <Image
-                  src={image.imageUrl}
-                  alt="Hero Image"
-                  fill
-                  className="object-cover"
-                  priority={index === 0}
-                />
-              </div>
-            ))}
+      {/* Hero Section - Syngri Style */}
+      <section className="relative w-full min-h-screen bg-[#050505] text-white overflow-hidden flex items-center">
+        {/* Abstract Background Elements */}
+        <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-purple-900/20 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-pink-600/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none z-10" />
 
-            {/* Static Overlay */}
-            <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-4 pointer-events-none">
-              <h1 className="max-w-4xl mb-6 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] text-5xl md:text-7xl font-serif font-bold tracking-wide text-white">
-                Discover Our Lifelike Reborn Baby Collection
-              </h1>
-              <p className="text-2xl md:text-3xl mb-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] max-w-3xl font-light text-white/90">
-                Handcrafted with love, designed for your heart.
-              </p>
-              <div className="pointer-events-auto">
-                <Button href="/shop" size="lg" className="bg-white text-pink-600 hover:bg-gray-100 border-none px-10 py-4 text-xl font-medium shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-                  Shop Now
-                </Button>
-              </div>
+        {/* Mobile Background Image (Behind Text) */}
+        <div className="absolute inset-0 md:hidden z-0 opacity-40">
+          {heroImages.length > 0 && (
+            <Image
+              src={heroImages[0].imageUrl}
+              alt="Hero Background"
+              fill
+              className="object-cover"
+              priority
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent" />
+        </div>
+
+        <div className="container mx-auto px-6 md:px-12 relative z-20 flex flex-col md:flex-row items-center gap-12 h-full pt-20 md:pt-0">
+          {/* Left Content */}
+          <div className="flex-1 text-center md:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8">
+              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+              <span className="text-sm font-medium text-gray-300">New Collection Available</span>
             </div>
 
-            {heroImages.length > 1 && (
-              <div className="hidden">
-                {/* Manual controls removed as requested */}
-              </div>
-            )}
-          </>
-        ) : (
-          <div className="w-full h-full bg-gradient-to-br from-pink-50 via-pink-100 to-lavender-50 flex flex-col items-center justify-center text-center p-8">
-            <h1 className="max-w-3xl mb-6 text-gray-900 font-serif">
-              Discover Our Lifelike Reborn Baby Collection
+            <h1 className="text-5xl text-white md:text-7xl font-bold leading-tight mb-6 tracking-tight drop-shadow-lg">
+              Transform your <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">nursery</span> into a <br />
+              world of joy.
             </h1>
-            <Button href="/shop">Shop Now</Button>
+
+            <p className="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed mx-auto md:mx-0 drop-shadow-md">
+              Discover our handcrafted silicone reborn babies, designed with passion and precision to bring warmth and life to your home.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+              <Button href="/shop" size="lg" className="bg-pink-600 text-white hover:bg-pink-700 border-none px-8 py-6 text-lg font-bold rounded-full min-w-[160px] shadow-lg shadow-pink-600/20">
+                Shop Now
+              </Button>
+              <Button href="/gallery" variant="outline" size="lg" className="border-white/30 text-pink-600 hover:bg-white/10 px-8 py-6 text-lg font-medium rounded-full min-w-[160px] backdrop-blur-sm">
+                View Gallery
+              </Button>
+            </div>
           </div>
-        )}
+
+          {/* Right Image (Desktop Only) */}
+          <div className="hidden md:flex flex-1 relative w-full h-[500px] md:h-[700px] items-center justify-center">
+            <div className="relative w-full h-full max-w-lg mx-auto">
+              {/* Main abstract shape/image placeholder */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-pink-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
+              <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-white/5 backdrop-blur-sm p-2 rotate-3 hover:rotate-0 transition-transform duration-700">
+                {heroImages.length > 0 ? (
+                  <Image
+                    src={heroImages[currentHeroIndex]?.imageUrl || heroImages[0]?.imageUrl}
+                    alt="Featured Baby"
+                    fill
+                    className="object-cover rounded-2xl transition-opacity duration-1000"
+                    priority
+                    unoptimized
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gray-800 rounded-2xl flex items-center justify-center">
+                    <span className="text-gray-500">Featured Image</span>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Latest Creations Section */}
-      <div className="px-6">
-        <ProductGrid products={products} />
+      <div className="w-full">
+        <ProductGrid products={products} itemsPerPage={3} enablePagination={true} />
       </div>
 
       {/* About Section */}
@@ -180,17 +203,29 @@ export default function Home() {
               baby, ensuring each one is a unique masterpiece that brings joy and
               comfort to collectors worldwide.
             </p>
-            <p className="text-lg leading-relaxed text-gray-700">
-              Our commitment to artistry, quality, and integrity guides everything
-              we do. We use only premium, ethically sourced silicone and
-              materials, ensuring that each Reborn baby is safe, durable, and a
-              joy to hold. Every stitch, every brushstroke, every detail is a
-              testament to our dedication to artistry and realism.
-            </p>
-            <p className="text-lg leading-relaxed text-gray-700">
-              Thank you for being a part of our story. We look forward to
-              crafting a piece of art that brings joy and warmth into your life.
-            </p>
+
+            <div className={`transition-all duration-500 overflow-hidden ${storyModalOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+              <p className="text-lg leading-relaxed text-gray-700 mb-6">
+                Our commitment to artistry, quality, and integrity guides everything
+                we do. We use only premium, ethically sourced silicone and
+                materials, ensuring that each Reborn baby is safe, durable, and a
+                joy to hold. Every stitch, every brushstroke, every detail is a
+                testament to our dedication to artistry and realism.
+              </p>
+              <p className="text-lg leading-relaxed text-gray-700">
+                Thank you for being a part of our story. We look forward to
+                crafting a piece of art that brings joy and warmth into your life.
+              </p>
+            </div>
+
+            {!storyModalOpen && (
+              <button
+                onClick={() => setStoryModalOpen(true)}
+                className="text-pink-600 font-semibold hover:text-pink-700 self-start underline underline-offset-4"
+              >
+                Read More
+              </button>
+            )}
           </div>
           <div className="flex-1 w-full md:max-w-[50%] h-[450px] relative rounded-2xl overflow-hidden shadow-lg group">
             <Image
@@ -209,14 +244,14 @@ export default function Home() {
 
       {/* Call to Action Section */}
       <div className="max-w-7xl mx-auto px-6">
-        <section className="mb-24 py-16 bg-pink-50 rounded-3xl text-center px-6">
+        <section className="py-16 bg-pink-50 rounded-3xl text-center px-6">
           <h2 className="text-4xl md:text-5xl font-serif mb-6 text-gray-900">
             Ready to Find Your Perfect Baby?
           </h2>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Explore our collection of handcrafted reborn babies and bring home a bundle of joy today.
           </p>
-          <Button href="/shop" size="lg" className="px-12 py-6 text-lg">
+          <Button href="/shop" size="lg" className="px-12 py-6 text-lg text-white">
             View Collection
           </Button>
         </section>

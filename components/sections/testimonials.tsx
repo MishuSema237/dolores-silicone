@@ -37,29 +37,32 @@ export function TestimonialsSection() {
 
   return (
     <>
-      <section className="mb-24 py-16 bg-pink-50/50 rounded-3xl">
+      <section className="py-16 bg-pink-50/50 rounded-3xl">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-center mb-12 font-serif text-3xl md:text-4xl text-gray-900">Hear From Our Happy Families Worldwide</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-white p-8 text-center flex flex-col justify-between rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-pink-100"
+                className="bg-white p-8 text-center flex flex-col justify-between rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-pink-50 relative overflow-hidden group"
               >
-                <div className="mb-6">
-                  <div className="flex justify-center gap-1 text-yellow-400 text-lg mb-4">
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-300 to-purple-300" />
+                <div className="mb-6 relative z-10">
+                  <div className="flex justify-center gap-1 text-yellow-400 text-lg mb-6">
                     {[...Array(testimonial.rating || 5)].map((_, i) => (
-                      <FaStar key={i} />
+                      <FaStar key={i} className="drop-shadow-sm" />
                     ))}
                   </div>
-                  <p className="italic text-gray-600 leading-relaxed">"{testimonial.content}"</p>
+                  <p className="italic text-gray-600 leading-relaxed text-lg font-light">"{testimonial.content}"</p>
                 </div>
-                <div>
-                  <p className="font-semibold text-gray-900">
+                <div className="relative z-10">
+                  <div className="w-12 h-1 bg-pink-100 mx-auto mb-4 rounded-full" />
+                  <p className="font-bold text-gray-900 text-lg">
                     {testimonial.name}
                   </p>
-                  <p className="text-sm text-gray-500 uppercase tracking-wide">{testimonial.role}</p>
+                  <p className="text-xs text-pink-500 font-bold uppercase tracking-widest mt-1">{testimonial.role}</p>
                 </div>
+                <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-pink-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700 pointer-events-none" />
               </div>
             ))}
           </div>

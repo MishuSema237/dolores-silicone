@@ -1,15 +1,15 @@
 import mongoose from "mongoose";
-import { resolve } from "path";
-import {config} from "dotenv";
-
-config({ path: resolve(process.cwd(), ".env.local") });
 
 const MONGODB_URI = process.env.MONGODB_URI;
+
 if (!MONGODB_URI) {
-  throw new Error("Please define MONGODB_URI in .env.local");
+  throw new Error(
+    "Please define the MONGODB_URI environment variable inside .env.local"
+  );
 }
 
 let cached = (global as any).mongoose;
+
 if (!cached) {
   cached = (global as any).mongoose = { conn: null, promise: null };
 }
@@ -18,12 +18,26 @@ async function connectMongoose() {
   if (cached.conn) {
     return cached.conn;
   }
+
   if (!cached.promise) {
-    cached.promise = mongoose.connect(MONGODB_URI!).then((mongoose) => {
+    const opts = {
+      bufferCommands: false,
+    };
+
+    cached.promise = mongoose.connect(MONGODB_URI!, opts).then((mongoose) => {
+      console.log("MongoDB connected successfully");
       return mongoose;
     });
   }
-  cached.conn = await cached.promise;
+
+  try {
+    cached.conn = await cached.promise;
+  } catch (e) {
+    cached.promise = null;
+    console.error("MongoDB connection error:", e);
+    throw e;
+  }
+
   return cached.conn;
 }
 

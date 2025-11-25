@@ -8,6 +8,7 @@ export async function GET() {
         const images = await HeroImage.find({}).sort({ order: 1, createdAt: -1 });
         return NextResponse.json(images);
     } catch (error: any) {
+        console.error("Error in GET /api/admin/hero:", error);
         return NextResponse.json(
             { error: error.message || "Failed to fetch hero images" },
             { status: 500 }

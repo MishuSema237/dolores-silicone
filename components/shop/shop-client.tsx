@@ -73,9 +73,9 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
 
             {/* Filters & Search Bar */}
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 mb-12">
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
-                    {/* Search */}
-                    <div className="md:col-span-4 relative">
+                <div className="flex flex-col gap-4">
+                    {/* Search - Full Width on Mobile */}
+                    <div className="relative w-full">
                         <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
                             <FaSearch />
                         </div>
@@ -84,49 +84,47 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                             placeholder="Search babies..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all"
+                            className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all"
                         />
                     </div>
 
-                    {/* Price Range */}
-                    <div className="md:col-span-4 flex gap-4 items-center">
-                        <div className="flex-1">
+                    <div className="grid grid-cols-2 md:grid-cols-12 gap-4 items-center">
+                        {/* Price Range */}
+                        <div className="col-span-1 md:col-span-4 flex gap-2 items-center">
                             <input
                                 type="number"
-                                placeholder="Min Price"
+                                placeholder="Min"
                                 value={priceRange.min}
                                 onChange={(e) =>
                                     setPriceRange((prev) => ({ ...prev, min: e.target.value }))
                                 }
-                                className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all"
+                                className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all"
                             />
-                        </div>
-                        <span className="text-gray-400">-</span>
-                        <div className="flex-1">
+                            <span className="text-gray-400">-</span>
                             <input
                                 type="number"
-                                placeholder="Max Price"
+                                placeholder="Max"
                                 value={priceRange.max}
                                 onChange={(e) =>
                                     setPriceRange((prev) => ({ ...prev, max: e.target.value }))
                                 }
-                                className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all"
+                                className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all"
                             />
                         </div>
-                    </div>
 
-                    {/* Sort */}
-                    <div className="md:col-span-4">
-                        <select
-                            value={sortOption}
-                            onChange={(e) => setSortOption(e.target.value)}
-                            className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all cursor-pointer bg-white"
-                        >
-                            <option value="newest">Newest Arrivals</option>
-                            <option value="price-asc">Price: Low to High</option>
-                            <option value="price-desc">Price: High to Low</option>
-                            <option value="name-asc">Name: A to Z</option>
-                        </select>
+                        {/* Sort */}
+                        <div className="col-span-1 md:col-span-4 md:col-start-9">
+                            <select
+                                value={sortOption}
+                                onChange={(e) => setSortOption(e.target.value)}
+                                className="w-full px-4 py-2 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all cursor-pointer bg-white"
+                            >
+                                <option value="newest">Newest Arrivals</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="name-asc">Name: A to Z</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>

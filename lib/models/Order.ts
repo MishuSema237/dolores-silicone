@@ -131,7 +131,6 @@ const OrderSchema = new Schema<IOrder>(
 );
 
 // Index for queries
-OrderSchema.index({ orderReference: 1 });
 OrderSchema.index({ "customer.email": 1 });
 OrderSchema.index({ status: 1 });
 OrderSchema.index({ createdAt: -1 });

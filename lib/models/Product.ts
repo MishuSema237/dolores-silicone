@@ -94,7 +94,6 @@ const ProductSchema = new Schema<IProduct>(
 );
 
 // Index for search and filtering
-ProductSchema.index({ slug: 1 });
 ProductSchema.index({ status: 1, featured: 1 });
 ProductSchema.index({ price: 1 });
 

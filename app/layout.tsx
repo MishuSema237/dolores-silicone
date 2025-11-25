@@ -24,6 +24,10 @@ export const metadata: Metadata = {
     "Handcrafted silicone reborn babies offering comfort, healing, and collection-worthy artistry.",
 };
 
+import { MainContent } from "@/components/layout/main-content";
+
+// ... imports remain same
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,9 +41,9 @@ export default function RootLayout({
         <CartProvider>
           <div className="flex min-h-screen flex-col">
             <SiteHeader />
-            <main className="mx-auto w-full max-w-viewport flex-1 px-6">
+            <MainContent>
               {children}
-            </main>
+            </MainContent>
             <SiteFooter />
           </div>
           <AdminLink />

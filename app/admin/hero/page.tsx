@@ -119,25 +119,6 @@ export default function ManageHeroPage() {
             header: "Order",
             accessor: (row: any) => row.order
         },
-        {
-            header: "Actions",
-            accessor: (row: any) => (
-                <div className="flex gap-2 justify-end">
-                    <button
-                        onClick={() => handleEdit(row)}
-                        className="p-2 text-blue-600 hover:bg-blue-50 rounded-full transition-colors"
-                    >
-                        <FaEdit />
-                    </button>
-                    <button
-                        onClick={() => handleDelete(row._id)}
-                        className="p-2 text-red-600 hover:bg-red-50 rounded-full transition-colors"
-                    >
-                        <FaTrash />
-                    </button>
-                </div>
-            ),
-        },
     ];
 
     return (
@@ -158,6 +139,8 @@ export default function ManageHeroPage() {
                     data={images}
                     isLoading={isLoading}
                     keyField="_id"
+                    onEdit={handleEdit}
+                    onDelete={(item) => handleDelete(item._id)}
                 />
             </div>
 
