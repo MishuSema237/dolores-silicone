@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "./button";
 import { FaShoppingCart } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 interface ProductCardProps {
   id: string;
@@ -36,6 +37,7 @@ export function ProductCard({
       slug,
       imageUrl,
     });
+    toast.success("Added to cart");
   };
 
   return (

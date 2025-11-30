@@ -144,7 +144,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">
-        <p>&copy; {new Date().getFullYear()} Reborn Babies Studio. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Joanna's Reborns. All rights reserved.</p>
       </div>
     </footer>
   );

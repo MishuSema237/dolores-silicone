@@ -10,10 +10,38 @@ interface FAQItem {
 }
 
 export default function FAQPage() {
-    const [faqs, setFaqs] = useState<FAQItem[]>([]);
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
-    const [isLoading, setIsLoading] = useState(true);
+    const faqs: FAQItem[] = [
+        {
+            _id: "1",
+            question: "What is a Reborn Baby?",
+            answer: "A Reborn Baby is a manufactured skin doll that has been transformed by an artist to resemble a human infant with as much realism as possible. The process of creating a reborn doll is referred to as reborning and the doll artists are referred to as reborners."
+        },
+        {
+            _id: "2",
+            question: "How do I care for my Reborn Baby?",
+            answer: "Reborn babies are collectibles and should be treated with care. Avoid direct sunlight and extreme heat. Dust them gently with a soft brush. Do not use baby wipes or harsh chemicals on the vinyl."
+        },
+        {
+            _id: "3",
+            question: "Do you offer custom orders?",
+            answer: "Yes, we accept custom orders! Please contact us with your specific requirements, and we will work with you to create your dream baby."
+        },
+        {
+            _id: "4",
+            question: "What payment methods do you accept?",
+            answer: "We accept Zelle, Cash App, Apple Pay, and other secure payment methods. Payment details will be provided upon order confirmation."
+        },
+        {
+            _id: "5",
+            question: "How long does shipping take?",
+            answer: "Shipping times vary depending on your location. Typically, orders are processed within 1-2 business days, and shipping takes 3-7 business days."
+        }
+    ];
 
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const isLoading = false;
+
+    /*
     useEffect(() => {
         const fetchFaqs = async () => {
             try {
@@ -34,6 +62,7 @@ export default function FAQPage() {
 
         fetchFaqs();
     }, []);
+    */
 
     const toggleFAQ = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
