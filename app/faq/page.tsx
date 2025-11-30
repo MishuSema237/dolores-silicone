@@ -18,23 +18,73 @@ export default function FAQPage() {
         },
         {
             _id: "2",
-            question: "How do I care for my Reborn Baby?",
-            answer: "Reborn babies are collectibles and should be treated with care. Avoid direct sunlight and extreme heat. Dust them gently with a soft brush. Do not use baby wipes or harsh chemicals on the vinyl."
+            question: "Are these dolls suitable for children?",
+            answer: "Reborn babies are primarily collector's items and art pieces. While they can be enjoyed by responsible older children, they are not recommended for young children as play dolls due to their delicate features, weighted bodies, and potential for damage if handled roughly."
         },
         {
             _id: "3",
-            question: "Do you offer custom orders?",
-            answer: "Yes, we accept custom orders! Please contact us with your specific requirements, and we will work with you to create your dream baby."
+            question: "How do I care for my Reborn Baby?",
+            answer: "Reborn babies should be treated like real infants. Support their head when lifting, avoid direct sunlight and extreme heat, and keep them away from pets. Dust them gently with a soft brush and avoid getting the cloth body wet."
         },
         {
             _id: "4",
-            question: "What payment methods do you accept?",
-            answer: "We accept Zelle, Cash App, Apple Pay, and other secure payment methods. Payment details will be provided upon order confirmation."
+            question: "Can I wash my Reborn Baby?",
+            answer: "No, you should never submerge your reborn baby in water, especially if it has a cloth body. If the vinyl parts get dirty, you can gently wipe them with a damp cloth, but avoid harsh chemicals or baby wipes which can damage the paint."
         },
         {
             _id: "5",
+            question: "What materials are used to make them?",
+            answer: "Our babies are typically created from high-quality vinyl or silicone kits. They are painted with multiple layers of heat-set paints to achieve realistic skin tones. The bodies are usually soft cloth filled with glass beads and poly-fil for weight and cuddliness."
+        },
+        {
+            _id: "6",
+            question: "Do they come with a birth certificate?",
+            answer: "Yes, every Joanna's Reborn baby comes with a beautiful birth certificate and a certificate of authenticity, making your adoption official."
+        },
+        {
+            _id: "7",
+            question: "Can I change their clothes?",
+            answer: "Absolutely! One of the joys of owning a reborn is dressing them up. Most of our babies fit into standard real baby clothes. The size (Preemie, Newborn, 0-3 months) will be specified in the baby's description."
+        },
+        {
+            _id: "8",
+            question: "Do you offer custom orders?",
+            answer: "Yes, we accept custom orders! If you have a specific sculpt or look in mind, please contact us. We can work together to create your dream baby with your preferred hair color, eye color, and weight."
+        },
+        {
+            _id: "9",
+            question: "Can the hair be styled?",
+            answer: "If your baby has rooted mohair, it can be gently styled using a soft baby brush and a little water or leave-in conditioner. Painted hair does not require styling but looks incredibly realistic and is maintenance-free."
+        },
+        {
+            _id: "10",
+            question: "How are the babies weighted?",
+            answer: "We use fine glass beads and high-quality poly-fil to weight our babies. This gives them a realistic 'dead weight' feel, so they flop and settle in your arms just like a real sleeping infant."
+        },
+        {
+            _id: "11",
+            question: "What payment methods do you accept?",
+            answer: "We accept secure payments via Zelle, Cash App, and Apple Pay. We prioritize secure transactions to ensure your peace of mind."
+        },
+        {
+            _id: "12",
+            question: "Do you offer layaway or payment plans?",
+            answer: "We understand that a reborn is a special investment. Please contact us directly to discuss potential flexible payment arrangements for higher-priced babies."
+        },
+        {
+            _id: "13",
             question: "How long does shipping take?",
-            answer: "Shipping times vary depending on your location. Typically, orders are processed within 1-2 business days, and shipping takes 3-7 business days."
+            answer: "Once your order is processed, shipping typically takes 3-7 business days depending on the destination. We ensure every baby is packed securely for their journey home."
+        },
+        {
+            _id: "14",
+            question: "Do you ship internationally?",
+            answer: "Yes, we can ship our babies to loving homes worldwide. Shipping costs and delivery times will vary based on the destination country."
+        },
+        {
+            _id: "15",
+            question: "What is your return policy?",
+            answer: "Due to the custom and artistic nature of our creations, all sales are typically final. However, we want you to be happy with your adoption. If there is an issue with your order upon arrival, please contact us immediately so we can resolve it."
         }
     ];
 
