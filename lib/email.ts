@@ -108,7 +108,7 @@ export async function sendOrderConfirmationEmail(order: any) {
       </ul>
       <p><strong>Total: $${order.payment.totalAmount.toFixed(2)}</strong></p>
       <br>
-      <a href="${process.env.NEXT_PUBLIC_SITE_URL}/orders/${order._id}" class="button">View Order Details</a>
+      <a href="${process.env.NEXT_PUBLIC_SITE_URL}/track-order?ref=${order.orderReference}" class="button">View Order Details</a>
       <br><br>
       <p>Best regards,</p>
       <p>Joanna's Reborns Team</p>

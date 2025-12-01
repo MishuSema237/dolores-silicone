@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { FormInput } from "@/components/ui/form-input";
 import { FaSearch, FaBoxOpen, FaShippingFast, FaCheckCircle } from "react-icons/fa";
+import { useSearchParams } from "next/navigation";
 
 export default function TrackOrderPage() {
-    const [orderReference, setOrderReference] = useState("");
+    const searchParams = useSearchParams();
+    const [orderReference, setOrderReference] = useState(searchParams.get("ref") || "");
     const [email, setEmail] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [order, setOrder] = useState<any | null>(null);
