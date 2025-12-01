@@ -31,6 +31,13 @@ export function PrintButton() {
                         // Remove elements that might cause issues or aren't needed for print
                         const elementsToRemove = clonedDoc.querySelectorAll('.print\\:hidden');
                         elementsToRemove.forEach(el => el.remove());
+
+                        // Make print-only elements visible
+                        const printOnlyElements = clonedDoc.querySelectorAll('.hidden.print\\:block');
+                        printOnlyElements.forEach(el => {
+                            el.classList.remove('hidden');
+                            el.classList.add('block');
+                        });
                     }
                 });
 
