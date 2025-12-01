@@ -150,7 +150,7 @@ export default function AdminSocialsPage() {
     };
 
     return (
-        <div className="p-6">
+        <div>
             <h1 className="text-xl md:text-2xl font-bold mb-6">Manage Social Media</h1>
 
             {/* Form */}
