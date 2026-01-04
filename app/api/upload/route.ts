@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
-import { writeFile, mkdir } from "fs/promises";
-import { join } from "path";
+import { v2 as cloudinary } from "cloudinary";
+
+// Configure Cloudinary
+cloudinary.config({
+    cloudinary_url: process.env.CLOUDINARY_URL,
+});
 
 export async function POST(request: Request) {
     try {
@@ -17,26 +21,25 @@ export async function POST(request: Request) {
         const bytes = await file.arrayBuffer();
         const buffer = Buffer.from(bytes);
 
-        // Create unique filename
-        const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-        const filename = file.name.replace(/[^a-zA-Z0-9.]/g, "-");
-        const finalFilename = `${uniqueSuffix}-${filename}`;
+        // Upload to Cloudinary using a Promise to handle the stream
+        const uploadResponse = await new Promise((resolve, reject) => {
+            const uploadStream = cloudinary.uploader.upload_stream(
+                {
+                    folder: "reborn_babies", // Optional: organize uploads in a folder
+                },
+                (error, result) => {
+                    if (error) reject(error);
+                    else resolve(result);
+                }
+            );
+            uploadStream.end(buffer);
+        }) as any;
 
-        // Ensure upload directory exists
-        const uploadDir = join(process.cwd(), "public", "uploads");
-        await mkdir(uploadDir, { recursive: true });
-
-        // Save file
-        const path = join(uploadDir, finalFilename);
-        await writeFile(path, buffer);
-
-        // Return public URL
-        const url = `/uploads/${finalFilename}`;
-        return NextResponse.json({ url });
+        return NextResponse.json({ url: uploadResponse.secure_url });
     } catch (error: any) {
         console.error("Upload error:", error);
         return NextResponse.json(
-            { error: "Upload failed" },
+            { error: "Upload failed: " + (error.message || "Unknown error") },
             { status: 500 }
         );
     }
