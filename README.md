@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Joanas Reborn Babies
 
-## Getting Started
+A modern E-commerce website for selling high-quality newborn reborn baby dolls. Built with Next.js 15+, MongoDB, and Cloudinary for a premium user experience.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 👶 **Baby Gallery**: Browse realistic reborn babies with detailed descriptions and high-quality images.
+- 🛍️ **Admin Dashboard**: Manage products, hero sliders, social links, and payment methods.
+- 🖼️ **Cloudinary Integration**: Fully persistent image uploads for products and gallery items.
+- 💳 **Payment Methods**: Configurable checkout options for buyers.
+- 📱 **Responsive Design**: Optimized for both mobile and desktop browsing.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Quick Start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repo**
+2. **Install dependencies**: `npm install` (or `pnpm install`)
+3. **Configure Environment**: 
+   - Follow the [Setup Instructions](file:///c:/Users/HP/Desktop/MISHAEL_SEMA_EKOM/Websites/reborn_babies/webapp/SETUP_INSTRUCTIONS.md) to create your `.env.local` file.
+   - Use [ENV_TEMPLATE.txt](file:///c:/Users/HP/Desktop/MISHAEL_SEMA_EKOM/Websites/reborn_babies/webapp/ENV_TEMPLATE.txt) as a guide.
+4. **Seed Database**: `npm run seed`
+5. **Run Development**: `npm run dev`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+- **Framework**: Next.js (App Router)
+- **Database**: MongoDB Atlas (via Mongoose)
+- **Storage**: Cloudinary
+- **Styling**: Tailwind CSS
+- **Authentication**: NextAuth.js
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Setup Guide](file:///c:/Users/HP/Desktop/MISHAEL_SEMA_EKOM/Websites/reborn_babies/webapp/SETUP_INSTRUCTIONS.md)
+- [Project Structure](file:///c:/Users/HP/Desktop/MISHAEL_SEMA_EKOM/Websites/reborn_babies/webapp/PROJECT_STRUCTURE.md)
+- [Database Setup](file:///c:/Users/HP/Desktop/MISHAEL_SEMA_EKOM/Websites/reborn_babies/webapp/DATABASE_SETUP.md)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+© 2026 Joanas Reborn Babies. All rights reserved.

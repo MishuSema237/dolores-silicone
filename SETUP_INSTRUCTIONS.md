@@ -20,6 +20,10 @@ NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_ADMIN_ALERT=
 NEXTAUTH_SECRET=your_secret_here_change_this
 NEXTAUTH_URL=http://localhost:3000
 
+# Cloudinary Configuration (REQUIRED for image uploads)
+# Get your CLOUDINARY_URL from https://cloudinary.com/console
+CLOUDINARY_URL=cloudinary://your_api_key:your_api_secret@your_cloud_name
+
 # App Configuration
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 
