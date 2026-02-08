@@ -87,6 +87,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: '/favicon.ico', sizes: 'any' },
       { url: '/assets/og-logo.png', type: 'image/png' },
     ],
     apple: [

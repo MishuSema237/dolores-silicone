@@ -14,6 +14,7 @@ import { FaPlay, FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
   const [processModalOpen, setProcessModalOpen] = useState(false);
+  // Force rebuild for Vercel cache invalidation - 2026-02-08
   const [storyModalOpen, setStoryModalOpen] = useState(false);
   const [babyProducts, setBabyProducts] = useState<any[]>([]);
   const [accessoryProducts, setAccessoryProducts] = useState<any[]>([]);
