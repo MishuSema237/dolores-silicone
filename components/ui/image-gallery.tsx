@@ -22,7 +22,7 @@ export function ImageGallery({ images, productName }: ImageGalleryProps) {
     <div>
       {/* Main Image */}
       <div
-        className="w-full h-[500px] mb-4 bg-gray-50 rounded-xl overflow-hidden flex items-center justify-center cursor-zoom-in"
+        className="w-full h-[500px] mb-4 bg-gray-50  overflow-hidden flex items-center justify-center cursor-zoom-in"
         onClick={() => hasRealImages && setIsViewerOpen(true)}
       >
         {hasRealImages && mainImage ? (
@@ -39,7 +39,7 @@ export function ImageGallery({ images, productName }: ImageGalleryProps) {
       </div>
 
       {/* Thumbnail Gallery */}
-      <div className="flex gap-4 overflow-x-auto p-2">
+      <div className="flex gap-4 overflow-x-auto p-2 px-4">
         {displayImages.map((image, index) => (
           <button
             key={index}

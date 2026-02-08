@@ -119,7 +119,7 @@ export default function Home() {
       </section>
 
       {/* Featured Babies Section */}
-      <section className="py-24 bg-gray-50/50">
+      <section className="py-12 bg-gray-50/50">
         <div className="container mx-auto px-6">
           <ProductGrid
             products={babyProducts}
@@ -131,7 +131,7 @@ export default function Home() {
       </section>
 
       {/* About Section - Modern Split Layout */}
-      <section className="py-24 relative overflow-hidden bg-white">
+      <section className="py-12 relative overflow-hidden bg-white">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-20">
             <div className="flex-1 relative group w-full">
@@ -183,7 +183,7 @@ export default function Home() {
       <FeaturesSection />
 
       {/* Featured Accessories Section */}
-      <section className="py-24 bg-white border-b border-gray-100">
+      <section className="py-12 bg-white border-b border-gray-100">
         <div className="container mx-auto px-6">
           <ProductGrid
             products={accessoryProducts}
@@ -195,7 +195,7 @@ export default function Home() {
       </section>
 
       {/* Story Section - Elegant Reverse Split */}
-      <section className="py-32 bg-gray-900 text-white overflow-hidden">
+      <section className="py-20 bg-gray-900 text-white overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-20">
             <div className="flex-1 relative lg:h-[700px] w-full flex items-center">
@@ -265,8 +265,8 @@ export default function Home() {
       <TestimonialsSection />
 
       {/* Professional Call To Action Section */}
-      <section className="py-32 bg-white flex justify-center px-6">
-        <div className="container max-w-6xl relative rounded-[4rem] overflow-hidden bg-purple-600 p-12 lg:p-24 text-center">
+      <section className="py-20  bg-white flex justify-center px-0 lg:px-6">
+        <div className="container max-w-6xl relative  lg:rounded-[4rem] overflow-hidden bg-purple-600 p-12 lg:p-24 text-center">
           {/* Background elements for CTA */}
           <div className="absolute top-[-20%] right-[-10%] w-96 h-96 bg-purple-400/20 rounded-full blur-[80px]" />
           <div className="absolute bottom-[-10%] left-[-10%] w-64 h-64 bg-indigo-800/20 rounded-full blur-[60px]" />

@@ -96,7 +96,7 @@ export function ProductGrid({
   };
 
   return (
-    <section className="mb-12 relative">
+    <section className="mb-6 relative">
       <div className="container mx-auto">
         {title && (
           <div className="flex justify-between items-end mb-12">
@@ -186,7 +186,7 @@ export function ProductGrid({
         )}
 
         {showViewAll && !enablePagination && (
-          <div className="text-center mt-8">
+          <div className="text-center mt-2">
             <Button
               href="/shop"
               variant="outline"

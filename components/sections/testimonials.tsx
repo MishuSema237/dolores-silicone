@@ -37,7 +37,7 @@ export function TestimonialsSection() {
 
   return (
     <>
-      <section className="py-32 bg-gray-50/80 relative overflow-hidden">
+      <section className="pt-20 bg-gray-50/80 relative overflow-hidden">
         {/* Background Decorative Element */}
         <div className="absolute right-0 top-0 w-1/3 h-full bg-purple-100/20 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
 

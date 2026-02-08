@@ -38,7 +38,7 @@ export function FeaturesSection() {
 
   return (
     <>
-      <section className="py-32 bg-white relative overflow-hidden">
+      <section className="pt-20 bg-white relative overflow-hidden">
         {/* Subtle Background Detail */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-100 to-transparent" />
 

@@ -74,7 +74,7 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
     ].filter(Boolean).length;
 
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-8 py-12">
+        <div className="w-full max-w-7xl mx-auto px-4 py-12">
             <div className="text-center mb-12">
                 <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4 bg-gradient-to-r from-purple-900 to-indigo-900 bg-clip-text text-transparent">
                     Our Collection
@@ -105,8 +105,8 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                     <button
                         onClick={() => setIsFiltersOpen(!isFiltersOpen)}
                         className={`flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-bold transition-all border ${isFiltersOpen || activeFilterCount > 0
-                                ? "bg-purple-600 border-purple-600 text-white shadow-lg shadow-purple-500/20"
-                                : "bg-white border-gray-200 text-gray-700 hover:border-purple-300 hover:bg-purple-50"
+                            ? "bg-purple-600 border-purple-600 text-white shadow-lg shadow-purple-500/20"
+                            : "bg-white border-gray-200 text-gray-700 hover:border-purple-300 hover:bg-purple-50"
                             }`}
                     >
                         <FaFilter />
@@ -139,8 +139,8 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                                         key={cat}
                                         onClick={() => setCategory(cat)}
                                         className={`text-left px-4 py-3 rounded-xl transition-all font-medium capitalize ${category === cat
-                                                ? "bg-purple-50 text-purple-700 border-l-4 border-purple-600"
-                                                : "text-gray-500 hover:bg-gray-50 hover:text-gray-900"
+                                            ? "bg-purple-50 text-purple-700 border-l-4 border-purple-600"
+                                            : "text-gray-500 hover:bg-gray-50 hover:text-gray-900"
                                             }`}
                                     >
                                         {cat === "all" ? "All Categories" : cat === "baby" ? "Babies" : "Accessories"}
@@ -217,7 +217,7 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
             {filteredProducts.length > 0 ? (
                 <ProductGrid products={filteredProducts} showViewAll={false} mobileLayout="grid" />
             ) : (
-                <div className="text-center py-24 bg-white rounded-[40px] border-2 border-dashed border-gray-100 flex flex-col items-center">
+                <div className="text-center py-12 bg-white rounded-[40px] border-2 border-dashed border-gray-100 flex flex-col items-center">
                     <div className="w-24 h-24 bg-purple-50 rounded-full flex items-center justify-center text-purple-200 text-4xl mb-6">
                         <FaSearch />
                     </div>
