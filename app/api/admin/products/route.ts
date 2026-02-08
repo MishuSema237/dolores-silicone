@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import connectMongoose from "@/lib/db/mongodb";
 import Product from "@/lib/models/Product";
+import { v2 as cloudinary } from "cloudinary";
 
 export async function GET(request: Request) {
     try {
@@ -87,6 +88,51 @@ export async function DELETE(request: Request) {
                 { error: "Missing id parameter" },
                 { status: 400 }
             );
+        }
+
+        // Find product to get images
+        const product = await Product.findById(id);
+        if (!product) {
+            return NextResponse.json(
+                { error: "Product not found" },
+                { status: 404 }
+            );
+        }
+
+        // Delete images from Cloudinary
+        if (product.images && product.images.length > 0) {
+            try {
+                // Determine if we need to configure Cloudinary manually or if it picks up CLOUDINARY_URL env automatically
+                // Based on upload route, we configured it manually.
+                cloudinary.config({
+                    cloudinary_url: process.env.CLOUDINARY_URL,
+                });
+
+                const deletePromises = product.images.map(async (imageUrl: string) => {
+                    // Extract public_id from URL
+                    // Example: https://res.cloudinary.com/demo/image/upload/v16113/folder/sample.jpg
+                    // We need 'folder/sample'
+                    try {
+                        const urlParts = imageUrl.split('/');
+                        const uploadIndex = urlParts.findIndex(part => part === 'upload');
+
+                        if (uploadIndex !== -1 && urlParts.length > uploadIndex + 2) {
+                            // Elements after 'upload/v12345/'
+                            const publicIdWithExtension = urlParts.slice(uploadIndex + 2).join('/');
+                            const publicId = publicIdWithExtension.replace(/\.[^/.]+$/, ""); // Remove extension
+
+                            await cloudinary.uploader.destroy(publicId);
+                        }
+                    } catch (err) {
+                        console.error(`Failed to delete image ${imageUrl}:`, err);
+                    }
+                });
+
+                await Promise.all(deletePromises);
+            } catch (imageError) {
+                console.error("Error deleting images from Cloudinary:", imageError);
+                // Continue with product deletion even if image deletion fails
+            }
         }
 
         await Product.findByIdAndDelete(id);

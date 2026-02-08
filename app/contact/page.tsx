@@ -119,14 +119,14 @@ export default function ContactPage() {
 
         <h1 className="text-4xl md:text-5xl font-serif mb-4 text-gray-900">Get In Touch</h1>
         <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-          Have a question about Joanna's Reborns or your order? We'd love to
+          Have a question about Dolores Silicone or your order? We'd love to
           hear from you.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         {/* Contact Form */}
-        <div className="lg:col-span-7 bg-white p-8 rounded-2xl shadow-sm border border-pink-100">
+        <div className="lg:col-span-7 bg-white p-8 rounded-2xl shadow-sm border border-purple-100">
           <h2 className="text-2xl font-serif mb-6 text-gray-800">Send us a Message</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -186,33 +186,33 @@ export default function ContactPage() {
 
         {/* Contact Information */}
         <div className="lg:col-span-5 space-y-8">
-          <div className="bg-gradient-to-br from-pink-50 to-white p-8 rounded-2xl border border-pink-100 shadow-sm">
+          <div className="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl border border-purple-100 shadow-sm">
             <h3 className="text-2xl font-serif mb-6 text-gray-800">Contact Information</h3>
             <div className="space-y-6">
               <div className="flex items-start gap-4 group">
-                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-pink-500 shadow-sm group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-purple-500 shadow-sm group-hover:scale-110 transition-transform">
                   <FaEnvelope />
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900 mb-1">Email Us</p>
                   <a
-                    href="mailto:info@joannasreborns.com"
-                    className="text-gray-600 hover:text-pink-600 transition-colors no-underline"
+                    href="mailto:contact@doloressilicone.com"
+                    className="text-purple-600 hover:text-purple-700 font-medium transition-colors break-all"
                   >
-                    info@joannasreborns.com
+                    contact@doloressilicone.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4 group">
-                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-pink-500 shadow-sm group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-purple-500 shadow-sm group-hover:scale-110 transition-transform">
                   <FaPhone />
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900 mb-1">Call Us</p>
                   <a
                     href="tel:+15551234567"
-                    className="text-gray-600 hover:text-pink-600 transition-colors no-underline"
+                    className="text-gray-600 hover:text-purple-600 transition-colors no-underline"
                   >
                     +1 (555) 123-4567
                   </a>
@@ -220,7 +220,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-4 group">
-                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-pink-500 shadow-sm group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-purple-500 shadow-sm group-hover:scale-110 transition-transform">
                   <FaMapMarkerAlt />
                 </div>
                 <div>
@@ -247,7 +247,7 @@ export default function ContactPage() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-pink-50 hover:text-pink-600 transition-all hover:-translate-y-1"
+                  className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition-all hover:-translate-y-1"
                 >
                   {social.imageUrl ? (
                     /* eslint-disable-next-line @next/next/no-img-element */

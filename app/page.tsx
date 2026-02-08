@@ -9,28 +9,23 @@ import { TestimonialsSection } from "@/components/sections/testimonials";
 import { FeaturesSection } from "@/components/sections/features";
 import { ProcessModalContent } from "@/components/sections/modals/process-modal";
 import Image from "next/image";
+import Link from "next/link";
+import { FaPlay, FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
   const [processModalOpen, setProcessModalOpen] = useState(false);
   const [storyModalOpen, setStoryModalOpen] = useState(false);
-  const [products, setProducts] = useState<any[]>([]);
-  const [heroImages, setHeroImages] = useState<any[]>([]);
-
+  const [babyProducts, setBabyProducts] = useState<any[]>([]);
+  const [accessoryProducts, setAccessoryProducts] = useState<any[]>([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fetch Products
         const productsRes = await fetch("/api/admin/products");
         if (productsRes.ok) {
           const data = await productsRes.json();
-          setProducts(data.filter((p: any) => p.status === 'active').slice(0, 4));
-        }
-
-        // Fetch Hero Images
-        const heroRes = await fetch("/api/admin/hero");
-        if (heroRes.ok) {
-          const data = await heroRes.json();
-          setHeroImages(data.filter((i: any) => i.active));
+          const activeProducts = data.filter((p: any) => p.status === 'active');
+          setBabyProducts(activeProducts.filter((p: any) => p.category === 'baby'));
+          setAccessoryProducts(activeProducts.filter((p: any) => p.category === 'accessory'));
         }
       } catch (error) {
         console.error("Failed to fetch data:", error);
@@ -41,195 +36,256 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="w-full">
-      {/* Hero Section - Syngri Style */}
-      <section className="relative w-full min-h-screen bg-[#050505] text-white overflow-hidden flex items-center mb-4">
-        {/* Abstract Background Elements */}
-        <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-purple-900/20 via-transparent to-transparent pointer-events-none" />
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-pink-600/20 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none z-10" />
-
-        {/* Mobile Background Image (Behind Text) */}
-        <div className="absolute inset-0 md:hidden z-0 opacity-40">
-          {heroImages.length > 0 && (
-            <Image
-              src={heroImages[0].imageUrl}
-              alt="Hero Background"
-              fill
-              className="object-cover"
-              priority
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent" />
+    <div className="w-full bg-white select-none">
+      {/* Premium Hero Section */}
+      <section className="relative min-h-[100vh] flex items-center overflow-hidden bg-[#030014]">
+        {/* Dynamic Background */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-purple-600/20 rounded-full blur-[120px] animate-pulse" />
+          <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-indigo-600/20 rounded-full blur-[100px]" />
+          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
         </div>
 
-        <div className="container mx-auto px-6 md:px-12 relative z-20 flex flex-col md:flex-row items-center gap-12 h-full  md:pt-0">
-          {/* Left Content */}
-          <div className="flex-1 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8">
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-sm font-medium text-gray-300">New Collection Available</span>
+        <div className="container mx-auto px-6 md:px-12 relative z-10 pt-40 pb-20 lg:py-0">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            {/* Hero Text Content */}
+            <div className="flex-1 text-center lg:text-left">
+
+
+              <h1 className="text-white mb-6 md:mb-8 text-5xl md:text-6xl  leading-[0.95] tracking-tight">
+                Crafting <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 animate-gradient-x">Artistic Reality</span> <br className="hidden md:block" />
+                For Your Nursery.
+              </h1>
+
+              <p className="text-lg md:text-xl text-gray-400 mb-10 md:mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                Discover the world of ultra-realistic silicone reborn babies. Each creation is a unique piece of art, meticulously handcrafted to bring emotion and life into your home.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 justify-center lg:justify-start">
+                <Button href="/shop" size="lg" className="w-full sm:w-auto bg-purple-600 text-white hover:bg-purple-500 h-16 px-10 rounded-2xl text-lg font-bold shadow-2xl shadow-purple-900/40 group">
+                  Explore Collection
+                  <FaArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                <Button href="/gallery" variant="outline" size="lg" className="w-full sm:w-auto glass-dark text-white border-white/10 h-16 px-10 rounded-2xl text-lg font-semibold hover:bg-white/5">
+                  View Gallery
+                </Button>
+              </div>
+
+              <div className="mt-12 md:mt-16 pt-8 border-t border-white/5 flex flex-wrap justify-center lg:justify-start gap-8 lg:gap-12 opacity-40">
+                <div className="flex flex-col">
+                  <span className="text-xl md:text-2xl font-bold text-white">1000+</span>
+                  <span className="text-[10px] uppercase tracking-widest">Collectors</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-xl md:text-2xl font-bold text-white">100%</span>
+                  <span className="text-[10px] uppercase tracking-widest">Handcrafted</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-xl md:text-2xl font-bold text-white">Worldwide</span>
+                  <span className="text-[10px] uppercase tracking-widest">Shipping</span>
+                </div>
+              </div>
             </div>
 
-            <h1 className="text-5xl text-white md:text-7xl font-bold leading-tight mb-6 tracking-tight drop-shadow-lg">
-              Transform your <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">nursery</span> into a <br />
-              world of joy.
-            </h1>
+            {/* Hero Image / Visual */}
+            <div className="flex-1 relative w-full hidden lg:flex justify-center items-center lg:h-[800px] mt-12 lg:mt-0">
+              <div className="relative w-full max-w-[300px] sm:max-w-md md:max-w-xl lg:max-w-2xl group">
+                {/* Decorative Gradients behind image */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-purple-500/10 rounded-full blur-[80px]" />
 
-            <p className="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed mx-auto md:mx-0 drop-shadow-md">
-              Discover our handcrafted silicone reborn babies, designed with passion and precision to bring warmth and life to your home.
-            </p>
+                <div className="relative z-10 animate-float">
+                  <Image
+                    src="/assets/hero-image.png"
+                    alt="Reborn Baby Masterpiece"
+                    width={800}
+                    height={1000}
+                    className="object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] rounded-[2rem] md:rounded-[3rem]"
+                    priority
+                  />
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start mt-6">
-              <Button href="/shop" size="lg" className="bg-pink-600 text-white hover:bg-pink-700 border-none  text-lg font-bold rounded-full min-w-[160px] shadow-lg shadow-pink-600/20">
-                Shop Now
-              </Button>
-              <Button href="/gallery" variant="outline" size="lg" className="border-white/30 text-pink-600 hover:bg-white/10  text-lg font-medium rounded-full min-w-[160px] backdrop-blur-sm">
-                View Gallery
-              </Button>
-            </div>
-          </div>
-
-          {/* Right Image (Desktop Only) */}
-          <div className="hidden md:flex flex-1 relative w-full h-[500px] md:h-[700px] items-center justify-center">
-            <div className="relative w-full h-full max-w-lg mx-auto">
-              {/* Main abstract shape/image placeholder */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-pink-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
-              <div className="relative w-full h-full flex items-center justify-center">
-                <Image
-                  src="/assets/baby1.png"
-                  alt="Reborn Baby"
-                  width={600}
-                  height={800}
-                  className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700"
-                  priority
-                />
+                  {/* Floating Detail Card */}
+                  <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 glass backdrop-blur-2xl p-4 md:p-6 rounded-2xl md:rounded-3xl border border-white/40 shadow-2xl hidden sm:block max-w-[180px] md:max-w-[240px]">
+                    <p className="text-[10px] font-black uppercase text-purple-600 tracking-widest mb-1 md:mb-2">Artisan Pick</p>
+                    <p className="text-gray-900 font-bold text-xs md:text-base mb-1">Ultra-Realistic Texture</p>
+                    <p className="text-[10px] md:text-sm text-gray-500">Meticulous multi-layer painting for lifelike depth.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Latest Creations Section */}
-      <div className="w-full">
-        <ProductGrid products={products} itemsPerPage={3} enablePagination={true} />
-      </div>
+      {/* Featured Babies Section */}
+      <section className="py-24 bg-gray-50/50">
+        <div className="container mx-auto px-6">
+          <ProductGrid
+            products={babyProducts}
+            layout="carousel"
+            title="Life-Like Babies"
+            showViewAll={true}
+          />
+        </div>
+      </section>
 
-      {/* About Section */}
-      <div className="max-w-7xl mx-auto px-6">
-        <section className="mb-24 flex flex-col md:flex-row items-center gap-8 md:gap-16">
-          <div className="flex-1 w-full md:max-w-[50%] h-[400px] relative rounded-2xl overflow-hidden shadow-lg group">
-            <Image
-              src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-              alt="Artisan at Work"
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60" />
-            <div className="absolute bottom-6 left-6 text-white">
-              <p className="font-serif text-2xl">Masterful Craftsmanship</p>
+      {/* About Section - Modern Split Layout */}
+      <section className="py-24 relative overflow-hidden bg-white">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col lg:flex-row items-center gap-20">
+            <div className="flex-1 relative group w-full">
+              <div className="relative h-[400px] md:h-[600px] w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Artisan at Work"
+                  fill
+                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/40 to-transparent" />
+              </div>
+              {/* Floating Badge */}
+              <div className="absolute -top-6 -left-6 md:-top-10 md:-left-10 w-24 h-24 md:w-40 md:h-40 bg-purple-600 rounded-full flex items-center justify-center p-4 md:p-6 text-center shadow-xl border-4 border-white transform -rotate-12 hidden sm:flex">
+                <p className="text-white font-black text-[8px] md:text-sm uppercase leading-tight tracking-widest">Est. 2018 <br /> Master Studio</p>
+              </div>
+            </div>
+
+            <div className="flex-1 text-center lg:text-left">
+              <span className="text-purple-600 font-black uppercase tracking-widest text-sm mb-4 block">Our Philosophy</span>
+              <h2 className="mb-8 font-display text-3xl md:text-5xl">Crafting Dreams, <br className="hidden md:block" /> One Baby at a Time</h2>
+              <div className="space-y-6 text-lg md:text-xl text-gray-600 font-light leading-relaxed">
+                <p>
+                  At Dolores Silicone, we pour our heart and soul into every silicone
+                  reborn baby. Our artists bring these lifelike creations to being
+                  through meticulous sculpting, detailed hand-painting, and precise
+                  weighting.
+                </p>
+                <p>
+                  We are dedicated to providing collectors with unparalleled realism,
+                  quality, and an unforgettable experience. Our brand emphasizes client
+                  satisfaction, love, and care.
+                </p>
+              </div>
+              <Button
+                variant="outline"
+                className="mt-12 h-14 px-8 rounded-xl border-purple-200 text-purple-700 hover:bg-purple-50 group"
+                onClick={() => setProcessModalOpen(true)}
+              >
+                Learn Our Process
+                <FaPlay className="ml-3 text-xs opacity-50 group-hover:opacity-100 transition-opacity" />
+              </Button>
             </div>
           </div>
-          <div className="flex-1 w-full md:max-w-[50%] flex flex-col gap-6">
-            <h2 className="text-left text-4xl font-serif">Crafting Dreams, One Baby at a Time</h2>
-            <p className="text-lg leading-relaxed text-gray-700">
-              At Joanna's Reborns, we pour our heart and soul into every silicone
-              reborn baby. Our artists bring these lifelike creations to being
-              through meticulous sculpting, detailed hand-painting, and precise
-              weighting, ensuring each one is a unique masterpiece.
-            </p>
-            <p className="text-lg leading-relaxed text-gray-700">
-              We are dedicated to providing collectors with unparalleled realism,
-              quality, and an unforgettable experience that goes beyond a mere
-              purchase. Each baby is designed to bring joy and comfort to
-              collectors worldwide.
-            </p>
-            <Button
-              variant="outline"
-              className="w-auto self-start mt-4"
-              onClick={() => setProcessModalOpen(true)}
-            >
-              Learn More About Our Process
-            </Button>
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       {/* Features Section */}
       <FeaturesSection />
 
-      {/* Our Story Section */}
-      <div className="max-w-7xl mx-auto px-6">
-        <section className="mb-24 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-16">
-          <div className="flex-1 w-full md:max-w-[50%] flex flex-col gap-6">
-            <h2 className="text-left text-4xl font-serif">Our Story</h2>
-            <p className="text-lg leading-relaxed text-gray-700">
-              Joanna's Reborns was founded on a passion for transforming silicone
-              into breathing works of art. Our journey began with a single
-              artist's dream to create dolls that not only look real but also
-              evoke the same warmth and emotion as a real baby.
-            </p>
-            <p className="text-lg leading-relaxed text-gray-700">
-              Over the years, this dream has grown into a collective of dedicated
-              artisans, each bringing their unique talent to craft these precious
-              creations. We pour our heart and soul into every silicone reborn
-              baby, ensuring each one is a unique masterpiece that brings joy and
-              comfort to collectors worldwide.
-            </p>
+      {/* Featured Accessories Section */}
+      <section className="py-24 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-6">
+          <ProductGrid
+            products={accessoryProducts}
+            layout="carousel"
+            title="Essential Accessories"
+            showViewAll={true}
+          />
+        </div>
+      </section>
 
-            <div className={`transition-all duration-500 overflow-hidden ${storyModalOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-              <p className="text-lg leading-relaxed text-gray-700 mb-6">
-                Our commitment to artistry, quality, and integrity guides everything
-                we do. We use only premium, ethically sourced silicone and
-                materials, ensuring that each Reborn baby is safe, durable, and a
-                joy to hold. Every stitch, every brushstroke, every detail is a
-                testament to our dedication to artistry and realism.
-              </p>
-              <p className="text-lg leading-relaxed text-gray-700">
-                Thank you for being a part of our story. We look forward to
-                crafting a piece of art that brings joy and warmth into your life.
-              </p>
+      {/* Story Section - Elegant Reverse Split */}
+      <section className="py-32 bg-gray-900 text-white overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-20">
+            <div className="flex-1 relative lg:h-[700px] w-full flex items-center">
+              <div className="relative h-[600px] w-full hidden md:block rounded-[3rem] overflow-hidden shadow-premium group">
+                <Image
+                  src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Our Story"
+                  fill
+                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-purple-950/20 mix-blend-multiply" />
+              </div>
+              {/* Floating Overlay Card */}
+              <div className="absolute bottom-10 -left-10 lg:bottom-1/4 lg:-left-20 glass-dark backdrop-blur-3xl p-8 rounded-[2.5rem] border border-white/10 shadow-2xl max-w-sm hidden md:block">
+                <div className="text-purple-400 text-4xl mb-4 font-serif italic font-bold">"</div>
+                <p className="text-lg text-gray-200 italic leading-relaxed mb-4">
+                  "The most rewarding feeling is seeing a collector's face when they hold their baby for the first time."
+                </p>
+                <p className="font-bold text-white tracking-widest text-sm uppercase">Dolores S. — Founder</p>
+              </div>
             </div>
 
-            {!storyModalOpen && (
-              <button
-                onClick={() => setStoryModalOpen(true)}
-                className="text-pink-600 font-semibold hover:text-pink-700 self-start underline underline-offset-4"
-              >
-                Read More
-              </button>
-            )}
+            <div className="flex-1">
+              <span className="text-purple-400 font-black uppercase tracking-widest text-sm mb-4 block">The Journey</span>
+              <h1 className="text-white mb-8 font-display">A Tale of Passion & Precision</h1>
+              <div className="space-y-6 text-xl text-gray-400 font-light leading-relaxed">
+                <p>
+                  Dolores Silicone was founded on a passion for transforming silicone
+                  into breathing works of art. Our journey began with a single
+                  artist's dream to create dolls that evoke warmth and emotion.
+                </p>
+                <p>
+                  Over the years, this has grown into a collective of dedicated
+                  artisans. We prioritize finding the perfect home for our babies,
+                  ensuring they are treated with the love they deserve.
+                </p>
+
+                <div className={`transition-all duration-700 ease-in-out overflow-hidden ${storyModalOpen ? 'max-h-[1000px] opacity-100 mt-6' : 'max-h-0 opacity-0'}`}>
+                  <p className="mb-6">
+                    Our commitment to artistry, quality, and integrity guides everything
+                    we do. We use only premium, ethically sourced silicone and
+                    materials, ensuring that each Reborn baby is safe, durable, and a
+                    joy to hold.
+                  </p>
+                  <p>
+                    Thank you for being a part of our story. We look forward to
+                    crafting a piece of art that brings joy and warmth into your life.
+                  </p>
+                </div>
+              </div>
+
+              {!storyModalOpen && (
+                <button
+                  onClick={() => setStoryModalOpen(true)}
+                  className="mt-12 text-purple-400 font-bold hover:text-purple-300 flex items-center gap-3 group uppercase tracking-widest text-sm"
+                >
+                  Discover Full Story
+                  <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </button>
+              )}
+            </div>
           </div>
-          <div className="flex-1 w-full md:max-w-[50%] h-[450px] relative rounded-2xl overflow-hidden shadow-lg group">
-            <Image
-              src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-              alt="Our Story"
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-pink-900/10 mix-blend-multiply" />
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       {/* Testimonials Section */}
       <TestimonialsSection />
 
-      {/* Call to Action Section */}
-      <div className="max-w-7xl mx-auto px-6">
-        <section className="py-16 bg-pink-50 rounded-3xl text-center px-6">
-          <h2 className="text-4xl md:text-5xl font-serif mb-6 text-gray-900">
-            Ready to Find Your Perfect Baby?
-          </h2>
-          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            Explore our collection of handcrafted reborn babies and bring home a bundle of joy today.
-          </p>
-          <Button href="/shop" size="lg" className="px-12 py-6 text-lg text-white">
-            View Collection
-          </Button>
-        </section>
-      </div>
+      {/* Professional Call To Action Section */}
+      <section className="py-32 bg-white flex justify-center px-6">
+        <div className="container max-w-6xl relative rounded-[4rem] overflow-hidden bg-purple-600 p-12 lg:p-24 text-center">
+          {/* Background elements for CTA */}
+          <div className="absolute top-[-20%] right-[-10%] w-96 h-96 bg-purple-400/20 rounded-full blur-[80px]" />
+          <div className="absolute bottom-[-10%] left-[-10%] w-64 h-64 bg-indigo-800/20 rounded-full blur-[60px]" />
+
+          <div className="relative z-10 max-w-3xl mx-auto">
+            <h2 className="text-white text-4xl lg:text-5xl mb-8 leading-tight">Ready to welcome a <br /> new bundle of joy?</h2>
+            <p className="text-purple-100 text-xl mb-12 font-light max-w-xl mx-auto">
+              Browse our available babies and accessories, or contact us for a custom creation piece.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center gap-6 justify-center">
+              <Button href="/shop" size="lg" className="bg-white text-purple-600 hover:bg-purple-50 h-16 px-12 rounded-2xl text-lg font-bold shadow-xl">
+                Browse Collection
+              </Button>
+              <Button href="/contact" variant="outline" size="lg" className="border-white border text-white bg-transparent hover:bg-white/40 h-16 px-12 rounded-2xl text-lg font-semibold">
+                Get In Touch
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Process Modal */}
       <Modal

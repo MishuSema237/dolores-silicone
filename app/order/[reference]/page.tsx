@@ -50,7 +50,7 @@ export default function OrderConfirmationPage() {
   if (loading) {
     return (
       <div className="w-full max-w-viewport mx-auto flex items-center justify-center py-20">
-        <div className="w-12 h-12 border-4 border-pink-600 border-t-transparent rounded-full animate-spin"></div>
+        <div className="w-12 h-12 border-4 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
       </div>
     );
   }
@@ -96,13 +96,13 @@ export default function OrderConfirmationPage() {
           <div className="flex justify-center mb-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/assets/owners-logo/Joannas Reborns Logo.jpg"
-              alt="Joanna's Reborns Logo"
+              src="/assets/owners-logo/Dolores Silicone Logo.png"
+              alt="Dolores Silicone Logo"
               className="h-24 w-24 object-cover rounded-full"
             />
           </div>
           <h1 className="text-3xl font-bold mb-2">Order Receipt</h1>
-          <p className="text-gray-500">Joanna's Reborns</p>
+          <p className="text-gray-500">Dolores Silicone</p>
         </div>
 
         {/* Order Details */}
@@ -178,7 +178,7 @@ export default function OrderConfirmationPage() {
             </div>
           </div>
 
-          <div className="bg-pink-50 p-4 border border-pink-200 rounded print:hidden">
+          <div className="bg-purple-50 p-4 border border-purple-200 rounded print:hidden">
             <p className="text-sm text-gray-700 mb-0">
               <strong>Next Steps:</strong> We will contact you at{" "}
               {order.customer.email} within 24 hours with payment details. No

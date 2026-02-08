@@ -29,5 +29,7 @@ const HeroImageSchema = new mongoose.Schema(
     { timestamps: true }
 );
 
-export default mongoose.models.HeroImage ||
+const HeroImage = mongoose.models.HeroImage ||
     mongoose.model("HeroImage", HeroImageSchema);
+
+export default HeroImage;

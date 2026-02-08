@@ -214,7 +214,7 @@ export default function ManagePaymentMethodsPage() {
                             id="isActive"
                             checked={isActive}
                             onChange={(e) => setIsActive(e.target.checked)}
-                            className="w-4 h-4 text-pink-600 rounded border-gray-300 focus:ring-pink-500"
+                            className="w-4 h-4 text-purple-600 rounded border-gray-300 focus:ring-purple-500"
                         />
                         <label htmlFor="isActive" className="text-sm text-gray-700">
                             Active

@@ -2,8 +2,10 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { Button } from "./button";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaEye } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { AccessoryUpsellModal } from "@/components/shop/accessory-upsell-modal";
+import { useCart } from "@/lib/context/cart-context";
 
 interface ProductCardProps {
   id: string;
@@ -12,9 +14,8 @@ interface ProductCardProps {
   imageUrl?: string;
   slug: string;
   description?: string;
+  category?: string;
 }
-
-import { useCart } from "@/lib/context/cart-context";
 
 export function ProductCard({
   id,
@@ -23,8 +24,11 @@ export function ProductCard({
   imageUrl,
   slug,
   description,
+  category,
 }: ProductCardProps) {
   const { addItem } = useCart();
+  const [showUpsell, setShowUpsell] = useState(false);
+  const [isNavigating, setIsNavigating] = useState(false);
 
   const handleAddToCart = (e?: React.MouseEvent) => {
     if (e) {
@@ -37,11 +41,14 @@ export function ProductCard({
       price,
       slug,
       imageUrl,
+      category,
     });
     toast.success("Added to cart");
-  };
 
-  const [isNavigating, setIsNavigating] = useState(false);
+    if (category === "baby") {
+      setShowUpsell(true);
+    }
+  };
 
   const handleCardClick = () => {
     if (!isNavigating) {
@@ -50,12 +57,9 @@ export function ProductCard({
   };
 
   return (
-    <div className="relative group w-full aspect-[3/4] rounded-[32px] p-4 overflow-hidden border-4 border-white shadow-xl transition-all duration-300 hover:-translate-y-2">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pink-100 via-purple-50 to-blue-50 opacity-80" />
-
-      {/* Product Image - Full Height Background */}
-      <div className="absolute inset-0 z-10">
+    <div className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative">
+      {/* Image Container */}
+      <div className="relative aspect-square overflow-hidden bg-gray-50">
         <Link
           href={`/product/${slug}`}
           className={`relative w-full h-full block ${isNavigating ? 'pointer-events-none' : ''}`}
@@ -74,41 +78,61 @@ export function ProductCard({
             </div>
           )}
         </Link>
+
+        {/* Overlay on hover */}
+        <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3 z-20">
+          <Link href={`/product/${slug}`}>
+            <button className="bg-white text-gray-900 p-3 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-purple-600 hover:text-white">
+              <FaEye />
+            </button>
+          </Link>
+          <button
+            onClick={handleAddToCart}
+            className="bg-white text-gray-900 p-3 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-75 hover:bg-purple-600 hover:text-white"
+          >
+            <FaShoppingCart />
+          </button>
+        </div>
       </div>
 
-      {/* Content Overlay - Dark Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-auto bg-gradient-to-t from-black/90 via-black/50 to-transparent backdrop-blur-[2px] z-20 p-6 flex flex-col justify-end">
-        <Link
-          href={`/product/${slug}`}
-          className={`block ${isNavigating ? 'pointer-events-none' : ''}`}
-          onClick={handleCardClick}
-        >
-          <h3 style={{ color: "white" }} className="text-2xl font-black capitalize drop-shadow-md mb-1 truncate tracking-wide !text-white">{name}</h3>
-          <p className="text-white/90 text-sm mb-4 line-clamp-2 drop-shadow-sm font-medium">
-            {description || "Handcrafted silicone reborn baby with lifelike details."}
-          </p>
-        </Link>
-
-        <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold text-white drop-shadow-md">
+      {/* Content */}
+      <div className="p-5">
+        <div className="flex justify-between items-start mb-2">
+          <Link href={`/product/${slug}`} onClick={handleCardClick}>
+            <h3 className="font-serif font-bold text-lg text-gray-900 line-clamp-1 group-hover:text-purple-600 transition-colors">
+              {name}
+            </h3>
+          </Link>
+          <span className="font-bold text-purple-600">
             ${(price || 0).toFixed(0)}
           </span>
-          <Button
-            onClick={handleAddToCart}
-            className="bg-pink-600 hover:bg-pink-700 text-white border-none rounded-full px-5 py-2 h-10 font-bold shadow-lg flex items-center gap-2 text-sm backdrop-blur-sm transition-all hover:scale-105"
-          >
-            <FaShoppingCart className="text-lg " />
-            <span className="hidden sm:inline">Add to Cart</span>
-          </Button>
         </div>
+
+        <p className="text-gray-500 text-sm mb-4 line-clamp-2 h-10">
+          {description || "Handcrafted silicone reborn baby with lifelike details."}
+        </p>
+
+        <Button
+          variant="outline"
+          onClick={handleAddToCart}
+          className="w-full border-purple-200 text-purple-600 hover:bg-purple-50 rounded-xl py-2 text-sm font-semibold h-10"
+        >
+          Add to Cart
+        </Button>
       </div>
 
       {/* Loading Overlay */}
       {isNavigating && (
-        <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-[1px] rounded-[32px]">
-          <div className="w-8 h-8 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+        <div className="absolute inset-0 z-[100] flex items-center justify-center bg-white/40 backdrop-blur-[2px]">
+          <div className="w-8 h-8 border-4 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
         </div>
       )}
+
+      <AccessoryUpsellModal
+        isOpen={showUpsell}
+        onClose={() => setShowUpsell(false)}
+        product={{ id, name }}
+      />
     </div>
   );
 }

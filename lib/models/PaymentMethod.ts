@@ -1,6 +1,6 @@
-import mongoose, { Schema, Document, Model } from "mongoose";
+import mongoose from "mongoose";
 
-export interface IPaymentMethod extends Document {
+export interface IPaymentMethod {
     name: string;
     details: string;
     logoUrl?: string;
@@ -9,7 +9,7 @@ export interface IPaymentMethod extends Document {
     updatedAt: Date;
 }
 
-const PaymentMethodSchema = new Schema<IPaymentMethod>(
+const PaymentMethodSchema = new mongoose.Schema<IPaymentMethod>(
     {
         name: {
             type: String,
@@ -31,8 +31,7 @@ const PaymentMethodSchema = new Schema<IPaymentMethod>(
     }
 );
 
-const PaymentMethod: Model<IPaymentMethod> =
-    mongoose.models.PaymentMethod ||
+const PaymentMethod = (mongoose.models.PaymentMethod as mongoose.Model<IPaymentMethod>) ||
     mongoose.model<IPaymentMethod>("PaymentMethod", PaymentMethodSchema);
 
 export default PaymentMethod;

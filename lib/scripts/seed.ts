@@ -1,19 +1,13 @@
-/**
- * Seed script for initial database setup
- * Run with: npx tsx lib/scripts/seed.ts
- * Or add to package.json scripts
- */
-
-import { config } from "dotenv";
+import dotenv from "dotenv";
 import { resolve } from "path";
 
 // Load .env.local file
-config({ path: resolve(process.cwd(), ".env.local") });
+dotenv.config({ path: resolve(process.cwd(), ".env.local") });
 
-import connectDB from "@/lib/db/mongodb";
-import Product from "@/lib/models/Product";
-import AdminUser from "@/lib/models/AdminUser";
-import ContentBlock from "@/lib/models/ContentBlock";
+import connectDB from "../db/mongodb";
+import Product from "../models/Product";
+import AdminUser from "../models/AdminUser";
+import ContentBlock from "../models/ContentBlock";
 
 async function seed() {
   try {

@@ -24,6 +24,7 @@ export default function AddBabyPage() {
             title: "",
         },
         images: [] as string[],
+        category: "baby",
         status: "active",
     });
 
@@ -57,7 +58,7 @@ export default function AddBabyPage() {
 
     return (
         <div className="max-w-3xl mx-auto">
-            <h1 className="text-2xl md:text-3xl font-serif font-bold mb-8 text-gray-900">Add New Baby</h1>
+            <h1 className="text-2xl md:text-3xl font-serif font-bold mb-8 text-gray-900">Add New Product</h1>
 
             <form onSubmit={handleSubmit} className="space-y-8 bg-white p-8 rounded-2xl shadow-sm">
                 <div className="block lg:grid lg:grid-cols-2 gap-6">
@@ -173,6 +174,17 @@ export default function AddBabyPage() {
                 </div>
 
                 <FormSelect
+                    id="category"
+                    label="Category"
+                    value={formData.category}
+                    onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+                    options={[
+                        { value: "baby", label: "Baby" },
+                        { value: "accessory", label: "Accessory" },
+                    ]}
+                />
+
+                <FormSelect
                     id="status"
                     label="Status"
                     value={formData.status}
@@ -199,7 +211,7 @@ export default function AddBabyPage() {
                         Cancel
                     </Button>
                     <Button type="submit" disabled={isLoading}>
-                        {isLoading ? "Creating..." : "Create Baby"}
+                        {isLoading ? "Creating..." : "Create Product"}
                     </Button>
                 </div>
             </form>

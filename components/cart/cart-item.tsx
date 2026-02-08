@@ -18,7 +18,7 @@ export function CartItemComponent({ item }: CartItemProps) {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row items-start sm:items-center py-4 border-b border-pink-200 gap-4 last:border-b-0 hover:bg-pink-50 transition-colors rounded-lg px-2">
+    <div className="flex flex-col sm:flex-row items-start sm:items-center py-4 border-b border-purple-200 gap-4 last:border-b-0 hover:bg-purple-50 transition-colors rounded-lg px-2">
       {/* Top Section: Image and Details */}
       <div className="flex items-center gap-4 w-full sm:w-auto flex-grow">
         {/* Image */}

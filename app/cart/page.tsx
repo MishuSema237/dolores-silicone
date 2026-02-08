@@ -53,7 +53,7 @@ export default function CartPage() {
 
         {/* Order Summary */}
         <div className="lg:col-span-5">
-          <div className="bg-pink-50 p-6 border border-pink-200 sticky top-6 rounded-xl shadow-sm">
+          <div className="bg-purple-50 p-6 border border-purple-200 sticky top-6 rounded-xl shadow-sm">
             <h2 className="mb-6">Order Summary</h2>
 
             <div className="space-y-2 mb-4">
@@ -108,7 +108,7 @@ export default function CartPage() {
             </div>
 
             <div className="mt-6 text-center">
-              <Link href="/track-order" className="text-sm text-pink-600 hover:text-pink-700 ">
+              <Link href="/track-order" className="text-sm text-purple-600 hover:text-purple-700 ">
                 Track an existing order
               </Link>
             </div>

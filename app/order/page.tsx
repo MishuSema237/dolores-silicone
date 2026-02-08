@@ -347,7 +347,7 @@ export default function OrderPage() {
                     value={method.name}
                     checked={formData.paymentMethod === method.name}
                     onChange={handleChange}
-                    className="w-4 h-4 text-pink-600 border-gray-300 focus:ring-pink-500 accent-pink-600"
+                    className="w-4 h-4 text-purple-600 border-gray-300 focus:ring-purple-500 accent-purple-600"
                   />
                   <label style={{ display: "flex" }} htmlFor={method.name} className="ml-3 flex-row items-center gap-3 cursor-pointer">
                     {method.logoUrl && (
@@ -404,7 +404,7 @@ export default function OrderPage() {
 
           {/* Right Column: Order Summary */}
           <div className="lg:col-span-5">
-            <div className="bg-pink-50 p-6 border border-pink-200 sticky top-6 rounded-xl shadow-sm">
+            <div className="bg-purple-50 p-6 border border-purple-200 sticky top-6 rounded-xl shadow-sm">
               <h2 className="mb-8">Order Summary</h2>
 
               <div className="space-y-2 mb-4">

@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document, Model } from "mongoose";
+import mongoose from "mongoose";
 
 export interface IOrderItem {
   productId: string;
@@ -10,6 +10,7 @@ export interface IOrderItem {
     eyeColor?: string;
     size?: string;
   };
+  parentProductId?: string; // Links accessory to a specific baby in the order
 }
 
 export interface IOrderStatusHistory {
@@ -19,7 +20,7 @@ export interface IOrderStatusHistory {
   triggeredBy?: string;
 }
 
-export interface IOrder extends Document {
+export interface IOrder {
   orderReference: string;
   items: IOrderItem[];
   customer: {
@@ -50,7 +51,7 @@ export interface IOrder extends Document {
   updatedAt: Date;
 }
 
-const OrderItemSchema = new Schema<IOrderItem>({
+const OrderItemSchema = new mongoose.Schema<IOrderItem>({
   productId: { type: String, required: true },
   name: { type: String, required: true },
   price: { type: Number, required: true },
@@ -60,16 +61,17 @@ const OrderItemSchema = new Schema<IOrderItem>({
     eyeColor: String,
     size: String,
   },
+  parentProductId: String,
 });
 
-const OrderStatusHistorySchema = new Schema<IOrderStatusHistory>({
+const OrderStatusHistorySchema = new mongoose.Schema<IOrderStatusHistory>({
   status: { type: String, required: true },
   timestamp: { type: Date, default: Date.now },
   note: String,
   triggeredBy: String,
 });
 
-const OrderSchema = new Schema<IOrder>(
+const OrderSchema = new mongoose.Schema<IOrder>(
   {
     orderReference: {
       type: String,
@@ -137,30 +139,29 @@ OrderSchema.index({ "customer.email": 1 });
 OrderSchema.index({ status: 1 });
 OrderSchema.index({ createdAt: -1 });
 
-// Generate order reference before saving
 // Generate order reference before validation
-OrderSchema.pre("validate", async function (next) {
+OrderSchema.pre("validate", async function (this: mongoose.HydratedDocument<IOrder>, next: any) {
   if (!this.orderReference) {
     const count = await mongoose.models.Order?.countDocuments() || 0;
     const date = new Date().toISOString().slice(0, 10).replace(/-/g, "");
-    this.orderReference = `RB${date}${String(count + 1).padStart(4, "0")}`;
+    this.orderReference = `DS${date}${String(count + 1).padStart(4, "0")}`;
   }
   next();
 });
 
 // Add status to history when status changes
-OrderSchema.pre("save", function (next) {
+OrderSchema.pre("save", function (this: mongoose.HydratedDocument<IOrder>, next: any) {
   if (this.isModified("status") && !this.isNew) {
     this.statusHistory.push({
-      status: this.status,
+      status: this.status as any,
       timestamp: new Date(),
     });
   }
   next();
 });
 
-const Order: Model<IOrder> =
-  mongoose.models.Order || mongoose.model<IOrder>("Order", OrderSchema);
+const Order = (mongoose.models.Order as mongoose.Model<IOrder>) ||
+  mongoose.model<IOrder>("Order", OrderSchema);
 
 export default Order;
 

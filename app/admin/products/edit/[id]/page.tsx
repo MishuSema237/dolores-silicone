@@ -21,6 +21,7 @@ export default function EditProductPage({ params }: { params: Promise<{ id: stri
         materialsAndCare: "",
         shippingInfo: "",
         status: "active",
+        category: "baby",
         images: [] as string[],
         testimonial: {
             quote: "",
@@ -49,6 +50,7 @@ export default function EditProductPage({ params }: { params: Promise<{ id: stri
                         materialsAndCare: product.materialsAndCare || "",
                         shippingInfo: product.shippingInfo || "",
                         status: product.status,
+                        category: product.category || "baby",
                         images: product.images || [],
                         testimonial: {
                             quote: product.testimonial?.quote || "",
@@ -133,6 +135,16 @@ export default function EditProductPage({ params }: { params: Promise<{ id: stri
                             required
                             value={formData.price}
                             onChange={(e) => setFormData({ ...formData, price: parseFloat(e.target.value) })}
+                        />
+                        <FormSelect
+                            id="category"
+                            label="Category"
+                            value={formData.category}
+                            onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+                            options={[
+                                { value: "baby", label: "Baby" },
+                                { value: "accessory", label: "Accessory" },
+                            ]}
                         />
                         <FormSelect
                             id="status"
@@ -239,7 +251,7 @@ export default function EditProductPage({ params }: { params: Promise<{ id: stri
                         Cancel
                     </Button>
                     <Button type="submit" disabled={isSaving}>
-                        {isSaving ? "Saving..." : "Update Baby"}
+                        {isSaving ? "Saving..." : "Update Product"}
                     </Button>
                 </div>
             </form>

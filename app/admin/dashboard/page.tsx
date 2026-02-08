@@ -10,7 +10,11 @@ interface DashboardStats {
     total: number;
     pending: number;
   };
-  products: number;
+  products: {
+    babies: number;
+    accessories: number;
+    total: number;
+  };
   gallery: number;
   testimonials: number;
   recentOrders: any[];
@@ -65,8 +69,13 @@ export default function AdminDashboard() {
         />
         <StatsCard
           title="Total Babies"
-          value={stats?.products || 0}
+          value={stats?.products.babies || 0}
           icon={<FaBoxOpen className="text-xl" />}
+        />
+        <StatsCard
+          title="Total Accessories"
+          value={stats?.products.accessories || 0}
+          icon={<FaShoppingBag className="text-xl" />}
         />
         <StatsCard
           title="Gallery Images"
@@ -86,7 +95,7 @@ export default function AdminDashboard() {
           <h2 className="text-lg font-semibold text-gray-900">Recent Orders</h2>
           <Link
             href="/admin/orders"
-            className="text-sm text-pink-600 hover:text-pink-700 font-medium"
+            className="text-sm text-purple-600 hover:text-purple-700 font-medium"
           >
             View All
           </Link>

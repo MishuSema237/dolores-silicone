@@ -99,10 +99,10 @@ export default function AdminLoginPage() {
           </Button>
         </form>
         <p className="text-sm text-gray-500 text-center mt-4">
-          Default: admin@rebornbabies.com / changeme123
+          Default: admin@doloressilicone.com / changeme123
         </p>
         <div className="mt-6 text-center">
-          <Link href="/" className="text-sm text-pink-600 hover:text-pink-700 font-medium hover:underline">
+          <Link href="/" className="text-sm text-purple-600 hover:text-purple-700 font-medium hover:underline">
             ← Go Home
           </Link>
         </div>

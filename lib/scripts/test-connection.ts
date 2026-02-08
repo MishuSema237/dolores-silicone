@@ -3,8 +3,8 @@
  * Run with: npx tsx lib/scripts/test-connection.ts
  */
 
-import { config } from "dotenv";
-import { resolve } from "path";
+const { config } = require("dotenv");
+const { resolve } = require("path");
 
 // Load .env.local file
 config({ path: resolve(process.cwd(), ".env.local") });

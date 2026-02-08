@@ -1,7 +1,7 @@
-import mongoose, { Schema, Document, Model } from "mongoose";
+import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 
-export interface IAdminUser extends Document {
+export interface IAdminUser {
   email: string;
   password: string;
   name: string;
@@ -12,7 +12,7 @@ export interface IAdminUser extends Document {
   comparePassword(candidatePassword: string): Promise<boolean>;
 }
 
-const AdminUserSchema = new Schema<IAdminUser>(
+const AdminUserSchema = new mongoose.Schema<IAdminUser>(
   {
     email: {
       type: String,
@@ -58,7 +58,7 @@ AdminUserSchema.methods.comparePassword = async function (
   return bcrypt.compare(candidatePassword, this.password);
 };
 
-const AdminUser: Model<IAdminUser> =
-  mongoose.models.AdminUser || mongoose.model<IAdminUser>("AdminUser", AdminUserSchema);
+const AdminUser = (mongoose.models.AdminUser as mongoose.Model<IAdminUser>) ||
+  mongoose.model<IAdminUser>("AdminUser", AdminUserSchema);
 
 export default AdminUser;

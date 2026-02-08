@@ -52,7 +52,7 @@ Payment Method: ${order.payment.preferredMethod}
 
 We will contact you shortly with payment details. Please keep this order reference for your records.
 
-Thank you for choosing Reborn Babies!
+Thank you for choosing Dolores Silicone!
     `.trim();
 
     // Send to customer
@@ -67,7 +67,7 @@ Thank you for choosing Reborn Babies!
 
     // Send admin notification if template is configured
     if (process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_ADMIN_ALERT) {
-      const adminEmail = process.env.ADMIN_EMAIL || "admin@rebornbabies.com";
+      const adminEmail = process.env.ADMIN_EMAIL || "contact@doloressilicone.com";
       const adminMessage = `
 New Order Received!
 
@@ -107,7 +107,7 @@ async function sendEmail(params: EmailParams) {
   // This will be called from client-side or server-side
   // For now, we'll use a server action or API route
   // EmailJS requires client-side calls, so we'll need to handle this differently
-  
+
   // For server-side, we can use the EmailJS API directly
   const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
   const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_ORDER_CONFIRMATION!;

@@ -1,6 +1,6 @@
-import mongoose, { Schema, Document, Model } from "mongoose";
+import mongoose from "mongoose";
 
-export interface ICustomer extends Document {
+export interface ICustomer {
   name: string;
   email: string;
   phone?: string;
@@ -16,7 +16,7 @@ export interface ICustomer extends Document {
   updatedAt: Date;
 }
 
-const CustomerSchema = new Schema<ICustomer>(
+const CustomerSchema = new mongoose.Schema<ICustomer>(
   {
     name: {
       type: String,
@@ -40,7 +40,7 @@ const CustomerSchema = new Schema<ICustomer>(
     },
     orders: [
       {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Order",
       },
     ],
@@ -52,8 +52,7 @@ const CustomerSchema = new Schema<ICustomer>(
 
 
 
-const Customer: Model<ICustomer> =
-  mongoose.models.Customer ||
+const Customer = (mongoose.models.Customer as mongoose.Model<ICustomer>) ||
   mongoose.model<ICustomer>("Customer", CustomerSchema);
 
 export default Customer;

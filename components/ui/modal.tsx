@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { FaTimes } from "react-icons/fa";
 
 interface ModalProps {
@@ -11,6 +12,12 @@ interface ModalProps {
 }
 
 export function Modal({ isOpen, onClose, title, children }: ModalProps) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -34,9 +41,9 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
     return () => document.removeEventListener("keydown", handleEscape);
   }, [isOpen, onClose]);
 
-  if (!isOpen) return null;
+  if (!mounted || !isOpen) return null;
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 bg-black/60 flex justify-center items-center z-[1000] transition-opacity"
       onClick={(e) => {
@@ -45,7 +52,7 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
         }
       }}
     >
-      <div className="bg-white p-6 md:p-12 max-w-2xl w-[95%] md:w-[90%] relative border border-pink-200 shadow-lg max-h-[90vh] overflow-y-auto rounded-2xl">
+      <div className="bg-white p-6 md:p-12 max-w-2xl w-[95%] md:w-[90%] relative border border-purple-200 shadow-lg max-h-[90vh] overflow-y-auto rounded-2xl animate-in fade-in zoom-in duration-200">
         <button
           type="button"
           onClick={onClose}
@@ -55,11 +62,12 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
           <FaTimes />
         </button>
         {title && (
-          <h2 className="text-left mb-6">{title}</h2>
+          <h2 className="text-left mb-6 font-display text-2xl md:text-3xl">{title}</h2>
         )}
         {children}
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 

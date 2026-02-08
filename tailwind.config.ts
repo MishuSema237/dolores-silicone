@@ -1,6 +1,7 @@
+// @ts-ignore
 import type { Config } from "tailwindcss";
 
-const config: Config = {
+const config: any = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,36 +10,36 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary pink palette - soft and baby-friendly
-        pink: {
-          50: "#fef7f9",
-          100: "#fdeef2",
-          200: "#fce0e8",
-          300: "#f9c8d6",
-          400: "#f5a5bd",
-          500: "#f08ba8", // Primary pink
-          600: "#e66b8f",
-          700: "#d44d75",
-          800: "#b83d62",
-          900: "#9a3552",
+        // Primary purple palette - sophisticated and royal
+        purple: {
+          50: "#f5f3ff",
+          100: "#ede9fe",
+          200: "#ddd6fe",
+          300: "#c4b5fd",
+          400: "#a78bfa",
+          500: "#8b5cf6", // Primary purple
+          600: "#7c3aed",
+          700: "#6d28d9",
+          800: "#5b21b6",
+          900: "#4c1d95",
         },
-        // Soft lavender accents
-        lavender: {
-          50: "#faf8fc",
-          100: "#f4f0f8",
-          200: "#e8e0f0",
-          300: "#d6c8e5",
-          400: "#b8a4d3",
-          500: "#9d82c0",
+        // Soft violet accents
+        violet: {
+          50: "#fdfaff",
+          100: "#f5f3ff",
+          200: "#ede9fe",
+          300: "#ddd6fe",
+          400: "#c4b5fd",
+          500: "#a78bfa",
         },
-        // Baby blue accents
-        babyblue: {
-          50: "#f0f9ff",
-          100: "#e0f2fe",
-          200: "#bae6fd",
-          300: "#7dd3fc",
-          400: "#38bdf8",
-          500: "#0ea5e9",
+        // Royal gold accents
+        gold: {
+          50: "#fffdf0",
+          100: "#fef9c3",
+          200: "#fef08a",
+          300: "#fde047",
+          400: "#facc15",
+          500: "#eab308",
         },
         // Neutrals matching wireframe
         gray: {

@@ -39,7 +39,7 @@ export default function FAQPage() {
         {
             _id: "6",
             question: "Do they come with a birth certificate?",
-            answer: "Yes, every Joanna's Reborn baby comes with a beautiful birth certificate and a certificate of authenticity, making your adoption official."
+            answer: "Yes, every Dolores Silicone baby comes with a beautiful birth certificate and a certificate of authenticity, making your adoption official."
         },
         {
             _id: "7",
@@ -136,16 +136,16 @@ export default function FAQPage() {
                     faqs.map((faq, index) => (
                         <div
                             key={faq._id}
-                            className="border border-pink-100 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow"
+                            className="border border-purple-100 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow"
                         >
                             <button
                                 onClick={() => toggleFAQ(index)}
-                                className="w-full px-6 py-4 flex items-center justify-between text-left bg-white hover:bg-pink-50/50 transition-colors"
+                                className="w-full px-6 py-4 flex items-center justify-between text-left bg-white hover:bg-purple-50/50 transition-colors"
                             >
                                 <span className="font-medium text-lg text-gray-800">
                                     {faq.question}
                                 </span>
-                                <span className="text-pink-500 ml-4">
+                                <span className="text-purple-500 ml-4">
                                     {openIndex === index ? <FaChevronUp /> : <FaChevronDown />}
                                 </span>
                             </button>
@@ -153,7 +153,7 @@ export default function FAQPage() {
                                 className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                                     }`}
                             >
-                                <div className="px-6 pb-6 pt-2 text-gray-600 leading-relaxed border-t border-pink-50">
+                                <div className="px-6 pb-6 pt-2 text-gray-600 leading-relaxed border-t border-purple-50">
                                     {faq.answer}
                                 </div>
                             </div>

@@ -1,6 +1,6 @@
-import mongoose, { Schema, Document, Model } from "mongoose";
+import mongoose from "mongoose";
 
-export interface ITestimonial extends Document {
+export interface ITestimonial {
     name: string;
     role: string;
     content: string;
@@ -10,7 +10,7 @@ export interface ITestimonial extends Document {
     updatedAt: Date;
 }
 
-const TestimonialSchema = new Schema<ITestimonial>(
+const TestimonialSchema = new mongoose.Schema<ITestimonial>(
     {
         name: {
             type: String,
@@ -42,8 +42,7 @@ const TestimonialSchema = new Schema<ITestimonial>(
     }
 );
 
-const Testimonial: Model<ITestimonial> =
-    mongoose.models.Testimonial ||
+const Testimonial = (mongoose.models.Testimonial as mongoose.Model<ITestimonial>) ||
     mongoose.model<ITestimonial>("Testimonial", TestimonialSchema);
 
 export default Testimonial;

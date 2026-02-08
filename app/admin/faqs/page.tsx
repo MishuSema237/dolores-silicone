@@ -201,7 +201,7 @@ export default function ManageFAQsPage() {
                             id="active"
                             checked={active}
                             onChange={(e) => setActive(e.target.checked)}
-                            className="w-4 h-4 text-pink-600 rounded border-gray-300 focus:ring-pink-500"
+                            className="w-4 h-4 text-purple-600 rounded border-gray-300 focus:ring-purple-500"
                         />
                         <label htmlFor="active" className="text-sm text-gray-700">
                             Active

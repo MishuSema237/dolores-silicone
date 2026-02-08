@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
     return {
-        name: "Joanna's Reborns",
-        short_name: "Joanna's Reborns",
+        name: "Dolores Silicone",
+        short_name: "Dolores Silicone",
         description: "Handcrafted silicone reborn babies designed with passion and precision.",
         start_url: '/',
         display: 'standalone',
@@ -16,12 +16,12 @@ export default function manifest(): MetadataRoute.Manifest {
                 type: 'image/x-icon',
             },
             {
-                src: '/assets/baby1.png',
+                src: '/assets/og-logo.png',
                 sizes: '192x192',
                 type: 'image/png',
             },
             {
-                src: '/assets/baby1.png',
+                src: '/assets/og-logo.png',
                 sizes: '512x512',
                 type: 'image/png',
             },

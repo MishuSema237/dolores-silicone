@@ -1,6 +1,6 @@
-import mongoose, { Schema, Document, Model } from "mongoose";
+import mongoose from "mongoose";
 
-export interface IContentBlock extends Document {
+export interface IContentBlock {
   key: string; // e.g., "homepage_hero", "faq_1", "testimonial_1"
   type: "text" | "html" | "image" | "testimonial" | "faq";
   title?: string;
@@ -12,7 +12,7 @@ export interface IContentBlock extends Document {
   updatedAt: Date;
 }
 
-const ContentBlockSchema = new Schema<IContentBlock>(
+const ContentBlockSchema = new mongoose.Schema<IContentBlock>(
   {
     key: {
       type: String,
@@ -29,7 +29,7 @@ const ContentBlockSchema = new Schema<IContentBlock>(
       type: String,
       required: true,
     },
-    metadata: Schema.Types.Mixed,
+    metadata: mongoose.Schema.Types.Mixed,
     order: {
       type: Number,
       default: 0,
@@ -47,8 +47,7 @@ const ContentBlockSchema = new Schema<IContentBlock>(
 
 ContentBlockSchema.index({ type: 1, active: 1, order: 1 });
 
-const ContentBlock: Model<IContentBlock> =
-  mongoose.models.ContentBlock ||
+const ContentBlock = (mongoose.models.ContentBlock as mongoose.Model<IContentBlock>) ||
   mongoose.model<IContentBlock>("ContentBlock", ContentBlockSchema);
 
 export default ContentBlock;

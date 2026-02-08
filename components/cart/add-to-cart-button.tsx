@@ -7,6 +7,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import toast from "react-hot-toast";
+import { AccessoryUpsellModal } from "@/components/shop/accessory-upsell-modal";
 
 interface AddToCartButtonProps {
   product: {
@@ -17,6 +18,7 @@ interface AddToCartButtonProps {
     slug: string;
     imageUrl?: string;
     images?: string[];
+    category?: string;
   };
 }
 
@@ -24,6 +26,7 @@ export function AddToCartButton({ product }: AddToCartButtonProps) {
   const { addItem } = useCart();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+  const [showUpsell, setShowUpsell] = useState(false);
 
   const handleAddToCart = async () => {
     setIsLoading(true);
@@ -42,8 +45,11 @@ export function AddToCartButton({ product }: AddToCartButtonProps) {
 
     toast.success("Added to cart!");
     setIsLoading(false);
-    // Optionally redirect to cart or show a toast notification
-    // router.push("/cart");
+
+    // Show upsell if it's a baby
+    if (product.category === "baby") {
+      setShowUpsell(true);
+    }
   };
 
   return (
@@ -102,6 +108,15 @@ export function AddToCartButton({ product }: AddToCartButtonProps) {
           </div>
         </div>
       </div>
+
+      <AccessoryUpsellModal
+        isOpen={showUpsell}
+        onClose={() => setShowUpsell(false)}
+        product={{
+          id: product.id || product._id || "",
+          name: product.name
+        }}
+      />
     </div>
   );
 }

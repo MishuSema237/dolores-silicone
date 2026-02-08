@@ -1,5 +1,10 @@
 "use client";
-
+import localFont from "next/font/local";
+const parisienne = localFont({
+  src: "../../public/assets/Parisienne-Regular.ttf",
+  variable: "--font-parisienne",
+  display: "swap",
+});
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -42,18 +47,43 @@ export default function SiteHeader() {
   }
 
   const isHome = pathname === "/";
-  const headerBg = isHome && !scrolled ? "bg-transparent" : "bg-white shadow-sm";
-  const textColor = isHome && !scrolled ? "!text-white" : "text-black";
-  const hoverColor = isHome && !scrolled ? "hover:text-pink-200" : "hover:text-pink-600";
-  const activeColor = isHome && !scrolled ? "!text-white" : "text-pink-600";
-  const activeBorder = isHome && !scrolled ? "border-white" : "border-pink-500";
-  const borderColor = isHome && !scrolled ? "border-transparent" : "border-pink-200";
+
+  // Header background logic
+  const headerBg = isHome
+    ? (scrolled ? "bg-white shadow-sm" : "bg-transparent")
+    : "bg-white shadow-sm";
+
+  // Text color logic
+  const textColor = isHome
+    ? (scrolled ? "text-black" : "!text-white")
+    : "text-black";
+
+  const hoverColor = isHome
+    ? (scrolled ? "hover:text-purple-600" : "hover:text-purple-200")
+    : "hover:text-purple-600";
+
+  const activeColor = isHome
+    ? (scrolled ? "text-purple-600" : "!text-white")
+    : "text-purple-600";
+
+  const activeBorder = isHome
+    ? (scrolled ? "border-purple-500" : "border-white")
+    : "border-purple-500";
+
+  const borderColor = isHome
+    ? (scrolled ? "border-purple-200" : "border-transparent")
+    : "border-purple-200";
+
   const positionClass = isHome ? "fixed top-0 left-0 right-0" : "sticky top-0";
 
   return (
-    <header className={`h-[60px] flex justify-between items-center px-6 z-50 transition-all duration-300 ${positionClass} ${headerBg} ${borderColor} border-b`}>
-      <Link href="/" className={`text-2xl font-bold no-underline hover:no-underline z-20 ${textColor}`}>
-        JOANNA'S REBORNS
+    <header
+      className={`h-[60px] flex justify-between items-center px-6 z-50 transition-all duration-300 ${positionClass} ${headerBg} ${borderColor} border-b`}
+      data-scrolled={scrolled}
+      data-path={pathname}
+    >
+      <Link href="/" style={{ fontFamily: "Parisienne" }} className={`text-3xl font-bold no-underline hover:no-underline z-20 !font-parisienne ${textColor}`}>
+        Dolores Silicone
       </Link>
 
       {/* Desktop Navigation */}
@@ -81,7 +111,7 @@ export default function SiteHeader() {
         >
           <FaShoppingCart />
           {itemCount > 0 && (
-            <span className="absolute -top-2 -right-2 bg-pink-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+            <span className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
               {itemCount > 9 ? "9+" : itemCount}
             </span>
           )}
@@ -97,7 +127,7 @@ export default function SiteHeader() {
       >
         {mobileMenuOpen ? <FaTimes /> : <FaBars />}
         {!mobileMenuOpen && itemCount > 0 && (
-          <span className="absolute top-0 right-0 bg-pink-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">
+          <span className="absolute top-0 right-0 bg-purple-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">
             {itemCount > 9 ? "9+" : itemCount}
           </span>
         )}
@@ -105,21 +135,27 @@ export default function SiteHeader() {
 
       {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white border-b border-pink-200 shadow-lg z-50 md:hidden rounded-b-xl">
+        <div className="absolute top-full left-0 right-0 bg-white border-b border-purple-200 shadow-lg z-50 md:hidden rounded-b-xl">
           <nav className="flex flex-col">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`px-6 py-4 text-base font-medium text-black no-underline border-b border-pink-100 hover:bg-pink-50 hover:text-pink-600 transition-colors ${isActive(link.href) ? "font-bold bg-pink-50 text-pink-600" : ""
+                className={`px-6 py-4 text-base font-medium text-black no-underline border-b border-purple-100 hover:bg-purple-50 hover:text-purple-600 transition-colors ${isActive(link.href) ? "font-bold bg-purple-50 text-purple-600" : ""
                   }`}
               >
                 {link.label}
               </Link>
             ))}
             <div className="flex items-center justify-between px-6 py-4">
-              <span className="font-medium text-black">Cart</span>
+              <Link
+                href="/cart"
+                onClick={() => setMobileMenuOpen(false)}
+                className="font-medium text-black"
+              >
+                Cart
+              </Link>
               <Link
                 href="/cart"
                 onClick={() => setMobileMenuOpen(false)}
@@ -128,7 +164,7 @@ export default function SiteHeader() {
               >
                 <FaShoppingCart />
                 {itemCount > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-pink-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  <span className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                     {itemCount > 9 ? "9+" : itemCount}
                   </span>
                 )}

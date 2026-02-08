@@ -4,7 +4,8 @@ import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { AddToCartButton } from "@/components/cart/add-to-cart-button";
 import { notFound } from "next/navigation";
 
-import { getProductBySlug } from "@/lib/utils/db-helpers";
+import { getProductBySlug, getProducts } from "@/lib/utils/db-helpers";
+import { ProductGrid } from "@/components/sections/product-grid";
 
 // ... (imports)
 
@@ -50,6 +51,21 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   if (!product) {
     notFound();
+  }
+
+  // Fetch Related Products
+  let relatedProducts = [];
+  try {
+    if (process.env.MONGODB_URI && product) {
+      relatedProducts = await getProducts({
+        category: product.category,
+        excludeId: product._id,
+        limit: 4,
+        status: 'active'
+      });
+    }
+  } catch (error) {
+    console.error("Error fetching related products:", error);
   }
 
   const fullStars = Math.floor(product.rating || 0);
@@ -101,7 +117,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
           <p className="mb-6">{product.description}</p>
 
-          <AddToCartButton product={product} />
+          <AddToCartButton product={{ ...product, id: product._id, category: product.category }} />
 
           {/* Accordion Sections */}
           <Accordion>
@@ -126,7 +142,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
           {/* Testimonial Card */}
           {product.testimonial && (
-            <div className="bg-pink-50 p-6 mt-8 rounded-xl shadow-sm">
+            <div className="bg-purple-50 p-6 mt-8 rounded-xl shadow-sm">
               <p className="italic mb-4 text-gray-700">{product.testimonial.quote}</p>
               <p className="font-semibold text-black mb-0">
                 - {product.testimonial.author}, {product.testimonial.title}
@@ -135,7 +151,16 @@ export default async function ProductPage({ params }: ProductPageProps) {
           )}
         </div>
       </div>
-    </div>
+
+      {/* Related Products Section */}
+      <div className="mt-24 mb-16 px-4">
+        <ProductGrid
+          products={relatedProducts}
+          title="You Might Also Like"
+          layout="carousel"
+        />
+      </div>
+    </div >
   );
 }
 

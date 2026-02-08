@@ -17,11 +17,11 @@ export function AccordionItem({
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
-    <div className="border-t border-pink-200 last:border-b">
+    <div className="border-t border-purple-200 last:border-b">
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center py-4 cursor-pointer bg-transparent border-0 text-left hover:text-pink-600 transition-colors"
+        className="w-full flex justify-between items-center py-4 cursor-pointer bg-transparent border-0 text-left hover:text-purple-600 transition-colors"
         aria-expanded={isOpen}
       >
         <h3 className="text-lg font-medium m-0">{title}</h3>

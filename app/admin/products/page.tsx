@@ -7,11 +7,13 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { FaPlus } from "react-icons/fa";
+import { cn } from "@/lib/utils/cn";
 
 export default function ManageProductsPage() {
     const router = useRouter();
     const [products, setProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [filter, setFilter] = useState<"baby" | "accessory" | "all">("baby");
 
     const fetchProducts = async () => {
         try {
@@ -48,6 +50,12 @@ export default function ManageProductsPage() {
         }
     };
 
+    // Filter products based on selected category
+    const filteredProducts = products.filter((product: any) => {
+        if (filter === "all") return true;
+        return (product.category || "baby") === filter;
+    });
+
     const columns = [
         {
             header: "Image",
@@ -80,6 +88,12 @@ export default function ManageProductsPage() {
             ),
         },
         {
+            header: "Category",
+            accessor: (product: any) => (
+                <span className="capitalize">{product.category || "baby"}</span>
+            ),
+        },
+        {
             header: "Status",
             accessor: (product: any) => (
                 <span
@@ -99,26 +113,65 @@ export default function ManageProductsPage() {
 
     return (
         <div>
-            <div className="flex items-center justify-between mb-8">
+            <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
                 <div>
                     <h1 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-2">
                         Products
                     </h1>
-                    <p className="text-gray-500">Manage your babies inventory.</p>
+                    <p className="text-gray-500">Manage your babies and accessories inventory.</p>
                 </div>
-                <Link href="/admin/babies/add">
-                    <Button className="flex items-center gap-2">
-                        <FaPlus /> Add Baby
-                    </Button>
-                </Link>
+                <div className="flex gap-3">
+                    <Link href="/admin/babies/add">
+                        <Button className="flex items-center gap-2">
+                            <FaPlus /> Add Product
+                        </Button>
+                    </Link>
+                </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100">
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                {/* Filter Tabs */}
+                <div className="flex border-b border-gray-100">
+                    <button
+                        onClick={() => setFilter("baby")}
+                        className={cn(
+                            "px-6 py-4 text-sm font-medium transition-colors border-b-2",
+                            filter === "baby"
+                                ? "border-purple-600 text-purple-600"
+                                : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                        )}
+                    >
+                        Babies
+                    </button>
+                    <button
+                        onClick={() => setFilter("accessory")}
+                        className={cn(
+                            "px-6 py-4 text-sm font-medium transition-colors border-b-2",
+                            filter === "accessory"
+                                ? "border-purple-600 text-purple-600"
+                                : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                        )}
+                    >
+                        Accessories
+                    </button>
+                    <button
+                        onClick={() => setFilter("all")}
+                        className={cn(
+                            "px-6 py-4 text-sm font-medium transition-colors border-b-2",
+                            filter === "all"
+                                ? "border-purple-600 text-purple-600"
+                                : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                        )}
+                    >
+                        All Products
+                    </button>
+                </div>
+
                 {isLoading ? (
                     <div className="p-8 text-center text-gray-500">Loading products...</div>
-                ) : products.length > 0 ? (
+                ) : filteredProducts.length > 0 ? (
                     <DataTable
-                        data={products}
+                        data={filteredProducts}
                         columns={columns}
                         keyField="_id"
                         onDelete={handleDelete}
@@ -127,9 +180,9 @@ export default function ManageProductsPage() {
                     />
                 ) : (
                     <div className="p-12 text-center">
-                        <p className="text-gray-500 mb-4">No babies found.</p>
+                        <p className="text-gray-500 mb-4">No products found in this category.</p>
                         <Link href="/admin/babies/add">
-                            <Button variant="outline">Add your first baby</Button>
+                            <Button variant="outline">Add a product</Button>
                         </Link>
                     </div>
                 )}

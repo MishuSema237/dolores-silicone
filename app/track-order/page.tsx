@@ -45,7 +45,7 @@ function TrackOrderContent() {
         switch (status) {
             case "completed": return <FaCheckCircle className="text-green-500 text-4xl" />;
             case "shipped": return <FaShippingFast className="text-blue-500 text-4xl" />;
-            default: return <FaBoxOpen className="text-pink-500 text-4xl" />;
+            default: return <FaBoxOpen className="text-purple-500 text-4xl" />;
         }
     };
 
@@ -66,7 +66,7 @@ function TrackOrderContent() {
                                 label="Order Reference"
                                 value={orderReference}
                                 onChange={(e) => setOrderReference(e.target.value.toUpperCase())}
-                                placeholder="e.g. RB20230001"
+                                placeholder="e.g. DS20260001"
                                 required
                             />
                             <FormInput
@@ -131,7 +131,7 @@ function TrackOrderContent() {
                                     {order.statusHistory.map((history: any, idx: number) => (
                                         <div key={idx} className="flex gap-4">
                                             <div className="flex flex-col items-center">
-                                                <div className="w-3 h-3 rounded-full bg-pink-500" />
+                                                <div className="w-3 h-3 rounded-full bg-purple-500" />
                                                 {idx < order.statusHistory.length - 1 && (
                                                     <div className="w-0.5 h-full bg-gray-200 my-1" />
                                                 )}
@@ -157,7 +157,7 @@ export default function TrackOrderPage() {
     return (
         <Suspense fallback={
             <div className="min-h-screen flex items-center justify-center bg-gray-50">
-                <div className="w-12 h-12 border-4 border-pink-600 border-t-transparent rounded-full animate-spin"></div>
+                <div className="w-12 h-12 border-4 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
             </div>
         }>
             <TrackOrderContent />

@@ -138,7 +138,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                             Send payment details or updates to <strong>{order.customer.email}</strong>.
                         </p>
                         <textarea
-                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all"
+                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all"
                             rows={6}
                             placeholder="Enter your message here..."
                             value={replyMessage}
@@ -156,8 +156,8 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                                     file:mr-4 file:py-2 file:px-4
                                     file:rounded-full file:border-0
                                     file:text-sm file:font-semibold
-                                    file:bg-pink-50 file:text-pink-700
-                                    hover:file:bg-pink-100"
+                                    file:bg-purple-50 file:text-purple-700
+                                    hover:file:bg-purple-100"
                             />
                             {attachments.length > 0 && (
                                 <div className="mt-2 text-sm text-gray-500">

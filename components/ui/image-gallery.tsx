@@ -45,7 +45,7 @@ export function ImageGallery({ images, productName }: ImageGalleryProps) {
             key={index}
             type="button"
             onClick={() => setSelectedIndex(index)}
-            className={`w-[100px] h-[100px] flex-shrink-0 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center hover:opacity-80 transition-opacity ${selectedIndex === index ? "ring-2 ring-pink-400" : ""
+            className={`w-[100px] h-[100px] flex-shrink-0 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center hover:opacity-80 transition-opacity ${selectedIndex === index ? "ring-2 ring-purple-400" : ""
               }`}
           >
             {hasRealImages && image ? (

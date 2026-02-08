@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
 import { SiteFooter } from "@/components/layout/site-footer";
 import SiteHeader from "@/components/layout/site-header";
 import { BackToTop } from "@/components/layout/back-to-top";
@@ -20,14 +21,20 @@ const displayFont = Playfair_Display({
   variable: "--font-display",
 });
 
+const parisienne = localFont({
+  src: "../public/assets/Parisienne-Regular.ttf",
+  variable: "--font-parisienne",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://joannasreborns.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://doloressilicone.com"),
   title: {
-    default: "Joanna's Reborns | Handcrafted Silicone Reborn Babies",
-    template: "%s | Joanna's Reborns",
+    default: "Dolores Silicone | Handcrafted Silicone Reborn Babies",
+    template: "%s | Dolores Silicone",
   },
   description:
-    "Discover handcrafted silicone reborn babies, designed with passion and precision. Bring comfort, relief, and healing to your home with our lifelike creations.",
+    "Handcrafted platinum silicone reborn babies. Each baby is a unique masterpiece created with love and care.",
   keywords: [
     "reborn babies",
     "silicone babies",
@@ -38,31 +45,31 @@ export const metadata: Metadata = {
     "silicone reborns",
     "custom reborns",
   ],
-  authors: [{ name: "Joanna's Reborns" }],
-  creator: "Joanna's Reborns",
+  authors: [{ name: "Dolores Silicone" }],
+  creator: "Dolores Silicone",
+  publisher: "Dolores Silicone",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "/",
-    title: "Joanna's Reborns | Handcrafted Silicone Reborn Babies",
-    description:
-      "Handcrafted with love to bring comfort, relief, and healing to hearts grieving the loss of a child or seeking companionship.",
-    siteName: "Joanna's Reborns",
+    url: "https://doloressilicone.com",
+    title: "Dolores Silicone | Handcrafted Silicone Reborn Babies",
+    description: "Experience the artistry of lifelike silicone reborn dolls. Handcrafted for collectors and families seeking comfort and joy.",
+    siteName: "Dolores Silicone",
     images: [
       {
         url: '/assets/og-logo.jpg',
         width: 1200,
         height: 630,
-        alt: "Joanna's Reborns - Lifelike Reborn Dolls",
+        alt: "Dolores Silicone - Lifelike Reborn Dolls",
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Joanna's Reborns | Handcrafted Lifelike Dolls",
-    description: "Discover our collection of handcrafted, lifelike reborn dolls. Each baby is a unique work of art waiting to be adopted.",
+    title: "Dolores Silicone | Handcrafted Lifelike Dolls",
+    description: "The peak of realism in silicone reborn art. Handcrafted babies that feel real in your arms.",
     images: ['/assets/og-logo.jpg'],
-    creator: '@joannasreborns',
+    creator: '@doloressilicone',
   },
   robots: {
     index: true,
@@ -80,10 +87,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/assets/baby1.png', type: 'image/png' },
+      { url: '/assets/og-logo.png', type: 'image/png' },
     ],
     apple: [
-      { url: '/assets/baby1.png' },
+      { url: '/assets/og-logo.png' },
     ],
   },
 };
@@ -96,7 +103,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bodyFont.variable} ${displayFont.variable} bg-white text-black antialiased`}
+        className={`${bodyFont.variable} ${displayFont.variable} ${parisienne.variable} bg-white text-black antialiased`}
       >
         <CartProvider>
           <div className="flex min-h-screen flex-col">

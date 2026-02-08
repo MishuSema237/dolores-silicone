@@ -1,7 +1,8 @@
-import { InputHTMLAttributes, TextareaHTMLAttributes } from "react";
+import React, { InputHTMLAttributes, TextareaHTMLAttributes } from "react";
 
 interface FormInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
+  id?: string;
   required?: boolean;
   error?: string;
   helpText?: string;
@@ -24,7 +25,7 @@ export function FormInput({
       </label>
       <div className="relative">
         <input
-          className={`w-full h-12 px-4 border border-gray-200 rounded-xl bg-white text-gray-900 text-base focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all ${endIcon ? "pr-12" : ""
+          className={`w-full h-12 px-4 border border-gray-200 rounded-xl bg-white text-gray-900 text-base focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all ${endIcon ? "pr-12" : ""
             } ${className}`}
           {...props}
         />
@@ -63,7 +64,7 @@ export function FormTextarea({
         {required && <span className="text-red-500 ml-1">*</span>}
       </label>
       <textarea
-        className={`w-full px-4 py-3 border border-gray-200 rounded-xl bg-white text-gray-900 text-base resize-y focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all ${className}`}
+        className={`w-full px-4 py-3 border border-gray-200 rounded-xl bg-white text-gray-900 text-base resize-y focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all ${className}`}
         {...props}
       />
       {helpText && <p className="text-xs text-gray-500 mt-1">{helpText}</p>}
@@ -95,7 +96,7 @@ export function FormSelect({
         {required && <span className="text-red-500 ml-1">*</span>}
       </label>
       <select
-        className={`w-full h-12 px-4 border border-gray-200 rounded-xl bg-white text-gray-900 text-base focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all ${className}`}
+        className={`w-full h-12 px-4 border border-gray-200 rounded-xl bg-white text-gray-900 text-base focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all ${className}`}
         {...props}
       >
         {options.map((option) => (
@@ -118,7 +119,7 @@ export function RadioOption({ label, ...props }: RadioOptionProps) {
     <div className="flex items-center mb-2">
       <input
         type="radio"
-        className="w-4 h-4 border border-gray-300 rounded-full mr-2 cursor-pointer appearance-none checked:bg-pink-500 checked:border-pink-500 relative checked:before:content-[''] checked:before:block checked:before:w-1.5 checked:before:h-1.5 checked:before:bg-white checked:before:rounded-full checked:before:absolute checked:before:top-1/2 checked:before:left-1/2 checked:before:-translate-x-1/2 checked:before:-translate-y-1/2 transition-all"
+        className="w-4 h-4 border border-gray-300 rounded-full mr-2 cursor-pointer appearance-none checked:bg-purple-600 checked:border-purple-600 relative checked:before:content-[''] checked:before:block checked:before:w-1.5 checked:before:h-1.5 checked:before:bg-white checked:before:rounded-full checked:before:absolute checked:before:top-1/2 checked:before:left-1/2 checked:before:-translate-x-1/2 checked:before:-translate-y-1/2 transition-all"
         {...props}
       />
       <label

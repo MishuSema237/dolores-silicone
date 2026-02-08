@@ -27,11 +27,15 @@ export async function getProducts(filters?: {
   status?: string;
   featured?: boolean;
   limit?: number;
+  category?: string;
+  excludeId?: string;
 }) {
   return withDB(async () => {
     const query: any = {};
     if (filters?.status) query.status = filters.status;
     if (filters?.featured !== undefined) query.featured = filters.featured;
+    if (filters?.category) query.category = filters.category;
+    if (filters?.excludeId) query._id = { $ne: filters.excludeId };
 
     let queryBuilder = Product.find(query).sort({ createdAt: -1 });
     if (filters?.limit) {

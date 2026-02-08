@@ -1,6 +1,6 @@
-import mongoose, { Schema, Document, Model } from "mongoose";
+import mongoose from "mongoose";
 
-export interface IProduct extends Document {
+export interface IProduct {
   name: string;
   slug: string;
   price: number;
@@ -17,6 +17,7 @@ export interface IProduct extends Document {
   };
   rating?: number;
   reviewCount?: number;
+  category: "baby" | "accessory";
   status: "active" | "inactive" | "sold_out";
   featured: boolean;
   createdAt: Date;
@@ -28,7 +29,7 @@ export interface IProduct extends Document {
   };
 }
 
-const ProductSchema = new Schema<IProduct>(
+const ProductSchema = new mongoose.Schema<IProduct>(
   {
     name: {
       type: String,
@@ -73,6 +74,11 @@ const ProductSchema = new Schema<IProduct>(
       type: Number,
       default: 0,
     },
+    category: {
+      type: String,
+      enum: ["baby", "accessory"],
+      default: "baby",
+    },
     status: {
       type: String,
       enum: ["active", "inactive", "sold_out"],
@@ -97,8 +103,8 @@ const ProductSchema = new Schema<IProduct>(
 ProductSchema.index({ status: 1, featured: 1 });
 ProductSchema.index({ price: 1 });
 
-const Product: Model<IProduct> =
-  mongoose.models.Product || mongoose.model<IProduct>("Product", ProductSchema);
+const Product = (mongoose.models.Product as mongoose.Model<IProduct>) ||
+  mongoose.model<IProduct>("Product", ProductSchema);
 
 export default Product;
 

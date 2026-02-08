@@ -35,4 +35,6 @@ const SocialMediaSchema = new mongoose.Schema(
     { timestamps: true }
 );
 
-export default mongoose.models.SocialMedia || mongoose.model("SocialMedia", SocialMediaSchema);
+const SocialMedia = mongoose.models.SocialMedia || mongoose.model("SocialMedia", SocialMediaSchema);
+
+export default SocialMedia;

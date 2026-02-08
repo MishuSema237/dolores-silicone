@@ -37,38 +37,58 @@ export function TestimonialsSection() {
 
   return (
     <>
-      <section className="py-10 mb-6 bg-pink-50/50 rounded-3xl">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-center mb-12 font-serif text-3xl md:text-4xl text-gray-900">Hear From Our Happy Families Worldwide</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      <section className="py-32 bg-gray-50/80 relative overflow-hidden">
+        {/* Background Decorative Element */}
+        <div className="absolute right-0 top-0 w-1/3 h-full bg-purple-100/20 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-24 max-w-3xl mx-auto">
+            <span className="text-purple-600 font-black uppercase tracking-widest text-sm mb-4 block">Collector Testimonials</span>
+            <h2 className="mb-6 font-display">Hear From Our Globally <br /> Growing Family</h2>
+            <p className="text-xl text-gray-500 font-light">
+              We take pride in every match made. Read how our babies have brought warmth and joy to homes across the world.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-white p-8 text-center flex flex-col justify-between rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-pink-50 relative overflow-hidden group"
+                className="glass p-10 rounded-[2.5rem] shadow-premium hover:shadow-2xl transition-all duration-500 border border-white group relative"
               >
-                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-300 to-purple-300" />
-                <div className="mb-6 relative z-10">
-                  <div className="flex justify-center gap-1 text-yellow-400 text-lg mb-6">
+                <div className="flex justify-between items-start mb-8">
+                  <div className="flex gap-1 text-yellow-400">
                     {[...Array(testimonial.rating || 5)].map((_, i) => (
-                      <FaStar key={i} className="drop-shadow-sm" />
+                      <FaStar key={i} className="text-sm" />
                     ))}
                   </div>
-                  <p className="italic text-gray-600 leading-relaxed text-lg font-light">"{testimonial.content}"</p>
+                  <div className="text-purple-100 text-5xl font-serif leading-none select-none opacity-50 group-hover:opacity-100 transition-opacity">“</div>
                 </div>
-                <div className="relative z-10">
-                  <div className="w-12 h-1 bg-pink-100 mx-auto mb-4 rounded-full" />
-                  <p className="font-bold text-gray-900 text-lg">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-xs text-pink-500 font-bold uppercase tracking-widest mt-1">{testimonial.role}</p>
+
+                <p className="text-gray-700 italic leading-relaxed text-lg font-light mb-10 min-h-[120px]">
+                  "{testimonial.content}"
+                </p>
+
+                <div className="pt-8 border-t border-purple-50 flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-100 to-indigo-100 flex items-center justify-center font-bold text-purple-600 text-sm">
+                    {testimonial.name.charAt(0)}
+                  </div>
+                  <div>
+                    <h4 className="text-base font-bold text-gray-900 leading-tight mb-1">{testimonial.name}</h4>
+                    <p className="text-xs text-purple-500 font-black uppercase tracking-widest">{testimonial.role}</p>
+                  </div>
                 </div>
-                <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-pink-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700 pointer-events-none" />
               </div>
             ))}
           </div>
-          <div className="text-center">
-            <Button variant="outline" onClick={() => setModalOpen(true)} className="bg-white hover:bg-gray-50">
-              Read All Testimonials
+
+          <div className="text-center mt-24">
+            <Button
+              variant="outline"
+              onClick={() => setModalOpen(true)}
+              className="h-14 px-10 rounded-2xl border-purple-200 text-purple-700 hover:bg-purple-50 font-bold tracking-wide"
+            >
+              Read All Stories
             </Button>
           </div>
         </div>

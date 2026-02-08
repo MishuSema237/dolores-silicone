@@ -17,8 +17,11 @@ export async function POST(request: NextRequest) {
     }
 
     const admin = await AdminUser.findOne({ email: email.toLowerCase() });
+    console.log("Login attempt for:", email.toLowerCase());
+    console.log("Admin found in DB:", !!admin);
 
     if (!admin) {
+      console.log("Login failed: User not found");
       return NextResponse.json(
         { error: "Invalid credentials" },
         { status: 401 }
@@ -26,8 +29,10 @@ export async function POST(request: NextRequest) {
     }
 
     const isValid = await admin.comparePassword(password);
+    console.log("Password is valid:", isValid);
 
     if (!isValid) {
+      console.log("Login failed: Password mismatch");
       return NextResponse.json(
         { error: "Invalid credentials" },
         { status: 401 }

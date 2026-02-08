@@ -2,8 +2,8 @@ import { getProducts } from "@/lib/utils/db-helpers";
 import { ShopClient } from "@/components/shop/shop-client";
 
 export const metadata = {
-  title: "Shop - Joanna's Reborns",
-  description: "Browse our complete collection of handcrafted silicone reborn babies",
+  title: "Shop - Dolores Silicone",
+  description: "Browse our complete collection of handcrafted silicone reborn babies and accessories",
 };
 
 export default async function ShopPage() {

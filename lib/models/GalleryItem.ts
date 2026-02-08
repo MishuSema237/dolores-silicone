@@ -1,6 +1,6 @@
-import mongoose, { Schema, Document, Model } from "mongoose";
+import mongoose from "mongoose";
 
-export interface IGalleryItem extends Document {
+export interface IGalleryItem {
   title?: string;
   description?: string;
   imageUrl: string;
@@ -11,7 +11,7 @@ export interface IGalleryItem extends Document {
   updatedAt: Date;
 }
 
-const GalleryItemSchema = new Schema<IGalleryItem>(
+const GalleryItemSchema = new mongoose.Schema<IGalleryItem>(
   {
     title: String,
     description: String,
@@ -40,8 +40,7 @@ const GalleryItemSchema = new Schema<IGalleryItem>(
 GalleryItemSchema.index({ featured: 1, order: 1 });
 GalleryItemSchema.index({ tags: 1 });
 
-const GalleryItem: Model<IGalleryItem> =
-  mongoose.models.GalleryItem ||
+const GalleryItem = (mongoose.models.GalleryItem as mongoose.Model<IGalleryItem>) ||
   mongoose.model<IGalleryItem>("GalleryItem", GalleryItemSchema);
 
 export default GalleryItem;

@@ -102,7 +102,7 @@ export default function PaymentSettingsPage() {
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-2">Payment Details (Email Template)</label>
                             <textarea
-                                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all"
+                                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all"
                                 rows={6}
                                 required
                                 placeholder="Enter bank details or payment instructions..."

@@ -1,0 +1,8 @@
+﻿components/shop/accessory-card.tsx(95,21): error TS2322: Type '(e: React.MouseEvent) => void' is not assignable to type '(e?: MouseEvent<HTMLButtonElement, MouseEvent> | undefined) => void'.
+  Types of parameters 'e' and 'e' are incompatible.
+    Type 'MouseEvent<HTMLButtonElement, MouseEvent> | undefined' is not assignable to type 'MouseEvent<Element, MouseEvent>'.
+      Type 'undefined' is not assignable to type 'MouseEvent<Element, MouseEvent>'.
+components/shop/accessory-upsell-modal.tsx(61,13): error TS2353: Object literal may only specify known properties, and 'parentProductId' does not exist in type 'Omit<CartItem, "quantity">'.
+diagnose-db.ts(14,47): error TS18048: 'db' is possibly 'undefined'.
+diagnose-db.ts(16,35): error TS18048: 'db' is possibly 'undefined'.
+diagnose-db.ts(20,33): error TS18048: 'db' is possibly 'undefined'.

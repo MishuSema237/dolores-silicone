@@ -10,6 +10,8 @@ export interface CartItem {
   imageUrl?: string;
   images?: string[];
   quantity: number;
+  category?: string;
+  parentProductId?: string;
   attributes?: {
     hairColor?: string;
     eyeColor?: string;

@@ -67,7 +67,7 @@ export default function AdminLayout({
     if (isLoading) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-50">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-pink-500"></div>
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500"></div>
             </div>
         );
     }
@@ -84,7 +84,7 @@ export default function AdminLayout({
         <div className="min-h-screen bg-gray-50 flex font-sans">
             {/* Mobile Header */}
             <div className="md:hidden fixed top-0 left-0 right-0 bg-white border-b border-gray-200 px-4 py-3 z-20 flex justify-between items-center h-16">
-                <h2 className="text-lg font-serif font-bold text-pink-600">Joanna's Reborns</h2>
+                <h2 className="text-lg font-serif font-bold text-purple-600">Dolores Silicone</h2>
                 <Button id="mobile-menu-button" variant="ghost" size="icon" onClick={() => document.getElementById('mobile-sidebar')?.classList.toggle('hidden')}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 </Button>
@@ -93,14 +93,14 @@ export default function AdminLayout({
             {/* Sidebar */}
             <aside id="mobile-sidebar" className="hidden md:flex flex-col w-64 bg-white border-r border-gray-200 fixed inset-y-0 z-30 pt-16 md:pt-0 transition-transform shadow-lg md:shadow-none">
                 <div className="p-6 border-b border-gray-100 hidden md:block flex-shrink-0">
-                    <h2 className="text-2xl font-serif font-bold text-pink-600">Joanna's Reborns</h2>
+                    <h2 className="text-2xl font-serif font-bold text-purple-600">Dolores Silicone</h2>
                 </div>
                 <nav className="p-4 space-y-2 flex-1 overflow-y-auto">
                     <Link
                         href="/admin/dashboard"
                         onClick={() => document.getElementById('mobile-sidebar')?.classList.add('hidden')}
                         className={`block px-4 py-2 rounded-lg transition-colors font-medium ${pathname === "/admin/dashboard"
-                            ? "bg-pink-50 text-pink-600"
+                            ? "bg-purple-50 text-purple-600"
                             : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                             }`}
                     >
@@ -110,17 +110,27 @@ export default function AdminLayout({
                         href="/admin/products"
                         onClick={() => document.getElementById('mobile-sidebar')?.classList.add('hidden')}
                         className={`block px-4 py-2 rounded-lg transition-colors font-medium ${pathname.startsWith("/admin/products") || pathname.startsWith("/admin/babies")
-                            ? "bg-pink-50 text-pink-600"
+                            ? "bg-purple-50 text-purple-600"
                             : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                             }`}
                     >
-                        Products
+                        Babies
+                    </Link>
+                    <Link
+                        href="/admin/accessories"
+                        onClick={() => document.getElementById('mobile-sidebar')?.classList.add('hidden')}
+                        className={`block px-4 py-2 rounded-lg transition-colors font-medium ${pathname.startsWith("/admin/accessories")
+                            ? "bg-purple-50 text-purple-600"
+                            : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                            }`}
+                    >
+                        Accessories
                     </Link>
                     <Link
                         href="/admin/orders"
                         onClick={() => document.getElementById('mobile-sidebar')?.classList.add('hidden')}
                         className={`block px-4 py-2 rounded-lg transition-colors font-medium ${pathname.startsWith("/admin/orders")
-                            ? "bg-pink-50 text-pink-600"
+                            ? "bg-purple-50 text-purple-600"
                             : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                             }`}
                     >
@@ -130,7 +140,7 @@ export default function AdminLayout({
                         href="/admin/gallery"
                         onClick={() => document.getElementById('mobile-sidebar')?.classList.add('hidden')}
                         className={`block px-4 py-2 rounded-lg transition-colors font-medium ${pathname.startsWith("/admin/gallery")
-                            ? "bg-pink-50 text-pink-600"
+                            ? "bg-purple-50 text-purple-600"
                             : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                             }`}
                     >
@@ -140,7 +150,7 @@ export default function AdminLayout({
                         href="/admin/testimonials"
                         onClick={() => document.getElementById('mobile-sidebar')?.classList.add('hidden')}
                         className={`block px-4 py-2 rounded-lg transition-colors font-medium ${pathname.startsWith("/admin/testimonials")
-                            ? "bg-pink-50 text-pink-600"
+                            ? "bg-purple-50 text-purple-600"
                             : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                             }`}
                     >
@@ -154,7 +164,7 @@ export default function AdminLayout({
                         href="/admin/socials"
                         onClick={() => document.getElementById('mobile-sidebar')?.classList.add('hidden')}
                         className={`block px-4 py-2 rounded-lg transition-colors font-medium ${pathname.startsWith("/admin/socials")
-                            ? "bg-pink-50 text-pink-600"
+                            ? "bg-purple-50 text-purple-600"
                             : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                             }`}
                     >
@@ -164,7 +174,7 @@ export default function AdminLayout({
                         href="/admin/payment-methods"
                         onClick={() => document.getElementById('mobile-sidebar')?.classList.add('hidden')}
                         className={`block px-4 py-2 rounded-lg transition-colors font-medium ${pathname.startsWith("/admin/payment-methods")
-                            ? "bg-pink-50 text-pink-600"
+                            ? "bg-purple-50 text-purple-600"
                             : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                             }`}
                     >

@@ -25,7 +25,7 @@ async function connectMongoose() {
     };
 
     cached.promise = mongoose.connect(MONGODB_URI!, opts).then((mongoose) => {
-      console.log("MongoDB connected successfully");
+      console.log("MongoDB connected successfully to:", MONGODB_URI?.split('@')[1]);
       return mongoose;
     });
   }

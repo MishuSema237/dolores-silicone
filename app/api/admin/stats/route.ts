@@ -12,14 +12,16 @@ export async function GET() {
         const [
             totalOrders,
             pendingOrders,
-            totalProducts,
+            totalBabies,
+            totalAccessories,
             totalGalleryImages,
             totalTestimonials,
             recentOrders,
         ] = await Promise.all([
             Order.countDocuments({}),
             Order.countDocuments({ status: "pending" }),
-            Product.countDocuments({}),
+            Product.countDocuments({ category: 'baby' }),
+            Product.countDocuments({ category: 'accessory' }),
             GalleryItem.countDocuments({}),
             Testimonial.countDocuments({}),
             Order.find({}).sort({ createdAt: -1 }).limit(5),
@@ -30,7 +32,11 @@ export async function GET() {
                 total: totalOrders,
                 pending: pendingOrders,
             },
-            products: totalProducts,
+            products: {
+                babies: totalBabies,
+                accessories: totalAccessories,
+                total: totalBabies + totalAccessories
+            },
             gallery: totalGalleryImages,
             testimonials: totalTestimonials,
             recentOrders,

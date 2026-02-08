@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ButtonHTMLAttributes, ReactNode } from "react";
+import { cn } from "@/lib/utils/cn";
 
 interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "onClick"> {
   variant?: "solid" | "outline" | "ghost" | "destructive";
@@ -16,17 +17,17 @@ export function Button({
   children,
   href,
   onClick,
-  className = "",
+  className,
   ...props
 }: ButtonProps) {
   const baseClasses =
-    "inline-flex items-center justify-center whitespace-nowrap transition-all duration-300 rounded-xl font-medium cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-500 disabled:pointer-events-none disabled:opacity-50";
+    "inline-flex items-center justify-center whitespace-nowrap transition-all duration-300 rounded-xl font-medium cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 disabled:pointer-events-none disabled:opacity-50";
 
   const variantClasses = {
     solid:
-      "bg-pink-500 border border-pink-500 text-white hover:bg-pink-600 hover:border-pink-600 active:bg-pink-700 active:border-pink-700 hover:scale-105 shadow-sm hover:shadow-md",
+      "bg-purple-600 border border-purple-600 text-white hover:bg-purple-700 hover:border-purple-700 active:bg-purple-800 active:border-purple-800 hover:scale-105 shadow-sm hover:shadow-md",
     outline:
-      "bg-white text-pink-600 border border-pink-300 hover:bg-pink-50 active:bg-pink-100 hover:border-pink-400 hover:text-pink-700 shadow-sm",
+      "bg-white text-purple-600 border border-purple-300 hover:bg-purple-50 active:bg-purple-100 hover:border-purple-400 hover:text-purple-700 shadow-sm",
     ghost:
       "hover:bg-gray-100 hover:text-gray-900 text-gray-600",
     destructive:
@@ -40,18 +41,21 @@ export function Button({
     icon: "h-10 w-10",
   };
 
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} className={cn(baseClasses, variantClasses[variant], sizeClasses[size], className)}>
         {children}
       </Link>
     );
   }
 
   return (
-    <button type="button" className={classes} onClick={onClick} {...props}>
+    <button
+      type="button"
+      className={cn(baseClasses, variantClasses[variant], sizeClasses[size], className)}
+      onClick={onClick}
+      {...props}
+    >
       {children}
     </button>
   );

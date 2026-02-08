@@ -87,7 +87,7 @@ export function PrintButton() {
         >
             {isGenerating ? (
                 <>
-                    <div className="w-4 h-4 border-2 border-pink-600 border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-4 h-4 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
                     Generating PDF...
                 </>
             ) : (
