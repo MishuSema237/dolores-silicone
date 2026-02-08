@@ -28,7 +28,7 @@ const parisienne = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://doloressilicone.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://dolores-silicone.vercel.app"),
   title: {
     default: "Dolores Silicone | Handcrafted Silicone Reborn Babies",
     template: "%s | Dolores Silicone",
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://doloressilicone.com",
+    url: "https://dolores-silicone.vercel.app",
     title: "Dolores Silicone | Handcrafted Silicone Reborn Babies",
     description: "Experience the artistry of lifelike silicone reborn dolls. Handcrafted for collectors and families seeking comfort and joy.",
     siteName: "Dolores Silicone",
     images: [
       {
-        url: '/assets/og-logo.jpg',
+        url: '/assets/og-logo.png',
         width: 1200,
         height: 630,
         alt: "Dolores Silicone - Lifelike Reborn Dolls",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Dolores Silicone | Handcrafted Lifelike Dolls",
     description: "The peak of realism in silicone reborn art. Handcrafted babies that feel real in your arms.",
-    images: ['/assets/og-logo.jpg'],
+    images: ['/assets/og-logo.png'],
     creator: '@doloressilicone',
   },
   robots: {
@@ -88,10 +88,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/assets/og-logo.png', type: 'image/png' },
+      { url: '/icon1.png', type: 'image/png' },
     ],
     apple: [
-      { url: '/assets/og-logo.png' },
+      { url: '/apple-icon.png' },
     ],
   },
 };
