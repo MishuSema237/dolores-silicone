@@ -148,14 +148,14 @@ export function ProductGrid({
 
         {/* Grid Layout (Desktop) */}
         {layout === "grid" && (
-          <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 mb-12">
+          <div className="hidden md:grid grid-cols-3 xl:grid-cols-4 gap-8 mb-12">
             {currentProducts.map((product) => renderCard(product))}
           </div>
         )}
 
         {/* Grid Layout (Mobile) */}
         {mobileLayout === "grid" && (
-          <div className="md:hidden grid grid-cols-1 gap-8 mb-8">
+          <div className="md:hidden grid grid-cols-2 gap-8 mb-8">
             {currentProducts.map((product) => renderCard(product))}
           </div>
         )}

@@ -31,7 +31,7 @@ export function ImageGallery({ images, productName }: ImageGalleryProps) {
             alt={`${productName} - Image ${selectedIndex + 1}`}
             width={800}
             height={500}
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 lg:rounded-md"
           />
         ) : (
           <span className="text-gray-400 text-xl">Full Photo of {productName}</span>

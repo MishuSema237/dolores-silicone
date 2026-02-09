@@ -72,7 +72,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const hasHalfStar = (product.rating || 0) % 1 >= 0.5;
 
   return (
-    <div className="w-full max-w-viewport mx-auto">
+    <div className="w-full max-w-viewport mx-auto lg:px-6 lg:pt-6">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
         {/* Left Column: Image Gallery */}
         <div className="lg:col-span-6">
@@ -83,7 +83,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         </div>
 
         {/* Right Column: Product Details */}
-        <div className="lg:col-span-5 px-4 lg:px-0">
+        <div className="lg:col-span-6 px-6 lg:px-0">
           <h1 className="mb-4">{product.name}</h1>
           <p className="text-3xl font-semibold mb-4">${product.price.toFixed(2)}</p>
 
@@ -153,7 +153,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
       </div>
 
       {/* Related Products Section */}
-      <div className="mt-24 mb-6 px-4">
+      <div className="mt-24 mb-6 px-6">
         <ProductGrid
           products={relatedProducts}
           title="You Might Also Like"

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 export function MainContent({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
     const isHome = pathname === "/";
+    const isProductDetails = pathname?.startsWith("/product/");
     const isAdmin = pathname?.startsWith("/admin");
 
     if (isAdmin) {
@@ -17,7 +18,7 @@ export function MainContent({ children }: { children: React.ReactNode }) {
 
     return (
         <main
-            className={`flex-1 w-full ${isHome ? "p-0" : "max-w-viewport mx-auto pt-[35px]"
+            className={`flex-1 w-full ${isHome || isProductDetails ? "p-0" : "max-w-viewport mx-auto px-4 md:px-8 pt-[35px]"
                 }`}
         >
             {children}
