@@ -412,7 +412,7 @@ export default function OrderPage() {
                 </div>
                 <div className="flex justify-between text-sm text-gray-500">
                   <span>Shipping</span>
-                  <span>Calculated later</span>
+                  <span>To Be Confirmed</span>
                 </div>
               </div>
 
