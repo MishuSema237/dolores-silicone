@@ -12,19 +12,19 @@ export default function CartPage() {
 
   if (items.length === 0) {
     return (
-      <div className="w-full max-w-viewport mx-auto text-center py-12">
-        <h1 className="mb-4">Your Cart is Empty</h1>
-        <p className="mb-8 text-gray-500">
+      <div className="w-full max-w-viewport mx-auto text-center py-8 md:py-12">
+        <h1 className="mb-4 text-2xl md:text-4xl">Your Cart is Empty</h1>
+        <p className="mb-8 text-gray-500 text-sm md:text-base">
           Start shopping to add items to your cart.
         </p>
-        <Button href="/shop">Continue Shopping</Button>
+        <Button href="/shop" className="h-10 px-6 rounded-md md:h-14 md:px-10 md:rounded-2xl">Continue Shopping</Button>
       </div>
     );
   }
 
   return (
     <div className="w-full max-w-viewport mx-auto">
-      <h1 className="mb-12">Your Cart</h1>
+      <h1 className="mb-6 md:mb-12 text-2xl md:text-4xl font-serif">Your Cart</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Cart Items */}
@@ -41,11 +41,11 @@ export default function CartPage() {
           </div>
 
           {/* Actions */}
-          <div className="flex gap-4 mt-8 flex-col sm:flex-row ">
-            <Button variant="outline" onClick={clearCart}>
+          <div className="flex gap-4 mt-4 md:mt-8 flex-col sm:flex-row ">
+            <Button variant="outline" onClick={clearCart} className="h-10 px-6 rounded-md md:h-14 md:px-10 md:rounded-2xl text-sm md:text-base">
               Clear Cart
             </Button>
-            <Button variant="outline" href="/shop">
+            <Button variant="outline" href="/shop" className="h-10 px-6 rounded-md md:h-14 md:px-10 md:rounded-2xl text-sm md:text-base">
               Continue Shopping
             </Button>
           </div>
@@ -79,7 +79,7 @@ export default function CartPage() {
               confirmation. We will contact you with payment details.
             </p>
 
-            <Button href="/order" className="w-full">
+            <Button href="/order" className="w-full h-10 px-6 rounded-md md:h-14 md:px-10 md:rounded-2xl text-sm md:text-lg font-bold">
               Proceed to Order
             </Button>
 

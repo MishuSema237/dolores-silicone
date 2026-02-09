@@ -75,18 +75,18 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
 
     return (
         <div className="w-full max-w-7xl mx-auto px-4 py-12">
-            <div className="text-center mb-12">
-                <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4 bg-gradient-to-r from-purple-900 to-indigo-900 bg-clip-text text-transparent">
+            <div className="text-center mb-6 md:mb-12">
+                <h1 className="text-2xl md:text-5xl font-serif font-bold mb-4 bg-gradient-to-r from-purple-900 to-indigo-900 bg-clip-text text-transparent">
                     Our Collection
                 </h1>
-                <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+                <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-lg">
                     Discover our handcrafted silicone reborn babies and premium accessories, each one a unique masterpiece waiting to be cherished.
                 </p>
             </div>
 
             {/* Filter Section */}
-            <div className="mb-12">
-                <div className="flex flex-col md:flex-row gap-4 items-stretch mb-4">
+            <div className="mb-6 md:mb-12">
+                <div className="flex flex-col sm:flex-row gap-4 items-stretch mb-4">
                     {/* Search Bar */}
                     <div className="flex-1 relative group">
                         <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-purple-500 transition-colors">
@@ -97,14 +97,14 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                             placeholder="Search our collection..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full pl-12 pr-4 py-4 bg-white border border-gray-200 rounded-2xl focus:ring-4 focus:ring-purple-500/10 focus:border-purple-500 outline-none transition-all shadow-sm text-lg"
+                            className="w-full pl-12 pr-4 py-2 md:py-4 bg-white border border-gray-200 rounded-md md:rounded-2xl focus:ring-4 focus:ring-purple-500/10 focus:border-purple-500 outline-none transition-all shadow-sm text-sm md:text-lg"
                         />
                     </div>
 
                     {/* Filter Toggle Button */}
                     <button
                         onClick={() => setIsFiltersOpen(!isFiltersOpen)}
-                        className={`flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-bold transition-all border ${isFiltersOpen || activeFilterCount > 0
+                        className={`flex text-sm md:text-lg items-center justify-center gap-3 px-4 py-2 md:px-8 md:py-4 rounded-md md:rounded-2xl font-bold transition-all border ${isFiltersOpen || activeFilterCount > 0
                             ? "bg-purple-600 border-purple-600 text-white shadow-lg shadow-purple-500/20"
                             : "bg-white border-gray-200 text-gray-700 hover:border-purple-300 hover:bg-purple-50"
                             }`}

@@ -43,6 +43,8 @@ export function ProductGrid({
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
+  const [activeSlide, setActiveSlide] = useState(0);
+
   const totalPages = Math.ceil(products.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentProducts = enablePagination ? products.slice(startIndex, startIndex + itemsPerPage) : products;
@@ -52,6 +54,12 @@ export function ProductGrid({
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
       setCanScrollLeft(scrollLeft > 5);
       setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 5);
+
+      // Calculate active slide
+      // Assuming card width is roughly 45vw on mobile (small cards) or 33% on desktop
+      const itemWidth = clientWidth < 768 ? clientWidth * 0.45 : clientWidth / 3;
+      const newActiveSlide = Math.round(scrollLeft / itemWidth);
+      setActiveSlide(newActiveSlide);
     }
   };
 
@@ -99,16 +107,16 @@ export function ProductGrid({
     <section className="mb-6 relative">
       <div className="container mx-auto">
         {title && (
-          <div className="flex justify-between items-end mb-12">
+          <div className="flex justify-between items-end mb-6 md:mb-12">
             <div>
-              <h2 className="text-4xl font-bold font-display">{title}</h2>
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold font-display">{title}</h2>
             </div>
             {layout === "carousel" && (
-              <div className="hidden md:flex gap-3">
+              <div className="hidden md:flex gap-2 md:gap-3">
                 <Button
                   variant="outline"
                   size="icon"
-                  className="rounded-full w-12 h-12 border-purple-200 text-purple-600 hover:bg-purple-50 disabled:opacity-30"
+                  className="rounded-full w-8 h-8 md:w-12 md:h-12 border-purple-200 text-purple-600 hover:bg-purple-50 disabled:opacity-30"
                   onClick={() => scroll("left")}
                   disabled={!canScrollLeft}
                 >
@@ -131,14 +139,14 @@ export function ProductGrid({
         {/* Carousel Layout (Both Desktop and Mobile if requested) */}
         {(layout === "carousel" || mobileLayout === "carousel") && (
           <div
-            className={`${layout === "carousel" ? "flex" : "hidden md:hidden"} overflow-x-auto snap-x snap-mandatory gap-6 pb-8 scrollbar-hide`}
+            className={`${mobileLayout === "carousel" ? "flex" : "hidden"} ${layout === "carousel" ? "md:flex" : "md:hidden"} overflow-x-auto snap-x snap-mandatory gap-4 md:gap-6 pb-4 md:pb-8 scrollbar-hide`}
             ref={scrollRef}
             onScroll={checkScroll}
           >
             {products.map((product) => (
               <div
                 key={product._id || product.id}
-                className="snap-start shrink-0 w-[85vw] md:w-[calc(33.333%-16px)]"
+                className="snap-start shrink-0 w-[45vw] md:w-[calc(33.333%-16px)]"
               >
                 {renderCard(product)}
               </div>
@@ -155,7 +163,7 @@ export function ProductGrid({
 
         {/* Grid Layout (Mobile) */}
         {mobileLayout === "grid" && (
-          <div className="md:hidden grid grid-cols-2 gap-8 mb-8">
+          <div className="md:hidden grid grid-cols-2 gap-2 mb-8">
             {currentProducts.map((product) => renderCard(product))}
           </div>
         )}

@@ -53,8 +53,8 @@ function TrackOrderContent() {
         <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
                 <div className="text-center mb-8 sm:mb-12">
-                    <h1 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900 mb-4">Track Your Order</h1>
-                    <p className="text-base sm:text-lg text-gray-600">
+                    <h1 className="text-2xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Track Your Order</h1>
+                    <p className="text-sm md:text-lg text-gray-600">
                         Enter your order reference and email address to check the status of your shipment.
                     </p>
                 </div>
@@ -78,7 +78,7 @@ function TrackOrderContent() {
                                 required
                             />
                         </div>
-                        <Button type="submit" className="w-full" disabled={isLoading}>
+                        <Button type="submit" className="w-full h-10 px-6 rounded-md md:h-14 md:px-10 md:rounded-2xl text-sm md:text-lg font-bold" disabled={isLoading}>
                             {isLoading ? "Searching..." : "Track Order"}
                         </Button>
                     </form>

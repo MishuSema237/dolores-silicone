@@ -32,8 +32,7 @@ export default function OrderPage() {
   const [paymentMethods, setPaymentMethods] = useState<any[]>([]);
 
   const subtotal = getTotal();
-  const estimatedShipping = 50; // This could be calculated based on location
-  const total = subtotal + estimatedShipping;
+  const total = subtotal;
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -156,7 +155,6 @@ export default function OrderPage() {
           address: formData.streetAddress,
           city: formData.city,
           state: formData.state || undefined,
-          zipCode: formData.zipCode,
           country: formData.country === "OTHER" ? formData.customCountry : formData.country,
         },
         payment: {
@@ -199,7 +197,7 @@ export default function OrderPage() {
 
   return (
     <div className="w-full max-w-viewport mx-auto">
-      <h1 className="mb-12">Your Order Request</h1>
+      <h1 className="mb-6 md:mb-12 text-2xl md:text-4xl font-serif">Your Order Request</h1>
 
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -207,7 +205,7 @@ export default function OrderPage() {
           <div className="lg:col-span-7">
             {/* Cart Items */}
             <div className="mb-12">
-              <h2 className="mb-8">1. Your Items</h2>
+              <h2 className="mb-4 md:mb-8 text-lg md:text-2xl font-serif">1. Your Items</h2>
               <div className="space-y-0">
                 {items.map((item) => (
                   <CartItemComponent key={item.id} item={item} />
@@ -219,8 +217,8 @@ export default function OrderPage() {
             </div>
 
             {/* Contact Information */}
-            <div className="mb-12">
-              <h2 className="mb-8">2. Contact Information</h2>
+            <div className="mb-8 md:mb-12">
+              <h2 className="mb-4 md:mb-8 text-lg md:text-2xl font-serif">2. Contact Information</h2>
               <FormInput
                 id="fullName"
                 name="fullName"
@@ -256,8 +254,8 @@ export default function OrderPage() {
             </div>
 
             {/* Shipping Address */}
-            <div className="mb-12">
-              <h2 className="mb-8">3. Shipping Address</h2>
+            <div className="mb-8 md:mb-12">
+              <h2 className="mb-4 md:mb-8 text-lg md:text-2xl font-serif">3. Shipping Address</h2>
               <FormInput
                 id="streetAddress"
                 name="streetAddress"
@@ -331,8 +329,8 @@ export default function OrderPage() {
             </div>
 
             {/* Payment Method */}
-            <div className="mb-12">
-              <h2 className="mb-4">4. Preferred Payment Method</h2>
+            <div className="mb-8 md:mb-12">
+              <h2 className="mb-4 text-lg md:text-2xl font-serif">4. Preferred Payment Method</h2>
               <p className="text-sm text-gray-500 mb-6">
                 We will contact you to arrange payment. Please indicate your
                 preferred method below.
@@ -413,21 +411,21 @@ export default function OrderPage() {
                   <span>${subtotal.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-sm text-gray-500">
-                  <span>Estimated Shipping</span>
-                  <span>${estimatedShipping.toFixed(2)}</span>
+                  <span>Shipping</span>
+                  <span>Calculated later</span>
                 </div>
               </div>
 
               <div className="border-t border-gray-300 pt-4 mt-4">
                 <div className="flex justify-between font-bold text-xl">
-                  <span>Total</span>
+                  <span>Total (Excl. Shipping)</span>
                   <span>${total.toFixed(2)}</span>
                 </div>
               </div>
 
               <Button
                 type="submit"
-                className="w-full mt-8"
+                className="w-full mt-6 md:mt-8 h-10 px-6 rounded-md md:h-14 md:px-10 md:rounded-2xl text-sm md:text-lg font-bold"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Submitting..." : "Place Order Request"}

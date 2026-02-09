@@ -84,8 +84,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
         {/* Right Column: Product Details */}
         <div className="lg:col-span-6 px-6 lg:px-0">
-          <h1 className="mb-4">{product.name}</h1>
-          <p className="text-3xl font-semibold mb-4">${product.price.toFixed(2)}</p>
+          <h1 className="text-2xl md:text-4xl font-serif font-bold mb-4">{product.name}</h1>
+          <p className="text-xl md:text-3xl font-semibold mb-4">${product.price.toFixed(2)}</p>
 
           {/* Rating */}
           {product.rating && (
@@ -158,6 +158,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           products={relatedProducts}
           title="You Might Also Like"
           layout="carousel"
+          mobileLayout="grid"
         />
       </div>
     </div >

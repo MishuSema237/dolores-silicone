@@ -39,8 +39,8 @@ export function SiteFooter() {
   }
 
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-16 pb-8 mt-8">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+    <footer className="bg-gray-900 text-gray-300 pt-10 md:pt-16 pb-8 mt-8">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-8 md:mb-12">
         {/* Brand Section */}
         <div className="space-y-4">
           <div className="flex flex-col items-center md:items-start">
@@ -88,7 +88,7 @@ export function SiteFooter() {
 
         {/* Quick Links */}
         <div className="text-center md:text-left">
-          <h4 className="text-white font-medium mb-6 md:mb-14">Quick Links</h4>
+          <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-4 md:mb-8">Quick Links</h4>
           <ul className="space-y-3 text-sm text-gray-300">
             <li>
               <Link href="/" className="text-gray-300 hover:text-purple-400 transition-colors">
@@ -125,7 +125,7 @@ export function SiteFooter() {
 
         {/* Contact Info */}
         <div className="text-center md:text-left">
-          <h4 className="text-white font-medium mb-6">Contact Us</h4>
+          <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-4 md:mb-8">Contact Us</h4>
           <ul className="space-y-4 text-sm text-gray-300 flex flex-col items-center md:items-start">
             <li className="flex items-start gap-3">
               <FaMapMarkerAlt className="mt-1 text-purple-500" />

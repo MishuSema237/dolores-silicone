@@ -38,44 +38,44 @@ export function FeaturesSection() {
 
   return (
     <>
-      <section className="pt-20 bg-white relative overflow-hidden">
+      <section className="pt-10 md:pt-20 bg-white relative overflow-hidden">
         {/* Subtle Background Detail */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-100 to-transparent" />
 
         <div className="container mx-auto px-6">
-          <div className="text-center mb-24 max-w-3xl mx-auto">
+          <div className="text-center mb-12 md:mb-24 max-w-3xl mx-auto">
             <span className="text-purple-600 font-black uppercase tracking-widest text-sm mb-4 block">Excellence in Art</span>
             <h2 className="mb-6">Why Choose Our Masterpieces?</h2>
-            <p className="text-xl text-gray-500 font-light">
+            <p className="text-sm md:text-xl text-gray-500 font-light">
               We combine artisan tradition with clinical precision to create the most realistic silicone companions in the world.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-20">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group relative flex flex-col items-center text-center focus-within:ring-2 focus-within:ring-purple-500 rounded-[2rem] p-4 transition-all"
+                className="group relative flex flex-col items-center text-center focus-within:ring-2 focus-within:ring-purple-500 rounded-lg md:rounded-[2rem] p-4 transition-all"
               >
-                <div className="w-24 h-24 rounded-3xl bg-gray-50 flex items-center justify-center mb-8 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500  relative overflow-hidden">
+                <div className="w-16 h-16 md:w-24 md:h-24 rounded-xl md:rounded-3xl bg-gray-50 flex items-center justify-center mb-4 md:mb-8 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500  relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <span className="relative z-10 transition-colors duration-500 group-hover:text-purple-600">
+                  <span className="relative z-10 transition-colors duration-500 group-hover:text-purple-600 text-2xl md:text-4xl">
                     {feature.icon}
                   </span>
                 </div>
-                <h3 className="text-2xl mb-4 font-bold tracking-tight text-gray-900">{feature.title}</h3>
-                <p className="text-gray-500 leading-relaxed font-light text-lg">
+                <h3 className="text-lg md:text-2xl mb-2 md:mb-4 font-bold tracking-tight text-gray-900">{feature.title}</h3>
+                <p className="text-gray-500 leading-relaxed font-light text-sm md:text-lg">
                   {feature.description}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-24">
+          <div className="text-center mt-12 md:mt-24">
             <Button
               variant="outline"
               onClick={() => setModalOpen(true)}
-              className="h-14 px-10 rounded-2xl border-purple-200 text-purple-700 hover:bg-purple-50 font-bold tracking-wide"
+              className="h-10 px-6 rounded-md md:h-14 md:px-10 md:rounded-2xl border-purple-200 text-purple-700 hover:bg-purple-50 font-semibold md:font-bold tracking-wide"
             >
               Our Full Story & Ethics
             </Button>

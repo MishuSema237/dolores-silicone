@@ -30,13 +30,13 @@ export function GalleryGrid({ items }: GalleryGridProps) {
 
   return (
     <>
-      <div className="columns-2 lg:columns-3 gap-4 md:gap-6 space-y-6">
+      <div className="columns-2 sm:columns-3 md:columns-4 gap-2 md:gap-4 space-y-2 md:space-y-4">
         {items.map((item) => (
           <button
             key={item._id}
             type="button"
             onClick={() => handleImageClick(item)}
-            className="break-inside-avoid w-full bg-gray-100 border border-gray-300 rounded-xl overflow-hidden relative hover:scale-[1.02] transition-transform cursor-pointer group"
+            className="break-inside-avoid w-full bg-gray-100 border border-gray-300 rounded-md overflow-hidden relative hover:scale-[1.02] transition-transform cursor-pointer group"
           >
             {item.imageUrl ? (
               <div className="relative w-full">

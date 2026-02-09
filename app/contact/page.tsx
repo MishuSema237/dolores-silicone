@@ -115,19 +115,19 @@ export default function ContactPage() {
 
   return (
     <div className="w-full max-w-viewport mx-auto">
-      <div className="text-center mb-16">
+      <div className="text-center mb-6 md:mb-16">
 
-        <h1 className="text-4xl md:text-5xl font-serif mb-4 text-gray-900">Get In Touch</h1>
-        <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+        <h1 className="text-2xl md:text-5xl font-serif mb-4 text-gray-900">Get In Touch</h1>
+        <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-lg">
           Have a question about Dolores Silicone or your order? We'd love to
           hear from you.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-start">
         {/* Contact Form */}
-        <div className="lg:col-span-7 bg-white p-8 rounded-2xl shadow-sm border border-purple-100">
-          <h2 className="text-2xl font-serif mb-6 text-gray-800">Send us a Message</h2>
+        <div className="lg:col-span-7 bg-white p-4 md:p-8 rounded-md md:rounded-2xl shadow-sm border border-purple-100">
+          <h2 className="text-lg md:text-2xl font-serif mb-6 text-gray-800">Send us a Message</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <FormInput
@@ -185,9 +185,9 @@ export default function ContactPage() {
         </div>
 
         {/* Contact Information */}
-        <div className="lg:col-span-5 space-y-8">
-          <div className="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl border border-purple-100 shadow-sm">
-            <h3 className="text-2xl font-serif mb-6 text-gray-800">Contact Information</h3>
+        <div className="lg:col-span-5 space-y-6 md:space-y-8">
+          <div className="bg-gradient-to-br from-purple-50 to-white p-4 md:p-8 rounded-md md:rounded-2xl border border-purple-100 shadow-sm">
+            <h3 className="text-lg md:text-2xl font-serif mb-6 text-gray-800">Contact Information</h3>
             <div className="space-y-6">
               <div className="flex items-start gap-4 group">
                 <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-purple-500 shadow-sm group-hover:scale-110 transition-transform">
@@ -238,8 +238,8 @@ export default function ContactPage() {
           </div>
 
           {/* Social Media */}
-          <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm text-center">
-            <h3 className="text-xl font-serif mb-6 text-gray-800">Follow Our Journey</h3>
+          <div className="bg-white p-4 md:p-8 rounded-md md:rounded-2xl border border-gray-100 shadow-sm text-center">
+            <h3 className="text-lg md:text-xl font-serif mb-6 text-gray-800">Follow Our Journey</h3>
             <div className="flex justify-center gap-6">
               {socials.map((social) => (
                 <a

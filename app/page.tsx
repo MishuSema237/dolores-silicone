@@ -47,43 +47,43 @@ export default function Home() {
           <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
         </div>
 
-        <div className="container mx-auto px-6 md:px-12 relative z-10 pt-40 pb-20 lg:py-0">
+        <div className="container mx-auto px-6 md:px-12 relative z-10 pt-24 md:pt-40 pb-20 lg:py-0">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Hero Text Content */}
             <div className="flex-1 text-center lg:text-left">
 
 
-              <h1 className="text-white mb-6 md:mb-8 text-5xl md:text-6xl  leading-[0.95] tracking-tight">
+              <h1 className="text-white mb-6 md:mb-8 text-3xl md:text-6xl leading-[0.95] tracking-tight">
                 Crafting <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 animate-gradient-x">Artistic Reality</span> <br className="hidden md:block" />
                 For Your Nursery.
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-400 mb-10 md:mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+              <p className="text-sm md:text-xl text-gray-400 mb-10 md:mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
                 Discover the world of ultra-realistic silicone reborn babies. Each creation is a unique piece of art, meticulously handcrafted to bring emotion and life into your home.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 justify-center lg:justify-start">
-                <Button href="/shop" size="lg" className="w-full sm:w-auto bg-purple-600 text-white hover:bg-purple-500 h-16 px-10 rounded-2xl text-lg font-bold shadow-2xl shadow-purple-900/40 group">
+                <Button href="/shop" size="lg" className="w-full sm:w-auto bg-purple-600 text-white hover:bg-purple-500 h-10 px-6 rounded-md md:h-16 md:px-10 md:rounded-2xl text-sm md:text-lg font-bold shadow-2xl shadow-purple-900/40 group">
                   Explore Collection
                   <FaArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button href="/gallery" variant="outline" size="lg" className="w-full sm:w-auto glass-dark text-white border-white/10 h-16 px-10 rounded-2xl text-lg font-semibold hover:bg-white/5">
+                <Button href="/gallery" variant="outline" size="lg" className="w-full sm:w-auto glass-dark text-white border-white/10 h-10 px-6 rounded-md md:h-16 md:px-10 md:rounded-2xl text-sm md:text-lg font-semibold hover:bg-white/5">
                   View Gallery
                 </Button>
               </div>
 
-              <div className="mt-12 md:mt-16 pt-8 border-t border-white/5 flex flex-wrap justify-center lg:justify-start gap-8 lg:gap-12 opacity-40">
+              <div className="mt-6 md:mt-16 pt-8 border-t border-white/5 flex flex-wrap justify-center lg:justify-start gap-4 md:gap-8 lg:gap-12 opacity-40">
                 <div className="flex flex-col">
-                  <span className="text-xl md:text-2xl font-bold text-white">1000+</span>
+                  <span className="text-base md:text-2xl font-bold text-white">1000+</span>
                   <span className="text-[10px] uppercase tracking-widest">Collectors</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-xl md:text-2xl font-bold text-white">100%</span>
+                  <span className="text-base md:text-2xl font-bold text-white">100%</span>
                   <span className="text-[10px] uppercase tracking-widest">Handcrafted</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-xl md:text-2xl font-bold text-white">Worldwide</span>
+                  <span className="text-base md:text-2xl font-bold text-white">Worldwide</span>
                   <span className="text-[10px] uppercase tracking-widest">Shipping</span>
                 </div>
               </div>
@@ -133,9 +133,9 @@ export default function Home() {
       {/* About Section - Modern Split Layout */}
       <section className="py-12 relative overflow-hidden bg-white">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-20">
+          <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-20">
             <div className="flex-1 relative group w-full">
-              <div className="relative h-[400px] md:h-[600px] w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl">
+              <div className="relative h-[400px] md:h-[600px] w-full rounded-lg md:rounded-[3rem] overflow-hidden shadow-2xl">
                 <Image
                   src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="Artisan at Work"
@@ -152,8 +152,8 @@ export default function Home() {
 
             <div className="flex-1 text-center lg:text-left">
               <span className="text-purple-600 font-black uppercase tracking-widest text-sm mb-4 block">Our Philosophy</span>
-              <h2 className="mb-8 font-display text-3xl md:text-5xl">Crafting Dreams, <br className="hidden md:block" /> One Baby at a Time</h2>
-              <div className="space-y-6 text-lg md:text-xl text-gray-600 font-light leading-relaxed">
+              <h2 className="mb-8 font-display text-2xl md:text-5xl">Crafting Dreams, <br className="hidden md:block" /> One Baby at a Time</h2>
+              <div className="space-y-6 text-sm md:text-xl text-gray-600 font-light leading-relaxed">
                 <p>
                   At Dolores Silicone, we pour our heart and soul into every silicone
                   reborn baby. Our artists bring these lifelike creations to being
@@ -168,7 +168,7 @@ export default function Home() {
               </div>
               <Button
                 variant="outline"
-                className="mt-12 h-14 px-8 rounded-xl border-purple-200 text-purple-700 hover:bg-purple-50 group"
+                className="mt-12 h-10 px-6 rounded-md md:h-14 md:px-8 md:rounded-xl border-purple-200 text-purple-700 hover:bg-purple-50 group"
                 onClick={() => setProcessModalOpen(true)}
               >
                 Learn Our Process
@@ -195,11 +195,11 @@ export default function Home() {
       </section>
 
       {/* Story Section - Elegant Reverse Split */}
-      <section className="py-20 bg-gray-900 text-white overflow-hidden">
+      <section className="py-12 md:py-20 bg-gray-900 text-white overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-20">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-10 md:gap-20">
             <div className="flex-1 relative lg:h-[700px] w-full flex items-center">
-              <div className="relative h-[600px] w-full hidden md:block rounded-[3rem] overflow-hidden shadow-premium group">
+              <div className="relative h-[600px] w-full hidden md:block rounded-lg md:rounded-[3rem] overflow-hidden shadow-premium group">
                 <Image
                   src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="Our Story"
@@ -220,8 +220,8 @@ export default function Home() {
 
             <div className="flex-1">
               <span className="text-purple-400 font-black uppercase tracking-widest text-sm mb-4 block">The Journey</span>
-              <h1 className="text-white mb-8 font-display">A Tale of Passion & Precision</h1>
-              <div className="space-y-6 text-xl text-gray-400 font-light leading-relaxed">
+              <h1 className="text-white mb-8 font-display text-2xl md:text-4xl">A Tale of Passion & Precision</h1>
+              <div className="space-y-6 text-sm md:text-xl text-gray-400 font-light leading-relaxed">
                 <p>
                   Dolores Silicone was founded on a passion for transforming silicone
                   into breathing works of art. Our journey began with a single
@@ -265,22 +265,22 @@ export default function Home() {
       <TestimonialsSection />
 
       {/* Professional Call To Action Section */}
-      <section className="py-20  bg-white flex justify-center px-0 lg:px-6">
-        <div className="container max-w-6xl relative  lg:rounded-[4rem] overflow-hidden bg-purple-600 p-12 lg:p-24 text-center">
+      <section className="py-12 md:py-20 bg-white flex justify-center px-0 lg:px-6">
+        <div className="container max-w-6xl relative lg:rounded-[4rem] overflow-hidden bg-purple-600 p-6 md:p-12 lg:p-24 text-center">
           {/* Background elements for CTA */}
           <div className="absolute top-[-20%] right-[-10%] w-96 h-96 bg-purple-400/20 rounded-full blur-[80px]" />
           <div className="absolute bottom-[-10%] left-[-10%] w-64 h-64 bg-indigo-800/20 rounded-full blur-[60px]" />
 
           <div className="relative z-10 max-w-3xl mx-auto">
-            <h2 className="text-white text-4xl lg:text-5xl mb-8 leading-tight">Ready to welcome a <br /> new bundle of joy?</h2>
-            <p className="text-purple-100 text-xl mb-12 font-light max-w-xl mx-auto">
+            <h2 className="text-white text-2xl md:text-4xl lg:text-5xl mb-8 leading-tight">Ready to welcome a <br /> new bundle of joy?</h2>
+            <p className="text-purple-100 text-sm md:text-xl mb-12 font-light max-w-xl mx-auto">
               Browse our available babies and accessories, or contact us for a custom creation piece.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-6 justify-center">
-              <Button href="/shop" size="lg" className="bg-white text-purple-600 hover:bg-purple-50 h-16 px-12 rounded-2xl text-lg font-bold shadow-xl">
+              <Button href="/shop" size="lg" className="bg-white text-purple-600 hover:bg-purple-50 h-10 px-6 rounded-md md:h-16 md:px-12 md:rounded-2xl text-sm md:text-lg font-bold shadow-xl">
                 Browse Collection
               </Button>
-              <Button href="/contact" variant="outline" size="lg" className="border-white border text-white bg-transparent hover:bg-white/40 h-16 px-12 rounded-2xl text-lg font-semibold">
+              <Button href="/contact" variant="outline" size="lg" className="border-white border text-white bg-transparent hover:bg-white/40 h-10 px-6 rounded-md md:h-16 md:px-12 md:rounded-2xl text-sm md:text-lg font-semibold">
                 Get In Touch
               </Button>
             </div>
