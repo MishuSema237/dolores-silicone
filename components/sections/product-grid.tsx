@@ -112,7 +112,7 @@ export function ProductGrid({
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold font-display">{title}</h2>
             </div>
             {layout === "carousel" && (
-              <div className="hidden md:flex gap-2 md:gap-3">
+              <div className="flex gap-2 md:gap-3">
                 <Button
                   variant="outline"
                   size="icon"
@@ -120,16 +120,16 @@ export function ProductGrid({
                   onClick={() => scroll("left")}
                   disabled={!canScrollLeft}
                 >
-                  <FaChevronLeft />
+                  <FaChevronLeft className="text-xs md:text-base" />
                 </Button>
                 <Button
                   variant="outline"
                   size="icon"
-                  className="rounded-full w-12 h-12 border-purple-200 text-purple-600 hover:bg-purple-50 disabled:opacity-30"
+                  className="rounded-full w-8 h-8 md:w-12 md:h-12 border-purple-200 text-purple-600 hover:bg-purple-50 disabled:opacity-30"
                   onClick={() => scroll("right")}
                   disabled={!canScrollRight}
                 >
-                  <FaChevronRight />
+                  <FaChevronRight className="text-xs md:text-base" />
                 </Button>
               </div>
             )}
@@ -138,20 +138,33 @@ export function ProductGrid({
 
         {/* Carousel Layout (Both Desktop and Mobile if requested) */}
         {(layout === "carousel" || mobileLayout === "carousel") && (
-          <div
-            className={`${mobileLayout === "carousel" ? "flex" : "hidden"} ${layout === "carousel" ? "md:flex" : "md:hidden"} overflow-x-auto snap-x snap-mandatory gap-4 md:gap-6 pb-4 md:pb-8 scrollbar-hide`}
-            ref={scrollRef}
-            onScroll={checkScroll}
-          >
-            {products.map((product) => (
-              <div
-                key={product._id || product.id}
-                className="snap-start shrink-0 w-[45vw] md:w-[calc(33.333%-16px)]"
-              >
-                {renderCard(product)}
-              </div>
-            ))}
-          </div>
+          <>
+            <div
+              className={`${mobileLayout === "carousel" ? "flex" : "hidden"} ${layout === "carousel" ? "md:flex" : "md:hidden"} overflow-x-auto snap-x snap-mandatory gap-4 md:gap-6 pb-4 md:pb-8 scrollbar-hide`}
+              ref={scrollRef}
+              onScroll={checkScroll}
+            >
+              {products.map((product) => (
+                <div
+                  key={product._id || product.id}
+                  className="snap-start shrink-0 w-[45vw] md:w-[calc(33.333%-16px)]"
+                >
+                  {renderCard(product)}
+                </div>
+              ))}
+            </div>
+
+            {/* Pagination Dots */}
+            <div className="flex justify-center gap-1.5 mt-2 md:hidden">
+              {products.map((_, idx) => (
+                <div
+                  key={idx}
+                  className={`h-1 rounded-full transition-all duration-300 ${activeSlide === idx ? "w-4 bg-purple-600" : "w-1 bg-purple-200"
+                    }`}
+                />
+              ))}
+            </div>
+          </>
         )}
 
         {/* Grid Layout (Desktop) */}

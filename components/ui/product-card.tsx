@@ -108,7 +108,7 @@ export function ProductCard({
           </span>
         </div>
 
-        <p className="text-gray-500 text-[10px] md:text-xs mb-4 line-clamp-2 h-8 md:h-10">
+        <p className="text-gray-500 text-[10px] md:text-xs mb-4 line-clamp-2">
           {description || "Handcrafted silicone reborn baby with lifelike details."}
         </p>
 

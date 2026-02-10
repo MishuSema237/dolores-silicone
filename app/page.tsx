@@ -198,8 +198,8 @@ export default function Home() {
       <section className="py-12 md:py-20 bg-gray-900 text-white overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-10 md:gap-20">
-            <div className="flex-1 relative lg:h-[700px] w-full flex items-center">
-              <div className="relative h-[600px] w-full hidden md:block rounded-lg md:rounded-[3rem] overflow-hidden shadow-premium group">
+            <div className="flex-1 relative md:h-[700px] w-full flex items-center">
+              <div className="relative h-[400px] md:h-[600px] w-full rounded-lg md:rounded-[3rem] overflow-hidden shadow-premium group">
                 <Image
                   src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="Our Story"
@@ -209,12 +209,12 @@ export default function Home() {
                 <div className="absolute inset-0 bg-purple-950/20 mix-blend-multiply" />
               </div>
               {/* Floating Overlay Card */}
-              <div className="absolute bottom-10 -left-10 lg:bottom-1/4 lg:-left-20 glass-dark backdrop-blur-3xl p-8 rounded-[2.5rem] border border-white/10 shadow-2xl max-w-sm hidden md:block">
-                <div className="text-purple-400 text-4xl mb-4 font-serif italic font-bold">"</div>
-                <p className="text-lg text-gray-200 italic leading-relaxed mb-4">
+              <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:-left-10 lg:bottom-1/4 lg:-left-20 glass-dark backdrop-blur-3xl p-6 md:p-8 rounded-2xl md:rounded-[2.5rem] border border-white/10 shadow-2xl md:max-w-sm">
+                <div className="text-purple-400 text-2xl md:text-4xl mb-2 md:mb-4 font-serif italic font-bold">"</div>
+                <p className="text-base md:text-lg text-gray-200 italic leading-relaxed mb-4">
                   "The most rewarding feeling is seeing a collector's face when they hold their baby for the first time."
                 </p>
-                <p className="font-bold text-white tracking-widest text-sm uppercase">Dolores S. — Founder</p>
+                <p className="font-bold text-white tracking-widest text-xs md:text-sm uppercase">Dolores S. — Founder</p>
               </div>
             </div>
 

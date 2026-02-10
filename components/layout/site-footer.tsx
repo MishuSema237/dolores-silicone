@@ -40,14 +40,14 @@ export function SiteFooter() {
 
   return (
     <footer className="bg-gray-900 text-gray-300 pt-10 md:pt-16 pb-8 mt-8">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-8 md:mb-12">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
         {/* Brand Section */}
         <div className="space-y-4">
           <div className="flex flex-col items-center md:items-start">
-            <div className="relative w-24 h-24 mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg">
+            <div className="relative w-48 h-24 mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/assets/owners-logo/Dolores Silicone Logo.png"
+                src="/assets/og-logo.png"
                 alt="Dolores Silicone"
                 className="w-full h-full object-cover"
               />
@@ -87,7 +87,7 @@ export function SiteFooter() {
         </div>
 
         {/* Quick Links */}
-        <div className="text-center md:text-left">
+        <div className="text-left">
           <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-4 md:mb-8">Quick Links</h4>
           <ul className="space-y-3 text-sm text-gray-300">
             <li>
@@ -124,9 +124,9 @@ export function SiteFooter() {
         </div>
 
         {/* Contact Info */}
-        <div className="text-center md:text-left">
+        <div className="text-left">
           <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-4 md:mb-8">Contact Us</h4>
-          <ul className="space-y-4 text-sm text-gray-300 flex flex-col items-center md:items-start">
+          <ul className="space-y-4 text-sm text-gray-300 flex flex-col items-start">
             <li className="flex items-start gap-3">
               <FaMapMarkerAlt className="mt-1 text-purple-500" />
               <span>123 Artisan Way,<br />Creative District, NY 10001</span>

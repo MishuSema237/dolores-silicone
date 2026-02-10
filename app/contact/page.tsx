@@ -224,10 +224,10 @@ export default function ContactPage() {
                   <FaMapMarkerAlt />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900 mb-1">Visit Us</p>
+                  <p className="font-semibold text-gray-900 mb-1">Our Studio</p>
                   <p className="text-gray-600 mb-0">
-                    123 Artisan Lane<br />
-                    Craftville, CA 90210
+                    Home-based Studio<br />
+                    Available Worldwide
                   </p>
                   <p className="text-xs text-gray-400 mt-2 italic">
                     (Studio visits by appointment only)

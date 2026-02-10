@@ -158,7 +158,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           products={relatedProducts}
           title="You Might Also Like"
           layout="carousel"
-          mobileLayout="grid"
+          mobileLayout="carousel"
         />
       </div>
     </div >
