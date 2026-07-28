@@ -122,7 +122,7 @@ export default function OrdersPage() {
                                             <div className="font-medium">{order.customer.name}</div>
                                             <div className="text-sm text-gray-500">{order.customer.email}</div>
                                         </td>
-                                        <td className="p-4">${order.payment.totalAmount.toFixed(2)}</td>
+                                        <td className="p-4">£{order.payment.totalAmount.toFixed(2)}</td>
                                         <td className="p-4">
                                             <span className={`px-2 py-1 rounded-full text-xs font-medium
                         ${order.status === 'paid' ? 'bg-green-100 text-green-700' :
@@ -177,7 +177,7 @@ export default function OrdersPage() {
                             </div>
 
                             <div className="flex justify-between items-center pt-1">
-                                <div className="font-bold text-lg">${order.payment.totalAmount.toFixed(2)}</div>
+                                <div className="font-bold text-lg">£{order.payment.totalAmount.toFixed(2)}</div>
                                 <Link href={`/admin/orders/${order._id}`}>
                                     <Button size="sm" className="w-full">View Details</Button>
                                 </Link>

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { DataTable } from "@/components/admin/data-table";
 import { Button } from "@/components/ui/button";
+import toast from "react-hot-toast";
 
 interface Message {
   _id: string;
@@ -18,6 +19,8 @@ export default function AdminMessagesPage() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedMessage, setSelectedMessage] = useState<Message | null>(null);
+  const [replyMessage, setReplyMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
 
   const fetchMessages = async () => {
     try {
@@ -80,7 +83,37 @@ export default function AdminMessagesPage() {
 
   const openMessage = (message: Message) => {
     setSelectedMessage(message);
+    setReplyMessage("");
     handleMarkRead(message);
+  };
+
+  const handleReply = async () => {
+    if (!replyMessage.trim() || !selectedMessage) return;
+    setIsSending(true);
+    try {
+      const res = await fetch(`/api/admin/messages/${selectedMessage._id}/reply`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: replyMessage }),
+      });
+      if (res.ok) {
+        toast.success("Reply sent successfully!");
+        setReplyMessage("");
+        setSelectedMessage({ ...selectedMessage, status: "Replied" });
+        setMessages((prev) =>
+          prev.map((m) =>
+            m._id === selectedMessage._id ? { ...m, status: "Replied" as const } : m
+          )
+        );
+      } else {
+        throw new Error("Failed to send reply");
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error("Error sending reply");
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const newCount = messages.filter((m) => m.status === "New").length;
@@ -210,14 +243,31 @@ export default function AdminMessagesPage() {
             </p>
           </div>
 
-          <div className="mt-6 pt-4 border-t border-gray-100">
-            <a
-              href={`mailto:${selectedMessage.email}?subject=Re: ${selectedMessage.subject || "Your message to Dolores Silicone"}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button>Reply via Email</Button>
-            </a>
+          <div className="mt-6 pt-4 border-t border-gray-100 space-y-4">
+            <h3 className="font-semibold text-gray-900">Reply to {selectedMessage.name}</h3>
+            <p className="text-sm text-gray-500">
+              Sending to: <strong>{selectedMessage.email}</strong>
+            </p>
+            <textarea
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all"
+              rows={5}
+              placeholder="Type your reply here..."
+              value={replyMessage}
+              onChange={(e) => setReplyMessage(e.target.value)}
+            />
+            <div className="flex gap-3">
+              <Button onClick={handleReply} disabled={isSending || !replyMessage.trim()}>
+                {isSending ? "Sending..." : "Send Reply"}
+              </Button>
+              <a
+                href={`mailto:${selectedMessage.email}?subject=Re: ${selectedMessage.subject || "Your message to Dolores Silicone"}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 text-sm text-gray-600 hover:text-purple-600 transition-colors"
+              >
+                Or open email client
+              </a>
+            </div>
           </div>
         </div>
       ) : (

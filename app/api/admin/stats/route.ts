@@ -3,7 +3,7 @@ import connectMongoose from "@/lib/db/mongodb";
 import Product from "@/lib/models/Product";
 import Order from "@/lib/models/Order";
 import GalleryItem from "@/lib/models/GalleryItem";
-import Testimonial from "@/lib/models/Testimonial";
+import Review from "@/lib/models/Review";
 
 export async function GET() {
     try {
@@ -12,20 +12,22 @@ export async function GET() {
         const [
             totalOrders,
             pendingOrders,
-            totalBabies,
             totalGirls,
+            totalBoys,
             totalAccessories,
             totalGalleryImages,
-            totalTestimonials,
+            totalReviews,
+            pendingReviews,
             recentOrders,
         ] = await Promise.all([
             Order.countDocuments({}),
             Order.countDocuments({ status: "pending" }),
-            Product.countDocuments({ category: 'boys' }),
             Product.countDocuments({ category: 'girls' }),
+            Product.countDocuments({ category: 'boys' }),
             Product.countDocuments({ category: 'accessories' }),
             GalleryItem.countDocuments({}),
-            Testimonial.countDocuments({}),
+            Review.countDocuments({ status: "Published" }),
+            Review.countDocuments({ status: "Pending" }),
             Order.find({}).sort({ createdAt: -1 }).limit(5),
         ]);
 
@@ -35,12 +37,17 @@ export async function GET() {
                 pending: pendingOrders,
             },
             products: {
-                babies: totalBabies + totalGirls,
+                girls: totalGirls,
+                boys: totalBoys,
                 accessories: totalAccessories,
-                total: totalBabies + totalGirls + totalAccessories
+                total: totalGirls + totalBoys + totalAccessories,
             },
             gallery: totalGalleryImages,
-            testimonials: totalTestimonials,
+            reviews: {
+                published: totalReviews,
+                pending: pendingReviews,
+                total: totalReviews + pendingReviews,
+            },
             recentOrders,
         });
     } catch (error: any) {

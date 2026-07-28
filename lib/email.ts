@@ -104,9 +104,9 @@ export async function sendOrderConfirmationEmail(order: any) {
       <p>We will review your order and send you payment details shortly.</p>
       <h3>Order Summary:</h3>
       <ul>
-        ${order.items.map((item: any) => `<li>${item.name} (x${item.quantity}) - $${(item.price * item.quantity).toFixed(2)}</li>`).join("")}
+        ${order.items.map((item: any) => `<li>${item.name} (x${item.quantity}) - £${(item.price * item.quantity).toFixed(2)}</li>`).join("")}
       </ul>
-      <p><strong>Total: $${order.payment.totalAmount.toFixed(2)}</strong></p>
+      <p><strong>Total: £${order.payment.totalAmount.toFixed(2)}</strong></p>
       <br>
       <a href="${process.env.NEXT_PUBLIC_SITE_URL}/track-order?ref=${order.orderReference}" class="button">View Order Details</a>
       <br><br>
@@ -128,7 +128,7 @@ export async function sendOrderNotificationToAdmin(order: any) {
       <h2>New Order Received</h2>
       <p><strong>Reference:</strong> ${order.orderReference}</p>
       <p><strong>Customer:</strong> ${order.customer.name} (${order.customer.email})</p>
-      <p><strong>Total:</strong> $${order.payment.totalAmount.toFixed(2)}</p>
+        <p><strong>Total:</strong> £${order.payment.totalAmount.toFixed(2)}</p>
       <br>
       <a href="${process.env.NEXT_PUBLIC_SITE_URL}/admin/orders/${order._id}" class="button">View Order in Admin</a>
     `;

@@ -5,8 +5,7 @@
 
 import mongoose from "mongoose";
 
-const DEST_URI =
-  "mongodb+srv://mishusema237_db_user:metrobooming@cluster0.htkqon9.mongodb.net/dolores_silicone?appName=Cluster0";
+const DEST_URI = process.env.MONGODB_URI || "";
 
 const BlogSchema = new mongoose.Schema(
   {},

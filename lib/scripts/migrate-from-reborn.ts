@@ -10,10 +10,9 @@
 import mongoose from "mongoose";
 
 // ── Connection strings ──────────────────────────────────────────────
-const SOURCE_URI =
-  "mongodb+srv://mishusema237_db_user:1mishael@cluster0.ikwyaoe.mongodb.net/reborn_babies?retryWrites=true&w=majority";
-const DEST_URI =
-  "mongodb+srv://mishusema237_db_user:metrobooming@cluster0.htkqon9.mongodb.net/dolores_silicone?appName=Cluster0";
+// Run with: SOURCE_MONGODB_URI=... DEST_MONGODB_URI=... npx tsx lib/scripts/migrate-from-reborn.ts
+const SOURCE_URI = process.env.SOURCE_MONGODB_URI || "";
+const DEST_URI = process.env.DEST_MONGODB_URI || process.env.MONGODB_URI || "";
 
 const USD_TO_GBP = 0.79;
 

@@ -11,12 +11,17 @@ interface DashboardStats {
     pending: number;
   };
   products: {
-    babies: number;
+    girls: number;
+    boys: number;
     accessories: number;
     total: number;
   };
   gallery: number;
-  testimonials: number;
+  reviews: {
+    published: number;
+    pending: number;
+    total: number;
+  };
   recentOrders: any[];
 }
 
@@ -54,7 +59,7 @@ export default function AdminDashboard() {
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8">
         <StatsCard
           title="Total Orders"
           value={stats?.orders.total || 0}
@@ -68,12 +73,17 @@ export default function AdminDashboard() {
           trendUp={!stats?.orders.pending}
         />
         <StatsCard
-          title="Total Girls"
-          value={stats?.products.babies || 0}
+          title="Girls"
+          value={stats?.products.girls || 0}
           icon={<FaBoxOpen className="text-xl" />}
         />
         <StatsCard
-          title="Total Boys"
+          title="Boys"
+          value={stats?.products.boys || 0}
+          icon={<FaBoxOpen className="text-xl" />}
+        />
+        <StatsCard
+          title="Accessories"
           value={stats?.products.accessories || 0}
           icon={<FaShoppingBag className="text-xl" />}
         />
@@ -83,9 +93,11 @@ export default function AdminDashboard() {
           icon={<FaImages className="text-xl" />}
         />
         <StatsCard
-          title="Testimonials"
-          value={stats?.testimonials || 0}
+          title="Reviews"
+          value={stats?.reviews.total || 0}
           icon={<FaCommentAlt className="text-xl" />}
+          trend={stats?.reviews.pending ? `${stats.reviews.pending} pending` : "All published"}
+          trendUp={!stats?.reviews.pending}
         />
       </div>
 
