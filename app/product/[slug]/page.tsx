@@ -29,13 +29,38 @@ export async function generateMetadata({ params }: ProductPageProps) {
 
   if (!product) {
     return {
-      title: "Product Not Found - Dolores Silicone",
+      title: "Product Not Found",
     };
   }
 
+  const title = `${product.name} | Dolores Silicone`;
+  const description = product.description || `Shop ${product.name} — a handcrafted silicone reborn baby by Dolores Silicone.`;
+  const ogImage = product.images?.[0] || "/assets/og-logo.png";
+
   return {
-    title: `${product.name} - Dolores Silicone`,
-    description: product.description,
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `https://dolores-silicone.vercel.app/product/${slug}`,
+      siteName: "Dolores Silicone",
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: product.name,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
+    },
   };
 }
 

@@ -1,12 +1,34 @@
 import { getProducts } from "@/lib/utils/db-helpers";
 import { ShopClient } from "@/components/shop/shop-client";
+import type { Metadata } from "next";
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-export const metadata = {
-  title: "Shop - Dolores Silicone",
-  description: "Browse our complete collection of handcrafted silicone reborn babies and accessories",
+export const metadata: Metadata = {
+  title: "Shop",
+  description: "Browse our complete collection of handcrafted silicone reborn babies and accessories — girls, boys, and more.",
+  openGraph: {
+    title: "Shop | Dolores Silicone",
+    description: "Browse our complete collection of handcrafted silicone reborn babies and accessories.",
+    url: "https://dolores-silicone.vercel.app/shop",
+    siteName: "Dolores Silicone",
+    images: [
+      {
+        url: "/assets/og-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Dolores Silicone Shop",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shop | Dolores Silicone",
+    description: "Browse our complete collection of handcrafted silicone reborn babies and accessories.",
+    images: ["/assets/og-logo.png"],
+  },
 };
 
 export default async function ShopPage() {

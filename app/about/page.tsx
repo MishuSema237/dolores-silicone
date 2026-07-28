@@ -1,8 +1,30 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "About - Dolores Silicone",
-  description: "Discover the artistry, materials, and story behind Dolores Silicone handcrafted reborn baby dolls.",
+export const metadata: Metadata = {
+  title: "About",
+  description: "Discover the artistry, materials, and story behind Dolores Silicone handcrafted reborn baby dolls. Learn about our process and mission.",
+  openGraph: {
+    title: "About | Dolores Silicone",
+    description: "Discover the artistry, materials, and story behind Dolores Silicone handcrafted reborn baby dolls.",
+    url: "https://dolores-silicone.vercel.app/about",
+    siteName: "Dolores Silicone",
+    images: [
+      {
+        url: "/assets/og-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "About Dolores Silicone",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About | Dolores Silicone",
+    description: "Discover the artistry, materials, and story behind Dolores Silicone.",
+    images: ["/assets/og-logo.png"],
+  },
 };
 
 export default function AboutPage() {
