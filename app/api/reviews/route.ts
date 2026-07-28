@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
             rating,
             comment,
             image: image || undefined,
-            status: "Published",
+            status: "Pending",
         });
 
         return NextResponse.json(review, { status: 201 });

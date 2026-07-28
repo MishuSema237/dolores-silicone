@@ -40,6 +40,16 @@ export async function generateMetadata({ params }: ProductPageProps) {
   return {
     title,
     description,
+    keywords: [
+      product.name,
+      "silicone reborn baby doll",
+      "full body silicone baby",
+      "handcrafted reborn doll UK",
+      "lifelike baby doll",
+      "platinum silicone reborn",
+      "reborn baby for sale",
+      product.category === "boys" ? "reborn baby boy" : product.category === "girls" ? "reborn baby girl" : "reborn doll accessories",
+    ],
     openGraph: {
       title,
       description,
@@ -100,6 +110,49 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   return (
     <div className="w-full max-w-viewport mx-auto lg:px-6 lg:pt-6">
+      {/* ── JSON-LD Product Schema ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: product.name,
+            description: product.description || product.detailedDescription || "",
+            image: product.images || [],
+            brand: {
+              "@type": "Brand",
+              name: "Dolores Silicone",
+            },
+            offers: {
+              "@type": "Offer",
+              url: `https://dolores-silicone.vercel.app/product/${slug}`,
+              priceCurrency: "GBP",
+              price: product.price?.toFixed(2),
+              availability: product.stock > 0
+                ? "https://schema.org/InStock"
+                : "https://schema.org/OutOfStock",
+              itemCondition: "https://schema.org/NewCondition",
+              seller: {
+                "@type": "Organization",
+                name: "Dolores Silicone",
+              },
+            },
+            aggregateRating: product.rating
+              ? {
+                  "@type": "AggregateRating",
+                  ratingValue: product.rating,
+                  reviewCount: product.reviewCount || 1,
+                  bestRating: 5,
+                  worstRating: 1,
+                }
+              : undefined,
+            category: product.category || "Reborn Baby Dolls",
+            material: "Platinum-Cured Silicone",
+            countryOfOrigin: "United Kingdom",
+          }),
+        }}
+      />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
         {/* Left Column: Image Gallery */}
         <div className="lg:col-span-6">

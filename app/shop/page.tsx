@@ -7,7 +7,17 @@ export const revalidate = 0;
 
 export const metadata: Metadata = {
   title: "Shop",
-  description: "Browse our complete collection of handcrafted silicone reborn babies and accessories — girls, boys, and more.",
+  description: "Browse our complete collection of handcrafted silicone reborn babies and accessories — girls, boys, and more. Shop UK's finest reborn dolls.",
+  keywords: [
+    "shop reborn baby dolls",
+    "buy silicone baby doll UK",
+    "reborn baby girls",
+    "reborn baby boys",
+    "reborn doll accessories",
+    "silicone reborn dolls for sale",
+    "handcrafted baby dolls UK",
+    "lifelike baby dolls shop",
+  ],
   openGraph: {
     title: "Shop | Dolores Silicone",
     description: "Browse our complete collection of handcrafted silicone reborn babies and accessories.",

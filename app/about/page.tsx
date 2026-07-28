@@ -3,7 +3,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Discover the artistry, materials, and story behind Dolores Silicone handcrafted reborn baby dolls. Learn about our process and mission.",
+  description: "Discover the artistry, materials, and story behind Dolores Silicone handcrafted reborn baby dolls. Learn about our platinum silicone process and mission.",
+  keywords: [
+    "about Dolores Silicone",
+    "reborn doll artist UK",
+    "platinum silicone reborn process",
+    "hand-painted reborn dolls",
+    "reborn doll materials",
+    "how reborn dolls are made",
+    "CE certified baby dolls",
+    "reborn doll artistry",
+  ],
   openGraph: {
     title: "About | Dolores Silicone",
     description: "Discover the artistry, materials, and story behind Dolores Silicone handcrafted reborn baby dolls.",

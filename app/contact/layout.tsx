@@ -4,6 +4,14 @@ export const metadata: Metadata = {
   title: "Contact Us",
   description:
     "Get in touch with Dolores Silicone. We ship worldwide and are happy to answer any questions about our handcrafted silicone reborn babies.",
+  keywords: [
+    "contact Dolores Silicone",
+    "reborn baby doll inquiry",
+    "custom reborn doll order",
+    "silicone baby doll questions",
+    "Dolores Silicone WhatsApp",
+    "reborn doll shop UK contact",
+  ],
   openGraph: {
     title: "Contact Us | Dolores Silicone",
     description:

@@ -82,6 +82,52 @@ export default function Home() {
 
   return (
     <div className="w-full bg-white select-none">
+      {/* ── JSON-LD Structured Data ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Dolores Silicone",
+            url: "https://dolores-silicone.vercel.app",
+            logo: "https://dolores-silicone.vercel.app/assets/owners-logo/Dolores Silicone Logo.png",
+            description:
+              "Handcrafted platinum silicone reborn baby dolls. Each baby is a one-of-a-kind masterpiece created with love and care.",
+            sameAs: [
+              "https://instagram.com/doloressilicone",
+              "https://facebook.com/doloressilicone",
+              "https://tiktok.com/@doloressilicone",
+            ],
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+447380608611",
+              contactType: "customer service",
+              availableLanguage: "English",
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Dolores Silicone",
+            url: "https://dolores-silicone.vercel.app",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: {
+                "@type": "EntryPoint",
+                urlTemplate:
+                  "https://dolores-silicone.vercel.app/shop?q={search_term_string}",
+              },
+              "query-input": "required name=search_term_string",
+            },
+          }),
+        }}
+      />
       {/* ═══════════════════════════════════════════
           CINEMATIC HERO — Mouse parallax + scroll fade
          ═══════════════════════════════════════════ */}

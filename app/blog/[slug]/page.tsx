@@ -53,6 +53,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title,
     description,
+    keywords: [
+      post.title,
+      post.category || "reborn doll article",
+      "silicone reborn baby dolls",
+      "reborn doll care",
+      "reborn doll tips",
+      "Dolores Silicone blog",
+    ],
     openGraph: {
       title,
       description,
@@ -87,5 +95,42 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
-  return <BlogPostClient initialPost={post} />;
+  return (
+    <>
+      {/* ── JSON-LD Article Schema ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: post.title,
+            description: post.excerpt || "",
+            image: post.image || undefined,
+            author: {
+              "@type": "Organization",
+              name: post.author || "Dolores Silicone",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Dolores Silicone",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://dolores-silicone.vercel.app/assets/owners-logo/Dolores Silicone Logo.png",
+              },
+            },
+            datePublished: post.publishedAt || post.createdAt,
+            dateModified: post.createdAt,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://dolores-silicone.vercel.app/blog/${slug}`,
+            },
+            keywords: "reborn doll care, silicone baby dolls, reborn collecting, therapeutic dolls",
+            articleSection: post.category || "Journal",
+          }),
+        }}
+      />
+      <BlogPostClient initialPost={post} />
+    </>
+  );
 }

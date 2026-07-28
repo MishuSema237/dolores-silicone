@@ -26,7 +26,30 @@ export default function ContactPage() {
         const res = await fetch("/api/admin/faqs");
         if (res.ok) {
           const data = await res.json();
-          setFaqs(Array.isArray(data) ? data.filter((f: any) => f.active !== false) : []);
+          const activeFaqs = Array.isArray(data) ? data.filter((f: any) => f.active !== false) : [];
+          setFaqs(activeFaqs);
+
+          // Inject FAQPage JSON-LD
+          if (activeFaqs.length > 0) {
+            const script = document.createElement("script");
+            script.type = "application/ld+json";
+            script.id = "faq-jsonld";
+            script.text = JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: activeFaqs.map((faq: any) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            });
+            const existing = document.getElementById("faq-jsonld");
+            if (existing) existing.remove();
+            document.head.appendChild(script);
+          }
         }
       } catch (error) {
         console.error("Failed to fetch FAQs:", error);
