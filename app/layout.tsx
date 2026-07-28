@@ -7,6 +7,7 @@ import { BackToTop } from "@/components/layout/back-to-top";
 import { CartProvider } from "@/lib/context/cart-context";
 import { MainContent } from "@/components/layout/main-content";
 import { Toaster } from "react-hot-toast";
+import WhatsAppFloat from "@/components/ui/whatsapp-float";
 import "./globals.css";
 
 const bodyFont = Inter({
@@ -115,6 +116,7 @@ export default function RootLayout({
             <SiteFooter />
           </div>
           <BackToTop />
+          <WhatsAppFloat />
           <Toaster position="bottom-right" />
         </CartProvider>
       </body>

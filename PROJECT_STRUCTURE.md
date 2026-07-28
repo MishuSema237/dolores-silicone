@@ -36,8 +36,7 @@ webapp/
 │   ├── db/                # Database utilities
 │   │   └── mongodb.ts
 │   ├── email/             # Email services
-│   │   ├── emailjs.ts
-│   │   └── nodemailer.ts (future)
+│   │   └── email.ts       # Nodemailer SMTP transport
 │   └── utils/             # Helper functions
 │       ├── seo.ts
 │       └── validation.ts
@@ -72,6 +71,6 @@ webapp/
 4. ⏳ Implement shop/product pages
 5. ⏳ Create order flow
 6. ⏳ Set up MongoDB connection
-7. ⏳ Integrate EmailJS
+7. ✅ Integrate SMTP email (Nodemailer)
 8. ⏳ Build admin portal
 

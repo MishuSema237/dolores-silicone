@@ -8,12 +8,12 @@ Create a file named `.env.local` in the `webapp` directory with the following co
 # MongoDB Atlas Connection String
 
 
-# EmailJS Configuration (for development)
-# Get these from https://www.emailjs.com/
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_ORDER_CONFIRMATION=
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_ADMIN_ALERT=
+# SMTP Configuration (Gmail)
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your_email@gmail.com
+SMTP_PASSWORD=your_app_password
+SMTP_FROM_NAME=Dolores Silicone
 
 # NextAuth Configuration (for admin portal)
 # Generate a random secret: openssl rand -base64 32
@@ -73,7 +73,7 @@ Visit http://localhost:3000 to see your site.
 ## Next Steps
 
 1. ✅ MongoDB connection configured
-2. ⏳ Set up EmailJS for order confirmations
+2. ✅ SMTP email configured (Gmail)
 3. ⏳ Build order form
 4. ⏳ Create admin portal
 

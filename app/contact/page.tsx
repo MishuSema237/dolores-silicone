@@ -3,11 +3,13 @@
 import { useState, useEffect, FormEvent } from "react";
 import { FormInput, FormTextarea } from "@/components/ui/form-input";
 import { Button } from "@/components/ui/button";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaInstagram, FaFacebook, FaPinterest, FaClock, FaWhatsapp, FaQuestionCircle } from "react-icons/fa";
 import toast from "react-hot-toast";
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [faqs, setFaqs] = useState<any[]>([]);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -17,6 +19,21 @@ export default function ContactPage() {
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    const fetchFaqs = async () => {
+      try {
+        const res = await fetch("/api/admin/faqs");
+        if (res.ok) {
+          const data = await res.json();
+          setFaqs(Array.isArray(data) ? data.filter((f: any) => f.active !== false) : []);
+        }
+      } catch (error) {
+        console.error("Failed to fetch FAQs:", error);
+      }
+    };
+    fetchFaqs();
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -55,7 +72,7 @@ export default function ContactPage() {
 
 
     try {
-      // Send contact form via EmailJS or API route
+      // Send contact form via API route
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -114,17 +131,41 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="w-full max-w-viewport mx-auto">
-      <div className="text-center mb-6 md:mb-16">
+    <div className="w-full">
+      {/* Full-bleed Hero */}
+      <section className="relative overflow-hidden bg-[#0c0517] text-white py-24 md:py-36">
+        <div className="absolute inset-0 bg-gradient-to-r from-violet-900/35 via-[#0c0517] to-purple-800/25" />
+        <div className="absolute top-0 left-1/3 w-[450px] h-[450px] bg-violet-600/10 rounded-full blur-[130px] -translate-y-1/4" />
+        <div className="absolute bottom-0 right-1/4 w-[350px] h-[350px] bg-purple-500/8 rounded-full blur-[100px] translate-y-1/3" />
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: "radial-gradient(circle, #a78bfa 1px, transparent 1px)",
+          backgroundSize: "32px 32px"
+        }} />
+        <div className="absolute top-[15%] right-[18%] w-24 h-24 border border-purple-500/12 rounded-full" />
+        <div className="absolute bottom-[18%] left-[10%] w-16 h-16 border-2 border-violet-400/10 rounded-xl -rotate-12" />
+        <div className="absolute top-[42%] left-[22%] w-2 h-2 bg-purple-400/30 rounded-full" />
 
-        <h1 className="text-2xl md:text-5xl font-serif mb-4 text-gray-900">Get In Touch</h1>
-        <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-lg">
-          Have a question about Dolores Silicone or your order? We'd love to
-          hear from you.
-        </p>
-      </div>
+        <div className="relative max-w-5xl mx-auto px-6 text-center">
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="w-10 h-px bg-gradient-to-r from-transparent to-purple-400/60" />
+            <div className="w-1.5 h-1.5 bg-purple-400/60 rotate-45" />
+            <div className="w-10 h-px bg-gradient-to-l from-transparent to-purple-400/60" />
+          </div>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-6">
+            <span className="bg-gradient-to-r from-white via-violet-100 to-purple-200 bg-clip-text text-transparent">
+              Get In
+            </span>
+            <br />
+            <span className="text-purple-400/80">Touch</span>
+          </h1>
+          <p className="text-purple-200/50 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Have a question about Dolores Silicone or your order? We&apos;d love to
+            hear from you.
+          </p>
+        </div>
+      </section>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-start px-4 md:px-8">
         {/* Contact Form */}
         <div className="lg:col-span-7 bg-white p-4 md:p-8 rounded-md md:rounded-2xl shadow-sm border border-purple-100">
           <h2 className="text-lg md:text-2xl font-serif mb-6 text-gray-800">Send us a Message</h2>
@@ -211,10 +252,10 @@ export default function ContactPage() {
                 <div>
                   <p className="font-semibold text-gray-900 mb-1">Call Us</p>
                   <a
-                    href="tel:+15551234567"
+                    href="tel:+447380608611"
                     className="text-gray-600 hover:text-purple-600 transition-colors no-underline"
                   >
-                    +1 (555) 123-4567
+                    +44 738 060 8611
                   </a>
                 </div>
               </div>
@@ -237,32 +278,98 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Social Media */}
-          <div className="bg-white p-4 md:p-8 rounded-md md:rounded-2xl border border-gray-100 shadow-sm text-center">
-            <h3 className="text-lg md:text-xl font-serif mb-6 text-gray-800">Follow Our Journey</h3>
-            <div className="flex justify-center gap-6">
-              {socials.map((social) => (
-                <a
-                  key={social._id}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition-all hover:-translate-y-1"
-                >
-                  {social.imageUrl ? (
-                    /* eslint-disable-next-line @next/next/no-img-element */
-                    <img
-                      src={social.imageUrl}
-                      alt={social.platform}
-                      className="w-full h-full object-cover rounded-full"
-                    />
-                  ) : (
-                    iconMap[social.icon] || <FaFacebook />
-                  )}
-                </a>
-              ))}
+          {/* WhatsApp Quick Link */}
+          <a
+            href="https://wa.me/447380608611?text=Hello%20Dolores%20Silicone!%20I%20have%20a%20question."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-green-50 p-4 md:p-8 rounded-md md:rounded-2xl border border-green-200 shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center flex-shrink-0">
+                <FaWhatsapp className="text-xl" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">WhatsApp Us Directly</h3>
+                <p className="text-sm text-gray-500">Fastest response for custom orders and quick questions.</p>
+                <p className="text-sm text-green-600 font-semibold mt-1">+44 738 060 8611</p>
+              </div>
+            </div>
+          </a>
+
+          {/* Business Hours */}
+          <div className="bg-gradient-to-br from-purple-50 to-white p-4 md:p-8 rounded-md md:rounded-2xl border border-purple-100 shadow-sm">
+            <div className="flex items-center gap-3 mb-6">
+              <FaClock className="text-purple-500" />
+              <h3 className="text-lg md:text-xl font-serif text-gray-800">Business Hours</h3>
+            </div>
+            <div className="space-y-3 text-sm">
+              <div className="flex justify-between"><span className="text-gray-600">Monday - Friday</span><span className="font-semibold text-gray-900">9:00 AM - 6:00 PM</span></div>
+              <div className="flex justify-between"><span className="text-gray-600">Saturday</span><span className="font-semibold text-gray-900">10:00 AM - 4:00 PM</span></div>
+              <div className="flex justify-between"><span className="text-gray-600">Sunday</span><span className="font-semibold text-gray-500">Closed</span></div>
+              <p className="text-xs text-gray-400 pt-2 border-t border-gray-100">All times in GMT. WhatsApp messages answered within 24 hours.</p>
             </div>
           </div>
+
+          {/* Social Media */}
+          {socials.length > 0 && (
+            <div className="bg-white p-4 md:p-8 rounded-md md:rounded-2xl border border-gray-100 shadow-sm text-center">
+              <h3 className="text-lg md:text-xl font-serif mb-6 text-gray-800">Follow Our Journey</h3>
+              <div className="flex justify-center gap-6">
+                {socials.map((social) => (
+                  <a
+                    key={social._id}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition-all hover:-translate-y-1"
+                  >
+                    {social.imageUrl ? (
+                      /* eslint-disable-next-line @next/next/no-img-element */
+                      <img
+                        src={social.imageUrl}
+                        alt={social.platform}
+                        className="w-full h-full object-cover rounded-full"
+                      />
+                    ) : (
+                      iconMap[social.icon] || <FaFacebook />
+                    )}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+        <div className="text-center mb-10">
+          <div className="flex items-center justify-center gap-2 text-purple-600 mb-3">
+            <FaQuestionCircle />
+            <span className="font-black uppercase tracking-widest text-sm">Frequently Asked</span>
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Common Questions</h2>
+        </div>
+        <div className="space-y-3">
+          {faqs.length > 0 ? faqs.map((faq, i) => (
+            <div key={faq._id || i} className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+              <button
+                onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                className="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition-colors"
+              >
+                <span className="font-semibold text-gray-900 pr-4">{faq.question}</span>
+                <span className={`text-purple-500 text-lg transition-transform flex-shrink-0 ${openFaq === i ? "rotate-45" : ""}`}>+</span>
+              </button>
+              {openFaq === i && (
+                <div className="px-5 pb-5 text-gray-600 leading-relaxed text-sm">
+                  {faq.answer}
+                </div>
+              )}
+            </div>
+          )) : (
+            <p className="text-center text-gray-400 py-8">FAQs coming soon.</p>
+          )}
         </div>
       </div>
     </div>

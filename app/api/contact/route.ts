@@ -1,32 +1,44 @@
 import { NextRequest, NextResponse } from "next/server";
+import connectMongoose from "@/lib/db/mongodb";
+import Message from "@/lib/models/Message";
 import { sendContactEmail } from "@/lib/email";
 import { handleApiError } from "@/lib/utils/api-error-handler";
-
-// For now, we'll use EmailJS or just log the contact form
-// You can integrate with EmailJS or send to your email service
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    // Validate required fields
-    if (!body.name || !body.email || !body.subject || !body.message) {
+    if (!body.name || !body.email || !body.message) {
       return NextResponse.json(
-        { error: "All fields are required" },
+        { error: "Name, email, and message are required" },
         { status: 400 }
       );
     }
 
-    await sendContactEmail({
+    await connectMongoose();
+
+    const message = await Message.create({
       name: body.name,
       email: body.email,
-      subject: body.subject,
-      message: body.message,
+      subject: body.subject || undefined,
+      content: body.message,
+      status: "New",
     });
 
+    try {
+      await sendContactEmail({
+        name: body.name,
+        email: body.email,
+        subject: body.subject || "Contact Form Submission",
+        message: body.message,
+      });
+    } catch (emailError) {
+      console.error("Failed to send email notification:", emailError);
+    }
+
     return NextResponse.json(
-      { success: true, message: "Message sent successfully" },
-      { status: 200 }
+      { success: true, message: "Message sent successfully", id: message._id },
+      { status: 201 }
     );
   } catch (error: any) {
     return handleApiError(error);

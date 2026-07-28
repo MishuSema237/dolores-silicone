@@ -37,11 +37,12 @@ Create a `.env.local` file in the `webapp` directory with:
 # MongoDB Atlas Connection String
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/reborn_babies?retryWrites=true&w=majority
 
-# EmailJS Configuration (for development)
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_ORDER_CONFIRMATION=your_template_id
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_ADMIN_ALERT=your_template_id
+# SMTP Configuration (Gmail)
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your_email@gmail.com
+SMTP_PASSWORD=your_app_password
+SMTP_FROM_NAME=Dolores Silicone
 
 # NextAuth Configuration (for admin portal)
 NEXTAUTH_SECRET=generate_a_random_secret_here

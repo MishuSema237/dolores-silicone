@@ -68,12 +68,12 @@ export default function AdminDashboard() {
           trendUp={!stats?.orders.pending}
         />
         <StatsCard
-          title="Total Babies"
+          title="Total Girls"
           value={stats?.products.babies || 0}
           icon={<FaBoxOpen className="text-xl" />}
         />
         <StatsCard
-          title="Total Accessories"
+          title="Total Boys"
           value={stats?.products.accessories || 0}
           icon={<FaShoppingBag className="text-xl" />}
         />

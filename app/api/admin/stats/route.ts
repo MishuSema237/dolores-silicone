@@ -13,6 +13,7 @@ export async function GET() {
             totalOrders,
             pendingOrders,
             totalBabies,
+            totalGirls,
             totalAccessories,
             totalGalleryImages,
             totalTestimonials,
@@ -20,8 +21,9 @@ export async function GET() {
         ] = await Promise.all([
             Order.countDocuments({}),
             Order.countDocuments({ status: "pending" }),
-            Product.countDocuments({ category: 'baby' }),
-            Product.countDocuments({ category: 'accessory' }),
+            Product.countDocuments({ category: 'boys' }),
+            Product.countDocuments({ category: 'girls' }),
+            Product.countDocuments({ category: 'accessories' }),
             GalleryItem.countDocuments({}),
             Testimonial.countDocuments({}),
             Order.find({}).sort({ createdAt: -1 }).limit(5),
@@ -33,9 +35,9 @@ export async function GET() {
                 pending: pendingOrders,
             },
             products: {
-                babies: totalBabies,
+                babies: totalBabies + totalGirls,
                 accessories: totalAccessories,
-                total: totalBabies + totalAccessories
+                total: totalBabies + totalGirls + totalAccessories
             },
             gallery: totalGalleryImages,
             testimonials: totalTestimonials,

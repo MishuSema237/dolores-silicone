@@ -12,6 +12,7 @@ interface ImageUploadProps {
 
 export function ImageUpload({ value = [], onChange, maxFiles = 5 }: ImageUploadProps) {
     const [isUploading, setIsUploading] = useState(false);
+    const [urlInput, setUrlInput] = useState("");
     const fileInputRef = useRef<HTMLInputElement>(null);
 
     const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -54,6 +55,21 @@ export function ImageUpload({ value = [], onChange, maxFiles = 5 }: ImageUploadP
         onChange(value.filter((url) => url !== urlToRemove));
     };
 
+    const handleAddUrl = () => {
+        const url = urlInput.trim();
+        if (!url) return;
+        if (!/^https?:\/\/.+/i.test(url)) {
+            alert("Please enter a valid URL starting with http:// or https://");
+            return;
+        }
+        if (value.length >= maxFiles) {
+            alert(`Maximum ${maxFiles} images allowed`);
+            return;
+        }
+        onChange([...value, url]);
+        setUrlInput("");
+    };
+
     return (
         <div className="space-y-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -94,6 +110,28 @@ export function ImageUpload({ value = [], onChange, maxFiles = 5 }: ImageUploadP
                 accept="image/*"
                 multiple
             />
+
+            {value.length < maxFiles && (
+                <div className="flex gap-2">
+                    <input
+                        type="url"
+                        placeholder="Or paste an image URL..."
+                        value={urlInput}
+                        onChange={(e) => setUrlInput(e.target.value)}
+                        onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleAddUrl(); } }}
+                        className="flex-1 px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-400"
+                    />
+                    <Button
+                        type="button"
+                        variant="outline"
+                        size="sm"
+                        onClick={handleAddUrl}
+                        disabled={!urlInput.trim()}
+                    >
+                        Add URL
+                    </Button>
+                </div>
+            )}
         </div>
     );
 }

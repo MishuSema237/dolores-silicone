@@ -39,9 +39,15 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
             result = result.filter((p) => p.price <= Number(priceRange.max));
         }
 
-        // Category Filter
+        // Category Filter (normalize old DB values)
         if (category !== "all") {
-            result = result.filter((p) => (p.category || "baby") === category);
+            result = result.filter((p) => {
+                const cat = (p.category || "girls").toLowerCase();
+                if (category === "accessories") return cat === "accessories" || cat === "accessory";
+                if (category === "boys") return cat === "boys" || (cat === "baby" && p.attributes?.gender?.toLowerCase() === "male");
+                if (category === "girls") return cat === "girls" || cat === "baby" && p.attributes?.gender?.toLowerCase() !== "male";
+                return true;
+            });
         }
 
         // Sort
@@ -73,6 +79,13 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
         sortOption !== "newest"
     ].filter(Boolean).length;
 
+    const categoryDescriptions: Record<string, string> = {
+        all: "Browse every handcrafted silicone reborn baby and accessory in our collection. Each one is a unique, one-of-a-kind creation made with medical-grade platinum silicone.",
+        girls: "Our handcrafted silicone baby girls, each painted with extraordinary attention to detail. From delicate eyelashes to weighted bodies that feel like holding a real newborn.",
+        boys: "Our handcrafted silicone baby boys, each a unique masterpiece. Premium platinum silicone, hand-rooted hair, and the realistic weighted feel that Dolores Silicone is known for.",
+        accessories: "Beautifully crafted accessories to complement your Dolores Silicone baby — from clothing and blankets to bottles and keepsake items.",
+    };
+
     return (
         <div className="w-full max-w-7xl mx-auto px-4 py-12">
             <div className="text-center mb-6 md:mb-12">
@@ -80,7 +93,7 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                     Our Collection
                 </h1>
                 <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-lg">
-                    Discover our handcrafted silicone reborn babies and premium accessories, each one a unique masterpiece waiting to be cherished.
+                    {categoryDescriptions[category] || categoryDescriptions.all}
                 </p>
             </div>
 
@@ -134,7 +147,7 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                                 Categories
                             </label>
                             <div className="flex flex-col gap-2">
-                                {["all", "baby", "accessory"].map((cat) => (
+                                {["all", "girls", "boys", "accessories"].map((cat) => (
                                     <button
                                         key={cat}
                                         onClick={() => setCategory(cat)}
@@ -143,7 +156,7 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                                             : "text-gray-500 hover:bg-gray-50 hover:text-gray-900"
                                             }`}
                                     >
-                                        {cat === "all" ? "All Categories" : cat === "baby" ? "Babies" : "Accessories"}
+                                        {cat === "all" ? "All Items" : cat === "girls" ? "Baby Girls" : cat === "boys" ? "Baby Boys" : "Accessories"}
                                     </button>
                                 ))}
                             </div>
@@ -156,7 +169,7 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                             </label>
                             <div className="flex items-center gap-3">
                                 <div className="flex-1 relative">
-                                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">$</span>
+                                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">£</span>
                                     <input
                                         type="number"
                                         placeholder="Min"
@@ -167,7 +180,7 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                                 </div>
                                 <span className="text-gray-300">to</span>
                                 <div className="flex-1 relative">
-                                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">$</span>
+                                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">£</span>
                                     <input
                                         type="number"
                                         placeholder="Max"
@@ -221,21 +234,37 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                     <div className="w-24 h-24 bg-purple-50 rounded-full flex items-center justify-center text-purple-200 text-4xl mb-6">
                         <FaSearch />
                     </div>
-                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-2">No matches found</h3>
-                    <p className="text-gray-500 mb-8 max-w-sm">
-                        Try adjusting your search or filters to find what you're looking for our treasure collection.
+                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-2">No items found</h3>
+                    <p className="text-gray-500 mb-8 max-w-md">
+                        {category === "girls"
+                            ? "We are currently preparing new baby girls. Check back soon or contact us for a custom commission."
+                            : category === "boys"
+                            ? "We are currently preparing new baby boys. Check back soon or contact us for a custom commission."
+                            : category === "accessories"
+                            ? "Accessories are being prepared. Contact us on WhatsApp for available items."
+                            : "Try adjusting your search or filters. Each of our babies is unique and availability changes regularly."}
                     </p>
-                    <button
-                        onClick={() => {
-                            setSearchQuery("");
-                            setPriceRange({ min: "", max: "" });
-                            setCategory("all");
-                            setSortOption("newest");
-                        }}
-                        className="px-8 py-3 bg-purple-600 text-white rounded-full font-bold shadow-lg shadow-purple-200 hover:bg-purple-700 transition-all hover:-translate-y-1"
-                    >
-                        Reset Search
-                    </button>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                        <button
+                            onClick={() => {
+                                setSearchQuery("");
+                                setPriceRange({ min: "", max: "" });
+                                setCategory("all");
+                                setSortOption("newest");
+                            }}
+                            className="px-8 py-3 bg-purple-600 text-white rounded-full font-bold shadow-lg shadow-purple-200 hover:bg-purple-700 transition-all hover:-translate-y-1"
+                        >
+                            Reset Filters
+                        </button>
+                        <a
+                            href="https://wa.me/447380608611?text=Hello%20Dolores%20Silicone!%20I%27m%20interested%20in%20a%20custom%20baby."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-8 py-3 bg-white text-purple-600 border-2 border-purple-200 rounded-full font-bold hover:bg-purple-50 transition-all"
+                        >
+                            Ask About Custom Orders
+                        </a>
+                    </div>
                 </div>
             )}
         </div>

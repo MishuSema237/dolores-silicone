@@ -55,6 +55,28 @@ async function seed() {
         status: "active" as const,
         featured: true,
       },
+      {
+        name: "Hand-Knit Newborn Blanket",
+        slug: "hand-knit-newborn-blanket",
+        price: 45,
+        description: "A soft, hand-knitted blanket in delicate pastel tones, perfectly sized for your reborn baby.",
+        detailedDescription: "Crafted from premium cotton yarn, this blanket features a classic cable-knit pattern in soft pastel shades. Ideal for photo sessions and display.",
+        images: [],
+        category: "accessories" as const,
+        status: "active" as const,
+        featured: false,
+      },
+      {
+        name: "Reborn Baby Bottle Set",
+        slug: "reborn-baby-bottle-set",
+        price: 25,
+        description: "A set of realistic miniature baby bottles for display with your reborn doll.",
+        detailedDescription: "Three finely detailed miniature bottles in clear, pink, and blue. Filled with non-toxic resin for a realistic weighted feel.",
+        images: [],
+        category: "accessories" as const,
+        status: "active" as const,
+        featured: false,
+      },
     ];
 
     for (const productData of products) {
@@ -68,8 +90,8 @@ async function seed() {
     }
 
     // Seed Admin User (change password after first login!)
-    const adminEmail = process.env.ADMIN_EMAIL || "admin@rebornbabies.com";
-    const adminPassword = process.env.ADMIN_PASSWORD || "changeme123";
+    const adminEmail = process.env.ADMIN_EMAIL || "admin@doloressilicone.com";
+    const adminPassword = process.env.ADMIN_PASSWORD || "CHANGE_ME_BEFORE_DEPLOY";
 
     const existingAdmin = await AdminUser.findOne({ email: adminEmail });
     if (!existingAdmin) {

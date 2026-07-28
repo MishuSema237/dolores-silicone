@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useState, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { DataTable } from "@/components/admin/data-table";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -10,10 +10,22 @@ import { FaPlus } from "react-icons/fa";
 import { cn } from "@/lib/utils/cn";
 
 export default function ManageProductsPage() {
+    return (
+        <Suspense fallback={<div className="p-8 text-center text-gray-500">Loading...</div>}>
+            <ProductsContent />
+        </Suspense>
+    );
+}
+
+function ProductsContent() {
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const initialCategory = searchParams.get("category");
     const [products, setProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [filter, setFilter] = useState<"baby" | "accessory" | "all">("baby");
+    const [filter, setFilter] = useState<"girls" | "boys" | "accessories" | "all">(
+        (initialCategory as "girls" | "boys" | "accessories" | "all") || "all"
+    );
 
     const fetchProducts = async () => {
         try {
@@ -50,10 +62,25 @@ export default function ManageProductsPage() {
         }
     };
 
+    // Normalize category: old DB values ("baby"/"accessory") → new values ("girls"/"boys"/"accessories")
+    const normalizeCategory = (product: any): string => {
+        const cat = product.category;
+        if (cat === "accessories" || cat === "accessory") return "accessories";
+        if (cat === "boys") return "boys";
+        if (cat === "girls") return "girls";
+        // "baby" or missing — use gender attribute to distinguish
+        if (cat === "baby" || !cat) {
+            const gender = product.attributes?.gender?.toLowerCase();
+            if (gender === "male") return "boys";
+            return "girls";
+        }
+        return cat;
+    };
+
     // Filter products based on selected category
     const filteredProducts = products.filter((product: any) => {
         if (filter === "all") return true;
-        return (product.category || "baby") === filter;
+        return normalizeCategory(product) === filter;
     });
 
     const columns = [
@@ -84,14 +111,17 @@ export default function ManageProductsPage() {
         {
             header: "Price",
             accessor: (product: any) => (
-                <span className="font-medium">${product.price.toFixed(2)}</span>
+                        <span className="font-medium">£{product.price.toFixed(2)}</span>
             ),
         },
         {
             header: "Category",
-            accessor: (product: any) => (
-                <span className="capitalize">{product.category || "baby"}</span>
-            ),
+            accessor: (product: any) => {
+                const cat = normalizeCategory(product);
+                return (
+                    <span className="capitalize">{cat === "accessories" ? "Accessory" : cat === "boys" ? "Baby Boy" : "Baby Girl"}</span>
+                );
+            },
         },
         {
             header: "Status",
@@ -133,21 +163,32 @@ export default function ManageProductsPage() {
                 {/* Filter Tabs */}
                 <div className="flex border-b border-gray-100">
                     <button
-                        onClick={() => setFilter("baby")}
+                        onClick={() => setFilter("girls")}
                         className={cn(
                             "px-6 py-4 text-sm font-medium transition-colors border-b-2",
-                            filter === "baby"
+                            filter === "girls"
                                 ? "border-purple-600 text-purple-600"
                                 : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
                         )}
                     >
-                        Babies
+                        Girls
                     </button>
                     <button
-                        onClick={() => setFilter("accessory")}
+                        onClick={() => setFilter("boys")}
                         className={cn(
                             "px-6 py-4 text-sm font-medium transition-colors border-b-2",
-                            filter === "accessory"
+                            filter === "boys"
+                                ? "border-purple-600 text-purple-600"
+                                : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                        )}
+                    >
+                        Boys
+                    </button>
+                    <button
+                        onClick={() => setFilter("accessories")}
+                        className={cn(
+                            "px-6 py-4 text-sm font-medium transition-colors border-b-2",
+                            filter === "accessories"
                                 ? "border-purple-600 text-purple-600"
                                 : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
                         )}

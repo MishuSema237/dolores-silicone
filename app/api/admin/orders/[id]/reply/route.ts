@@ -3,10 +3,7 @@ import connectMongoose from "@/lib/db/mongodb";
 import Order from "@/lib/models/Order";
 import { sendOrderUpdateEmail } from "@/lib/email";
 
-// Since sendOrderConfirmationEmail is specific, we might need to expose a generic sendEmail or create a new function
-// For now, I'll assume we can use the existing infrastructure or I'll modify emailjs.ts later if needed.
-// Actually, the user wants to "reply via the site which then send the reply to the client via email template for payment details"
-// So this is basically sending payment details.
+// Sends payment details / reply to customer via SMTP
 
 export async function POST(
     request: Request,

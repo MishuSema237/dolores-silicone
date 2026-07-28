@@ -4,8 +4,8 @@ import Image from "next/image";
 import { Button } from "./button";
 import { FaShoppingCart, FaEye } from "react-icons/fa";
 import toast from "react-hot-toast";
-import { AccessoryUpsellModal } from "@/components/shop/accessory-upsell-modal";
 import { useCart } from "@/lib/context/cart-context";
+import { formatPrice } from "@/lib/utils";
 
 interface ProductCardProps {
   id: string;
@@ -27,7 +27,6 @@ export function ProductCard({
   category,
 }: ProductCardProps) {
   const { addItem } = useCart();
-  const [showUpsell, setShowUpsell] = useState(false);
   const [isNavigating, setIsNavigating] = useState(false);
 
   const handleAddToCart = (e?: React.MouseEvent) => {
@@ -44,10 +43,6 @@ export function ProductCard({
       category,
     });
     toast.success("Added to cart");
-
-    if (category === "baby") {
-      setShowUpsell(true);
-    }
   };
 
   const handleCardClick = () => {
@@ -104,7 +99,7 @@ export function ProductCard({
             </h3>
           </Link>
           <span className="font-bold text-purple-600 text-xs md:text-sm hidden min-[450px]:block">
-            ${(price || 0).toFixed(0)}
+            {formatPrice(price || 0)}
           </span>
         </div>
 
@@ -123,7 +118,7 @@ export function ProductCard({
         {/* Mobile (<450px) Layout */}
         <div className="flex min-[450px]:hidden items-center justify-between mt-3">
           <span className="font-bold text-purple-600 text-sm">
-            ${(price || 0).toFixed(0)}
+            {formatPrice(price || 0)}
           </span>
           <button
             onClick={handleAddToCart}
@@ -142,11 +137,6 @@ export function ProductCard({
         </div>
       )}
 
-      <AccessoryUpsellModal
-        isOpen={showUpsell}
-        onClose={() => setShowUpsell(false)}
-        product={{ id, name }}
-      />
     </div>
   );
 }

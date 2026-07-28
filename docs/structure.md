@@ -7,7 +7,7 @@ app/
   shop/                  # Product listing route group
   product/[slug]/        # Product detail pages
   gallery/               # Gallery grid + lightbox
-  contact/               # Contact page + EmailJS form
+  contact/               # Contact page + SMTP form
   cart/                  # Cart review before order flow
   order/                 # Multi-step order experience
     [reference]/         # Client-facing order status page
@@ -22,7 +22,7 @@ components/
 lib/
   config/                # Site constants, theme tokens, navigation data
   db/                    # MongoDB connection + repositories
-  email/                 # EmailJS + future Nodemailer helpers
+  email/                 # Nodemailer SMTP helpers
   seo/                   # Metadata builders, structured data helpers
   utils/                 # Formatters, mappers, shared helpers
   types/                 # Shared TypeScript interfaces & Zod schemas

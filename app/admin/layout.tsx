@@ -147,14 +147,44 @@ export default function AdminLayout({
                         Gallery
                     </Link>
                     <Link
-                        href="/admin/testimonials"
+                        href="/admin/blog"
                         onClick={() => document.getElementById('mobile-sidebar')?.classList.add('hidden')}
-                        className={`block px-4 py-2 rounded-lg transition-colors font-medium ${pathname.startsWith("/admin/testimonials")
+                        className={`block px-4 py-2 rounded-lg transition-colors font-medium ${pathname.startsWith("/admin/blog")
                             ? "bg-purple-50 text-purple-600"
                             : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                             }`}
                     >
-                        Testimonials
+                        Blog
+                    </Link>
+                    <Link
+                        href="/admin/reviews"
+                        onClick={() => document.getElementById('mobile-sidebar')?.classList.add('hidden')}
+                        className={`block px-4 py-2 rounded-lg transition-colors font-medium ${pathname.startsWith("/admin/reviews")
+                            ? "bg-purple-50 text-purple-600"
+                            : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                            }`}
+                    >
+                        Reviews
+                    </Link>
+                    <Link
+                        href="/admin/faqs"
+                        onClick={() => document.getElementById('mobile-sidebar')?.classList.add('hidden')}
+                        className={`block px-4 py-2 rounded-lg transition-colors font-medium ${pathname.startsWith("/admin/faqs")
+                            ? "bg-purple-50 text-purple-600"
+                            : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                            }`}
+                    >
+                        FAQs
+                    </Link>
+                    <Link
+                        href="/admin/messages"
+                        onClick={() => document.getElementById('mobile-sidebar')?.classList.add('hidden')}
+                        className={`block px-4 py-2 rounded-lg transition-colors font-medium ${pathname.startsWith("/admin/messages")
+                            ? "bg-purple-50 text-purple-600"
+                            : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                            }`}
+                    >
+                        Messages
                     </Link>
 
                     <div className="pt-4 pb-2">

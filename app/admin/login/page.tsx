@@ -98,9 +98,7 @@ export default function AdminLoginPage() {
             {isLoading ? "Logging in..." : "Login"}
           </Button>
         </form>
-        <p className="text-sm text-gray-500 text-center mt-4">
-          Default: admin@doloressilicone.com / changeme123
-        </p>
+
         <div className="mt-6 text-center">
           <Link href="/" className="text-sm text-purple-600 hover:text-purple-700 font-medium hover:underline">
             ← Go Home

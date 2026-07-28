@@ -17,7 +17,7 @@ export interface IProduct {
   };
   rating?: number;
   reviewCount?: number;
-  category: "baby" | "accessory";
+  category: "boys" | "girls" | "accessories";
   status: "active" | "inactive" | "sold_out";
   featured: boolean;
   createdAt: Date;
@@ -76,8 +76,8 @@ const ProductSchema = new mongoose.Schema<IProduct>(
     },
     category: {
       type: String,
-      enum: ["baby", "accessory"],
-      default: "baby",
+      enum: ["boys", "girls", "accessories"],
+      default: "girls",
     },
     status: {
       type: String,

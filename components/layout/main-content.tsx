@@ -18,10 +18,7 @@ export function MainContent({ children }: { children: React.ReactNode }) {
     }
 
     return (
-        <main
-            className={`flex-1 w-full ${isHome || isShop || isProductDetails ? "p-0" : "max-w-viewport mx-auto px-4 md:px-8 pt-[35px]"
-                }`}
-        >
+        <main className="flex-1 w-full">
             {children}
         </main>
     );

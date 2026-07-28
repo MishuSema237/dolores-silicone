@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import { ProductCard } from "@/components/ui/product-card";
-import { AccessoryCard } from "@/components/shop/accessory-card";
 import { Button } from "@/components/ui/button";
 import { FaChevronLeft, FaChevronRight, FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
@@ -95,10 +94,6 @@ export function ProductGrid({
       description: product.description,
       category: product.category,
     };
-
-    if (product.category === "accessory") {
-      return <AccessoryCard key={product._id || product.id} {...commonProps} />;
-    }
 
     return <ProductCard key={product._id || product.id} {...commonProps} />;
   };

@@ -21,7 +21,7 @@ export default function EditProductPage({ params }: { params: Promise<{ id: stri
         materialsAndCare: "",
         shippingInfo: "",
         status: "active",
-        category: "baby",
+        category: "girls",
         images: [] as string[],
         testimonial: {
             quote: "",
@@ -142,8 +142,8 @@ export default function EditProductPage({ params }: { params: Promise<{ id: stri
                             value={formData.category}
                             onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                             options={[
-                                { value: "baby", label: "Baby" },
-                                { value: "accessory", label: "Accessory" },
+                                { value: "girls", label: "Girls" },
+                                { value: "boys", label: "Boys" },
                             ]}
                         />
                         <FormSelect

@@ -24,7 +24,7 @@ export default function AddBabyPage() {
             title: "",
         },
         images: [] as string[],
-        category: "baby",
+        category: "girls",
         status: "active",
     });
 
@@ -179,8 +179,8 @@ export default function AddBabyPage() {
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                     options={[
-                        { value: "baby", label: "Baby" },
-                        { value: "accessory", label: "Accessory" },
+                        { value: "girls", label: "Girls" },
+                        { value: "boys", label: "Boys" },
                     ]}
                 />
 
