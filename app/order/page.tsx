@@ -154,6 +154,7 @@ export default function OrderPage() {
         shipping: {
           address: formData.streetAddress,
           city: formData.city,
+          zipCode: formData.zipCode,
           state: formData.state || undefined,
           country: formData.country === "OTHER" ? formData.customCountry : formData.country,
         },
