@@ -40,10 +40,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Generate order reference
-    const count = await mongoose.models.Order?.countDocuments() || 0;
-    const date = new Date().toISOString().slice(0, 10).replace(/-/g, "");
-    const orderReference = `RB${date}${String(count + 1).padStart(4, "0")}`;
+    // Generate random order reference
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    const random = Array.from({ length: 6 }, () => chars[Math.floor(Math.random() * chars.length)]).join("");
+    const orderReference = `DS${random}`;
 
     // Create order
     const order = await createOrder({

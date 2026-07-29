@@ -66,7 +66,7 @@ function TrackOrderContent() {
                                 label="Order Reference"
                                 value={orderReference}
                                 onChange={(e) => setOrderReference(e.target.value.toUpperCase())}
-                                placeholder="e.g. DS20260001"
+                                placeholder="e.g. DSX7K2M9"
                                 required
                             />
                             <FormInput
