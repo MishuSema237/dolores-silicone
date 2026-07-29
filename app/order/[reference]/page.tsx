@@ -64,7 +64,7 @@ export default function OrderConfirmationPage() {
   const total = order.payment.totalAmount;
 
   return (
-    <div className="w-full max-w-viewport mx-auto px-4 print:max-w-none">
+    <div className="w-full max-w-viewport mx-auto px-4 pt-4 md:pt-8 print:max-w-none">
       <ClearCartOnMount />
 
       <div className="max-w-3xl mx-auto text-center print:text-left">

@@ -23,7 +23,7 @@ export default function CartPage() {
   }
 
   return (
-    <div className="w-full max-w-viewport mx-auto px-4">
+    <div className="w-full max-w-viewport mx-auto px-4 pt-4 md:pt-8">
       <h1 className="mb-6 md:mb-12 text-2xl md:text-4xl font-serif">Your Cart</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
