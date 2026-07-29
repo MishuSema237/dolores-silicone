@@ -22,10 +22,10 @@ async function checkAdmin() {
         const password = process.env.ADMIN_PASSWORD;
 
         if (!email) {
-            console.log("No ADMIN_EMAIL in .env.local, checking for default 'admin@doloressilicone.com'");
+            console.log("No ADMIN_EMAIL in .env.local, checking for default 'siliconedolores@gmail.com'");
         }
 
-        const testEmail = email || "admin@doloressilicone.com";
+        const testEmail = email || "siliconedolores@gmail.com";
         const admin = await AdminUser.findOne({ email: testEmail.toLowerCase() });
 
         if (!admin) {

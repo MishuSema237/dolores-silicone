@@ -97,8 +97,8 @@ export default function ReturnsPage() {
                 WhatsApp
               </a>{" "}
               or email at{" "}
-              <a href="mailto:hello@doloressilicone.com" className="text-purple-600 hover:text-purple-700 underline">
-                hello@doloressilicone.com
+              <a href="mailto:siliconedolores@gmail.com" className="text-purple-600 hover:text-purple-700 underline">
+                siliconedolores@gmail.com
               </a>
             </li>
             <li>Provide your order reference and reason for return</li>

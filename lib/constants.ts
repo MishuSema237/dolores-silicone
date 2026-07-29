@@ -13,7 +13,7 @@ export const WHATSAPP = {
 } as const;
 
 export const CONTACT = {
-  email: "hello@doloressilicone.com",
+  email: "siliconedolores@gmail.com",
   phone: "+44 738 060 8611",
   address: "Worldwide",
 } as const;
