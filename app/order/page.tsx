@@ -68,7 +68,7 @@ export default function OrderPage() {
 
   if (items.length === 0) {
     return (
-      <div className="w-full max-w-viewport mx-auto text-center py-12">
+      <div className="w-full max-w-viewport mx-auto px-4 text-center py-12">
         <h1 className="mb-4">Your Cart is Empty</h1>
         <p className="mb-8 text-gray-500">
           Add items to your cart before placing an order.
@@ -196,7 +196,7 @@ export default function OrderPage() {
   };
 
   return (
-    <div className="w-full max-w-viewport mx-auto">
+    <div className="w-full max-w-viewport mx-auto px-4">
       <h1 className="mb-6 md:mb-12 text-2xl md:text-4xl font-serif">Your Order Request</h1>
 
       <form onSubmit={handleSubmit}>

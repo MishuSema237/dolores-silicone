@@ -109,7 +109,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const hasHalfStar = (product.rating || 0) % 1 >= 0.5;
 
   return (
-    <div className="w-full max-w-viewport mx-auto lg:px-6 lg:pt-6">
+    <div className="w-full max-w-viewport mx-auto px-4 lg:px-6 lg:pt-6">
       {/* ── JSON-LD Product Schema ── */}
       <script
         type="application/ld+json"

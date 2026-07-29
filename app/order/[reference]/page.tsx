@@ -50,7 +50,7 @@ export default function OrderConfirmationPage() {
 
   if (loading) {
     return (
-      <div className="w-full max-w-viewport mx-auto flex items-center justify-center py-20">
+      <div className="w-full max-w-viewport mx-auto px-4 flex items-center justify-center py-20">
         <div className="w-12 h-12 border-4 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
       </div>
     );
@@ -64,7 +64,7 @@ export default function OrderConfirmationPage() {
   const total = order.payment.totalAmount;
 
   return (
-    <div className="w-full max-w-viewport mx-auto print:max-w-none">
+    <div className="w-full max-w-viewport mx-auto px-4 print:max-w-none">
       <ClearCartOnMount />
 
       <div className="max-w-3xl mx-auto text-center print:text-left">
