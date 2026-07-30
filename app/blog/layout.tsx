@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Journal | Dolores Silicone",
     description:
       "Insights into the world of reborn artistry, silicone baby care, therapeutic uses, and the craft behind every Dolores creation.",
-    url: "https://dolores-silicone.vercel.app/blog",
+    url: "https://doloressilicone.com/blog",
     siteName: "Dolores Silicone",
     images: [
       {

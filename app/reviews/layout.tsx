@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Customer Reviews | Dolores Silicone",
     description:
       "Read genuine customer reviews and experiences with Dolores Silicone handcrafted reborn baby dolls.",
-    url: "https://dolores-silicone.vercel.app/reviews",
+    url: "https://doloressilicone.com/reviews",
     siteName: "Dolores Silicone",
     images: [
       {

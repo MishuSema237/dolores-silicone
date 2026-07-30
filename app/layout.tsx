@@ -29,7 +29,7 @@ const parisienne = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://dolores-silicone.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://doloressilicone.com"),
   title: {
     default: "Dolores Silicone | Handcrafted Silicone Reborn Babies",
     template: "%s | Dolores Silicone",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://dolores-silicone.vercel.app",
+    url: "https://doloressilicone.com",
     title: "Dolores Silicone | Handcrafted Silicone Reborn Babies",
     description: "Experience the artistry of lifelike silicone reborn dolls. Handcrafted for collectors and families seeking comfort and joy.",
     siteName: "Dolores Silicone",

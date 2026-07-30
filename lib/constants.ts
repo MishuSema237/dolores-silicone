@@ -2,7 +2,7 @@ export const BRAND = {
   name: "Dolores Silicone",
   tagline: "Handcrafted Silicone Reborn Babies",
   description: "Handcrafted with love, bringing comfort and joy to your arms. Each baby is a unique masterpiece of healing art.",
-  url: process.env.NEXT_PUBLIC_APP_URL || "https://dolores-silicone.vercel.app",
+  url: process.env.NEXT_PUBLIC_APP_URL || "https://doloressilicone.com",
 } as const;
 
 export const WHATSAPP = {
@@ -47,7 +47,7 @@ export const SEO = {
   titleTemplate: "%s | Dolores Silicone",
   defaultDescription:
     "Handcrafted platinum silicone reborn baby dolls made with love in the UK. Each baby is a one-of-a-kind masterpiece — hand-painted in 8–20+ layers, weighted for realism, and CE certified safe.",
-  url: process.env.NEXT_PUBLIC_APP_URL || "https://dolores-silicone.vercel.app",
+  url: process.env.NEXT_PUBLIC_APP_URL || "https://doloressilicone.com",
   keywords: [
     "silicone reborn baby dolls UK",
     "reborn baby dolls",

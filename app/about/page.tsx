@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About | Dolores Silicone",
     description: "Discover the artistry, materials, and story behind Dolores Silicone handcrafted reborn baby dolls.",
-    url: "https://dolores-silicone.vercel.app/about",
+    url: "https://doloressilicone.com/about",
     siteName: "Dolores Silicone",
     images: [
       {

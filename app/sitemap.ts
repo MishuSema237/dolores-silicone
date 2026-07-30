@@ -3,7 +3,7 @@ import connectMongoose from "@/lib/db/mongodb";
 import Product from "@/lib/models/Product";
 import Blog from "@/lib/models/Blog";
 
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || "https://dolores-silicone.vercel.app";
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || "https://doloressilicone.com";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [

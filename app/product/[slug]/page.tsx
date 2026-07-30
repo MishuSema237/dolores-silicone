@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: ProductPageProps) {
     openGraph: {
       title,
       description,
-      url: `https://dolores-silicone.vercel.app/product/${slug}`,
+      url: `https://doloressilicone.com/product/${slug}`,
       siteName: "Dolores Silicone",
       images: [
         {
@@ -126,7 +126,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             },
             offers: {
               "@type": "Offer",
-              url: `https://dolores-silicone.vercel.app/product/${slug}`,
+              url: `https://doloressilicone.com/product/${slug}`,
               priceCurrency: "GBP",
               price: product.price?.toFixed(2),
               availability: product.stock > 0

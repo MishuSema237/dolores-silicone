@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Contact Us | Dolores Silicone",
     description:
       "Get in touch with Dolores Silicone. We ship worldwide and are happy to answer any questions.",
-    url: "https://dolores-silicone.vercel.app/contact",
+    url: "https://doloressilicone.com/contact",
     siteName: "Dolores Silicone",
     images: [
       {

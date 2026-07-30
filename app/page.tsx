@@ -90,8 +90,8 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "Dolores Silicone",
-            url: "https://dolores-silicone.vercel.app",
-            logo: "https://dolores-silicone.vercel.app/assets/owners-logo/Dolores Silicone Logo.png",
+            url: "https://doloressilicone.com",
+            logo: "https://doloressilicone.com/assets/owners-logo/Dolores Silicone Logo.png",
             description:
               "Handcrafted platinum silicone reborn baby dolls. Each baby is a one-of-a-kind masterpiece created with love and care.",
             sameAs: [
@@ -115,13 +115,13 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "WebSite",
             name: "Dolores Silicone",
-            url: "https://dolores-silicone.vercel.app",
+            url: "https://doloressilicone.com",
             potentialAction: {
               "@type": "SearchAction",
               target: {
                 "@type": "EntryPoint",
                 urlTemplate:
-                  "https://dolores-silicone.vercel.app/shop?q={search_term_string}",
+                  "https://doloressilicone.com/shop?q={search_term_string}",
               },
               "query-input": "required name=search_term_string",
             },

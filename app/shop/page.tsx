@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shop | Dolores Silicone",
     description: "Browse our complete collection of handcrafted silicone reborn babies and accessories.",
-    url: "https://dolores-silicone.vercel.app/shop",
+    url: "https://doloressilicone.com/shop",
     siteName: "Dolores Silicone",
     images: [
       {

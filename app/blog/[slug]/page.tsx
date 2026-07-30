@@ -64,7 +64,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title,
       description,
-      url: `https://dolores-silicone.vercel.app/blog/${slug}`,
+      url: `https://doloressilicone.com/blog/${slug}`,
       siteName: "Dolores Silicone",
       images: [
         {
@@ -116,14 +116,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               name: "Dolores Silicone",
               logo: {
                 "@type": "ImageObject",
-                url: "https://dolores-silicone.vercel.app/assets/owners-logo/Dolores Silicone Logo.png",
+                url: "https://doloressilicone.com/assets/owners-logo/Dolores Silicone Logo.png",
               },
             },
             datePublished: post.publishedAt || post.createdAt,
             dateModified: post.createdAt,
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://dolores-silicone.vercel.app/blog/${slug}`,
+              "@id": `https://doloressilicone.com/blog/${slug}`,
             },
             keywords: "reborn doll care, silicone baby dolls, reborn collecting, therapeutic dolls",
             articleSection: post.category || "Journal",
