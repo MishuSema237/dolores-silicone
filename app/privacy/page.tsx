@@ -105,8 +105,8 @@ export default function PrivacyPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">7. Contact Us</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
             For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by email at{" "}
-            <a href="mailto:siliconedolores@gmail.com" className="text-purple-600 hover:text-purple-700 underline">
-              siliconedolores@gmail.com
+            <a href="mailto:support@doloressilicone.com" className="text-purple-600 hover:text-purple-700 underline">
+              support@doloressilicone.com
             </a>{" "}
             or by mail using the details provided on our{" "}
             <Link href="/contact" className="text-purple-600 hover:text-purple-700 underline">

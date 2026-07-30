@@ -34,7 +34,7 @@ async function seed() {
 
         const AdminUser = mongoose.models.AdminUser || mongoose.model("AdminUser", AdminUserSchema);
 
-        const email = process.env.ADMIN_EMAIL || "siliconedolores@gmail.com";
+        const email = process.env.ADMIN_EMAIL || "support@doloressilicone.com";
         const password = process.env.ADMIN_PASSWORD || "CHANGE_ME_BEFORE_DEPLOY";
 
         const existing = await AdminUser.findOne({ email: email.toLowerCase() });
