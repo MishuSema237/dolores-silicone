@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import localFont from "next/font/local";
@@ -129,6 +130,7 @@ export default function RootLayout({
           <BackToTop />
           <WhatsAppFloat />
           <Toaster position="bottom-right" />
+          <Script id="chatway" async src="https://cdn.chatway.app/widget.js?id=B2ZUNT3u7r7k" strategy="lazyOnload" />
         </CartProvider>
       </body>
     </html>
