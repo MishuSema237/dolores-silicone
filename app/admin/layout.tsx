@@ -91,7 +91,7 @@ export default function AdminLayout({
             </div>
 
             {/* Sidebar */}
-            <aside id="mobile-sidebar" className="hidden flex flex-col w-64 bg-white border-r border-gray-200 fixed inset-y-0 left-0 z-30 pt-16 md:pt-0 transition-transform shadow-lg md:shadow-none overflow-y-auto">
+            <aside id="mobile-sidebar" className="hidden md:flex flex-col w-64 bg-white border-r border-gray-200 fixed inset-y-0 left-0 z-30 pt-16 md:pt-0 transition-transform shadow-lg md:shadow-none overflow-y-auto">
                 <div className="p-6 border-b border-gray-100 hidden md:block flex-shrink-0">
                     <h2 className="text-2xl font-serif font-bold text-purple-600">Dolores Silicone</h2>
                 </div>
