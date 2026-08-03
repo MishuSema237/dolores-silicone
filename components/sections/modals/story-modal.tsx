@@ -2,44 +2,44 @@ export function StoryModalContent() {
   return (
     <>
       <p>
-        Reborn Babies was founded on a passion for transforming silicone into
-        breathing works of art. Our journey began with a single artist's dream
-        to create dolls that not only look real but also evoke the same warmth
-        and emotion as a real baby. Over the years, this dream has grown into a
-        collective of dedicated artisans, each bringing their unique talent to
-        craft these precious creations.
+        Dolores Silicone nació de una pasión por transformar la silicona en
+        obras de arte vivas. Nuestro viaje comenzó con el sueño de una artista
+        por crear muñecas que no solo parecieran reales, sino que también
+        evocaran el mismo cariño y emoción que un bebé real. Con los años, este
+        sueño se ha convertido en un equipo de artesanos dedicados, cada uno
+        aportando su talento único para crear estas preciosas obras.
       </p>
-      <p>Our core values guide everything we do:</p>
+      <p>Nuestros valores fundamentales guían todo lo que hacemos:</p>
       <ul className="list-disc pl-6 mb-4 space-y-2">
         <li>
-          <strong>Artistry:</strong> We are committed to the highest standards
-          of artistic excellence, meticulously crafting every detail to achieve
-          unparalleled realism.
+          <strong>Arte:</strong> Estamos comprometidos con los más altos
+          estándares de excelencia artística, elaborando meticulosamente cada
+          detalle para lograr un realismo incomparable.
         </li>
         <li>
-          <strong>Quality:</strong> We use only premium, ethically sourced
-          silicone and materials, ensuring that each Reborn baby is safe,
-          durable, and a joy to hold.
+          <strong>Calidad:</strong> Utilizamos únicamente silicona y materiales
+          premium de origen ético, asegurando que cada bebé Dolores sea seguro,
+          duradero y un placer de sostener.
         </li>
         <li>
-          <strong>Integrity:</strong> Transparency and honesty are paramount. We
-          clearly communicate our process, materials, and unique payment system,
-          building trust with our community.
+          <strong>Integridad:</strong> La transparencia y la honestidad son
+          fundamentales. Comunicamos claramente nuestro proceso, materiales y
+          sistema de pago único, generando confianza con nuestra comunidad.
         </li>
         <li>
-          <strong>Community:</strong> We value the passionate community of
-          Reborn collectors and strive to foster a supportive and engaging
-          environment. Your joy is our greatest reward.
+          <strong>Comunidad:</strong> Valoramos a la apasionada comunidad de
+          coleccionistas de reborn y nos esforzamos por fomentar un entorno
+          solidario y cercano. Tu alegría es nuestra mayor recompensa.
         </li>
         <li>
-          <strong>Passion:</strong> Our work is driven by a deep love for this
-          unique art form. We infuse every baby with the care and dedication it
-          deserves.
+          <strong>Pasión:</strong> Nuestro trabajo está impulsado por un
+          profundo amor por esta forma de arte única. Infundimos en cada bebé el
+          cuidado y la dedicación que merece.
         </li>
       </ul>
       <p>
-        Thank you for being a part of our story. We look forward to crafting a
-        piece of art that brings joy and warmth into your life.
+        Gracias por formar parte de nuestra historia. Esperamos crear una
+        obra de arte que traiga alegría y calidez a tu vida.
       </p>
     </>
   );

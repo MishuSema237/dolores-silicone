@@ -5,23 +5,24 @@ import { useCart } from "@/lib/context/cart-context";
 import { CartItemComponent } from "@/components/cart/cart-item";
 import { FormInput, FormSelect, RadioOption } from "@/components/ui/form-input";
 import { Button } from "@/components/ui/button";
+import { formatPrice } from "@/lib/utils";
 import { FaInfoCircle } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import toast from "react-hot-toast";
 
 const countries = [
-  { value: "", label: "Select a country" },
-  { value: "US", label: "United States" },
-  { value: "CA", label: "Canada" },
-  { value: "GB", label: "United Kingdom" },
+  { value: "", label: "Selecciona un país" },
+  { value: "US", label: "Estados Unidos" },
+  { value: "CA", label: "Canadá" },
+  { value: "GB", label: "Reino Unido" },
   { value: "AU", label: "Australia" },
-  { value: "NZ", label: "New Zealand" },
-  { value: "DE", label: "Germany" },
-  { value: "FR", label: "France" },
-  { value: "IT", label: "Italy" },
-  { value: "ES", label: "Spain" },
-  { value: "OTHER", label: "Other" },
+  { value: "NZ", label: "Nueva Zelanda" },
+  { value: "DE", label: "Alemania" },
+  { value: "FR", label: "Francia" },
+  { value: "IT", label: "Italia" },
+  { value: "ES", label: "España" },
+  { value: "OTHER", label: "Otro" },
 ];
 
 export default function OrderPage() {
@@ -69,11 +70,11 @@ export default function OrderPage() {
   if (items.length === 0) {
     return (
       <div className="w-full max-w-viewport mx-auto px-4 text-center py-12">
-        <h1 className="mb-4">Your Cart is Empty</h1>
+        <h1 className="mb-4">Tu Carrito está Vacío</h1>
         <p className="mb-8 text-gray-500">
-          Add items to your cart before placing an order.
+          Añade artículos a tu carrito antes de hacer un pedido.
         </p>
-        <Button href="/shop">Continue Shopping</Button>
+        <Button href="/shop">Seguir Comprando</Button>
       </div>
     );
   }
@@ -106,22 +107,22 @@ export default function OrderPage() {
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
 
-    if (!formData.fullName.trim()) newErrors.fullName = "Full name is required";
-    if (!formData.email.trim()) newErrors.email = "Email is required";
+    if (!formData.fullName.trim()) newErrors.fullName = "El nombre completo es obligatorio";
+    if (!formData.email.trim()) newErrors.email = "El correo electrónico es obligatorio";
     else if (!/\S+@\S+\.\S+/.test(formData.email))
-      newErrors.email = "Email is invalid";
+      newErrors.email = "El correo electrónico no es válido";
     if (!formData.streetAddress.trim())
-      newErrors.streetAddress = "Street address is required";
-    if (!formData.city.trim()) newErrors.city = "City is required";
-    if (!formData.zipCode.trim()) newErrors.zipCode = "Zip code is required";
-    if (!formData.country) newErrors.country = "Country is required";
+      newErrors.streetAddress = "La dirección es obligatoria";
+    if (!formData.city.trim()) newErrors.city = "La ciudad es obligatoria";
+    if (!formData.zipCode.trim()) newErrors.zipCode = "El código postal es obligatorio";
+    if (!formData.country) newErrors.country = "El país es obligatorio";
     if (formData.country === "OTHER" && !formData.customCountry.trim())
-      newErrors.customCountry = "Please specify your country";
+      newErrors.customCountry = "Especifica tu país";
 
     if (!formData.paymentMethod)
-      newErrors.paymentMethod = "Payment method is required";
+      newErrors.paymentMethod = "El método de pago es obligatorio";
     if (formData.paymentMethod === "other" && !formData.customPaymentMethod.trim())
-      newErrors.customPaymentMethod = "Please specify payment method";
+      newErrors.customPaymentMethod = "Especifica el método de pago";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -182,7 +183,7 @@ export default function OrderPage() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.error || "Failed to submit order");
+        throw new Error(errorData.error || "No se pudo enviar el pedido");
       }
 
       const result = await response.json();
@@ -191,14 +192,14 @@ export default function OrderPage() {
       router.push(`/order/${result.orderReference}`);
     } catch (error: any) {
       console.error("Order submission error:", error);
-      toast.error(error.message || "There was an error submitting your order. Please try again.");
+      toast.error(error.message || "Hubo un error al enviar tu pedido. Inténtalo de nuevo.");
       setIsSubmitting(false);
     }
   };
 
   return (
     <div className="w-full max-w-viewport mx-auto px-4 pt-4 md:pt-8">
-      <h1 className="mb-6 md:mb-12 text-2xl md:text-4xl font-serif">Your Order Request</h1>
+      <h1 className="mb-6 md:mb-12 text-2xl md:text-4xl font-serif">Tu Solicitud de Pedido</h1>
 
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -206,26 +207,26 @@ export default function OrderPage() {
           <div className="lg:col-span-7">
             {/* Cart Items */}
             <div className="mb-12">
-              <h2 className="mb-4 md:mb-8 text-lg md:text-2xl font-serif">1. Your Items</h2>
+              <h2 className="mb-4 md:mb-8 text-lg md:text-2xl font-serif">1. Tus Artículos</h2>
               <div className="space-y-0">
                 {items.map((item) => (
                   <CartItemComponent key={item.id} item={item} />
                 ))}
               </div>
               <div className="text-right font-medium pt-4 border-t border-gray-300 mt-4">
-                <p className="mb-0">Subtotal: ${subtotal.toFixed(2)}</p>
+                <p className="mb-0">Subtotal: {formatPrice(subtotal)}</p>
               </div>
             </div>
 
             {/* Contact Information */}
             <div className="mb-8 md:mb-12">
-              <h2 className="mb-4 md:mb-8 text-lg md:text-2xl font-serif">2. Contact Information</h2>
+              <h2 className="mb-4 md:mb-8 text-lg md:text-2xl font-serif">2. Información de Contacto</h2>
               <FormInput
                 id="fullName"
                 name="fullName"
-                label="Full Name"
+                label="Nombre Completo"
                 type="text"
-                placeholder="Jane Doe"
+                placeholder="María García"
                 required
                 value={formData.fullName}
                 onChange={handleChange}
@@ -234,9 +235,9 @@ export default function OrderPage() {
               <FormInput
                 id="email"
                 name="email"
-                label="Email Address"
+                label="Correo Electrónico"
                 type="email"
-                placeholder="jane.doe@example.com"
+                placeholder="maria.garcia@example.com"
                 required
                 value={formData.email}
                 onChange={handleChange}
@@ -245,7 +246,7 @@ export default function OrderPage() {
               <FormInput
                 id="phone"
                 name="phone"
-                label="Phone Number"
+                label="Número de Teléfono"
                 type="tel"
                 placeholder="(123) 456-7890"
                 value={formData.phone}
@@ -256,13 +257,13 @@ export default function OrderPage() {
 
             {/* Shipping Address */}
             <div className="mb-8 md:mb-12">
-              <h2 className="mb-4 md:mb-8 text-lg md:text-2xl font-serif">3. Shipping Address</h2>
+              <h2 className="mb-4 md:mb-8 text-lg md:text-2xl font-serif">3. Dirección de Envío</h2>
               <FormInput
                 id="streetAddress"
                 name="streetAddress"
-                label="Street Address"
+                label="Dirección"
                 type="text"
-                placeholder="123 Main St"
+                placeholder="Calle Principal 123"
                 required
                 value={formData.streetAddress}
                 onChange={handleChange}
@@ -272,9 +273,9 @@ export default function OrderPage() {
                 <FormInput
                   id="city"
                   name="city"
-                  label="City"
+                  label="Ciudad"
                   type="text"
-                  placeholder="Anytown"
+                  placeholder="Madrid"
                   required
                   value={formData.city}
                   onChange={handleChange}
@@ -283,9 +284,9 @@ export default function OrderPage() {
                 <FormInput
                   id="state"
                   name="state"
-                  label="State / Province"
+                  label="Estado / Provincia"
                   type="text"
-                  placeholder="State/Province"
+                  placeholder="Provincia"
                   value={formData.state}
                   onChange={handleChange}
                   error={errors.state}
@@ -293,9 +294,9 @@ export default function OrderPage() {
                 <FormInput
                   id="zipCode"
                   name="zipCode"
-                  label="Zip / Postal Code"
+                  label="Código Postal"
                   type="text"
-                  placeholder="12345"
+                  placeholder="28001"
                   required
                   value={formData.zipCode}
                   onChange={handleChange}
@@ -305,7 +306,7 @@ export default function OrderPage() {
               <FormSelect
                 id="country"
                 name="country"
-                label="Country"
+                label="País"
                 required
                 options={countries}
                 value={formData.country}
@@ -317,9 +318,9 @@ export default function OrderPage() {
                   <FormInput
                     id="customCountry"
                     name="customCountry"
-                    label="Specify Country"
+                    label="Especifica el País"
                     type="text"
-                    placeholder="Enter your country"
+                    placeholder="Escribe tu país"
                     required
                     value={formData.customCountry}
                     onChange={handleChange}
@@ -331,10 +332,10 @@ export default function OrderPage() {
 
             {/* Payment Method */}
             <div className="mb-8 md:mb-12">
-              <h2 className="mb-4 text-lg md:text-2xl font-serif">4. Preferred Payment Method</h2>
+              <h2 className="mb-4 text-lg md:text-2xl font-serif">4. Método de Pago Preferido</h2>
               <p className="text-sm text-gray-500 mb-6">
-                We will contact you to arrange payment. Please indicate your
-                preferred method below.
+                Te contactaremos para organizar el pago. Indica tu
+                método preferido a continuación.
               </p>
 
               {paymentMethods.map((method) => (
@@ -363,7 +364,7 @@ export default function OrderPage() {
                 id="otherPayment"
                 name="paymentMethod"
                 value="other"
-                label="Other (please specify):"
+                label="Otro (especificar):"
                 checked={formData.paymentMethod === "other"}
                 onChange={handleChange}
               />
@@ -375,7 +376,7 @@ export default function OrderPage() {
                     name="customPaymentMethod"
                     label=""
                     type="text"
-                    placeholder="e.g., Wise, Zelle, etc."
+                    placeholder="p. ej., Wise, Zelle, etc."
                     required={showOtherPayment}
                     value={formData.customPaymentMethod}
                     onChange={handleChange}
@@ -393,9 +394,9 @@ export default function OrderPage() {
               <div className="mt-6 p-4 bg-gray-100 border border-gray-300">
                 <p className="text-sm text-black mb-0 flex items-start">
                   <FaInfoCircle className="mr-2 mt-0.5 flex-shrink-0" />
-                  By clicking 'Place Order Request', you initiate an order, and
-                  we will contact you with payment details. No immediate payment
-                  will be taken.
+                  Al hacer clic en &quot;Enviar Solicitud de Pedido&quot;, inicias un pedido y
+                  te contactaremos con los datos de pago. No se realizará ningún
+                  pago inmediato.
                 </p>
               </div>
             </div>
@@ -404,23 +405,23 @@ export default function OrderPage() {
           {/* Right Column: Order Summary */}
           <div className="lg:col-span-5">
             <div className="bg-purple-50 p-6 border border-purple-200 sticky top-6 rounded-xl shadow-sm">
-              <h2 className="mb-8">Order Summary</h2>
+              <h2 className="mb-8">Resumen del Pedido</h2>
 
               <div className="space-y-2 mb-4">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
-                  <span>${subtotal.toFixed(2)}</span>
+                  <span>{formatPrice(subtotal)}</span>
                 </div>
                 <div className="flex justify-between text-sm text-gray-500">
-                  <span>Shipping</span>
-                  <span>To Be Confirmed</span>
+                  <span>Envío</span>
+                  <span>Por Confirmar</span>
                 </div>
               </div>
 
               <div className="border-t border-gray-300 pt-4 mt-4">
                 <div className="flex justify-between font-bold text-xl">
-                  <span>Total (Excl. Shipping)</span>
-                  <span>${total.toFixed(2)}</span>
+                  <span>Total (Sin Envío)</span>
+                  <span>{formatPrice(total)}</span>
                 </div>
               </div>
 
@@ -429,7 +430,7 @@ export default function OrderPage() {
                 className="w-full mt-6 md:mt-8 h-10 px-6 rounded-md md:h-14 md:px-10 md:rounded-2xl text-sm md:text-lg font-bold"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Submitting..." : "Place Order Request"}
+                {isSubmitting ? "Enviando..." : "Enviar Solicitud de Pedido"}
               </Button>
 
               {/* Trust Badges */}

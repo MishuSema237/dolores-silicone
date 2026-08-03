@@ -30,7 +30,7 @@ interface ProductGridProps {
 
 export function ProductGrid({
   products,
-  title = "Our Latest Creations",
+  title = "Nuestras últimas creaciones",
   showViewAll = true,
   itemsPerPage = 8,
   enablePagination = false,
@@ -188,7 +188,7 @@ export function ProductGrid({
               <FaChevronLeft />
             </Button>
             <span className="font-medium text-gray-900">
-              Page {currentPage} of {totalPages}
+              Página {currentPage} de {totalPages}
             </span>
             <Button
               variant="outline"
@@ -208,7 +208,7 @@ export function ProductGrid({
               variant="outline"
               className="rounded-xl border-purple-200 text-purple-600 hover:bg-purple-50 group px-8"
             >
-              View Collection <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              Ver colección <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         )}

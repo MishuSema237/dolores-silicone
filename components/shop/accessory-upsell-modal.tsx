@@ -5,6 +5,7 @@ import { Modal } from "@/components/ui/modal";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useCart } from "@/lib/context/cart-context";
+import { formatPrice } from "@/lib/utils";
 import toast from "react-hot-toast";
 
 interface Accessory {
@@ -60,24 +61,24 @@ export function AccessoryUpsellModal({ isOpen, onClose, product }: AccessoryUpse
             imageUrl: accessory.images[0],
             parentProductId: product.id, // Linking to the baby
         });
-        toast.success(`Added ${accessory.name} for ${product.name}!`);
+        toast.success(`¡Añadido ${accessory.name} para ${product.name}!`);
     };
 
     return (
         <Modal
             isOpen={isOpen}
             onClose={onClose}
-            title="Complete Your Order"
+            title="Completa tu pedido"
         >
             <div className="space-y-6">
                 <div className="text-center">
                     <p className="text-gray-600 mb-6">
-                        Would you like to add some premium accessories for <strong>{product.name}</strong>?
+                        ¿Te gustaría añadir accesorios premium para <strong>{product.name}</strong>?
                     </p>
                 </div>
 
                 {isLoading ? (
-                    <div className="text-center py-8 text-gray-500">Loading accessories...</div>
+                    <div className="text-center py-8 text-gray-500">Cargando accesorios...</div>
                 ) : accessories.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[400px] overflow-y-auto p-2">
                         {accessories.map((acc) => (
@@ -96,7 +97,7 @@ export function AccessoryUpsellModal({ isOpen, onClose, product }: AccessoryUpse
                                 <div className="flex flex-col flex-grow">
                                     <h4 className="text-sm font-semibold text-gray-900 mb-1">{acc.name}</h4>
                                     <p className="text-sm font-bold text-purple-600 mb-2">
-                                        ${acc.price.toFixed(2)}
+                                        {formatPrice(acc.price)}
                                     </p>
                                 </div>
                                 <Button
@@ -105,27 +106,27 @@ export function AccessoryUpsellModal({ isOpen, onClose, product }: AccessoryUpse
                                     onClick={() => handleAddAccessory(acc)}
                                     className="w-full mt-auto text-xs py-1 h-8"
                                 >
-                                    Add to Cart
+                                    Añadir al carrito
                                 </Button>
                             </div>
                         ))}
                     </div>
                 ) : (
                     <div className="text-center py-8 text-gray-500 italic">
-                        No accessories currently available.
+                        No hay accesorios disponibles actualmente.
                     </div>
                 )}
 
                 <div className="flex flex-col gap-3 pt-4 border-t border-gray-100 px-2 lg:px-0">
                     <Button href="/cart" className="w-full">
-                        Proceed to Checkout
+                        Ir al carrito
                     </Button>
                     <Button
                         variant="ghost"
                         onClick={onClose}
                         className="w-full text-gray-500 hover:text-gray-900"
                     >
-                        No thanks, just the baby
+                        No, gracias, solo el bebé
                     </Button>
                 </div>
             </div>

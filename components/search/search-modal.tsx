@@ -44,24 +44,24 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
   }, [searchQuery, isOpen]);
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} title="Search Products">
+    <Modal isOpen={isOpen} onClose={onClose} title="Buscar productos">
       <FormInput
         id="search"
         name="search"
         label=""
         type="text"
-        placeholder="Search for products..."
+        placeholder="Buscar productos..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         autoFocus
       />
 
       {isSearching && (
-        <p className="text-sm text-gray-500 mt-4">Searching...</p>
+        <p className="text-sm text-gray-500 mt-4">Buscando...</p>
       )}
 
       {!isSearching && searchQuery.length > 2 && results.length === 0 && (
-        <p className="text-sm text-gray-500 mt-4">No products found.</p>
+        <p className="text-sm text-gray-500 mt-4">No se encontraron productos.</p>
       )}
 
       {results.length > 0 && (
@@ -74,7 +74,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
               className="block p-4 border border-gray-300 hover:bg-gray-100 transition-colors"
             >
               <p className="font-medium">{product.name}</p>
-              <p className="text-sm text-gray-500">${product.price.toFixed(2)}</p>
+              <p className="text-sm text-gray-500">€{product.price.toFixed(2)}</p>
             </Link>
           ))}
         </div>
@@ -82,7 +82,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
       {searchQuery.length <= 2 && (
         <p className="text-sm text-gray-500 mt-4">
-          Type at least 3 characters to search...
+          Escribe al menos 3 caracteres para buscar...
         </p>
       )}
     </Modal>

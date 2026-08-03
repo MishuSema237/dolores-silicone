@@ -3,6 +3,7 @@
 import { useState, useEffect, use } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { formatPrice } from "@/lib/utils";
 import toast from "react-hot-toast";
 
 interface OrderDetail {
@@ -122,12 +123,12 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                                         <div className="font-medium">{item.name}</div>
                                         <div className="text-sm text-gray-500">Qty: {item.quantity}</div>
                                     </div>
-                                    <div className="font-medium">£{(item.price * item.quantity).toFixed(2)}</div>
+                                    <div className="font-medium">{formatPrice(item.price * item.quantity)}</div>
                                 </div>
                             ))}
                             <div className="flex justify-between items-center pt-4 border-t border-gray-100 font-bold text-lg">
                                 <span>Total</span>
-                                <span>£{order.payment.totalAmount.toFixed(2)}</span>
+                                <span>{formatPrice(order.payment.totalAmount)}</span>
                             </div>
                         </div>
                     </div>

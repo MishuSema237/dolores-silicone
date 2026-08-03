@@ -36,7 +36,7 @@ export function BackToTop() {
         <button
             onClick={scrollToTop}
             className="fixed bottom-8 right-8 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 hover:scale-110 transition-all duration-300 z-[100] focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
-            aria-label="Back to Top"
+            aria-label="Volver arriba"
         >
             <FaArrowUp className="text-xl" />
         </button>

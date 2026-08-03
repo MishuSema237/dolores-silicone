@@ -28,13 +28,13 @@ export function ImageGallery({ images, productName }: ImageGalleryProps) {
         {hasRealImages && mainImage ? (
           <Image
             src={mainImage}
-            alt={`${productName} - Image ${selectedIndex + 1}`}
+            alt={`${productName} - Imagen ${selectedIndex + 1}`}
             width={800}
             height={500}
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 lg:rounded-md"
           />
         ) : (
-          <span className="text-gray-400 text-xl">Full Photo of {productName}</span>
+          <span className="text-gray-400 text-xl">Foto completa de {productName}</span>
         )}
       </div>
 
@@ -51,13 +51,13 @@ export function ImageGallery({ images, productName }: ImageGalleryProps) {
             {hasRealImages && image ? (
               <Image
                 src={image}
-                alt={`${productName} thumbnail ${index + 1}`}
+                alt={`${productName} miniatura ${index + 1}`}
                 width={100}
                 height={100}
                 className="w-full h-full object-cover"
               />
             ) : (
-              <span className="text-gray-400 text-xs">Thumb {index + 1}</span>
+              <span className="text-gray-400 text-xs">Miniatura {index + 1}</span>
             )}
           </button>
         ))}

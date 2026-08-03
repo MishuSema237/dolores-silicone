@@ -20,12 +20,12 @@ export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/shop", label: "Shop" },
-    { href: "/about", label: "About" },
+    { href: "/", label: "Inicio" },
+    { href: "/shop", label: "Tienda" },
+    { href: "/about", label: "Nosotros" },
     { href: "/blog", label: "Blog" },
-    { href: "/reviews", label: "Reviews" },
-    { href: "/contact", label: "Contact" },
+    { href: "/reviews", label: "Opiniones" },
+    { href: "/contact", label: "Contacto" },
   ];
 
   const isActive = (href: string) => {
@@ -108,7 +108,7 @@ export default function SiteHeader() {
       <div className="hidden md:flex items-center gap-6 relative">
         <Link
           href="/cart"
-          aria-label="Shopping cart"
+          aria-label="Carrito de compra"
           className={`text-xl hover:text-gray-500 no-underline relative z-20 ${textColor}`}
         >
           <FaShoppingCart />
@@ -125,7 +125,7 @@ export default function SiteHeader() {
         type="button"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         className={`md:hidden text-xl cursor-pointer hover:text-gray-500 bg-transparent border-0 p-2 z-20 ${textColor} relative`}
-        aria-label="Toggle menu"
+        aria-label="Abrir menú"
       >
         {mobileMenuOpen ? <FaTimes /> : <FaBars />}
         {!mobileMenuOpen && itemCount > 0 && (
@@ -156,12 +156,12 @@ export default function SiteHeader() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="font-medium text-black"
               >
-                Cart
+                Carrito
               </Link>
               <Link
                 href="/cart"
                 onClick={() => setMobileMenuOpen(false)}
-                aria-label="Shopping cart"
+                aria-label="Carrito de compra"
                 className="text-xl text-black hover:text-gray-500 no-underline relative"
               >
                 <FaShoppingCart />

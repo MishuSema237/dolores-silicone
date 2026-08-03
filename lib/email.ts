@@ -57,17 +57,17 @@ export async function sendContactEmail(data: {
 
     // Email to Admin
     const adminContent = `
-      <h2>New Contact Message</h2>
-      <p><strong>From:</strong> ${data.name} (${data.email})</p>
-      <p><strong>Subject:</strong> ${data.subject}</p>
-      <p><strong>Message:</strong></p>
+      <h2>Nuevo mensaje de contacto</h2>
+      <p><strong>De:</strong> ${data.name} (${data.email})</p>
+      <p><strong>Asunto:</strong> ${data.subject}</p>
+      <p><strong>Mensaje:</strong></p>
       <p>${data.message.replace(/\n/g, "<br>")}</p>
     `;
 
     try {
         await sendEmail({
             to: adminEmail as string,
-            subject: `New Contact Message: ${data.subject}`,
+            subject: `Nuevo mensaje de contacto: ${data.subject}`,
             html: generateEmailTemplate(adminContent),
         });
         console.log("Admin notification sent");
@@ -78,18 +78,18 @@ export async function sendContactEmail(data: {
 
     // Auto-reply to User
     const userContent = `
-      <h2>Thank you for contacting us!</h2>
-      <p>Hi ${data.name},</p>
-      <p>We have received your message regarding "${data.subject}". We will get back to you as soon as possible.</p>
+      <h2>¡Gracias por contactarnos!</h2>
+      <p>Hola ${data.name},</p>
+      <p>Hemos recibido tu mensaje sobre "${data.subject}". Te responderemos lo antes posible.</p>
       <br>
-      <p>Best regards,</p>
-      <p>Dolores Silicone Team</p>
+      <p>Un cordial saludo,</p>
+      <p>Equipo Dolores Silicone</p>
     `;
 
     try {
         await sendEmail({
             to: data.email,
-            subject: "We received your message - Dolores Silicone",
+            subject: "Hemos recibido tu mensaje - Dolores Silicone",
             html: generateEmailTemplate(userContent),
         });
         console.log("User confirmation sent");
@@ -102,25 +102,25 @@ export async function sendContactEmail(data: {
 export async function sendOrderConfirmationEmail(order: any) {
     // Email to Customer
     const customerContent = `
-      <h1>Order Confirmed!</h1>
-      <p>Hi ${order.customer.name},</p>
-      <p>Thank you for your order. Your order reference is <strong>${order.orderReference}</strong>.</p>
-      <p>We will review your order and send you payment details shortly.</p>
-      <h3>Order Summary:</h3>
+      <h1>¡Pedido confirmado!</h1>
+      <p>Hola ${order.customer.name},</p>
+      <p>Gracias por tu pedido. Tu número de referencia es <strong>${order.orderReference}</strong>.</p>
+      <p>Revisaremos tu pedido y te enviaremos los detalles de pago en breve.</p>
+      <h3>Resumen del pedido:</h3>
       <ul>
-        ${order.items.map((item: any) => `<li>${item.name} (x${item.quantity}) - £${(item.price * item.quantity).toFixed(2)}</li>`).join("")}
+        ${order.items.map((item: any) => `<li>${item.name} (x${item.quantity}) - €${(item.price * item.quantity).toFixed(2)}</li>`).join("")}
       </ul>
-      <p><strong>Total: £${order.payment.totalAmount.toFixed(2)}</strong></p>
+      <p><strong>Total: €${order.payment.totalAmount.toFixed(2)}</strong></p>
       <br>
-      <a href="${process.env.NEXT_PUBLIC_SITE_URL}/track-order?ref=${order.orderReference}" class="button">View Order Details</a>
+      <a href="${process.env.NEXT_PUBLIC_SITE_URL}/track-order?ref=${order.orderReference}" class="button">Ver detalles del pedido</a>
       <br><br>
-      <p>Best regards,</p>
-      <p>Dolores Silicone Team</p>
+      <p>Un cordial saludo,</p>
+      <p>Equipo Dolores Silicone</p>
     `;
 
     await sendEmail({
         to: order.customer.email,
-        subject: `Order Confirmation - ${order.orderReference}`,
+        subject: `Confirmación de pedido - ${order.orderReference}`,
         html: generateEmailTemplate(customerContent),
     });
 }
@@ -129,17 +129,17 @@ export async function sendOrderNotificationToAdmin(order: any) {
     const adminEmail = process.env.ADMIN_EMAIL || process.env.SMTP_USER;
 
     const adminContent = `
-      <h2>New Order Received</h2>
-      <p><strong>Reference:</strong> ${order.orderReference}</p>
-      <p><strong>Customer:</strong> ${order.customer.name} (${order.customer.email})</p>
-        <p><strong>Total:</strong> £${order.payment.totalAmount.toFixed(2)}</p>
+      <h2>Nuevo pedido recibido</h2>
+      <p><strong>Referencia:</strong> ${order.orderReference}</p>
+      <p><strong>Cliente:</strong> ${order.customer.name} (${order.customer.email})</p>
+        <p><strong>Total:</strong> €${order.payment.totalAmount.toFixed(2)}</p>
       <br>
-      <a href="${process.env.NEXT_PUBLIC_SITE_URL}/admin/orders/${order._id}" class="button">View Order in Admin</a>
+      <a href="${process.env.NEXT_PUBLIC_SITE_URL}/admin/orders/${order._id}" class="button">Ver pedido en el panel</a>
     `;
 
     await sendEmail({
         to: adminEmail as string,
-        subject: `New Order Received - ${order.orderReference}`,
+        subject: `Nuevo pedido recibido - ${order.orderReference}`,
         html: generateEmailTemplate(adminContent),
     });
 }

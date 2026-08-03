@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FaShoppingCart, FaEye } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/lib/context/cart-context";
+import { formatPrice } from "@/lib/utils";
 import toast from "react-hot-toast";
 
 interface AccessoryCardProps {
@@ -39,7 +40,7 @@ export function AccessoryCard({
             imageUrl,
             category: "accessory",
         });
-        toast.success(`${name} added to cart`);
+        toast.success(`${name} añadido al carrito`);
     };
 
     return (
@@ -86,12 +87,12 @@ export function AccessoryCard({
                         </h3>
                     </Link>
                     <span className="font-bold text-purple-600 text-xs md:text-sm hidden min-[450px]:block">
-                        ${price.toFixed(0)}
+                        {formatPrice(price)}
                     </span>
                 </div>
 
                 <p className="text-gray-500 text-[10px] md:text-xs mb-4 line-clamp-2">
-                    {description || "Premium accessory for your collection."}
+                    {description || "Accesorio premium para tu colección."}
                 </p>
 
                 <Button
@@ -99,18 +100,18 @@ export function AccessoryCard({
                     onClick={handleAddToCart}
                     className="hidden min-[450px]:flex w-full border-purple-200 text-purple-600 hover:bg-purple-50 rounded-xl py-2 text-xs font-semibold"
                 >
-                    Add to Cart
+                    Añadir al carrito
                 </Button>
 
                 {/* Mobile (<450px) Layout */}
                 <div className="flex min-[450px]:hidden items-center justify-between mt-3">
                     <span className="font-bold text-purple-600 text-sm">
-                        ${price.toFixed(0)}
+                        {formatPrice(price)}
                     </span>
                     <button
                         onClick={handleAddToCart}
                         className="p-2 text-purple-600 hover:bg-purple-50 rounded-full transition-colors"
-                        aria-label="Add to cart"
+                        aria-label="Añadir al carrito"
                     >
                         <FaShoppingCart size={18} />
                     </button>

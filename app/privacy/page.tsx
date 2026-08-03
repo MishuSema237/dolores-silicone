@@ -2,8 +2,8 @@ import Link from "next/link";
 import { BRAND } from "@/lib/constants";
 
 export const metadata = {
-  title: "Privacy Policy - Dolores Silicone",
-  description: "Privacy Policy for Dolores Silicone handcrafted reborn baby dolls.",
+  title: "Política de Privacidad - Dolores Silicone",
+  description: "Política de Privacidad de las muñecas reborn de silicona hechas a mano de Dolores Silicone.",
 };
 
 export default function PrivacyPage() {
@@ -32,9 +32,9 @@ export default function PrivacyPage() {
         <div className="relative max-w-5xl mx-auto px-6 text-center">
           {/* Breadcrumb */}
           <div className="inline-flex items-center gap-2 text-purple-300/60 text-sm mb-8">
-            <Link href="/" className="hover:text-purple-200 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-purple-200 transition-colors">Inicio</Link>
             <span>/</span>
-            <span className="text-purple-200">Privacy</span>
+            <span className="text-purple-200">Privacidad</span>
           </div>
 
           {/* Decorative line */}
@@ -46,71 +46,71 @@ export default function PrivacyPage() {
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-6">
             <span className="bg-gradient-to-r from-white via-purple-100 to-violet-200 bg-clip-text text-transparent">
-              Privacy
+              Política de
             </span>
             <br />
-            <span className="text-purple-400/80">Policy</span>
+            <span className="text-purple-400/80">Privacidad</span>
           </h1>
 
           <p className="text-purple-200/50 text-lg md:text-xl max-w-xl mx-auto leading-relaxed mb-4">
-            How we protect your information and respect your privacy.
+            Cómo protegemos tu información y respetamos tu privacidad.
           </p>
 
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/20 bg-purple-500/5 text-purple-300/60 text-sm">
             <span className="w-1.5 h-1.5 bg-purple-400/60 rounded-full" />
-            Last updated: January 2025
+            Última actualización: enero de 2025
           </div>
         </div>
       </section>
 
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6 prose prose-gray max-w-none">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Information We Collect</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Información que Recopilamos</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            When you visit {BRAND.name}, we automatically collect certain information about your device, including your web browser, IP address, time zone, and some cookies that are installed on your device. Additionally, as you browse the site, we collect information about the individual web pages or products that you view, what websites or search terms referred you to the site, and how you interact with the site.
+            Cuando visitas {BRAND.name}, recopilamos automáticamente cierta información sobre tu dispositivo, incluyendo tu navegador web, dirección IP, zona horaria y algunas cookies que se instalan en tu dispositivo. Además, mientras navegas por el sitio, recopilamos información sobre las páginas web individuales o los productos que visitas, qué sitios web o términos de búsqueda te remitieron al sitio y cómo interactúas con el sitio.
           </p>
           <p className="text-gray-600 leading-relaxed mb-6">
-            When you make a purchase or attempt to make a purchase through the site, we collect your name, billing address, shipping address, payment information (including credit card numbers), email address, and phone number. This is referred to as &quot;Order Information.&quot;
+            Cuando realizas una compra o intentas realizar una compra a través del sitio, recopilamos tu nombre, dirección de facturación, dirección de envío, información de pago (incluidos los números de tarjeta de crédito), correo electrónico y número de teléfono. Esto se denomina &quot;Información del Pedido&quot;.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">2. How We Use Your Information</h2>
-          <p className="text-gray-600 leading-relaxed mb-4">We use the Order Information that we collect generally to:</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">2. Cómo Usamos Tu Información</h2>
+          <p className="text-gray-600 leading-relaxed mb-4">Utilizamos la Información del Pedido que recopilamos generalmente para:</p>
           <ul className="list-disc pl-6 text-gray-600 leading-relaxed mb-6 space-y-2">
-            <li>Fulfil any orders placed through the site (including processing your payment, arranging for shipping, and providing you with invoices and/or order confirmations)</li>
-            <li>Communicate with you about your orders</li>
-            <li>Screen our orders for potential risk or fraud</li>
-            <li>When in line with the preferences you have shared with us, provide you with information or advertising relating to our products or services</li>
+            <li>Procesar los pedidos realizados a través del sitio (incluyendo el procesamiento de tu pago, la organización del envío y el envío de facturas y/o confirmaciones de pedido)</li>
+            <li>Comunicarnos contigo sobre tus pedidos</li>
+            <li>Revisar nuestros pedidos para detectar riesgos o fraudes potenciales</li>
+            <li>Cuando esté de acuerdo con las preferencias que has compartido con nosotros, proporcionarte información o publicidad relacionada con nuestros productos o servicios</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">3. Sharing Your Personal Information</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">3. Compartir Tu Información Personal</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            We share your Personal Information with third parties to help us use your Personal Information, as described above. We also use Google Analytics to help us understand how our customers use the site. We may also share your Personal Information to comply with applicable laws and regulations, to respond to a subpoena, search warrant, or other lawful request for information we receive, or to otherwise protect our rights.
+            Compartimos tu Información Personal con terceros para ayudarnos a utilizar tu Información Personal, como se describe anteriormente. También utilizamos Google Analytics para ayudarnos a entender cómo usan el sitio nuestros clientes. También podemos compartir tu Información Personal para cumplir con las leyes y regulaciones aplicables, responder a una citación, orden de registro u otra solicitud legal de información que recibamos, o para proteger de otro modo nuestros derechos.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">4. Your Rights</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">4. Tus Derechos</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            If you are a European resident, you have the right to access personal information we hold about you and to ask that your personal information be corrected, updated, or deleted. If you would like to exercise these rights, please contact us through the contact information below.
+            Si eres residente europeo, tienes derecho a acceder a la información personal que tenemos sobre ti y a solicitar que tu información personal sea corregida, actualizada o eliminada. Si deseas ejercer estos derechos, contáctanos a través de la información de contacto a continuación.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">5. Data Retention</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">5. Retención de Datos</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            When you place an order through the site, we will maintain your Order Information for our records unless and until you ask us to delete this information.
+            Cuando realizas un pedido a través del sitio, mantendremos tu Información del Pedido en nuestros registros a menos que y hasta que nos pidas que eliminemos esta información.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">6. Changes</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">6. Cambios</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal, or regulatory reasons.
+            Podemos actualizar esta política de privacidad de vez en cuando para reflejar, por ejemplo, cambios en nuestras prácticas o por otras razones operativas, legales o regulatorias.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">7. Contact Us</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">7. Contáctanos</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by email at{" "}
+            Para obtener más información sobre nuestras prácticas de privacidad, si tienes preguntas o si deseas presentar una queja, contáctanos por correo electrónico en{" "}
             <a href="mailto:support@doloressilicone.com" className="text-purple-600 hover:text-purple-700 underline">
               support@doloressilicone.com
             </a>{" "}
-            or by mail using the details provided on our{" "}
+            o por correo utilizando los datos proporcionados en nuestra{" "}
             <Link href="/contact" className="text-purple-600 hover:text-purple-700 underline">
-              Contact page
+              página de Contacto
             </Link>.
           </p>
         </div>

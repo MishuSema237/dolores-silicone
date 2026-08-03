@@ -15,21 +15,21 @@ interface Feature {
 const features: Feature[] = [
   {
     icon: <FaHandSparkles className="text-4xl text-purple-500" />,
-    title: "Unmatched Craftsmanship",
+    title: "Artesanía Inigualable",
     description:
-      "Each baby is a unique piece, meticulously sculpted, painted, and weighted by expert artists to achieve peak realism and quality.",
+      "Cada bebé es una pieza única, meticulosamente esculpida, pintada y con peso realista por artistas expertos para lograr el máximo realismo y calidad.",
   },
   {
     icon: <FaGem className="text-4xl text-purple-500" />,
-    title: "Premium Silicone Materials",
+    title: "Materiales de Silicona Premium",
     description:
-      "We use only the highest-grade platinum cure silicone, ensuring durability, a soft-touch feel, and hypoallergenic properties.",
+      "Utilizamos únicamente silicona de platino de la más alta calidad, garantizando durabilidad, tacto suave y propiedades hipoalergénicas.",
   },
   {
     icon: <FaHeart className="text-4xl text-purple-500" />,
-    title: "Personalized Ordering Experience",
+    title: "Experiencia de Compra Personalizada",
     description:
-      "Enjoy dedicated customer support and a transparent order-to-delivery process, tailored to provide peace of mind.",
+      "Disfruta de atención al cliente dedicada y un proceso transparente de pedido a entrega, pensado para brindarte tranquilidad.",
   },
 ];
 
@@ -44,10 +44,10 @@ export function FeaturesSection() {
 
         <div className="container mx-auto px-6">
           <div className="text-center mb-12 md:mb-24 max-w-3xl mx-auto">
-            <span className="text-purple-600 font-black uppercase tracking-widest text-sm mb-4 block">Excellence in Art</span>
-            <h2 className="mb-6">Why Choose Our Masterpieces?</h2>
+            <span className="text-purple-600 font-black uppercase tracking-widest text-sm mb-4 block">Excelencia en el arte</span>
+            <h2 className="mb-6">¿Por qué elegir nuestras obras maestras?</h2>
             <p className="text-sm md:text-xl text-gray-500 font-light">
-              We combine artisan tradition with clinical precision to create the most realistic silicone companions in the world.
+              Combinamos tradición artesanal con precisión clínica para crear los compañeros de silicona más realistas del mundo.
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export function FeaturesSection() {
               onClick={() => setModalOpen(true)}
               className="h-10 px-6 rounded-md md:h-14 md:px-10 md:rounded-2xl border-purple-200 text-purple-700 hover:bg-purple-50 font-semibold md:font-bold tracking-wide"
             >
-              Our Full Story & Ethics
+              Nuestra historia completa y valores
             </Button>
           </div>
         </div>
@@ -86,7 +86,7 @@ export function FeaturesSection() {
       <Modal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
-        title="Our Story & Values"
+        title="Nuestra historia y valores"
       >
         <StoryModalContent />
       </Modal>

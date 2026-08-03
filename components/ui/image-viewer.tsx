@@ -55,7 +55,7 @@ export function ImageViewer({
             <button
                 onClick={onClose}
                 className="absolute top-6 right-6 text-white/70 hover:text-white p-2 rounded-full hover:bg-white/10 transition-all z-50"
-                aria-label="Close"
+                aria-label="Cerrar"
             >
                 <FaTimes size={32} />
             </button>
@@ -68,7 +68,7 @@ export function ImageViewer({
                         prevImage();
                     }}
                     className="absolute left-4 md:left-8 text-white/50 hover:text-white p-4 rounded-full hover:bg-white/10 transition-all z-50"
-                    aria-label="Previous image"
+                    aria-label="Imagen anterior"
                 >
                     <FaChevronLeft size={40} />
                 </button>
@@ -80,7 +80,7 @@ export function ImageViewer({
                     {images[currentIndex] && (
                         <Image
                             src={images[currentIndex]}
-                            alt={`Full screen view ${currentIndex + 1}`}
+                            alt={`Vista a pantalla completa ${currentIndex + 1}`}
                             fill
                             className="object-contain"
                             priority
@@ -97,7 +97,7 @@ export function ImageViewer({
                         nextImage();
                     }}
                     className="absolute right-4 md:right-8 text-white/50 hover:text-white p-4 rounded-full hover:bg-white/10 transition-all z-50"
-                    aria-label="Next image"
+                    aria-label="Imagen siguiente"
                 >
                     <FaChevronRight size={40} />
                 </button>

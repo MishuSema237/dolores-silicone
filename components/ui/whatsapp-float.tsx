@@ -8,11 +8,11 @@ export default function WhatsAppFloat() {
       href={WHATSAPP.link}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp"
+      aria-label="Chatear por WhatsApp"
       className="fixed bottom-20 right-8 z-[100] flex items-center gap-3 group"
     >
       <span className="hidden sm:block bg-white text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        Chat with us
+        Chatea con nosotros
       </span>
       <div className="bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:bg-[#20bd5a] hover:scale-110 transition-all duration-300">
         <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">

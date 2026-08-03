@@ -73,12 +73,12 @@ export default function ContactPage() {
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
 
-    if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.email.trim()) newErrors.email = "Email is required";
+    if (!formData.name.trim()) newErrors.name = "El nombre es obligatorio";
+    if (!formData.email.trim()) newErrors.email = "El correo electrónico es obligatorio";
     else if (!/\S+@\S+\.\S+/.test(formData.email))
-      newErrors.email = "Email is invalid";
-    if (!formData.subject.trim()) newErrors.subject = "Subject is required";
-    if (!formData.message.trim()) newErrors.message = "Message is required";
+      newErrors.email = "El correo electrónico no es válido";
+    if (!formData.subject.trim()) newErrors.subject = "El asunto es obligatorio";
+    if (!formData.message.trim()) newErrors.message = "El mensaje es obligatorio";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -107,10 +107,10 @@ export default function ContactPage() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || "Failed to send message");
+        throw new Error(data.error || "No se pudo enviar el mensaje");
       }
 
-      toast.success("Thank you! Your message has been sent. We'll get back to you soon.");
+      toast.success("¡Gracias! Tu mensaje ha sido enviado. Te responderemos pronto.");
 
       // Reset form
       setFormData({
@@ -120,7 +120,7 @@ export default function ContactPage() {
         message: "",
       });
     } catch (error: any) {
-      toast.error(error.message || "There was an error sending your message. Please try again.");
+      toast.error(error.message || "Hubo un error al enviar tu mensaje. Inténtalo de nuevo.");
     } finally {
       setIsSubmitting(false);
     }
@@ -176,14 +176,14 @@ export default function ContactPage() {
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-6">
             <span className="bg-gradient-to-r from-white via-violet-100 to-purple-200 bg-clip-text text-transparent">
-              Get In
+              Ponte en
             </span>
             <br />
-            <span className="text-purple-400/80">Touch</span>
+            <span className="text-purple-400/80">Contacto</span>
           </h1>
           <p className="text-purple-200/50 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Have a question about Dolores Silicone or your order? We&apos;d love to
-            hear from you.
+            ¿Tienes una pregunta sobre Dolores Silicone o tu pedido? Nos encantaría
+            saber de ti.
           </p>
         </div>
       </section>
@@ -191,15 +191,15 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-start px-4 md:px-8">
         {/* Contact Form */}
         <div className="lg:col-span-7 bg-white p-4 md:p-8 rounded-md md:rounded-2xl shadow-sm border border-purple-100">
-          <h2 className="text-lg md:text-2xl font-serif mb-6 text-gray-800">Send us a Message</h2>
+          <h2 className="text-lg md:text-2xl font-serif mb-6 text-gray-800">Envíanos un Mensaje</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <FormInput
                 id="name"
                 name="name"
-                label="Your Name"
+                label="Tu Nombre"
                 type="text"
-                placeholder="John Doe"
+                placeholder="Juan Pérez"
                 required
                 value={formData.name}
                 onChange={handleChange}
@@ -208,9 +208,9 @@ export default function ContactPage() {
               <FormInput
                 id="email"
                 name="email"
-                label="Your Email"
+                label="Tu Correo Electrónico"
                 type="email"
-                placeholder="john.doe@example.com"
+                placeholder="juan.perez@example.com"
                 required
                 value={formData.email}
                 onChange={handleChange}
@@ -220,9 +220,9 @@ export default function ContactPage() {
             <FormInput
               id="subject"
               name="subject"
-              label="Subject"
+              label="Asunto"
               type="text"
-              placeholder="Inquiry about Reborn Baby"
+              placeholder="Consulta sobre un bebé reborn"
               required
               value={formData.subject}
               onChange={handleChange}
@@ -231,8 +231,8 @@ export default function ContactPage() {
             <FormTextarea
               id="message"
               name="message"
-              label="Your Message"
-              placeholder="Type your message here..."
+              label="Tu Mensaje"
+              placeholder="Escribe tu mensaje aquí..."
               required
               rows={6}
               value={formData.message}
@@ -243,7 +243,7 @@ export default function ContactPage() {
 
 
             <Button type="submit" disabled={isSubmitting} className="w-full md:w-auto px-8">
-              {isSubmitting ? "Sending..." : "Send Message"}
+              {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
             </Button>
           </form>
         </div>
@@ -251,14 +251,14 @@ export default function ContactPage() {
         {/* Contact Information */}
         <div className="lg:col-span-5 space-y-6 md:space-y-8">
           <div className="bg-gradient-to-br from-purple-50 to-white p-4 md:p-8 rounded-md md:rounded-2xl border border-purple-100 shadow-sm">
-            <h3 className="text-lg md:text-2xl font-serif mb-6 text-gray-800">Contact Information</h3>
+            <h3 className="text-lg md:text-2xl font-serif mb-6 text-gray-800">Información de Contacto</h3>
             <div className="space-y-6">
               <div className="flex items-start gap-4 group">
                 <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-purple-500 shadow-sm group-hover:scale-110 transition-transform">
                   <FaEnvelope />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900 mb-1">Email Us</p>
+                  <p className="font-semibold text-gray-900 mb-1">Escríbenos</p>
                   <a
                     href="mailto:support@doloressilicone.com"
                     className="text-purple-600 hover:text-purple-700 font-medium transition-colors break-all"
@@ -273,7 +273,7 @@ export default function ContactPage() {
                   <FaPhone />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900 mb-1">Call Us</p>
+                  <p className="font-semibold text-gray-900 mb-1">Llámanos</p>
                   <a
                     href="tel:+447380608611"
                     className="text-gray-600 hover:text-purple-600 transition-colors no-underline"
@@ -288,13 +288,13 @@ export default function ContactPage() {
                   <FaMapMarkerAlt />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900 mb-1">Our Studio</p>
+                  <p className="font-semibold text-gray-900 mb-1">Nuestro Estudio</p>
                   <p className="text-gray-600 mb-0">
-                    Home-based Studio<br />
-                    Available Worldwide
+                    Estudio en casa<br />
+                    Disponible en todo el mundo
                   </p>
                   <p className="text-xs text-gray-400 mt-2 italic">
-                    (Studio visits by appointment only)
+                    (Visitas al estudio solo con cita previa)
                   </p>
                 </div>
               </div>
@@ -303,7 +303,7 @@ export default function ContactPage() {
 
           {/* WhatsApp Quick Link */}
           <a
-            href="https://wa.me/447380608611?text=Hello%20Dolores%20Silicone!%20I%20have%20a%20question."
+            href="https://wa.me/447380608611?text=Hola%20Dolores%20Silicone!%20Tengo%20una%20pregunta."
             target="_blank"
             rel="noopener noreferrer"
             className="block bg-green-50 p-4 md:p-8 rounded-md md:rounded-2xl border border-green-200 shadow-sm hover:shadow-md transition-shadow"
@@ -313,8 +313,8 @@ export default function ContactPage() {
                 <FaWhatsapp className="text-xl" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-900 mb-1">WhatsApp Us Directly</h3>
-                <p className="text-sm text-gray-500">Fastest response for custom orders and quick questions.</p>
+                <h3 className="font-bold text-gray-900 mb-1">Escríbenos por WhatsApp</h3>
+                <p className="text-sm text-gray-500">La respuesta más rápida para pedidos personalizados y preguntas rápidas.</p>
                 <p className="text-sm text-green-600 font-semibold mt-1">+44 738 060 8611</p>
               </div>
             </div>
@@ -324,20 +324,20 @@ export default function ContactPage() {
           <div className="bg-gradient-to-br from-purple-50 to-white p-4 md:p-8 rounded-md md:rounded-2xl border border-purple-100 shadow-sm">
             <div className="flex items-center gap-3 mb-6">
               <FaClock className="text-purple-500" />
-              <h3 className="text-lg md:text-xl font-serif text-gray-800">Business Hours</h3>
+              <h3 className="text-lg md:text-xl font-serif text-gray-800">Horario de Atención</h3>
             </div>
             <div className="space-y-3 text-sm">
-              <div className="flex justify-between"><span className="text-gray-600">Monday - Friday</span><span className="font-semibold text-gray-900">9:00 AM - 6:00 PM</span></div>
-              <div className="flex justify-between"><span className="text-gray-600">Saturday</span><span className="font-semibold text-gray-900">10:00 AM - 4:00 PM</span></div>
-              <div className="flex justify-between"><span className="text-gray-600">Sunday</span><span className="font-semibold text-gray-500">Closed</span></div>
-              <p className="text-xs text-gray-400 pt-2 border-t border-gray-100">All times in GMT. WhatsApp messages answered within 24 hours.</p>
+              <div className="flex justify-between"><span className="text-gray-600">Lunes - Viernes</span><span className="font-semibold text-gray-900">9:00 AM - 6:00 PM</span></div>
+              <div className="flex justify-between"><span className="text-gray-600">Sábado</span><span className="font-semibold text-gray-900">10:00 AM - 4:00 PM</span></div>
+              <div className="flex justify-between"><span className="text-gray-600">Domingo</span><span className="font-semibold text-gray-500">Cerrado</span></div>
+              <p className="text-xs text-gray-400 pt-2 border-t border-gray-100">Horas en GMT. Los mensajes de WhatsApp se responden en un plazo de 24 horas.</p>
             </div>
           </div>
 
           {/* Social Media */}
           {socials.length > 0 && (
             <div className="bg-white p-4 md:p-8 rounded-md md:rounded-2xl border border-gray-100 shadow-sm text-center">
-              <h3 className="text-lg md:text-xl font-serif mb-6 text-gray-800">Follow Our Journey</h3>
+              <h3 className="text-lg md:text-xl font-serif mb-6 text-gray-800">Sigue Nuestro Viaje</h3>
               <div className="flex justify-center gap-6">
                 {socials.map((social) => (
                   <a
@@ -370,9 +370,9 @@ export default function ContactPage() {
         <div className="text-center mb-10">
           <div className="flex items-center justify-center gap-2 text-purple-600 mb-3">
             <FaQuestionCircle />
-            <span className="font-black uppercase tracking-widest text-sm">Frequently Asked</span>
+            <span className="font-black uppercase tracking-widest text-sm">Preguntas Frecuentes</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Common Questions</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Preguntas Comunes</h2>
         </div>
         <div className="space-y-3">
           {faqs.length > 0 ? faqs.map((faq, i) => (
@@ -391,7 +391,7 @@ export default function ContactPage() {
               )}
             </div>
           )) : (
-            <p className="text-center text-gray-400 py-8">FAQs coming soon.</p>
+            <p className="text-center text-gray-400 py-8">Próximamente habrá preguntas frecuentes.</p>
           )}
         </div>
       </div>

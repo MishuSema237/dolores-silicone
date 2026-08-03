@@ -6,21 +6,21 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export const metadata: Metadata = {
-  title: "Shop",
-  description: "Browse our complete collection of handcrafted silicone reborn babies and accessories — girls, boys, and more. Shop UK's finest reborn dolls.",
+  title: "Tienda",
+  description: "Explora nuestra colección completa de muñecas reborn de silicona hechas a mano y accesorios — niñas, niños y más. Compra las mejores muñecas reborn.",
   keywords: [
-    "shop reborn baby dolls",
-    "buy silicone baby doll UK",
-    "reborn baby girls",
-    "reborn baby boys",
-    "reborn doll accessories",
-    "silicone reborn dolls for sale",
-    "handcrafted baby dolls UK",
-    "lifelike baby dolls shop",
+    "comprar muñecas reborn",
+    "muñeca de silicona en venta",
+    "muñecas reborn niñas",
+    "muñecas reborn niños",
+    "accesorios para muñecas reborn",
+    "muñecas reborn de silicona en venta",
+    "muñecas hechas a mano",
+    "tienda de muñecas realistas",
   ],
   openGraph: {
-    title: "Shop | Dolores Silicone",
-    description: "Browse our complete collection of handcrafted silicone reborn babies and accessories.",
+    title: "Tienda | Dolores Silicone",
+    description: "Explora nuestra colección completa de muñecas reborn de silicona hechas a mano y accesorios.",
     url: "https://doloressilicone.com/shop",
     siteName: "Dolores Silicone",
     images: [
@@ -28,15 +28,15 @@ export const metadata: Metadata = {
         url: "/assets/og-logo.png",
         width: 1200,
         height: 630,
-        alt: "Dolores Silicone Shop",
+        alt: "Tienda Dolores Silicone",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shop | Dolores Silicone",
-    description: "Browse our complete collection of handcrafted silicone reborn babies and accessories.",
+    title: "Tienda | Dolores Silicone",
+    description: "Explora nuestra colección completa de muñecas reborn de silicona hechas a mano y accesorios.",
     images: ["/assets/og-logo.png"],
   },
 };

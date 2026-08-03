@@ -2,9 +2,9 @@ import { getGalleryItems } from "@/lib/utils/db-helpers";
 import { GalleryGrid } from "@/components/sections/gallery-grid";
 
 export const metadata = {
-  title: "Gallery - Dolores Silicone",
+  title: "Galería - Dolores Silicone",
   description:
-    "Explore a collection of our most cherished creations. Each photo highlights the artistry and lifelike detail of our silicone babies.",
+    "Explora una colección de nuestras creaciones más queridas. Cada foto resalta la artesanía y el detalle realista de nuestros bebés de silicona.",
 };
 
 export default async function GalleryPage() {
@@ -20,7 +20,7 @@ export default async function GalleryPage() {
   if (galleryItems.length === 0) {
     galleryItems = Array.from({ length: 6 }, (_, i) => ({
       _id: `placeholder-${i}`,
-      title: `Gallery Image ${i + 1}`,
+      title: `Imagen de Galería ${i + 1}`,
       imageUrl: "",
       tags: [],
       featured: false,
@@ -54,15 +54,15 @@ export default async function GalleryPage() {
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-6">
             <span className="bg-gradient-to-r from-white via-purple-100 to-violet-200 bg-clip-text text-transparent">
-              Our
+              Nuestra
             </span>
             <br />
-            <span className="text-purple-400/80">Gallery</span>
+            <span className="text-purple-400/80">Galería</span>
           </h1>
 
           <p className="text-purple-200/50 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Explore a collection of our most cherished creations. Each photo
-            highlights the artistry and lifelike detail of our silicone babies.
+            Explora una colección de nuestras creaciones más queridas. Cada foto
+            resalta la artesanía y el detalle realista de nuestros bebés de silicona.
           </p>
         </div>
       </section>
@@ -72,9 +72,9 @@ export default async function GalleryPage() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="text-center mb-10">
             <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed">
-              Every baby in this gallery was hand-painted with 8-20+ layers of Genesis heat-set paints,
-              weighted with glass beads for a realistic feel, and rooted strand by strand with premium mohair.
-              Click any image to view it in full detail.
+              Cada bebé de esta galería fue pintado a mano con 8-20+ capas de pinturas Genesis de fijado por calor,
+              con peso de cuentas de vidrio para una sensación realista y cabello implantado hebra por hebra con mohair premium.
+              Haz clic en cualquier imagen para verla en detalle completo.
             </p>
           </div>
           <GalleryGrid items={galleryItems} />
@@ -84,13 +84,13 @@ export default async function GalleryPage() {
       {/* How It's Made Summary */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10">How Each Baby Is Made</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10">Cómo se Hace Cada Bebé</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { step: "01", title: "Sculpt & Prep", desc: "Selected sculpt cleaned, sanded, and prepared for painting" },
-              { step: "02", title: "Hand-Paint", desc: "8-20+ translucent layers of Genesis heat-set paints" },
-              { step: "03", title: "Root & Style", desc: "Strand-by-strand mohair and micro-rooted eyelashes" },
-              { step: "04", title: "Weight & Dress", desc: "Glass bead weighting and handmade outfit dressing" },
+              { step: "01", title: "Escultura y Preparación", desc: "Escultura seleccionada, limpiada, lijada y preparada para pintar" },
+              { step: "02", title: "Pintado a Mano", desc: "8-20+ capas translúcidas de pinturas Genesis de fijado por calor" },
+              { step: "03", title: "Implante y Peinado", desc: "Mohair hebra por hebra y pestañas microimplantadas" },
+              { step: "04", title: "Peso y Vestimenta", desc: "Peso con cuentas de vidrio y vestimenta con atuendos hechos a mano" },
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
                 <div className="w-10 h-10 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center font-black text-sm mx-auto mb-3">{item.step}</div>

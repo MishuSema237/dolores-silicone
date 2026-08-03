@@ -57,7 +57,7 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
           type="button"
           onClick={onClose}
           className="absolute top-4 right-4 text-2xl text-black cursor-pointer p-2 hover:text-gray-500 bg-transparent border-0"
-          aria-label="Close modal"
+          aria-label="Cerrar modal"
         >
           <FaTimes />
         </button>

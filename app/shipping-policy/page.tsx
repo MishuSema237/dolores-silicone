@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Shipping Policy - Dolores Silicone",
-  description: "Shipping information for Dolores Silicone handcrafted reborn baby dolls.",
+  title: "Política de Envío - Dolores Silicone",
+  description: "Información de envío de las muñecas reborn de silicona hechas a mano de Dolores Silicone.",
 };
 
 export default function ShippingPolicyPage() {
@@ -30,9 +30,9 @@ export default function ShippingPolicyPage() {
 
         <div className="relative max-w-5xl mx-auto px-6 text-center">
           <div className="inline-flex items-center gap-2 text-purple-300/60 text-sm mb-8">
-            <Link href="/" className="hover:text-purple-200 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-purple-200 transition-colors">Inicio</Link>
             <span>/</span>
-            <span className="text-purple-200">Shipping</span>
+            <span className="text-purple-200">Envío</span>
           </div>
 
           <div className="flex items-center justify-center gap-3 mb-8">
@@ -43,71 +43,70 @@ export default function ShippingPolicyPage() {
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-6">
             <span className="bg-gradient-to-r from-white via-violet-100 to-purple-200 bg-clip-text text-transparent">
-              Shipping
+              Política de
             </span>
             <br />
-            <span className="text-purple-400/80">Policy</span>
+            <span className="text-purple-400/80">Envío</span>
           </h1>
 
           <p className="text-purple-200/50 text-lg md:text-xl max-w-xl mx-auto leading-relaxed mb-4">
-            How we deliver your precious handcrafted baby safely to your door.
+            Cómo entregamos tu preciado bebé hecho a mano de forma segura en tu puerta.
           </p>
 
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/20 bg-purple-500/5 text-purple-300/60 text-sm">
             <span className="w-1.5 h-1.5 bg-purple-400/60 rounded-full" />
-            Last updated: January 2025
+            Última actualización: enero de 2025
           </div>
         </div>
       </section>
 
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6 prose prose-gray max-w-none">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Processing Times</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Tiempos de Procesamiento</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            All orders are processed within <strong>1–3 business days</strong>. Orders are not shipped or delivered on weekends or UK bank holidays. If we experience a high volume of orders, shipments may be delayed by a few days. We will contact you if there is a significant delay in the dispatch of your order.
+            Todos los pedidos se procesan dentro de <strong>1–3 días laborables</strong>. Los pedidos no se envían ni se entregan los fines de semana ni en los días festivos del Reino Unido. Si experimentamos un alto volumen de pedidos, los envíos pueden retrasarse unos días. Te contactaremos si hay un retraso significativo en el despacho de tu pedido.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">UK Shipping</h2>
-          <p className="text-gray-600 leading-relaxed mb-4">We offer the following shipping options within the United Kingdom:</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Envío en el Reino Unido</h2>
+          <p className="text-gray-600 leading-relaxed mb-4">Ofrecemos las siguientes opciones de envío dentro del Reino Unido:</p>
           <ul className="list-disc pl-6 text-gray-600 leading-relaxed mb-6 space-y-2">
-            <li><strong>Standard Shipping:</strong> 3–5 business days — Free on orders over £100</li>
-            <li><strong>Express Shipping:</strong> 1–2 business days — Calculated at checkout</li>
+            <li><strong>Envío Estándar:</strong> 3–5 días laborables — Gratis en pedidos superiores a 117 €</li>
+            <li><strong>Envío Exprés:</strong> 1–2 días laborables — Calculado al pagar</li>
           </ul>
           <p className="text-gray-600 leading-relaxed mb-6">
-            All UK shipments are sent via Royal Mail or a trusted courier service with tracking. A tracking number will be provided via email once your order has been dispatched.
+            Todos los envíos del Reino Unido se realizan a través de Royal Mail o un servicio de mensajería de confianza con seguimiento. Se proporcionará un número de seguimiento por correo electrónico una vez que tu pedido haya sido despachado.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">International Shipping</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Envío Internacional</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            We ship to select international destinations. International shipping rates and delivery times vary by location. Estimated delivery is <strong>7–21 business days</strong> depending on destination. Please note that customs duties, import taxes, and brokerage fees are the responsibility of the recipient and are not included in the shipping charges.
+            Enviamos a destinos internacionales seleccionados. Las tarifas de envío internacional y los tiempos de entrega varían según la ubicación. La entrega estimada es de <strong>7–21 días laborables</strong> según el destino. Ten en cuenta que los derechos de aduana, los impuestos de importación y las tarifas de corretaje son responsabilidad del destinatario y no están incluidos en los cargos de envío.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Packaging</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Embalaje</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Every Dolores Silicone reborn baby is carefully packaged in a secure, padded box to ensure it arrives safely. Our packaging is designed to protect the delicate details of each handcrafted piece during transit. Each baby is wrapped in soft tissue paper and includes a certificate of authenticity.
+            Cada bebé reborn de Dolores Silicone se empaqueta cuidadosamente en una caja segura y acolchada para garantizar que llegue sin daños. Nuestro embalaje está diseñado para proteger los delicados detalles de cada pieza hecha a mano durante el tránsito. Cada bebé se envuelve en papel de seda suave e incluye un certificado de autenticidad.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Order Tracking</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Seguimiento de Pedidos</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Once your order has shipped, you will receive an email with your tracking number. You can track your order on the carrier&apos;s website or by using our{" "}
+            Una vez que tu pedido haya sido enviado, recibirás un correo electrónico con tu número de seguimiento. Puedes rastrear tu pedido en el sitio web del transportista o usando nuestra página de{" "}
             <Link href="/track-order" className="text-purple-600 hover:text-purple-700 underline">
-              Track Order
-            </Link>{" "}
-            page.
+              Rastrear Pedido
+            </Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Lost or Damaged Shipments</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Envíos Perdidos o Dañados</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            If your package appears to be lost or arrives damaged, please contact us immediately. We will work with the shipping carrier to investigate and resolve the issue. For damaged shipments, please retain all packaging materials and take photographs of the damage.
+            Si tu paquete parece estar perdido o llega dañado, contáctanos inmediatamente. Trabajaremos con el transportista para investigar y resolver el problema. Para envíos dañados, conserva todos los materiales de embalaje y toma fotografías del daño.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Contact Us</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Contáctanos</h2>
           <p className="text-gray-600 leading-relaxed">
-            If you have any questions about shipping, please reach out via our{" "}
+            Si tienes alguna pregunta sobre el envío, contáctanos a través de nuestra{" "}
             <Link href="/contact" className="text-purple-600 hover:text-purple-700 underline">
-              Contact page
+              página de Contacto
             </Link>{" "}
-            or{" "}
+            o por{" "}
             <a
               href="https://wa.me/447380608611"
               target="_blank"

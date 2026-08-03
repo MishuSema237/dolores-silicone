@@ -88,12 +88,12 @@ export function PrintButton() {
             {isGenerating ? (
                 <>
                     <div className="w-4 h-4 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
-                    Generating PDF...
+                    Generando PDF...
                 </>
             ) : (
                 <>
                     {isMobile() ? <FaDownload /> : <FaPrint />}
-                    {isMobile() ? 'Download Receipt' : 'Print Receipt'}
+                    {isMobile() ? 'Descargar recibo' : 'Imprimir recibo'}
                 </>
             )}
         </Button>

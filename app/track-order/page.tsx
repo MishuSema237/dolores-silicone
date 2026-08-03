@@ -32,10 +32,10 @@ function TrackOrderContent() {
             if (res.ok) {
                 setOrder(data);
             } else {
-                setError(data.error || "Failed to find order");
+                setError(data.error || "No se pudo encontrar el pedido");
             }
         } catch (err) {
-            setError("An error occurred. Please try again.");
+            setError("Ocurrió un error. Inténtalo de nuevo.");
         } finally {
             setIsLoading(false);
         }
@@ -53,9 +53,9 @@ function TrackOrderContent() {
         <div className="min-h-screen bg-gray-50/50 py-10 px-4 md:py-20">
             <div className="max-w-xl mx-auto">
                 <div className="text-center mb-10">
-                    <h1 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-3">Track Your Order</h1>
+                    <h1 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-3">Rastrea Tu Pedido</h1>
                     <p className="text-sm text-gray-500 max-w-sm mx-auto">
-                        Enter your order reference and email address to check the status of your shipment.
+                        Introduce tu referencia de pedido y tu correo electrónico para consultar el estado de tu envío.
                     </p>
                 </div>
 
@@ -63,23 +63,23 @@ function TrackOrderContent() {
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="space-y-4">
                             <FormInput
-                                label="Order Reference"
+                                label="Referencia del Pedido"
                                 value={orderReference}
                                 onChange={(e) => setOrderReference(e.target.value.toUpperCase())}
-                                placeholder="e.g. DSX7K2M9"
+                                placeholder="p. ej. DSX7K2M9"
                                 required
                             />
                             <FormInput
-                                label="Email Address"
+                                label="Correo Electrónico"
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Used during checkout"
+                                placeholder="Usado durante el pago"
                                 required
                             />
                         </div>
                         <Button type="submit" className="w-full h-11 px-6 rounded-lg text-sm font-semibold tracking-wide uppercase transition-all shadow-md hover:shadow-lg" disabled={isLoading}>
-                            {isLoading ? "Searching..." : "Track Order"}
+                            {isLoading ? "Buscando..." : "Rastrear Pedido"}
                         </Button>
                     </form>
 
@@ -100,23 +100,23 @@ function TrackOrderContent() {
                                     {getStatusIcon(order.status)}
                                 </div>
                                 <div>
-                                    <h2 className="text-lg font-bold text-gray-900 tracking-tight">Order {order.orderReference}</h2>
-                                    <p className="text-sm text-gray-500 capitalize">Status: <span className="font-semibold text-purple-700">{order.status.replace("_", " ")}</span></p>
+                                    <h2 className="text-lg font-bold text-gray-900 tracking-tight">Pedido {order.orderReference}</h2>
+                                    <p className="text-sm text-gray-500 capitalize">Estado: <span className="font-semibold text-purple-700">{order.status.replace("_", " ")}</span></p>
                                 </div>
                             </div>
                             <div className="text-left md:text-right">
-                                <p className="text-xs text-gray-400 uppercase tracking-wider">Ordered on</p>
-                                <p className="font-medium text-gray-700">{new Date(order.createdAt).toLocaleDateString()}</p>
+                                <p className="text-xs text-gray-400 uppercase tracking-wider">Pedido el</p>
+                                <p className="font-medium text-gray-700">{new Date(order.createdAt).toLocaleDateString("es-ES")}</p>
                             </div>
                         </div>
 
                         <div className="space-y-6 mb-8">
                             <div>
-                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Shipping To</h3>
+                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Envío a</h3>
                                 <p className="text-gray-700 font-medium">{order.shipping.city}, {order.shipping.country}</p>
                             </div>
                             <div>
-                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Items</h3>
+                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Artículos</h3>
                                 <ul className="space-y-3">
                                     {order.items.map((item: any, idx: number) => (
                                         <li key={idx} className="flex justify-between items-center text-sm p-3 bg-gray-50 rounded-lg border border-gray-100">
@@ -130,7 +130,7 @@ function TrackOrderContent() {
 
                         {order.statusHistory.length > 0 && (
                             <div className="bg-gray-50/50 rounded-lg p-4 border border-gray-100">
-                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Timeline</h3>
+                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Cronología</h3>
                                 <div className="space-y-0">
                                     {order.statusHistory.map((history: any, idx: number) => (
                                         <div key={idx} className="flex gap-4 relative pb-6 last:pb-0">
@@ -142,7 +142,7 @@ function TrackOrderContent() {
                                             </div>
                                             <div className="relative -top-1">
                                                 <p className="font-semibold text-sm text-gray-800 capitalize">{history.status.replace("_", " ")}</p>
-                                                <p className="text-xs text-gray-500">{new Date(history.timestamp).toLocaleString()}</p>
+                                                <p className="text-xs text-gray-500">{new Date(history.timestamp).toLocaleString("es-ES")}</p>
                                                 {history.note && <p className="text-xs text-gray-600 mt-1 italic">{history.note}</p>}
                                             </div>
                                         </div>

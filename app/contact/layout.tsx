@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contacto",
   description:
-    "Get in touch with Dolores Silicone. We ship worldwide and are happy to answer any questions about our handcrafted silicone reborn babies.",
+    "Ponte en contacto con Dolores Silicone. Enviamos a todo el mundo y estaremos encantados de responder cualquier pregunta sobre nuestras muñecas reborn de silicona hechas a mano.",
   keywords: [
-    "contact Dolores Silicone",
-    "reborn baby doll inquiry",
-    "custom reborn doll order",
-    "silicone baby doll questions",
-    "Dolores Silicone WhatsApp",
-    "reborn doll shop UK contact",
+    "contacto Dolores Silicone",
+    "consulta sobre muñecas reborn",
+    "pedido de muñeca reborn personalizada",
+    "preguntas sobre muñecas de silicona",
+    "WhatsApp Dolores Silicone",
+    "contacto tienda de muñecas reborn",
   ],
   openGraph: {
-    title: "Contact Us | Dolores Silicone",
+    title: "Contacto | Dolores Silicone",
     description:
-      "Get in touch with Dolores Silicone. We ship worldwide and are happy to answer any questions.",
+      "Ponte en contacto con Dolores Silicone. Enviamos a todo el mundo y responderemos cualquier pregunta.",
     url: "https://doloressilicone.com/contact",
     siteName: "Dolores Silicone",
     images: [
@@ -23,16 +23,16 @@ export const metadata: Metadata = {
         url: "/assets/og-logo.png",
         width: 1200,
         height: 630,
-        alt: "Contact Dolores Silicone",
+        alt: "Contacto Dolores Silicone",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us | Dolores Silicone",
+    title: "Contacto | Dolores Silicone",
     description:
-      "Get in touch with Dolores Silicone. We ship worldwide.",
+      "Ponte en contacto con Dolores Silicone. Enviamos a todo el mundo.",
     images: ["/assets/og-logo.png"],
   },
 };

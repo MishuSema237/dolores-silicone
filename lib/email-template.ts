@@ -189,12 +189,12 @@ export function generateEmailTemplate(content: string) {
           </div>
           <div class="footer">
             <p style="margin-bottom: 16px;">
-              <a href="${process.env.NEXT_PUBLIC_SITE_URL}/gallery">Gallery</a>
-              <a href="${process.env.NEXT_PUBLIC_SITE_URL}/contact">Contact</a>
+              <a href="${process.env.NEXT_PUBLIC_SITE_URL}/gallery">Galería</a>
+              <a href="${process.env.NEXT_PUBLIC_SITE_URL}/contact">Contacto</a>
             </p>
-            <p>&copy; ${new Date().getFullYear()} Dolores Silicone. All rights reserved.</p>
+            <p>&copy; ${new Date().getFullYear()} Dolores Silicone. Todos los derechos reservados.</p>
             <p style="margin-top: 8px; font-size: 11px; opacity: 0.8;">
-                You are receiving this because you made a purchase or inquiry.
+                Recibes este correo porque realizaste una compra o consulta.
             </p>
           </div>
         </div>

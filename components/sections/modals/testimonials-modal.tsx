@@ -26,11 +26,11 @@ export function TestimonialsModalContent() {
   }, []);
 
   if (isLoading) {
-    return <div className="text-center p-8">Loading testimonials...</div>;
+    return <div className="text-center p-8">Cargando testimonios...</div>;
   }
 
   if (testimonials.length === 0) {
-    return <div className="text-center p-8">No testimonials yet.</div>;
+    return <div className="text-center p-8">Aún no hay testimonios.</div>;
   }
 
   return (

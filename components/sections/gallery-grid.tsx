@@ -42,7 +42,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
               <div className="relative w-full">
                 <Image
                   src={item.imageUrl}
-                  alt={item.title || "Gallery image"}
+                  alt={item.title || "Imagen de galería"}
                   width={500}
                   height={500}
                   className="w-full h-auto object-cover"
@@ -51,7 +51,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
               </div>
             ) : (
               <div className="h-[300px] flex items-center justify-center">
-                <span>Gallery Image</span>
+                <span>Imagen de galería</span>
               </div>
             )}
           </button>

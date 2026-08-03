@@ -80,17 +80,17 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
     ].filter(Boolean).length;
 
     const categoryDescriptions: Record<string, string> = {
-        all: "Browse every handcrafted silicone reborn baby and accessory in our collection. Each one is a unique, one-of-a-kind creation made with medical-grade platinum silicone.",
-        girls: "Our handcrafted silicone baby girls, each painted with extraordinary attention to detail. From delicate eyelashes to weighted bodies that feel like holding a real newborn.",
-        boys: "Our handcrafted silicone baby boys, each a unique masterpiece. Premium platinum silicone, hand-rooted hair, and the realistic weighted feel that Dolores Silicone is known for.",
-        accessories: "Beautifully crafted accessories to complement your Dolores Silicone baby — from clothing and blankets to bottles and keepsake items.",
+        all: "Explora cada muñeca reborn de silicona y accesorio hechos a mano en nuestra colección. Cada uno es una creación única e irrepetible realizada con silicona de platino de grado médico.",
+        girls: "Nuestras bebés de silicona hechas a mano, cada una pintada con un extraordinario nivel de detalle. Desde pestañas delicadas hasta cuerpos con peso que se sienten como sostener a un recién nacido real.",
+        boys: "Nuestros bebés de silicona hechos a mano, cada uno una obra maestra única. Silicona de platino premium, cabello implantado a mano y la sensación de peso realista por la que Dolores Silicone es conocida.",
+        accessories: "Accesorios bellamente elaborados para complementar tu bebé Dolores Silicone: desde ropa y mantas hasta biberones y artículos de recuerdo.",
     };
 
     return (
         <div className="w-full max-w-7xl mx-auto px-4 py-12">
             <div className="text-center mb-6 md:mb-12">
                 <h1 className="text-2xl md:text-5xl font-serif font-bold mb-4 bg-gradient-to-r from-purple-900 to-indigo-900 bg-clip-text text-transparent">
-                    Our Collection
+                    Nuestra colección
                 </h1>
                 <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-lg">
                     {categoryDescriptions[category] || categoryDescriptions.all}
@@ -107,7 +107,7 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                         </div>
                         <input
                             type="text"
-                            placeholder="Search our collection..."
+                            placeholder="Buscar en nuestra colección..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             className="w-full pl-12 pr-4 py-2 md:py-4 bg-white border border-gray-200 rounded-md md:rounded-2xl focus:ring-4 focus:ring-purple-500/10 focus:border-purple-500 outline-none transition-all shadow-sm text-sm md:text-lg"
@@ -123,7 +123,7 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                             }`}
                     >
                         <FaFilter />
-                        <span>Filters</span>
+                        <span>Filtros</span>
                         {activeFilterCount > 0 && (
                             <span className="flex items-center justify-center w-6 h-6 bg-white text-purple-600 rounded-full text-xs font-black">
                                 {activeFilterCount}
@@ -144,7 +144,7 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                         {/* Categories */}
                         <div>
                             <label className="block text-sm font-black text-gray-900 uppercase tracking-widest mb-4">
-                                Categories
+                                Categorías
                             </label>
                             <div className="flex flex-col gap-2">
                                 {["all", "girls", "boys", "accessories"].map((cat) => (
@@ -156,7 +156,7 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                                             : "text-gray-500 hover:bg-gray-50 hover:text-gray-900"
                                             }`}
                                     >
-                                        {cat === "all" ? "All Items" : cat === "girls" ? "Baby Girls" : cat === "boys" ? "Baby Boys" : "Accessories"}
+                                        {cat === "all" ? "Todos los artículos" : cat === "girls" ? "Bebés niñas" : cat === "boys" ? "Bebés niños" : "Accesorios"}
                                     </button>
                                 ))}
                             </div>
@@ -165,25 +165,25 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                         {/* Price Range */}
                         <div>
                             <label className="block text-sm font-black text-gray-900 uppercase tracking-widest mb-4">
-                                Price Range
+                                Rango de precio
                             </label>
                             <div className="flex items-center gap-3">
                                 <div className="flex-1 relative">
-                                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">£</span>
+                                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">€</span>
                                     <input
                                         type="number"
-                                        placeholder="Min"
+                                        placeholder="Mín"
                                         value={priceRange.min}
                                         onChange={(e) => setPriceRange(p => ({ ...p, min: e.target.value }))}
                                         className="w-full pl-8 pr-3 py-3 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:ring-2 focus:ring-purple-500 outline-none transition-all"
                                     />
                                 </div>
-                                <span className="text-gray-300">to</span>
+                                <span className="text-gray-300">a</span>
                                 <div className="flex-1 relative">
-                                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">£</span>
+                                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">€</span>
                                     <input
                                         type="number"
-                                        placeholder="Max"
+                                        placeholder="Máx"
                                         value={priceRange.max}
                                         onChange={(e) => setPriceRange(p => ({ ...p, max: e.target.value }))}
                                         className="w-full pl-8 pr-3 py-3 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:ring-2 focus:ring-purple-500 outline-none transition-all"
@@ -195,17 +195,17 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                         {/* Sorting */}
                         <div>
                             <label className="block text-sm font-black text-gray-900 uppercase tracking-widest mb-4">
-                                Sort By
+                                Ordenar por
                             </label>
                             <select
                                 value={sortOption}
                                 onChange={(e) => setSortOption(e.target.value)}
                                 className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:ring-2 focus:ring-purple-500 outline-none transition-all cursor-pointer appearance-none"
                             >
-                                <option value="newest">Newest Arrivals</option>
-                                <option value="price-asc">Price: Low to High</option>
-                                <option value="price-desc">Price: High to Low</option>
-                                <option value="name-asc">Name: A to Z</option>
+                                <option value="newest">Novedades</option>
+                                <option value="price-asc">Precio: de menor a mayor</option>
+                                <option value="price-desc">Precio: de mayor a menor</option>
+                                <option value="name-asc">Nombre: A a Z</option>
                             </select>
                         </div>
                     </div>
@@ -220,7 +220,7 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                             }}
                             className="text-sm font-bold text-gray-400 hover:text-red-500 flex items-center gap-2 transition-colors"
                         >
-                            <FaTimes /> Clear all filters
+                            <FaTimes /> Borrar todos los filtros
                         </button>
                     </div>
                 </div>
@@ -234,15 +234,15 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                     <div className="w-24 h-24 bg-purple-50 rounded-full flex items-center justify-center text-purple-200 text-4xl mb-6">
                         <FaSearch />
                     </div>
-                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-2">No items found</h3>
+                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-2">No se encontraron artículos</h3>
                     <p className="text-gray-500 mb-8 max-w-md">
                         {category === "girls"
-                            ? "We are currently preparing new baby girls. Check back soon or contact us for a custom commission."
+                            ? "Estamos preparando nuevas bebés. Vuelve pronto o contáctanos para una comisión personalizada."
                             : category === "boys"
-                            ? "We are currently preparing new baby boys. Check back soon or contact us for a custom commission."
+                            ? "Estamos preparando nuevos bebés. Vuelve pronto o contáctanos para una comisión personalizada."
                             : category === "accessories"
-                            ? "Accessories are being prepared. Contact us on WhatsApp for available items."
-                            : "Try adjusting your search or filters. Each of our babies is unique and availability changes regularly."}
+                            ? "Estamos preparando accesorios. Contáctanos por WhatsApp para ver los disponibles."
+                            : "Intenta ajustar tu búsqueda o filtros. Cada uno de nuestros bebés es único y la disponibilidad cambia con frecuencia."}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3">
                         <button
@@ -254,7 +254,7 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                             }}
                             className="px-8 py-3 bg-purple-600 text-white rounded-full font-bold shadow-lg shadow-purple-200 hover:bg-purple-700 transition-all hover:-translate-y-1"
                         >
-                            Reset Filters
+                            Restablecer filtros
                         </button>
                         <a
                             href="https://wa.me/447380608611?text=Hello%20Dolores%20Silicone!%20I%27m%20interested%20in%20a%20custom%20baby."
@@ -262,7 +262,7 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                             rel="noopener noreferrer"
                             className="px-8 py-3 bg-white text-purple-600 border-2 border-purple-200 rounded-full font-bold hover:bg-purple-50 transition-all"
                         >
-                            Ask About Custom Orders
+                            Preguntar por pedidos personalizados
                         </a>
                     </div>
                 </div>

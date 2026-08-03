@@ -13,78 +13,78 @@ export default function FAQPage() {
     const faqs: FAQItem[] = [
         {
             _id: "1",
-            question: "What is a Reborn Baby?",
-            answer: "A Reborn Baby is a manufactured skin doll that has been transformed by an artist to resemble a human infant with as much realism as possible. The process of creating a reborn doll is referred to as reborning and the doll artists are referred to as reborners."
+            question: "¿Qué es un Bebé Reborn?",
+            answer: "Un Bebé Reborn es una muñeca de piel fabricada que ha sido transformada por un artista para parecerse a un bebé humano con el máximo realismo posible. El proceso de crear una muñeca reborn se denomina reborning y los artistas se denominan reborners."
         },
         {
             _id: "2",
-            question: "Are these dolls suitable for children?",
-            answer: "Reborn babies are primarily collector's items and art pieces. While they can be enjoyed by responsible older children, they are not recommended for young children as play dolls due to their delicate features, weighted bodies, and potential for damage if handled roughly."
+            question: "¿Son estas muñecas adecuadas para niños?",
+            answer: "Los bebés reborn son principalmente artículos de colección y piezas de arte. Aunque pueden ser disfrutados por niños mayores responsables, no se recomiendan para niños pequeños como muñecas de juego debido a sus delicadas características, cuerpos con peso y el potencial de daño si se manipulan bruscamente."
         },
         {
             _id: "3",
-            question: "How do I care for my Reborn Baby?",
-            answer: "Reborn babies should be treated like real infants. Support their head when lifting, avoid direct sunlight and extreme heat, and keep them away from pets. Dust them gently with a soft brush and avoid getting the cloth body wet."
+            question: "¿Cómo cuido a mi Bebé Reborn?",
+            answer: "Los bebés reborn deben tratarse como bebés reales. Sostén su cabeza al levantarlos, evita la luz solar directa y el calor extremo, y mantenlos alejados de las mascotas. Quita el polvo suavemente con un cepillo suave y evita mojar el cuerpo de tela."
         },
         {
             _id: "4",
-            question: "Can I wash my Reborn Baby?",
-            answer: "No, you should never submerge your reborn baby in water, especially if it has a cloth body. If the vinyl parts get dirty, you can gently wipe them with a damp cloth, but avoid harsh chemicals or baby wipes which can damage the paint."
+            question: "¿Puedo lavar a mi Bebé Reborn?",
+            answer: "No, nunca debes sumergir tu bebé reborn en agua, especialmente si tiene un cuerpo de tela. Si las partes de vinilo se ensucian, puedes limpiarlas suavemente con un paño húmedo, pero evita productos químicos agresivos o toallitas para bebés que pueden dañar la pintura."
         },
         {
             _id: "5",
-            question: "What materials are used to make them?",
-            answer: "Our babies are typically created from high-quality vinyl or silicone kits. They are painted with multiple layers of heat-set paints to achieve realistic skin tones. The bodies are usually soft cloth filled with glass beads and poly-fil for weight and cuddliness."
+            question: "¿Qué materiales se utilizan para hacerlos?",
+            answer: "Nuestros bebés se crean típicamente con kits de vinilo o silicona de alta calidad. Se pintan con múltiples capas de pinturas de fijado por calor para lograr tonos de piel realistas. Los cuerpos suelen ser de tela suave rellena con cuentas de vidrio y relleno de poliéster para dar peso y abrazabilidad."
         },
         {
             _id: "6",
-            question: "Do they come with a birth certificate?",
-            answer: "Yes, every Dolores Silicone baby comes with a beautiful birth certificate and a certificate of authenticity, making your adoption official."
+            question: "¿Vienen con certificado de nacimiento?",
+            answer: "Sí, cada bebé de Dolores Silicone viene con un hermoso certificado de nacimiento y un certificado de autenticidad, haciendo oficial tu adopción."
         },
         {
             _id: "7",
-            question: "Can I change their clothes?",
-            answer: "Absolutely! One of the joys of owning a reborn is dressing them up. Most of our babies fit into standard real baby clothes. The size (Preemie, Newborn, 0-3 months) will be specified in the baby's description."
+            question: "¿Puedo cambiarles la ropa?",
+            answer: "¡Por supuesto! Una de las alegrías de tener un reborn es vestirlos. La mayoría de nuestros bebés caben en ropa estándar de bebés reales. La talla (Prematuro, Recién Nacido, 0-3 meses) se especificará en la descripción del bebé."
         },
         {
             _id: "8",
-            question: "Do you offer custom orders?",
-            answer: "Yes, we accept custom orders! If you have a specific sculpt or look in mind, please contact us. We can work together to create your dream baby with your preferred hair color, eye color, and weight."
+            question: "¿Ofrecen pedidos personalizados?",
+            answer: "Sí, ¡aceptamos pedidos personalizados! Si tienes una escultura o un aspecto específico en mente, contáctanos. Podemos trabajar juntos para crear el bebé de tus sueños con tu color de cabello, color de ojos y peso preferidos."
         },
         {
             _id: "9",
-            question: "Can the hair be styled?",
-            answer: "If your baby has rooted mohair, it can be gently styled using a soft baby brush and a little water or leave-in conditioner. Painted hair does not require styling but looks incredibly realistic and is maintenance-free."
+            question: "¿Se puede peinar el cabello?",
+            answer: "Si tu bebé tiene mohair implantado, se puede peinar suavemente con un cepillo suave para bebés y un poco de agua o acondicionador sin enjuague. El cabello pintado no requiere peinado, pero se ve increíblemente realista y no requiere mantenimiento."
         },
         {
             _id: "10",
-            question: "How are the babies weighted?",
-            answer: "We use fine glass beads and high-quality poly-fil to weight our babies. This gives them a realistic 'dead weight' feel, so they flop and settle in your arms just like a real sleeping infant."
+            question: "¿Cómo se les da el peso a los bebés?",
+            answer: "Usamos finas cuentas de vidrio y relleno de poliéster de alta calidad para dar peso a nuestros bebés. Esto les da una sensación realista de 'peso muerto', de modo que se acomodan y reposan en tus brazos como un bebé dormido real."
         },
         {
             _id: "11",
-            question: "What payment methods do you accept?",
-            answer: "We accept secure payments via Zelle, Cash App, and Apple Pay. We prioritize secure transactions to ensure your peace of mind."
+            question: "¿Qué métodos de pago aceptan?",
+            answer: "Aceptamos pagos seguros a través de Zelle, Cash App y Apple Pay. Priorizamos las transacciones seguras para garantizar tu tranquilidad."
         },
         {
             _id: "12",
-            question: "Do you offer layaway or payment plans?",
-            answer: "We understand that a reborn is a special investment. Please contact us directly to discuss potential flexible payment arrangements for higher-priced babies."
+            question: "¿Ofrecen apartados o planes de pago?",
+            answer: "Entendemos que un reborn es una inversión especial. Contáctanos directamente para hablar sobre posibles acuerdos de pago flexibles para los bebés de mayor precio."
         },
         {
             _id: "13",
-            question: "How long does shipping take?",
-            answer: "Once your order is processed, shipping typically takes 3-7 business days depending on the destination. We ensure every baby is packed securely for their journey home."
+            question: "¿Cuánto tarda el envío?",
+            answer: "Una vez procesado tu pedido, el envío suele tardar de 3 a 7 días laborables dependiendo del destino. Nos aseguramos de que cada bebé esté empacado de forma segura para su viaje a casa."
         },
         {
             _id: "14",
-            question: "Do you ship internationally?",
-            answer: "Yes, we can ship our babies to loving homes worldwide. Shipping costs and delivery times will vary based on the destination country."
+            question: "¿Hacen envíos internacionales?",
+            answer: "Sí, podemos enviar nuestros bebés a hogares amorosos en todo el mundo. Los costos de envío y los tiempos de entrega variarán según el país de destino."
         },
         {
             _id: "15",
-            question: "What is your return policy?",
-            answer: "Due to the custom and artistic nature of our creations, all sales are typically final. However, we want you to be happy with your adoption. If there is an issue with your order upon arrival, please contact us immediately so we can resolve it."
+            question: "¿Cuál es su política de devoluciones?",
+            answer: "Debido a la naturaleza personalizada y artística de nuestras creaciones, todas las ventas suelen ser definitivas. Sin embargo, queremos que estés feliz con tu adopción. Si hay un problema con tu pedido a su llegada, contáctanos inmediatamente para poder resolverlo."
         }
     ];
 
@@ -122,16 +122,16 @@ export default function FAQPage() {
         <div className="w-full max-w-4xl mx-auto px-4 py-16">
             <div className="text-center mb-16">
                 <h1 className="text-4xl md:text-5xl font-serif mb-4 text-gray-900">
-                    Frequently Asked Questions
+                    Preguntas Frecuentes
                 </h1>
                 <p className="text-gray-500 text-lg">
-                    Find answers to common questions about our Reborn Babies.
+                    Encuentra respuestas a las preguntas más comunes sobre nuestros Bebés Reborn.
                 </p>
             </div>
 
             <div className="space-y-4">
                 {isLoading ? (
-                    <p className="text-center text-gray-500">Loading FAQs...</p>
+                    <p className="text-center text-gray-500">Cargando preguntas frecuentes...</p>
                 ) : faqs.length > 0 ? (
                     faqs.map((faq, index) => (
                         <div
@@ -160,7 +160,7 @@ export default function FAQPage() {
                         </div>
                     ))
                 ) : (
-                    <p className="text-center text-gray-500">No FAQs available at the moment.</p>
+                    <p className="text-center text-gray-500">No hay preguntas frecuentes disponibles por el momento.</p>
                 )}
             </div>
         </div>

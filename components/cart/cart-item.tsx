@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FaTimes } from "react-icons/fa";
 import { useCart } from "@/lib/context/cart-context";
 import type { CartItem } from "@/lib/context/cart-context";
+import { formatPrice } from "@/lib/utils";
 
 interface CartItemProps {
   item: CartItem;
@@ -32,7 +33,7 @@ export function CartItemComponent({ item }: CartItemProps) {
               className="w-full h-full object-cover"
             />
           ) : (
-            <span className="text-gray-400 text-xs">Product Image</span>
+            <span className="text-gray-400 text-xs">Imagen del producto</span>
           )}
         </div>
 
@@ -41,9 +42,9 @@ export function CartItemComponent({ item }: CartItemProps) {
           <p className="font-medium text-black mb-1">{item.name}</p>
           {item.attributes && (
             <p className="text-sm text-gray-500 mb-0">
-              {item.attributes.hairColor && `${item.attributes.hairColor} Hair`}
+              {item.attributes.hairColor && `${item.attributes.hairColor}`}
               {item.attributes.hairColor && item.attributes.eyeColor && ", "}
-              {item.attributes.eyeColor && `${item.attributes.eyeColor} Eyes`}
+              {item.attributes.eyeColor && `${item.attributes.eyeColor}`}
               {item.attributes.size && `, ${item.attributes.size}`}
             </p>
           )}
@@ -58,7 +59,7 @@ export function CartItemComponent({ item }: CartItemProps) {
             type="button"
             onClick={() => handleQuantityChange(-1)}
             className="bg-transparent border-0 text-black h-full w-8 cursor-pointer p-0 text-base hover:bg-gray-100 flex items-center justify-center"
-            aria-label="Decrease quantity"
+            aria-label="Disminuir cantidad"
           >
             -
           </button>
@@ -69,7 +70,7 @@ export function CartItemComponent({ item }: CartItemProps) {
             type="button"
             onClick={() => handleQuantityChange(1)}
             className="bg-transparent border-0 text-black h-full w-8 cursor-pointer p-0 text-base hover:bg-gray-100 flex items-center justify-center"
-            aria-label="Increase quantity"
+            aria-label="Aumentar cantidad"
           >
             +
           </button>
@@ -78,7 +79,7 @@ export function CartItemComponent({ item }: CartItemProps) {
         <div className="flex items-center gap-4 md:gap-2">
           {/* Price */}
           <span className="font-medium text-black min-w-[80px] text-right">
-            ${(item.price * item.quantity).toFixed(2)}
+            {formatPrice(item.price * item.quantity)}
           </span>
 
           {/* Remove Button */}
@@ -86,7 +87,7 @@ export function CartItemComponent({ item }: CartItemProps) {
             type="button"
             onClick={() => removeItem(item.id)}
             className="bg-transparent border-0 text-gray-500 cursor-pointer text-sm hover:text-red-600 p-2"
-            aria-label="Remove item"
+            aria-label="Quitar artículo"
           >
             <FaTimes />
           </button>

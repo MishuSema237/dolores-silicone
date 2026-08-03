@@ -8,6 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaPlus } from "react-icons/fa";
 import { cn } from "@/lib/utils/cn";
+import { formatPrice } from "@/lib/utils";
 
 export default function ManageProductsPage() {
     return (
@@ -111,7 +112,7 @@ function ProductsContent() {
         {
             header: "Price",
             accessor: (product: any) => (
-                        <span className="font-medium">£{product.price.toFixed(2)}</span>
+                        <span className="font-medium">{formatPrice(product.price)}</span>
             ),
         },
         {
