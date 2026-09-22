@@ -320,6 +320,27 @@ export const productTranslations: Record<string, ProductTranslation> = {
     detailedDescription:
       "Made from premium high-quality silicone, she has a soft, realistic touch and is perfect for collectors, artists, photography, display or gentle role play. Every detail, from her tiny fingers and toes to her sweet expression, has been carefully designed to create a truly realistic experience.",
   },
+  "mia-petra": {
+    name: "Mia Petra",
+    description:
+      "Fall in love with Mia, a beautiful full-body silicone baby, handcrafted with an incredible level of realism and attention to every detail. Her soft silicone skin, delicate features and newborn appearance make her look like a real baby.",
+    detailedDescription:
+      "Every detail has been carefully designed to offer a unique experience, making Mia an ideal piece for collectors, artists, photo sessions or for those who value the beauty of hyper-realistic silicone babies.",
+  },
+  "luc-a-mateo": {
+    name: "Lucia & Mateo",
+    description:
+      "A precious reborn twin set with a sweet, highly realistic look. Both babies have their eyes closed, delicate features and little details that give them an adorable appearance.\n\n🎀 Twin Girl: wears a beautiful pink headband with a big bow.\n🎀 Twin Boy: wears a delicate white headband with a bow.\n🌸 Both wear white floral-print outfits with ruffles and delicate finishes.\n🍼 They are presented together, creating a tender and special twin pair.",
+    detailedDescription:
+      "Discover our adorable silicone twin babies, created with a delicate design and realistic details that give them a charming and special look. ✨\n\nPerfect for collectors and reborn baby lovers, these little ones stand out for their beautiful finish and incredible level of detail.\n\n🎀 Two babies full of tenderness\n✨ Realistic and delicate details\n🍼 Ideal for collecting or gifting\n💗 A special piece to enjoy and treasure\n\nMake these adorable little twins part of your collection. 🥰👶👶",
+  },
+  valentina: {
+    name: "Valentina",
+    description:
+      "Our beautiful reborn doll is carefully designed to offer a sweet and realistic appearance. Her delicate face, little hands and soft details make her a charming piece for any collection.",
+    detailedDescription:
+      "Our beautiful reborn doll is carefully designed to offer a sweet and realistic appearance. Her delicate face, little hands and soft details make her a charming piece for any collection.\n\n✨ Features\n\n* 👧 Realistic baby girl design\n* 💕 Sweet face and delicate features\n* 👗 Includes an adorable outfit\n* 🧸 Perfect for reborn doll collectors\n* 🎁 Ideal as a special gift\n* ✨ Careful finish and realistic details\n\nA special doll for those who enjoy the beauty and charm of reborn dolls.",
+  },
 
   // ── "boys" category ────────────────────────────────────────────────
   "lucas-daniel": {
