@@ -2,44 +2,44 @@ export function StoryModalContent() {
   return (
     <>
       <p>
-        Dolores Silicone nació de una pasión por transformar la silicona en
-        obras de arte vivas. Nuestro viaje comenzó con el sueño de una artista
-        por crear muñecas que no solo parecieran reales, sino que también
-        evocaran el mismo cariño y emoción que un bebé real. Con los años, este
-        sueño se ha convertido en un equipo de artesanos dedicados, cada uno
-        aportando su talento único para crear estas preciosas obras.
+        Dolores Silicone was born from a passion for transforming silicone into
+        living works of art. Our journey began with an artist's
+        dream of creating dolls that not only looked real, but also
+        evoked the same affection and emotion as a real baby. Over the years, this
+        dream has grown into a team of dedicated artisans, each one
+        bringing their unique talent to create these precious works.
       </p>
-      <p>Nuestros valores fundamentales guían todo lo que hacemos:</p>
+      <p>Our core values guide everything we do:</p>
       <ul className="list-disc pl-6 mb-4 space-y-2">
         <li>
-          <strong>Arte:</strong> Estamos comprometidos con los más altos
-          estándares de excelencia artística, elaborando meticulosamente cada
-          detalle para lograr un realismo incomparable.
+          <strong>Art:</strong> We are committed to the highest
+          standards of artistic excellence, meticulously crafting every
+          detail to achieve unparalleled realism.
         </li>
         <li>
-          <strong>Calidad:</strong> Utilizamos únicamente silicona y materiales
-          premium de origen ético, asegurando que cada bebé Dolores sea seguro,
-          duradero y un placer de sostener.
+          <strong>Quality:</strong> We use only premium, ethically sourced
+          silicone and materials, ensuring that every Dolores baby is safe,
+          durable, and a joy to hold.
         </li>
         <li>
-          <strong>Integridad:</strong> La transparencia y la honestidad son
-          fundamentales. Comunicamos claramente nuestro proceso, materiales y
-          sistema de pago único, generando confianza con nuestra comunidad.
+          <strong>Integrity:</strong> Transparency and honesty are
+          fundamental. We clearly communicate our process, materials, and
+          unique payment system, building trust with our community.
         </li>
         <li>
-          <strong>Comunidad:</strong> Valoramos a la apasionada comunidad de
-          coleccionistas de reborn y nos esforzamos por fomentar un entorno
-          solidario y cercano. Tu alegría es nuestra mayor recompensa.
+          <strong>Community:</strong> We value the passionate community of
+          reborn collectors and strive to foster a supportive
+          and welcoming environment. Your joy is our greatest reward.
         </li>
         <li>
-          <strong>Pasión:</strong> Nuestro trabajo está impulsado por un
-          profundo amor por esta forma de arte única. Infundimos en cada bebé el
-          cuidado y la dedicación que merece.
+          <strong>Passion:</strong> Our work is driven by a
+          deep love for this unique art form. We infuse every baby with the
+          care and dedication it deserves.
         </li>
       </ul>
       <p>
-        Gracias por formar parte de nuestra historia. Esperamos crear una
-        obra de arte que traiga alegría y calidez a tu vida.
+        Thank you for being part of our story. We hope to create a
+        work of art that brings joy and warmth to your life.
       </p>
     </>
   );

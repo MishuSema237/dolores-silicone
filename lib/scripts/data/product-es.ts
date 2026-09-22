@@ -1,6 +1,6 @@
 /**
- * Traducciones al español para los productos de la base de datos.
- * Claves = slug del producto. Solo se aplican los campos presentes.
+ * English translations for database products.
+ * Keys = product slug. Only present fields are applied.
  */
 
 export interface ProductTranslation {
@@ -18,448 +18,448 @@ export interface ProductTranslation {
 }
 
 export const productTranslations: Record<string, ProductTranslation> = {
-  // ── Categoría "baby" (se normaliza a girls/boys) ──────────────────
+  // ── "baby" category (normalized to girls/boys) ────────────────────
   dumpling: {
     description:
-      "Un bebé de silicona de cuerpo completo, tranquilo, creado para traer consuelo y amor a casa.",
+      "A peaceful full-body silicone baby, created to bring comfort and love home.",
     detailedDescription:
-      "Conoce a Dumpling, un bebé reborn de silicona de cuerpo completo creado para capturar la belleza serena de un recién nacido dormido. Su expresión suave y su presencia realista están diseñadas para evocar calidez, conexión y una tranquilidad dulce, convirtiéndolo en un complemento significativo para cualquier hogar.\n\nDumpling es ideal para familias que buscan consuelo, recuerdos preciosos, decoración de la habitación del bebé y regalos llenos de cariño. También atrae a coleccionistas exigentes que valoran el realismo, la artesanía y la autenticidad emocional. Cada detalle está creado para ofrecer una experiencia relajante y realista que se siente personal y especial.\n\nYa sea bienvenido como un recuerdo familiar o añadido a una colección reborn curada, Dumpling ofrece más que una apariencia: ofrece una sensación de paz, conexión y el encanto atemporal de un recién nacido.",
+      "Meet Dumpling, a full-body silicone reborn baby created to capture the serene beauty of a sleeping newborn. Their soft expression and realistic presence are designed to evoke warmth, connection and sweet tranquility, making them a meaningful addition to any home.\n\nDumpling is ideal for families seeking comfort, precious keepsakes, nursery décor and gifts full of affection. It also appeals to discerning collectors who value realism, craftsmanship and emotional authenticity. Every detail is crafted to deliver a calming, realistic experience that feels personal and special.\n\nWhether welcomed as a family keepsake or added to a curated reborn collection, Dumpling offers more than a look: it offers a sense of peace, connection and the timeless charm of a newborn.",
     materialsAndCare:
-      "Dumpling está creado con silicona premium de cuerpo completo para un realismo excepcional, flexibilidad suave y una sensación de recién nacido verdadero. Viste un jersey y un gorro tejidos a mano, con pantalones de tela a juego, manoplas y escarpines, e incluye una manta de presentación de felpa.\n\nPara mantener su calidad y apariencia, manéjalo con las manos limpias y secas y limpia suavemente las manchas con un paño suave y ligeramente húmedo. No lo sumerjas en agua. Evita la luz solar directa, el calor y los productos químicos agresivos para evitar decoloración o alteración del material. Guárdalo en un lugar fresco y seco y viste y desviste con cuidado para proteger tanto la silicona como las prendas de punto. Diseñado para un manejo delicado, confort familiar, fotografía, exhibición y cuidados de colección.",
+      "Dumpling is crafted from premium full-body silicone for exceptional realism, soft flexibility and a true newborn feel. It wears a hand-knitted jersey and bonnet, with matching fabric pants, mittens and booties, and includes a plush presentation blanket.\n\nTo maintain its quality and appearance, handle it with clean, dry hands and gently wipe away marks with a soft, slightly damp cloth. Do not submerge it in water. Avoid direct sunlight, heat and harsh chemicals to prevent discoloration or material alteration. Store it in a cool, dry place and dress and undress it carefully to protect both the silicone and the knitwear. Designed for gentle handling, family comfort, photography, display and collection care.",
     shippingInfo:
-      "Ofrecemos con gusto envío estándar gratuito a todo el mundo en todos los pedidos. Cada bebé se prepara y fabrica bajo pedido, con un tiempo de procesamiento típico de 2 a 3 días laborables. Una vez enviado, la entrega se estima en 7 a 14 días laborables a través de mensajeros exprés de confianza según tu ubicación.\n\nCada pedido se empaqueta de forma segura en una lujosa caja de regalo magnética reutilizable para garantizar una llegada segura y una experiencia de desempaquetado hermosa.\n\nSe aceptan devoluciones dentro de los 14 días posteriores a la entrega, siempre que el bebé se devuelva en su estado original, sin usar y sin daños. Como cada bebé es una creación artística personalizada, puede aplicarse una tarifa de reposición del 15%. Las tarifas de envío no son reembolsables.",
+      "We are happy to offer free standard worldwide shipping on all orders. Each baby is prepared and made to order, with a typical processing time of 2 to 3 business days. Once shipped, delivery is estimated at 7 to 14 business days via trusted express couriers depending on your location.\n\nEvery order is securely packaged in a luxurious reusable magnetic gift box to guarantee a safe arrival and a beautiful unboxing experience.\n\nReturns are accepted within 14 days of delivery, provided the baby is returned in its original, unused and undamaged condition. As each baby is a bespoke artistic creation, a 15% restocking fee may apply. Shipping fees are non-refundable.",
   },
   alie: {
     description:
-      "Silicona de cuerpo completo ultra realista. Creada para una vida de conexión.",
+      "Ultra-realistic full-body silicone. Crafted for a lifetime of connection.",
     detailedDescription:
-      "Experimenta la presencia conmovedora de Alie, una obra maestra impresionante del estudio Dolores Silicone. Capturando la inocencia frágil de un recién nacido en un reposo perfecto e inalterado, Alie viste un delicado conjunto de punto color melocotón, tejido a mano, con su característico gorrito en punta.\n\nCada microtrayecto de piel, vena sutil y suave mechón de cabello oscuro implantado a mano ha sido meticulosamente reproducido por nuestros maestros artesanos para evocar la emoción visceral de un bebé real. La construcción de silicona de cuerpo completo de Alie proporciona un peso y una flexibilidad realistas que imitan la sensación de «derretirse en los brazos» de un recién nacido, invitándote a un mundo de confort y compañía de calidad heredada. Para garantizar su procedencia, Alie llega con un Certificado de Autenticidad que la verifica como una creación genuina y única de Dolores Silicone: una pieza de legado para tu familia y colección.",
+      "Experience the touching presence of Alie, a breathtaking masterpiece from the Dolores Silicone studio. Capturing the fragile innocence of a newborn in perfect, undisturbed repose, Alie wears a delicate hand-knitted peach-toned set with her signature pointed bonnet.\n\nEvery micro-detail of skin, subtle vein and soft strand of hand-implanted dark hair has been meticulously reproduced by our master artisans to evoke the visceral emotion of a real baby. Alie's full-body silicone construction provides realistic weight and flexibility that mimic the 'melting in your arms' feel of a newborn, inviting you into a world of comfort and heirloom-quality companionship. To guarantee provenance, Alie arrives with a Certificate of Authenticity verifying her as a genuine, one-of-a-kind Dolores Silicone creation: a legacy piece for your family and collection.",
     materialsAndCare:
-      "Forjada con nuestra silicona médica de grado platino y curado con platino, Alie ofrece un tacto aterciopelado e hipoalergénico tan duradero como realista. Ten en cuenta: Alie es una muñeca de arte coleccionable hecha a mano, no un juguete. Está pensada para coleccionistas adultos y familias que buscan una pieza heredada de alta gama para exhibir, manejar con delicadeza y confort emocional.\n\nAunque su presencia es profundamente calmante, se requiere supervisión de un adulto si la manipulan niños. Para preservar su acabado artesanal, trata a Alie con la misma ternura que a un bebé real, evitando tejidos abrasivos y manteniendo su superficie mate pristina con polvo de seda de alta calidad y apto para silicona.",
+      "Forged from our medical-grade platinum-cured silicone, Alie offers a velvety, hypoallergenic touch that is as durable as it is realistic. Please note: Alie is a handmade collectible art doll, not a toy. She is intended for adult collectors and families seeking a high-end heirloom piece for display, gentle handling and emotional comfort.\n\nAlthough her presence is deeply calming, adult supervision is required if handled by children. To preserve her handcrafted finish, treat Alie with the same tenderness as a real baby, avoiding abrasive fabrics and keeping her pristine matte surface dusted with high-quality, silicone-safe silk powder.",
     shippingInfo:
-      "Ofrecemos envío exprés mundial gratuito para Alie. Se somete a una preparación final rigurosa y a una inspección artesanal antes de colocarse de forma segura en nuestro lujoso empaque magnético de regalo, diseñado para una experiencia de desempaquetado realmente impresionante.\n\nProcesamiento: permite una ventana de procesamiento artesanal dedicada mientras nuestros artistas finalizan los intrincados detalles de Alie.\nEntrega: las estimaciones de entrega exprés se proporcionan al despachar, garantizando un viaje rápido y seguro hasta tu puerta.\nDevoluciones: debido a la naturaleza hecha a medida de nuestros productos de arte de alta gama, ofrecemos condiciones de devolución justas. Ten en cuenta que puede aplicarse una tarifa de reposición para mantener la integridad de nuestra colección exclusiva.",
+      "We offer free worldwide express shipping for Alie. She undergoes a rigorous final preparation and artisan inspection before being placed securely in our luxurious magnetic gift packaging, designed for a truly stunning unboxing experience.\n\nProcessing: allow a dedicated artisan processing window while our artists finalize Alie's intricate details.\nDelivery: express delivery estimates are provided upon dispatch, ensuring a fast and safe journey to your door.\nReturns: due to the made-to-order nature of our high-end art pieces, we offer fair return conditions. Please note a restocking fee may apply to maintain the integrity of our exclusive collection.",
   },
   ronnie: {
     description:
-      "Silicona de cuerpo completo hiperrealista. Un sereno latido de paz para tu hogar.",
+      "Hyper-realistic full-body silicone. A serene heartbeat of peace for your home.",
     detailedDescription:
-      "Conocer a Ronnie por primera vez es un momento de emoción pura y silenciosa. Capturado en un estiramiento somnoliento y contento, Ronnie encarna la magia fugaz de las primeras horas de un recién nacido. Vestido con algodón blanco impecable de grado hospitalario y su característico gorro celestial «Hello World», esta obra maestra de silicona de cuerpo completo es un testimonio del realismo inigualable del estudio Dolores Silicone.\n\nCada arruga delicada de la frente y el sutil e realista pucherito de los labios ha sido esculpida con precisión para evocar una profunda sensación de protección y calma. La presencia con peso de Ronnie está equilibrada para sentirse instintivamente «correcta» en tus brazos, creando un vínculo inmediato que trasciende el coleccionismo tradicional. Ya sea como un querido recuerdo familiar o como la joya de la corona de una colección seria, Ronnie ofrece una conexión atemporal con la belleza de la vida nueva. Para asegurar tu inversión, Ronnie llega con un Certificado de Autenticidad que verifica su estatus como una creación original de Dolores Silicone, elaborada artesanalmente.",
+      "Meeting Ronnie for the first time is a moment of pure, quiet emotion. Caught in a drowsy, contented stretch, Ronnie embodies the fleeting magic of a newborn's first hours. Dressed in pristine hospital-grade white cotton and his signature 'Hello World' celestial bonnet, this full-body silicone masterpiece is a testament to the Dolores Silicone studio's unrivaled realism.\n\nEvery delicate forehead crinkle and the subtle, realistic pout of the lips has been sculpted with precision to evoke a deep sense of protection and calm. Ronnie's weighted presence is balanced to feel instinctively 'right' in your arms, creating an immediate bond that transcends traditional collecting. Whether as a treasured family keepsake or the crown jewel of a serious collection, Ronnie offers a timeless connection to the beauty of new life. To secure your investment, Ronnie arrives with a Certificate of Authenticity verifying his status as an original, artfully crafted Dolores Silicone creation.",
     materialsAndCare:
-      "Ronnie está fundido con nuestra silicona exclusiva de curado con platino, ofreciendo una sensación realista de «piel con piel» que es hipoalergénica y notablemente flexible. Ten en cuenta: Ronnie es una muñeca de arte coleccionable hecha a mano, no un juguete. Pensada para exhibición, compañía emocional y manejo delicado, Ronnie requiere supervisión de un adulto para los niños. Para mantener la intrincada pintura artesanal y la textura mate característica, recomendamos un manejo consciente y la aplicación regular de nuestro polvo de seda artesanal premium.",
+      "Ronnie is cast in our exclusive platinum-cured silicone, offering a realistic 'skin-to-skin' feel that is hypoallergenic and remarkably flexible. Please note: Ronnie is a handmade collectible art doll, not a toy. Intended for display, emotional companionship and gentle handling, Ronnie requires adult supervision for children. To maintain the intricate hand-painted artistry and signature matte texture, we recommend mindful handling and the regular application of our premium artisan silk powder.",
     shippingInfo:
-      "Ofrecemos envío exprés mundial gratuito para garantizar que Ronnie llegue a ti con el máximo cuidado. Cada bebé se presenta en nuestro característico lujoso empaque magnético de regalo, reflejando la naturaleza premium de tu adquisición.\n\nProcesamiento: nuestros artesanos dedican tiempo a una inspección de calidad final y rigurosa para asegurar que Ronnie salga sin defectos.\nEntrega: el envío exprés totalmente asegurado garantiza que Ronnie llegue de forma segura y rápida a tu puerta.\nDevoluciones: como cada creación es una obra de arte única, ofrecemos condiciones de devolución justas, que pueden incluir una tarifa de reposición para preservar la exclusividad de nuestra colección hecha a mano.",
+      "We offer free worldwide express shipping to ensure Ronnie reaches you with the utmost care. Each baby is presented in our signature luxury magnetic gift packaging, reflecting the premium nature of your acquisition.\n\nProcessing: our artisans dedicate time to a rigorous final quality inspection to ensure Ronnie leaves without a single flaw.\nDelivery: fully insured express shipping guarantees Ronnie arrives safely and quickly at your door.\nReturns: as each creation is a unique work of art, we offer fair return conditions, which may include a restocking fee to preserve the exclusivity of our handmade collection.",
   },
   "maeve-the-twins": {
-    name: "Maeve las Gemelas",
+    name: "Maeve the Twins",
     description:
-      "Un sereno par de bebés reborn de silicona de cuerpo completo, esculpidos en suaves tonos ruborizados y vestidos con delicados tejidos de punto pastel, creados para ser sostenidos, queridos y conservados para siempre.",
+      "A serene pair of full-body silicone reborn babies, sculpted in soft blushed tones and dressed in delicate pastel knits, created to be held, cherished and kept forever.",
     detailedDescription:
-      "Este exquisito set de gemelas de Dolores Silicone captura un momento de calma pura: dos recién nacidas realistas descansando lado a lado, con expresiones suavizadas en dulces sonrisas, piel besada con calidez natural y extremidades relajadas con realismo de recién nacido. Cada contorno, desde los sutiles pliegues de las manos hasta el tierno rizo de los dedos de los pies, ha sido esculpido y terminado individualmente para evocar la íntima quietud de los primeros días de vida.\n\nHechas a mano como bebés reborn de silicona de cuerpo completo, cada pieza ofrece una notable sensación de presencia y conexión emocional. Sus cuerpos de silicona suaves y con peso responden de forma natural al ser acunados, creando una experiencia que va más allá de la exhibición: una que invita al vínculo, el consuelo y la reflexión. Vestidas con chaquetas de punto rosa empolvado, mallas color crema y capotas de marfil, las gemelas encarnan una estética refinada y heredada, diseñada para armonizar con elegantes habitaciones infantiles y colecciones curadas.\n\nCada bebé llega con un Certificado de Autenticidad que lo verifica como una creación genuina de Dolores Silicone. Este certificado confirma la artesanía, los materiales y la naturaleza limitada de la pieza, garantizando un valor duradero para coleccionistas exigentes y familias que buscan un recuerdo significativo.\n\nCreado no para las tendencias, sino para la atemporalidad, este set de gemelas es una celebración de la conexión: entre el arte y la emoción, la memoria y la artesanía.",
+      "This exquisite twin set from Dolores Silicone captures a moment of pure calm: two realistic newborn girls resting side by side, with softened expressions in sweet smiles, skin kissed with natural warmth and newborn-realistic relaxed limbs. Every contour, from the subtle creases of the hands to the tender curl of the toes, has been individually sculpted and finished to evoke the intimate stillness of the first days of life.\n\nHandmade as full-body silicone reborn babies, each piece offers a remarkable sense of presence and emotional connection. Their soft, weighted silicone bodies respond naturally when cradled, creating an experience that goes beyond display: one that invites bonding, comfort and reflection. Dressed in blush-pink knitted jackets, cream leggings and ivory bonnets, the twins embody a refined, heirloom aesthetic designed to harmonize with elegant nurseries and curated collections.\n\nEach baby arrives with a Certificate of Authenticity verifying it as a genuine Dolores Silicone creation. This certificate confirms the craftsmanship, materials and limited nature of the piece, guaranteeing lasting value for discerning collectors and families seeking a meaningful keepsake.\n\nCreated not for trends but for timelessness, this twin set is a celebration of connection: between art and emotion, memory and craftsmanship.",
     materialsAndCare:
-      "Creadas con silicona premium de grado platino de cuerpo completo, pintadas delicadamente a mano con pigmentos en capas y terminadas con detalles finos para el realismo de la piel. El cabello y los rasgos se refinan individualmente para preservar una apariencia suave de recién nacido.\n\nEsta pieza es una muñeca de arte coleccionable hecha a mano, no un juguete. Pensada para un manejo delicado, exhibición, confort terapéutico y conexión emocional. Debido a la naturaleza artesanal y la construcción realista, se requiere supervisión de un adulto para los niños. Evita el estiramiento excesivo, los objetos afilados, la transferencia de tinta de tejidos oscuros y la luz solar directa prolongada. Limpia solo con un paño suave y ligeramente húmedo y deja secar al aire de forma natural.",
+      "Crafted from premium platinum-grade full-body silicone, delicately hand-painted with layered pigments and finished with fine details for skin realism. Hair and features are individually refined to preserve a soft newborn appearance.\n\nThis piece is a handmade collectible art doll, not a toy. Intended for gentle handling, display, therapeutic comfort and emotional connection. Due to the handcrafted nature and realistic construction, adult supervision is required for children. Avoid excessive stretching, sharp objects, ink transfer from dark fabrics and prolonged direct sunlight. Clean only with a soft, slightly damp cloth and allow to air dry naturally.",
     shippingInfo:
-      "• Envío mundial gratuito en todos los pedidos\n• Tiempo de procesamiento artesanal: aproximadamente 2 a 4 semanas, ya que cada pieza se prepara cuidadosamente\n• Entrega exprés: estimada en 3 a 7 días laborables después del despacho\n• Presentadas en un lujoso empaque magnético de regalo, ideal para regalar o almacenar en archivo\n\nDebido a la naturaleza personalizada y artesanal de las muñecas de arte coleccionables, las devoluciones solo se aceptan en su estado original. Puede aplicarse una tarifa de reposición para creaciones personalizadas o limitadas. Los detalles completos de la devolución se proporcionan en la compra para garantizar transparencia y confianza.",
+      "• Free worldwide shipping on all orders\n• Artisan processing time: approximately 2 to 4 weeks, as each piece is carefully prepared\n• Express delivery: estimated at 3 to 7 business days after dispatch\n• Presented in luxury magnetic gift packaging, ideal for gifting or archival storage\n\nDue to the bespoke, handcrafted nature of collectible art dolls, returns are only accepted in original condition. A restocking fee may apply for custom or limited creations. Full return details are provided at purchase to ensure transparency and trust.",
   },
 
-  // ── Categoría "accessory" (se normaliza a accessories) ─────────────
+  // ── "accessory" category (normalized to accessories) ───────────────
   "dolores-silicone-baby-essentials-starter-kit-blue": {
-    name: "Dolores Silicone – Kit de Inicio de Accesorios Esenciales (Azul)",
+    name: "Dolores Silicone – Baby Essentials Starter Kit (Blue)",
     description:
-      "Un kit de esenciales cuidadosamente seleccionados con accesorios sencillos y cotidianos diseñados para complementar tu bebé reborn de silicona con suavidad, confort y estilo atemporal.",
+      "A thoughtfully curated essentials kit with simple, everyday accessories designed to complement your silicone reborn baby with softness, comfort and timeless style.",
     detailedDescription:
-      "Qué incluye\n\nConjunto Suave de Dos Piezas (Azul)\nUn conjunto ligero de estilo recién nacido con parte de arriba y pantalones con pies, diseñado para vestir fácilmente y un contacto suave con la silicona.\n\nCalcetines de Recién Nacido (Par)\nCalcetines suaves de punto elástico que añaden calidez y realismo sin presión.\n\nGorro Tejido de Punto\nUn sencillo gorro acanalado en un tono azul a juego, ideal para el estilo de recién nacido.\n\nChupetes Magnéticos (Set de 2)\nChupetes solo para exhibición, diseñados para poses y fotografía realistas.\n\nCestita Tejida Mini\nUna cesta ligera adecuada para descansar, exhibir o preparar sesiones de fotos cuando se forra con un paño o una manta.\n\nManta Suave de Envolver\nUna manta básica y transpirable para envolver, exhibir o sostener suavemente.\n\nTodos los artículos de este kit están pensados únicamente para muñecas de arte reborn coleccionables de silicona.\nEste kit no contiene productos funcionales para bebés y no es adecuado para bebés reales. Se requiere supervisión de un adulto cuando se usa cerca de niños.",
+      "What's included\n\nSoft Two-Piece Set (Blue)\nA lightweight newborn-style set with a top and footed pants, designed for easy dressing and gentle contact with the silicone.\n\nNewborn Socks (Pair)\nSoft stretch-knit socks that add warmth and realism without pressure.\n\nKnitted Bonnet\nA simple ribbed bonnet in a matching blue tone, ideal for the newborn look.\n\nMagnetic Pacifiers (Set of 2)\nDisplay-only pacifiers designed for realistic posing and photography.\n\nMini Woven Basket\nA lightweight basket suitable for resting, displaying or staging photo sessions when lined with a cloth or blanket.\n\nSoft Swaddle Blanket\nA basic, breathable blanket for swaddling, displaying or gentle holding.\n\nAll items in this kit are intended solely for collectible silicone reborn art dolls.\nThis kit does not contain functional baby products and is not suitable for real babies. Adult supervision is required when used near children.",
   },
 
-  // ── Categoría "girls" ─────────────────────────────────────────────
+  // ── "girls" category ───────────────────────────────────────────────
   "elena-rose": {
     description:
-      "Un hermoso y realista bebé de silicona recién nacida, con rasgos suaves y cuerpo con peso para una sensación auténtica.",
+      "A beautiful and realistic silicone newborn baby girl, with soft features and a weighted body for an authentic feel.",
     detailedDescription:
-      "Esta impresionante bebé recién nacida está meticulosamente hecha a mano con silicona premium de platino. Cada detalle, desde las delicadas arrugas de las manos hasta las diminutas uñas, ha sido cuidadosamente esculpido por nuestro maestro artesano. La bebé viene con extremidades reposicionables y ojos de cristal realistas que añaden a su apariencia realista.",
+      "This stunning newborn baby is meticulously handmade from premium platinum silicone. Every detail, from the delicate hand wrinkles to the tiny fingernails, has been carefully sculpted by our master artisan. The baby comes with repositionable limbs and realistic crystal eyes that add to her lifelike appearance.",
     materialsAndCare:
-      "Hecha con silicona premium de platino. Limpia con jabón suave y agua. Evita la luz solar directa. Guárdala en un lugar fresco y seco.",
-    shippingInfo: "Se envía en 3 a 5 días laborables. Empaquetada cuidadosamente en una caja acolchada.",
+      "Made from premium platinum silicone. Clean with mild soap and water. Avoid direct sunlight. Store in a cool, dry place.",
+    shippingInfo: "Ships within 3 to 5 business days. Carefully packaged in a padded box.",
   },
   "isla-may": {
     description:
-      "Una bebé preciosa con rasgos delicados y construcción premium de silicona para una calidad duradera.",
+      "A precious baby with delicate features and premium silicone construction for lasting quality.",
     detailedDescription:
-      "Isla tiene el cabello implantado a mano con hermosos mechones, detalles realistas de lanugo y relleno de cuentas de cristal con peso para esa sensación perfecta de bebé. Su expresión dulce y sus mejillas sonrosadas la hacen irresistible.",
-    materialsAndCare: "Construcción premium de silicona de platino. Lavar solo a mano. Guardar en su posición original.",
-    shippingInfo: "Enviamos a todo el mundo, con seguimiento.",
+      "Isla has beautifully hand-implanted hair strands, realistic lanugo details and weighted glass bead filling for that perfect baby feel. Her sweet expression and rosy cheeks make her irresistible.",
+    materialsAndCare: "Premium platinum silicone construction. Hand wash only. Store in original position.",
+    shippingInfo: "We ship worldwide, with tracking.",
   },
   "sophie-nicole": {
-    description: "Una niña pequeña adorable con los detalles y la expresión más realistas.",
+    description: "An adorable little girl with the most realistic detailing and expression.",
     detailedDescription:
-      "Sophie es una de nuestras niñas pequeñas más detalladas, con tonos de piel realistas, vetas sutiles y hermosos rasgos pintados a mano. Su cuerpo con peso la hace perfecta para abrazarla.",
-    materialsAndCare: "Silicona premium. Limpiar con un paño húmedo. Evitar sumergir en agua.",
-    shippingInfo: "Entrega asegurada.",
+      "Sophie is one of our most detailed little girls, with realistic skin tones, subtle veins and beautiful hand-painted features. Her weighted body makes her perfect for cuddling.",
+    materialsAndCare: "Premium silicone. Clean with a damp cloth. Avoid submerging in water.",
+    shippingInfo: "Secure delivery.",
   },
   "layla-grace": {
-    description: "Un bebé dormido y tranquilo con ojos cerrados realistas y una expresión dulce.",
+    description: "A calm sleeping baby with realistic closed eyes and a sweet expression.",
     detailedDescription:
-      "Layla está bellamente elaborada con ojos cerrados realistas que muestran pestañas delicadas. Su cuerpo con peso y su posición natural de dormir la hacen perfecta para exhibir o abrazar.",
-    materialsAndCare: "Construcción de silicona. Limpiar suavemente con jabón suave.",
-    shippingInfo: "Empaquetada con cuidado y enviada de forma segura, con número de seguimiento al confirmarse el pedido.",
+      "Layla is beautifully crafted with realistic closed eyes showing delicate lashes. Her weighted body and natural sleeping position make her perfect for display or cuddling.",
+    materialsAndCare: "Silicone construction. Clean gently with mild soap.",
+    shippingInfo: "Carefully packaged and securely shipped, with a tracking number provided once the order is confirmed.",
   },
   "isabella-grace": {
-    description: "Nuestra bebé de colección premium con excepcional detalle y realismo.",
+    description: "Our premium collectible baby with exceptional detail and realism.",
     detailedDescription:
-      "Isabella representa la cúspide de nuestro oficio. Cada detalle ha sido cuidadosamente considerado, desde los cabellos individuales hasta los sutiles tonos de piel. Es una verdadera obra maestra.",
-    materialsAndCare: "Silicona de grado de colección. Se recomienda limpieza profesional.",
-    shippingInfo: "Envío premium con seguro incluido.",
+      "Isabella represents the pinnacle of our craft. Every detail has been carefully considered, from individual hairs to subtle skin tones. She is a true masterpiece.",
+    materialsAndCare: "Collector-grade silicone. Professional cleaning recommended.",
+    shippingInfo: "Premium shipping with insurance included.",
   },
   "harper-lynn": {
-    description: "Nuestra bebé artesana premium con detalle de calidad de museo.",
+    description: "Our premium artisan baby with museum-quality detail.",
     detailedDescription:
-      "Harper es una pieza única que presenta nuestra mejor artesanía. Desde la veta sutil hasta el tono de piel perfecto, representa meses de cuidadosa elaboración.",
-    materialsAndCare: "Calidad de museo. Se recomienda cuidado profesional.",
-    shippingInfo: "Entrega con guantes blancos disponible.",
+      "Harper is a one-of-a-kind piece featuring our finest craftsmanship. From the subtle veining to the perfect skin tone, she represents months of careful work.",
+    materialsAndCare: "Museum quality. Professional care recommended.",
+    shippingInfo: "White-glove delivery available.",
   },
   "lily-rose-and-ruby-anne": {
-    name: "Lily Rose y Ruby Anne",
+    name: "Lily Rose and Ruby Anne",
     description:
-      "Una bebé preciosa con rasgos delicados y construcción premium de silicona.",
+      "A precious baby with delicate features and premium silicone construction.",
     detailedDescription:
-      "Muñecas dormidas y realistas con tonos de piel suaves.\nEstas gemelas siempre deben estar juntas.",
-    materialsAndCare: "MATERIAL: mezcla de silicona y vinilo, cuerpo de tela.\nCUIDADO: guardar en posición tumbada para mantener la forma.",
+      "Realistic sleeping dolls with soft skin tones.\nThese twins should always stay together.",
+    materialsAndCare: "MATERIAL: silicone and vinyl blend, cloth body.\nCARE: store lying down to maintain shape.",
   },
   "emma-grace": {
-    description: "Un hermoso recién nacido con expresión realista de sueño y rasgos suaves.",
-    detailedDescription: "Muñeca de expresión suave con postura natural de recién nacido.",
-    materialsAndCare: "MATERIAL: extremidades de silicona, cuerpo de tela, ojos acrílicos.\n\nCUIDADO: limpiar solo las manchas.",
+    description: "A beautiful newborn with a realistic sleeping expression and soft features.",
+    detailedDescription: "A soft-expression doll with a natural newborn posture.",
+    materialsAndCare: "MATERIAL: silicone limbs, cloth body, acrylic eyes.\n\nCARE: spot clean only.",
   },
   "sofia-joy": {
-    description: "Un bebé alegre con ojos expresivos y hermosos detalles pintados a mano.",
-    detailedDescription: "Estilo realista de recién nacido, cabello implantado, piel de silicona de tacto suave.",
-    materialsAndCare: "MATERIAL: silicona completa, capas de pintura selladas, cabello implantado.\nCUIDADO: mantener alejada del polvo, usar talco para bebés ligeramente.",
+    description: "A cheerful baby with expressive eyes and beautiful hand-painted details.",
+    detailedDescription: "Realistic newborn style, rooted hair, soft-touch silicone skin.",
+    materialsAndCare: "MATERIAL: full silicone, sealed paint layers, rooted hair.\nCARE: keep away from dust, use baby powder sparingly.",
   },
   "chloe-anne": {
-    description: "Una pequeña preciosa con colorido delicado y auténtico cuerpo con peso.",
-    detailedDescription: "Adorable muñeca bebé con mejillas sonrosadas y orejitas diminutas.",
-    materialsAndCare: "MATERIAL: silicona ecológica, pintura a mano detallada.\n\nCUIDADO: lavar suavemente y secar completamente al aire.",
+    description: "A precious little one with delicate coloring and an authentic weighted body.",
+    detailedDescription: "Adorable baby doll with rosy cheeks and tiny little ears.",
+    materialsAndCare: "MATERIAL: eco-friendly silicone, detailed hand painting.\n\nCARE: wash gently and air dry completely.",
   },
   "nora-faith": {
-    description: "Un bebé sereno con rasgos tranquilos y piel premium de silicona.",
-    detailedDescription: "Muñeca bebé realista con manos curvadas y expresión serena.",
-    materialsAndCare: "MATERIALES: silicona de grado médico, cejas pintadas, mohair implantado.\n\nCUIDADO: lavar con cuidado, evitar cepillar el cabello con brusquedad.",
+    description: "A serene baby with calm features and premium silicone skin.",
+    detailedDescription: "Realistic baby doll with curled hands and a serene expression.",
+    materialsAndCare: "MATERIALS: medical-grade silicone, painted brows, rooted mohair.\n\nCARE: wash with care, avoid brushing hair roughly.",
   },
   "mia-faith": {
-    description: "Un bebé compacto con el cuerpo más suave y abrazable y una presencia amorosa.",
-    detailedDescription: "Lindo muñeco bebé de silicona completa con diseño de abrazo.",
-    materialsAndCare: "MATERIALES: cuerpo de silicona completa, textura de piel realista.\n\nCUIDADO: guardar plano o apoyado para mantener la forma.",
+    description: "A compact baby with the softest, most huggable body and a loving presence.",
+    detailedDescription: "Cute full silicone baby doll with a snuggly design.",
+    materialsAndCare: "MATERIALS: full silicone body, realistic skin texture.\n\nCARE: store flat or propped to maintain shape.",
   },
   "olivia-hope": {
-    description: "Un bebé precioso con rasgos detallados y posición natural.",
-    detailedDescription: "Muñeca pequeña de estilo recién nacido con deditos diminutos y pliegues realistas.",
-    materialsAndCare: "MATERIALES: cuerpo de silicona, interior con peso, acabado suave.\nCUIDADO: mantener alejada de la tinta y los tejidos oscuros para evitar manchas.",
+    description: "A precious baby with detailed features and a natural position.",
+    detailedDescription: "Small newborn-style doll with tiny fingers and realistic creases.",
+    materialsAndCare: "MATERIALS: silicone body, weighted interior, soft finish.\nCARE: keep away from ink and dark fabrics to avoid staining.",
   },
   "sandra-lois": {
-    description: "Tan suave y blandita.",
-    detailedDescription: "Es una muñeca bebé especial y realista con ojos y rasgos maravillosos. Tan suave y adorable.",
-    materialsAndCare: "MATERIAL: hecha de silicona de alta calidad, sensación de piel suave y realista.\nCUIDADO: limpiar con jabón suave y agua tibia.",
-    shippingInfo: "Entrega lo más rápido posible.",
+    description: "So soft and squishy.",
+    detailedDescription: "A special, realistic baby doll with wonderful eyes and features. So soft and adorable.",
+    materialsAndCare: "MATERIAL: made of high-quality silicone, soft realistic skin feel.\nCARE: clean with mild soap and warm water.",
+    shippingInfo: "Delivery as fast as possible.",
   },
   "samanta-grace": {
-    description: "Muñeca bebé de silicona realista y suave con detalles realistas, hecha para abrazos, coleccionar y regalar.",
+    description: "Soft realistic silicone baby doll with lifelike details, made for cuddling, collecting and gifting.",
     detailedDescription:
-      "Nuestras muñecas bebé de silicona son suaves, realistas y cuidadosamente elaboradas con detalles realistas para verse y sentirse como un bebé de verdad. Perfectas para coleccionistas, regalos y amantes de las muñecas reborn.",
-    materialsAndCare: "MATERIAL: detalles pintados a mano para una apariencia realista.\nCUIDADO: mantener alejada del calor directo y la luz solar. Vestir con ropa de colores claros para evitar manchas.",
-    shippingInfo: "Entrega rápida, sin problemas.",
+      "Our silicone baby dolls are soft, realistic and carefully crafted with lifelike details to look and feel like a real baby. Perfect for collectors, gifts and reborn doll lovers.",
+    materialsAndCare: "MATERIAL: hand-painted details for a realistic look.\nCARE: keep away from direct heat and sunlight. Dress in light-colored clothing to avoid staining.",
+    shippingInfo: "Fast, hassle-free delivery.",
   },
   "ella-joy": {
-    description: "Muñeca bebé de silicona linda y realista con sensación de peso para mayor realismo.",
+    description: "Cute, realistic silicone baby doll with weighted feel for added realism.",
     detailedDescription:
-      "Esta muñeca bebé de silicona está hecha a mano con suave piel de silicona de platino realista, lo que le da un tacto y una apariencia realistas. Cuenta con delicados detalles faciales, suaves tonos de piel y un cuerpo abrazable perfecto para coleccionistas y niños bajo supervisión.",
+      "This silicone baby doll is handmade from soft, realistic platinum silicone, giving it a realistic touch and appearance. It features delicate facial details, soft skin tones and a huggable body perfect for collectors and supervised children.",
     materialsAndCare:
-      "MATERIAL: se usa silicona de alta calidad porque se siente suave, flexible y realista como la piel humana.\nCUIDADO: los limpiadores fuertes, el alcohol o la lejía pueden dañar o decolorar la silicona.",
-    shippingInfo: "Sin problemas ni maltratos.",
+      "MATERIAL: high-quality silicone is used because it feels soft, flexible and realistic like human skin.\nCARE: strong cleaners, alcohol or bleach can damage or discolor silicone.",
+    shippingInfo: "No problems, no rough handling.",
   },
   "stella-queen": {
-    description: "Un bebé adorable con la sonrisa más dulce y una expresión suave.",
+    description: "An adorable baby with the sweetest smile and a soft expression.",
     detailedDescription:
-      "Hecha de silicona de platino duradera, esta muñeca bebé es suave, apretable y realista, diseñada para dar una experiencia de recién nacido realista para el juego o la colección.",
-    materialsAndCare: "Material: cabello suave insertado hebra por hebra para imitar el cabello real de un bebé.\nCuidado: algunos bebés de silicona son pesados, así que un soporte adecuado previene el estrés en las articulaciones.",
-    shippingInfo: "Entrega rápida.",
+      "Made of durable platinum silicone, this baby doll is soft, squeezable and realistic, designed to provide a realistic newborn experience for play or collection.",
+    materialsAndCare: "Material: soft hair inserted strand by strand to imitate real baby hair.\nCare: some silicone babies are heavy, so proper support prevents joint stress.",
+    shippingInfo: "Fast delivery.",
   },
   "marie-clare": {
-    description: "Una creación maravillosa con expresiones realistas y calidad premium.",
+    description: "A wonderful creation with realistic expressions and premium quality.",
     detailedDescription:
-      "Esta adorable muñeca bebé de silicona tiene un cuerpo flexible, tonos de piel naturales y un detalle fino como diminutas venas, arrugas y cabello suave para un efecto realista.",
+      "This adorable silicone baby doll has a flexible body, natural skin tones and fine detail such as tiny veins, wrinkles and soft hair for a realistic effect.",
     materialsAndCare:
-      "Material: un tipo especial de silicona que se usa comúnmente para hacer muñecas reborn suaves y de cuerpo completo por su durabilidad.\nCuidado: aplicar polvo apto para silicona después de la limpieza para reducir la adherencia y mantener la piel suave.",
-    shippingInfo: "Buenas tarifas.",
+      "Material: a special type of silicone commonly used to make soft, full-body reborn dolls for its durability.\nCare: apply silicone-safe powder after cleaning to reduce tackiness and keep the skin soft.",
+    shippingInfo: "Good rates.",
   },
   "rose-marie": {
-    description: "Una bebé preciosa con rasgos delicados y construcción premium de silicona.",
+    description: "A precious baby with delicate features and premium silicone construction.",
     detailedDescription:
-      "Esta muñeca bebé de silicona premium viene con rasgos terminados a mano, piel suave tipo vinilo y una sensación abrazable, lo que la hace perfecta para exhibir, regalar o para confort emocional.",
+      "This premium silicone baby doll comes with hand-finished features, soft vinyl-like skin and a huggable feel, making it perfect for display, gifting or emotional comfort.",
     materialsAndCare:
-      "Material: colocada dentro de algunas muñecas para chupetes magnéticos o accesorios.\nCuidado: quitar la ropa ajustada lentamente porque estirar puede dañar los dedos o las extremidades.",
-    shippingInfo: "Envío con seguimiento.",
+      "Material: placed inside some dolls for magnetic pacifiers or accessories.\nCare: remove tight clothing slowly because stretching can damage fingers or limbs.",
+    shippingInfo: "Shipping with tracking.",
   },
   "prisca-grace": {
-    description: "Hermosa muñeca bebé niña creada con detalles realistas y encanto.",
+    description: "Beautiful baby girl doll created with lifelike details and charm.",
     detailedDescription:
-      "Una muñeca reborn de recién nacida realista con cuerpo con peso, expresión facial dulce y detalles cuidadosamente elaborados que la hacen sentir y verse como un bebé de verdad.",
+      "A realistic newborn reborn doll with a weighted body, sweet facial expression and carefully crafted details that make her feel and look like a real baby.",
     materialsAndCare:
-      "Material: añadido internamente para ayudar a dar forma al cuerpo y reducir el peso.\nCuidado: usar solo productos hechos para muñecas de silicona para mantener la calidad y la apariencia.",
-    shippingInfo: "Entrega en la puerta de tu casa.",
+      "Material: added internally to help shape the body and reduce weight.\nCare: use only products made for silicone dolls to maintain quality and appearance.",
+    shippingInfo: "Delivery to your doorstep.",
   },
   "sophia-peace": {
-    description: "Muñeca niña pequeña juguetona.",
-    detailedDescription: "Sophia está estilizada en una pose juguetona y ligeramente despierta.",
-    materialsAndCare: "Material: silicona + armadura.\nCuidado: manejar las articulaciones con suavidad.",
-    shippingInfo: "Entrega segura.",
+    description: "Playful little girl doll.",
+    detailedDescription: "Sophia is styled in a playful, slightly awake pose.",
+    materialsAndCare: "Material: silicone + armature.\nCare: handle joints gently.",
+    shippingInfo: "Safe delivery.",
   },
   "emma-cleo": {
-    description: "Es perfecta para coleccionistas, fotografía, exhibición o como una compañera querida.",
+    description: "Perfect for collectors, photography, display or as a beloved companion.",
     detailedDescription:
-      "Esta hermosa bebé de silicona hecha a mano está diseñada con un realismo increíble, con delicados tonos de piel pintados a mano, cabello implantado suave, deditos y deditos de los pies detallados, y una expresión pacífica de sueño. Pesa 8 libras y mide 20 pulgadas.",
-    materialsAndCare: "Material: 100% silicona de curado con platino, pintada a mano con pinturas premium de silicona.\nCuidado: lavar solo con agua tibia y jabón suave si es necesario.",
-    shippingInfo: "Envío mundial con seguimiento disponible.",
+      "This beautiful handmade silicone baby is designed with incredible realism, featuring delicate hand-painted skin tones, soft rooted hair, detailed little fingers and toes, and a peaceful sleeping expression. She weighs 8 pounds and measures 20 inches.",
+    materialsAndCare: "Material: 100% platinum-cured silicone, hand-painted with premium silicone paints.\nCare: wash only with warm water and mild soap if needed.",
+    shippingInfo: "Worldwide shipping with tracking available.",
   },
   "lily-ray": {
-    description: "Una muñeca bebé de silicona premium con rasgos realistas y un color de piel increíble.",
+    description: "A premium silicone baby doll with realistic features and incredible skin color.",
     detailedDescription:
-      "* Longitud: aproximadamente 20 pulgadas\n* Peso: aproximadamente 6.2 libras\n* Talla de ropa: le queda ropa de recién nacido hasta bebé de 2 meses\n* Chupete: magnético\n* Incluye: conjunto tejido, gorro a juego, chupete magnético, juguete de conejo de ganchillo y empaque protector",
-    materialsAndCare: "Material: silicona de cuerpo completo, mohair premium implantado a mano.\nCuidado: limpiar solo con agua tibia y jabón suave para bebés.",
-    shippingInfo: "Los pedidos se empaquetan de forma segura con envoltura protectora para garantizar una entrega segura.",
+      "* Length: approximately 20 inches\n* Weight: approximately 6.2 pounds\n* Clothing size: fits newborn to 2-month baby clothes\n* Pacifier: magnetic\n* Includes: knitted outfit, matching bonnet, magnetic pacifier, crochet bunny toy and protective packaging",
+    materialsAndCare: "Material: full-body silicone, premium hand-rooted mohair.\nCare: clean only with warm water and mild baby soap.",
+    shippingInfo: "Orders are securely packaged with protective wrapping to ensure safe delivery.",
   },
   "blessing-mariam": {
     description:
-      "Enamórate de esta muñeca reborn bellamente hecha a mano, con delicados rasgos dormidos, suave cabello rizado implantado y detalles increíblemente realistas. Incluye conjuntos, una manta, chupete, biberón, instrucciones de cuidado y regalos extra en el paquete.",
+      "Fall in love with this beautifully handcrafted reborn doll, featuring delicate sleeping features, soft rooted curly hair and incredibly lifelike details. Includes outfits, a blanket, pacifier, bottle, care instructions and extra gifts in the package.",
     detailedDescription:
-      "Conoce a esta impresionante bebé reborn, hecha con amor a mano para capturar la belleza y la inocencia de un recién nacido dormido pacíficamente. Cada detalle, desde el cabello rizado oscuro delicadamente implantado hasta la tez suave pintada a mano y los diminutos rasgos realistas, ha sido cuidadosamente creado para brindar una experiencia increíblemente realista. Mide 21 pulgadas y pesa 8 libras, ropa de recién nacido de 3 meses.",
+      "Meet this stunning reborn baby, handmade with love to capture the beauty and innocence of a peacefully sleeping newborn. Every detail, from the delicately rooted dark curly hair to the hand-painted soft complexion and tiny lifelike features, has been carefully crafted to deliver an incredibly realistic experience. She measures 21 inches and weighs 8 pounds, wearing 3-month newborn clothing.",
     materialsAndCare:
-      "Material: pintada a mano con tonos de piel realistas, vetas sutiles, rubor y detalles diminutos.\nCuidado: manéjala con delicadeza y apoya la cabeza como con un recién nacido real.",
-    shippingInfo: "Incluye envío seguro con seguimiento.",
+      "Material: hand-painted with realistic skin tones, subtle veins, blush and tiny details.\nCare: handle gently and support the head as you would a real newborn.",
+    shippingInfo: "Includes secure tracked shipping.",
   },
   "anna-clovette": {
     description:
-      "Una muñeca reborn realista bellamente hecha a mano con cabello castaño implantado, detalles realistas de recién nacido, cuerpo suave con peso y chupete magnético. Perfecta para coleccionistas, regalos, fotografía y entusiastas del reborn.",
+      "A beautifully handcrafted realistic reborn doll with rooted brown hair, lifelike newborn details, a soft weighted body and a magnetic pacifier. Perfect for collectors, gifts, photography and reborn enthusiasts.",
     detailedDescription:
-      "Conoce a esta impresionante muñeca reborn realista, cuidadosamente hecha a mano para capturar la delicada belleza de un recién nacido real. Con un hermoso cabello castaño implantado, piel suavemente ruborizada, diminutos detalles pintados a mano y una pacífica expresión de sueño, esta bebé está diseñada para sentirse increíblemente realista. Pesa 6 libras, usa ropa de recién nacido y mide 20 pulgadas.",
+      "Meet this stunning realistic reborn doll, carefully handmade to capture the delicate beauty of a real newborn. Featuring beautiful rooted brown hair, softly blushed skin, tiny hand-painted details and a peaceful sleeping expression, this baby is designed to feel incredibly realistic. She weighs 6 pounds, wears newborn clothing and measures 20 inches.",
     materialsAndCare:
-      "Material: cuerpo suave de tela relleno con algodón PP premium y finas cuentas de cristal para un peso realista.\nCuidado: limpiar suavemente con un paño suave y húmedo; no remojar ni sumergir en agua.",
-    shippingInfo: "Empaquetada de forma segura para ayudar a prevenir daños durante el transporte.",
+      "Material: soft cloth body filled with premium PP cotton and fine glass beads for realistic weight.\nCare: gently clean with a soft, damp cloth; do not soak or submerge in water.",
+    shippingInfo: "Securely packaged to help prevent damage during transit.",
   },
   "seraphina-elowen": {
     description:
-      "Seraphina Elowen es una impresionante muñeca reborn hecha a mano con mohair oscuro delicadamente implantado, rasgos pacíficos de sueño y piel bellamente pintada a mano. Diseñada con un realismo increíble, es un recuerdo preciado para coleccionistas y entusiastas del reborn.",
+      "Seraphina Elowen is a stunning handcrafted reborn doll with delicately rooted dark mohair, peaceful sleeping features and beautifully hand-painted skin. Designed with incredible realism, she is a treasured keepsake for collectors and reborn enthusiasts.",
     detailedDescription:
-      "Conoce a Seraphina Elowen, una muñeca reborn hecha a mano con amor para capturar la dulce belleza de un recién nacido dormido. Su tez suavemente ruborizada, sus diminutas uñas de manos y pies pintadas a mano, sus tonos de piel realistas y su mohair oscuro premium implantado la hacen increíblemente realista.",
+      "Meet Seraphina Elowen, a reborn doll handmade with love to capture the sweet beauty of a sleeping newborn. Her softly blushed complexion, tiny hand-painted fingernails and toenails, realistic skin tones and premium rooted dark mohair make her incredibly realistic.",
     materialsAndCare:
-      "Material: cabeza, brazos y piernas de vinilo suave premium.\nCuidado: no sumergir en agua a menos que la muñeca sea de silicona de cuerpo completo.",
-    shippingInfo: "Envío mundial disponible.",
+      "Material: premium soft-touch vinyl head, arms and legs.\nCare: do not submerge in water unless the doll is full-body silicone.",
+    shippingInfo: "Worldwide shipping available.",
   },
   "feola-mae": {
     description:
-      "Longitud: 19 pulgadas. Peso: 6.4 libras. Talla de ropa: recién nacido. Talla de pañal: recién nacido.",
+      "Length: 19 inches. Weight: 6.4 pounds. Clothing size: newborn. Diaper size: newborn.",
     detailedDescription:
-      "Conoce a Feola Mae, una hermosa bebé de silicona realista hecha a mano con dulce cabello rizado oscuro y rasgos pacíficos de sueño. Cada detalle ha sido cuidadosamente diseñado para parecerse a un recién nacido real, desde su textura de piel suave y sus deditos hasta sus delicadas expresiones faciales. Feola Mae es perfecta para coleccionistas, fotografía, exhibición, confort terapéutico o cualquier persona que busque un bebé de silicona increíblemente realista. Llega lista para ser amada y atesorada.",
+      "Meet Feola Mae, a beautiful handmade realistic silicone baby with sweet dark curly hair and peaceful sleeping features. Every detail has been carefully designed to resemble a real newborn, from her soft skin texture and little fingers to her delicate facial expressions. Feola Mae is perfect for collectors, photography, display, therapeutic comfort or anyone looking for an incredibly realistic silicone baby. She arrives ready to be loved and treasured.",
     materialsAndCare:
-      "Material: 100% silicona de curado con platino de cuerpo completo.\nCuidado: espolvorear ligeramente con talco para bebés apto para silicona para mantener la sensación sedosa.",
-    shippingInfo: "Empaquetada cuidadosamente en una caja protectora segura.",
+      "Material: 100% platinum-cured full-body silicone.\nCare: lightly dust with silicone-safe baby powder to keep the silky feel.",
+    shippingInfo: "Carefully packaged in a secure protective box.",
   },
   "elodie-claire": {
     description:
-      "Esta pequeña encanto tiene una pacífica expresión de sueño, rasgos delicadamente pintados y una apariencia abrazable de recién nacido que la hace parecer que está soñando pacíficamente. Es perfecta para coleccionistas o cualquier persona que busque una compañera realista.",
+      "This little charmer has a peaceful sleeping expression, delicately painted features and a huggable newborn look that makes her appear to be dreaming peacefully. Perfect for collectors or anyone seeking a realistic companion.",
     detailedDescription:
-      "Nombre: Elodie Claire\nGénero: Niña\nTamaño: 20 pulgadas\nPeso: 7 libras\nEdad: recién nacida de 3 meses\nCabello: mohair suave premium implantado a mano, suavemente estilizado para un look natural de recién nacido\nOjos: cerrados",
-    materialsAndCare: "Material: silicona de cuerpo completo suave, flexible y realista.\nCuidado: guardar en un lugar fresco y seco cuando no esté en exhibición.",
-    shippingInfo: "Envío mundial disponible.",
+      "Name: Elodie Claire\nGender: Girl\nSize: 20 inches\nWeight: 7 pounds\nAge: 3-month newborn\nHair: premium soft hand-rooted mohair, gently styled for a natural newborn look\nEyes: closed",
+    materialsAndCare: "Material: soft, flexible, realistic full-body silicone.\nCare: store in a cool, dry place when not on display.",
+    shippingInfo: "Worldwide shipping available.",
   },
   "grace-elise": {
     description:
-      "Conoce a Grace Elise, una bebé de silicona de cuerpo completo bellamente hecha a mano, diseñada para capturar la preciosa apariencia y sensación de un recién nacido dormido en paz. Con sus rasgos suaves, mejillas regordetas y tonos de piel realistas, Grace Elise es una compañera conmovedora para coleccionistas, entusiastas del reborn y cualquier persona que busque un bebé de silicona increíblemente realista.",
+      "Meet Grace Elise, a beautifully handmade full-body silicone baby designed to capture the precious look and feel of a peacefully sleeping newborn. With her soft features, chubby cheeks and realistic skin tones, Grace Elise is a touching companion for collectors, reborn enthusiasts and anyone seeking an incredibly realistic silicone baby.",
     detailedDescription:
-      "* Nombre: Grace Elise\n* Género: Niña\n* Longitud: aproximadamente 20 pulgadas\n* Peso: aproximadamente 8.2 libras\n* Material: 100% silicona Ecoflex de curado con platino\n* Tipo de cuerpo: silicona de cuerpo completo con detalles anatómicamente correctos\n* Tono de piel: tez suave de recién nacida con rubor realista y vetas sutiles\n* Cabello: mohair premium implantado a mano\n* Cejas: pintadas a mano para una apariencia natural\n* Pestañas: mohair suave implantado a mano\n* Ojos: cerrados, expresión pacífica de sueño\n* Boca: ligeramente abierta y adecuada para un chupete magnético\n* Posabilidad: brazos, piernas, cabeza y cuerpo flexibles para posar suavemente",
-    materialsAndCare: "Material: 100% silicona Ecoflex de curado con platino.\nCuidado: evitar telas de colores oscuros que puedan manchar la silicona.",
-    shippingInfo: "Envío y entrega a todo el mundo.",
+      "* Name: Grace Elise\n* Gender: Girl\n* Length: approximately 20 inches\n* Weight: approximately 8.2 pounds\n* Material: 100% platinum-cured Ecoflex silicone\n* Body type: full-body silicone with anatomically correct details\n* Skin tone: soft newborn complexion with realistic blush and subtle veins\n* Hair: premium hand-rooted mohair\n* Brows: hand-painted for a natural look\n* Lashes: soft hand-rooted mohair\n* Eyes: closed, peaceful sleeping expression\n* Mouth: slightly open and suitable for a magnetic pacifier\n* Posability: flexible arms, legs, head and body for gentle posing",
+    materialsAndCare: "Material: 100% platinum-cured Ecoflex silicone.\nCare: avoid dark fabrics that may stain the silicone.",
+    shippingInfo: "Shipping and delivery worldwide.",
   },
   "lily-grace": {
     description:
-      "Conoce a Lily Grace, una muñeca reborn de silicona de cuerpo completo bellamente hecha a mano con detalles increíblemente realistas. Tiene piel suave y realista, rasgos delicadamente pintados a mano, fino cabello implantado y una adorable pose de sueño acurrucada que la hace parecer un recién nacido pacífico.",
+      "Meet Lily Grace, a beautifully handmade full-body silicone reborn doll with incredibly lifelike details. She has soft, realistic skin, delicately hand-painted features, fine rooted hair and an adorable curled-up sleeping pose that makes her look like a peaceful newborn.",
     detailedDescription:
-      "* Género: Niña\n* Longitud: 19 pulgadas\n* Peso: 6 libras\n* Material: silicona premium de cuerpo completo de platino\n* Cabello: mohair premium implantado a mano\n* Ojos: cerrados\n* Incluye: conjunto, chupete magnético, biberón, manta, certificado de nacimiento e instrucciones de cuidado.",
+      "* Gender: Girl\n* Length: 19 inches\n* Weight: 6 pounds\n* Material: premium platinum full-body silicone\n* Hair: premium hand-rooted mohair\n* Eyes: closed\n* Includes: outfit, magnetic pacifier, bottle, blanket, birth certificate and care instructions.",
     materialsAndCare:
-      "Material: creada con silicona premium de platino de cuerpo completo, lo que le da a la muñeca una sensación increíblemente suave, flexible y realista.\nCuidado: espolvorear ligeramente con talco para bebés apto para silicona para mantener una sensación sedosa.",
-    shippingInfo: "Servicio rápido y fácil.",
+      "Material: crafted from premium platinum full-body silicone, giving the doll an incredibly soft, flexible and realistic feel.\nCare: lightly dust with silicone-safe baby powder to maintain a silky feel.",
+    shippingInfo: "Fast and easy service.",
   },
   "ella-realistic-newborn": {
-    name: "Ella – Recién Nacida Realista",
+    name: "Ella – Realistic Newborn",
     description:
-      "Conoce a Ella, una bebé reborn de silicona bellamente elaborada con detalles intrincados que imitan a un recién nacido real.",
+      "Meet Ella, a beautifully crafted silicone reborn baby with intricate details that mimic a real newborn.",
     detailedDescription:
-      "Ella es una bebé de silicona de cuerpo completo, meticulosamente esculpida y pintada a mano. Tiene mohair implantado, tonos de piel realistas, vetas sutiles y uñas delicadas.",
+      "Ella is a full-body silicone baby, meticulously sculpted and hand-painted. She has rooted mohair, realistic skin tones, subtle veins and delicate fingernails.",
     materialsAndCare:
-      "Creada con silicona de curado con platino, conocida por su durabilidad y sensación realista.",
+      "Crafted from platinum-cured silicone, known for its durability and realistic feel.",
     shippingInfo:
-      "Todos los bebés reborn se envían de forma segura en empaques personalizados para garantizar su llegada en perfecto estado.",
+      "All reborn babies are safely shipped in custom packaging to ensure they arrive in perfect condition.",
     attributes: {
-      hairColor: "Rubio",
-      eyeColor: "Azules",
-      size: "19 pulgadas",
-      gender: "Niña",
+      hairColor: "Blonde",
+      eyeColor: "Blue",
+      size: "19 inches",
+      gender: "Girl",
     },
   },
   "liam-peaceful-sleeper": {
-    name: "Liam – Duerme Plácidamente",
-    description: "Un bebé dormido y tranquilo con rasgos realistas.",
+    name: "Liam – Peaceful Sleeper",
+    description: "A calm, sleeping baby with realistic features.",
     attributes: {
-      hairColor: "Castaño",
-      eyeColor: "Verdes",
-      size: "20 pulgadas",
-      gender: "Niño",
+      hairColor: "Brown",
+      eyeColor: "Green",
+      size: "20 inches",
+      gender: "Boy",
     },
   },
   "lea-rei": {
     description:
-      "Conoce a **Lea Rei**, una muñeca bebé de silicona completa bellamente elaborada con una atención increíble al detalle. Desde su piel suave y realista hasta sus delicados rasgos faciales, Lea Rei captura el encanto y la inocencia de un recién nacido real.",
+      "Meet **Lea Rei**, a beautifully crafted full silicone baby doll with incredible attention to detail. From her soft, realistic skin to her delicate facial features, Lea Rei captures the charm and innocence of a real newborn.",
     detailedDescription:
-      "Hecha con silicona premium de alta calidad, tiene un tacto suave y realista y es perfecta para coleccionistas, artistas, fotografía, exhibición o juegos de rol suaves. Cada detalle, desde sus diminutos dedos de manos y pies hasta su dulce expresión, ha sido cuidadosamente diseñado para crear una experiencia verdaderamente realista.",
+      "Made from premium high-quality silicone, she has a soft, realistic touch and is perfect for collectors, artists, photography, display or gentle role play. Every detail, from her tiny fingers and toes to her sweet expression, has been carefully designed to create a truly realistic experience.",
   },
 
-  // ── Categoría "boys" ──────────────────────────────────────────────
+  // ── "boys" category ────────────────────────────────────────────────
   "lucas-daniel": {
-    description: "Un bebé compacto y adorable con la expresión más dulce y una artesanía de calidad.",
+    description: "A compact, adorable baby with the sweetest expression and quality craftsmanship.",
     detailedDescription:
-      "Lucas es un bebé encantador con mejillas sonrosadas, dedos detallados y una dulce sonrisa. A pesar de su tamaño más pequeño, tiene todo el detalle de nuestros bebés más grandes.",
-    materialsAndCare: "Silicona de calidad. Fácil de limpiar y mantener.",
-    shippingInfo: "Envío estándar disponible.",
+      "Lucas is a charming baby with rosy cheeks, detailed fingers and a sweet smile. Despite his smaller size, he has all the detail of our larger babies.",
+    materialsAndCare: "Quality silicone. Easy to clean and maintain.",
+    shippingInfo: "Standard shipping available.",
   },
   "liam-brooks": {
-    description: "Perfectamente equilibrado para abrazar, con la sensación de silicona más suave.",
+    description: "Perfectly balanced for cuddling, with the softest silicone feel.",
     detailedDescription:
-      "Liam está diseñado para abrazar con una distribución óptima del peso y silicona increíblemente suave. Su dulce expresión invita a un cariño infinito.",
-    materialsAndCare: "Silicona ultra suave. Se recomienda un manejo suave.",
-    shippingInfo: "Se envía en cuestión de minutos.",
+      "Liam is designed for cuddling with optimal weight distribution and incredibly soft silicone. His sweet expression invites endless affection.",
+    materialsAndCare: "Ultra-soft silicone. Gentle handling recommended.",
+    shippingInfo: "Ships within minutes.",
   },
   "kyro-james": {
-    description: "Un bebé alegre con rasgos expresivos y un colorido hermoso.",
+    description: "A cheerful baby with expressive features and beautiful coloring.",
     detailedDescription:
-      "Kyro tiene los ojos pintados más expresivos y una piel sonrosada y natural. Cada rasgo está pintado a mano por nuestros talentosos artistas.",
-    materialsAndCare: "Detalles pintados a mano. Limpiar con cuidado.",
-    shippingInfo: "Envío con seguimiento disponible.",
+      "Kyro has the most expressive painted eyes and natural rosy skin. Every feature is hand-painted by our talented artists.",
+    materialsAndCare: "Hand-painted details. Clean with care.",
+    shippingInfo: "Shipping with tracking available.",
   },
   "toby-mason": {
-    description: "Una belleza dormida con los ojos cerrados más realistas.",
+    description: "A sleeping beauty with the most realistic closed eyes.",
     detailedDescription:
-      "Toby tiene ojos cerrados notablemente detallados con pestañas pintadas. Su expresión pacífica y su cuerpo con peso lo hacen ideal para abrazar.",
-    materialsAndCare: "MATERIAL: silicona premium. Limpiar suavemente.\n\nCUIDADO: mantener seco, evitar el exceso de agua o la exposición.",
-    shippingInfo: "Enviamos a todo el mundo.",
+      "Toby has remarkably detailed closed eyes with painted lashes. His peaceful expression and weighted body make him ideal for cuddling.",
+    materialsAndCare: "MATERIAL: premium silicone. Clean gently.\n\nCARE: keep dry, avoid excess water or exposure.",
+    shippingInfo: "We ship worldwide.",
   },
   "ethan-cole": {
-    description: "Un bebé adorable con la sonrisa más dulce y una expresión suave.",
-    detailedDescription: "Muñeco bebé niño pequeño con uñas y labios detallados.",
-    materialsAndCare: "MATERIALES: silicona de cuerpo completo, tonos de piel pintados a mano.\n\nCUIDADO: manejar con suavidad, evitar estirar las extremidades.",
+    description: "An adorable baby with the sweetest smile and a soft expression.",
+    detailedDescription: "Little boy baby doll with detailed nails and lips.",
+    materialsAndCare: "MATERIALS: full-body silicone, hand-painted skin tones.\n\nCARE: handle gently, avoid stretching limbs.",
   },
   "milo-blue": {
-    description: "Una creación impresionante con venas realistas y hermoso cabello implantado a mano.",
-    detailedDescription: "Muñeco bebé regordete con sensación de piel de tacto suave.",
-    materialsAndCare: "MATERIALES: cuerpo suave de silicona, venas realistas, diseño con peso.\n\nCUIDADO: usar talco para bebés ocasionalmente y mantener libre de polvo.",
+    description: "A striking creation with realistic veins and beautiful hand-rooted hair.",
+    detailedDescription: "Chubby baby boy with soft-touch skin feel.",
+    materialsAndCare: "MATERIALS: soft silicone body, realistic veins, weighted design.\n\nCARE: use baby powder occasionally and keep dust-free.",
   },
   "leo-nathan": {
-    description: "Una creación maravillosa con expresiones realistas y calidad premium.",
-    detailedDescription: "Muñeco bebé de estilo recién nacido con ojos soñolientos y mejillas regordetas.",
-    materialsAndCare: "MATERIAL: cuerpo de silicona completa, detalles pintados a mano, suave cabello implantado.\nCUIDADO: limpiar con jabón suave y agua, secar suavemente, evitar objetos afilados.",
+    description: "A wonderful creation with realistic expressions and premium quality.",
+    detailedDescription: "Newborn-style baby boy with sleepy eyes and chubby cheeks.",
+    materialsAndCare: "MATERIAL: full silicone body, hand-painted details, soft rooted hair.\nCARE: clean with mild soap and water, dry gently, avoid sharp objects.",
   },
   "zaylen-noah": {
-    description: "Una creación impresionante con venas realistas y hermoso cabello implantado a mano.",
-    detailedDescription: "Un bebé de silicona de estilo raro con ojos expresivos y suave implantación de cabello.",
-    materialsAndCare: "MATERIAL: silicona de platino, cabello de mohair, pintura sellada.\nCUIDADO: evitar el cepillado brusco; usar solo un cepillo suave.",
-    shippingInfo: "Entrega hecha lo antes posible.",
+    description: "A striking creation with realistic veins and beautiful hand-rooted hair.",
+    detailedDescription: "A unique-style silicone baby with expressive eyes and soft hair rooting.",
+    materialsAndCare: "MATERIAL: platinum silicone, mohair, sealed paint.\nCARE: avoid rough brushing; use only a soft brush.",
+    shippingInfo: "Delivery as fast as possible.",
   },
   "bryan-alex": {
     description:
-      "Un bebé niño de silicona de cuerpo completo realista, con piel suave, detalles realistas y una sensación abrazable.",
+      "A realistic full-body silicone baby boy, with soft skin, lifelike details and a huggable feel.",
     detailedDescription:
-      "Este adorable bebé niño de silicona de cuerpo completo está hecho a mano con detalles realistas, textura de piel suave y rasgos realistas. Diseñado para abrazos, coleccionar y exhibir.",
+      "This adorable full-body silicone baby boy is handmade with lifelike details, soft skin texture and realistic features. Designed for cuddles, collecting and display.",
     materialsAndCare:
-      "Material: polvo especial usado en la piel de silicona para reducir la adherencia y mantener la suavidad.\nCuidado: los limpiadores fuertes, el alcohol o la lejía pueden dañar o decolorar la silicona.",
-    shippingInfo: "Entrega mundial.",
+      "Material: special powder used on silicone skin to reduce tackiness and maintain softness.\nCare: strong cleaners, alcohol or bleach can damage or discolor silicone.",
+    shippingInfo: "Worldwide delivery.",
   },
   "liam-carter": {
-    description: "Un muñeco recién nacido lindo y realista con expresiones suaves.",
+    description: "A cute, realistic newborn boy doll with soft expressions.",
     detailedDescription:
-      "Liam Carter tiene una cara finamente esculpida, piel suave de mezcla vinilo-silicona y proporciones realistas de recién nacido. Está diseñado para el confort emocional, la fotografía y el coleccionismo de alta gama.",
-    materialsAndCare: "Material: cuentas de cristal o gránulos de silicona.\nCuidado: no usar productos químicos agresivos ni alcohol.",
-    shippingInfo: "Empaque seguro para protección completa durante el transporte.",
+      "Liam Carter has a finely sculpted face, soft vinyl-silicone blend skin and realistic newborn proportions. He is designed for emotional comfort, photography and high-end collecting.",
+    materialsAndCare: "Material: glass beads or silicone granules.\nCare: do not use harsh chemicals or alcohol.",
+    shippingInfo: "Secure packaging for full protection during transit.",
   },
   "logan-james": {
-    description: "Bebé niño recién nacido suave.",
-    detailedDescription: "Logan tiene pliegues de piel de recién nacido realistas y una sensación de tacto suave.",
-    materialsAndCare: "Materiales: silicona, relleno de algodón.\nCuidado: evitar remojar en agua.",
-    shippingInfo: "A todo el mundo, empacado de forma segura con espuma protectora.",
+    description: "Soft newborn baby boy.",
+    detailedDescription: "Logan has realistic newborn skin folds and a soft-touch feel.",
+    materialsAndCare: "Materials: silicone, cotton filling.\nCare: avoid soaking in water.",
+    shippingInfo: "Worldwide, securely packaged with protective foam.",
   },
   "loyd-gabriel": {
-    description: "Muñecos bebé de silicona completa con características especiales y accesorios.",
+    description: "Full silicone baby dolls with special features and accessories.",
     detailedDescription:
-      "Muñecos bebé suaves y blanditos; es un bebé niño de silicona completa que viene con un conjunto, una manta, chupete, biberón, instrucciones de cuidado y a veces regalos extra en el paquete.",
+      "Soft, squishy baby dolls; a full silicone baby boy that comes with an outfit, a blanket, pacifier, bottle, care instructions and sometimes extra gifts in the package.",
     materialsAndCare:
-      "Material: silicona de curado con platino, pigmentos y pinturas de silicona.\nCuidado: manejar con suavidad y apoyar la cabeza y las extremidades. Limpiar solo con agua tibia y jabón suave.",
-    shippingInfo: "Entrega mundial a través de mi agencia de envíos.",
+      "Material: platinum-cured silicone, pigments and silicone paints.\nCare: handle gently and support the head and limbs. Clean only with warm water and mild soap.",
+    shippingInfo: "Worldwide delivery through my shipping agency.",
   },
   "micheal-gold": {
     description:
-      "Un bebé niño completo con rasgos realistas de bebé, suave y con ojos cerrados.",
+      "A complete baby boy with realistic baby features, soft and with closed eyes.",
     detailedDescription:
-      "Un dulce recién nacido duerme pacíficamente sobre una suave manta color crema. El bebé tiene cabello oscuro, rasgos delicados y viste un pijama a rayas gris y blanco con acentos coloridos y pies a juego. Un clip de chupete con un juguete de felpa está sujeto al conjunto, añadiendo un toque adorable. El bebé descansa cómodamente con un brazo levantado, creando una escena tranquila y conmovedora.",
+      "A sweet newborn sleeps peacefully on a soft cream blanket. The baby has dark hair, delicate features and wears gray and white striped pajamas with colorful accents and matching feet. A pacifier clip with a plush toy is attached to the outfit, adding an adorable touch. The baby rests comfortably with one arm raised, creating a calm and touching scene.",
     materialsAndCare:
-      "Materiales: hecho con silicona premium de platino o vinilo reborn premium, con detalles pintados a mano, cabello implantado o pintado, ojos realistas de cristal o acrílico (si están abiertos), cuerpo de relleno suave (para muñecas reborn) y rasgos cuidadosamente elaborados diseñados para parecerse a un recién nacido real.\nCuidado: no usar productos químicos agresivos, productos a base de alcohol ni limpiadores abrasivos.",
-    shippingInfo: "Envío mundial.",
+      "Materials: made with premium platinum silicone or premium reborn vinyl, with hand-painted details, rooted or painted hair, realistic glass or acrylic eyes (if open), soft stuffed body (for reborn dolls) and carefully crafted features designed to resemble a real newborn.\nCare: do not use harsh chemicals, alcohol-based products or abrasive cleaners.",
+    shippingInfo: "Worldwide shipping.",
   },
   "milo-asher": {
     description:
-      "Una muñeca reborn dormida bellamente hecha a mano con cabello implantado, rasgos realistas de recién nacido, cuerpo suave con peso y chupete magnético. Perfecta para coleccionistas, regalos, fotografía y amantes de los bebés reborn.",
+      "A beautifully handcrafted sleeping reborn doll with rooted hair, lifelike newborn features, a soft weighted body and a magnetic pacifier. Perfect for collectors, gifts, photography and reborn baby lovers.",
     detailedDescription:
-      "Conoce a Asher, mi muñeca reborn dormida, hecha a mano con amor para capturar la belleza pacífica de un recién nacido en reposo. Con cabello castaño claro delicadamente implantado, piel suavemente ruborizada, diminutos detalles pintados a mano y una dulce expresión de sueño, este bebé realista está diseñado para traer calidez y realismo a cualquier colección. Completo con chupete magnético, este reborn es perfecto para abrazar, exhibir, fotografiar, jugar o como un regalo considerado.",
+      "Meet Asher, my sleeping reborn doll, handmade with love to capture the peaceful beauty of a newborn at rest. With delicately rooted light brown hair, softly blushed skin, tiny hand-painted details and a sweet sleeping expression, this realistic baby is designed to bring warmth and realism to any collection. Complete with a magnetic pacifier, this reborn is perfect for cuddling, display, photography, play or as a thoughtful gift.",
     materialsAndCare:
-      "Material: cabeza, brazos y piernas de vinilo premium de tacto suave.\nCuidado: recomendado para coleccionistas y niños de 3 años o más con supervisión de un adulto.",
-    shippingInfo: "Empaquetado cuidadosamente con envoltura protectora para una entrega segura.",
+      "Material: premium soft-touch vinyl head, arms and legs.\nCare: recommended for collectors and children aged 3 and up with adult supervision.",
+    shippingInfo: "Carefully packaged with protective wrapping for safe delivery.",
   },
   "carlos-logan": {
     description:
-      "Longitud: 22 pulgadas. Peso: 7 libras. Talla de ropa de bebé: recién nacido, aunque algo de ropa de 3 meses también le queda según la marca. Talla de pañal: recién nacido.",
+      "Length: 22 inches. Weight: 7 pounds. Baby clothing size: newborn, though some 3-month clothes also fit depending on the brand. Diaper size: newborn.",
     detailedDescription:
-      "Conoce a Carlos, una muñeca reborn dormida bellamente hecha a mano para capturar el encanto pacífico de un recién nacido. Con rasgos delicadamente pintados, suave cabello rubio, mejillas sonrosadas, diminutos dedos realistas y una serena expresión de sueño, este bebé está hecho para verse y sentirse increíblemente realista. Vestido con un acogedor conjunto Disney y abrazando un juguete de peluche colorido, este pequeño es perfecto para coleccionistas, regalos, fotografía o cualquier persona que ame las muñecas reborn realistas. El cuerpo con peso proporciona una sensación reconfortante y realista al ser sostenido.",
+      "Meet Carlos, a beautifully handmade sleeping reborn doll designed to capture the peaceful charm of a newborn. With delicately painted features, soft blond hair, rosy cheeks, tiny realistic fingers and a serene sleeping expression, this baby is made to look and feel incredibly realistic. Dressed in a cozy Disney outfit and hugging a colorful plush toy, this little one is perfect for collectors, gifts, photography or anyone who loves realistic reborn dolls. The weighted body provides a comforting, realistic feel when held.",
     materialsAndCare:
-      "Material: cuerpo suave de tela con peso y relleno premium.\nCuidado: mantener alejado de la luz solar directa y del calor excesivo.",
-    shippingInfo: "Enviado en una caja segura para proteger la muñeca durante el transporte.",
+      "Material: soft weighted cloth body with premium filling.\nCare: keep away from direct sunlight and excessive heat.",
+    shippingInfo: "Shipped in a secure box to protect the doll during transit.",
   },
   "josh-marshal": {
     description:
-      "Josh Marshal es una muñeca reborn dormida realista con suave cabello castaño, detalles pintados a mano y un adorable conjunto a rayas azul marino. Un encantador compañero perfecto para coleccionistas, regalos o exhibiciones de guardería.",
+      "Josh Marshal is a realistic sleeping reborn doll with soft brown hair, hand-painted details and an adorable navy striped outfit. A charming companion perfect for collectors, gifts or nursery displays.",
     detailedDescription:
-      "Conoce a Josh Marshal, un bebé dormido irresistiblemente realista con una expresión pacífica y suave cabello castaño. Sus rasgos delicadamente pintados, sus ojos suavemente cerrados, sus mejillas sonrosadas y sus diminutos labios fruncidos crean la apariencia de un recién nacido soñando pacíficamente. Vestido con un clásico top de punto azul marino con pantalones a rayas y abrazando a sus ositos favoritos, Josh trae calidez y confort a cualquier guardería o colección. Cada detalle está cuidadosamente elaborado para capturar la belleza de un recién nacido real, convirtiéndolo en un maravilloso compañero para coleccionistas, exhibición, fotografía o regalos sinceros.",
+      "Meet Josh Marshal, an irresistibly realistic sleeping baby with a peaceful expression and soft brown hair. His delicately painted features, gently closed eyes, rosy cheeks and tiny pursed lips create the look of a newborn dreaming peacefully. Dressed in a classic navy knitted top with striped pants and hugging his favorite teddy bears, Josh brings warmth and comfort to any nursery or collection. Every detail is carefully crafted to capture the beauty of a real newborn, making him a wonderful companion for collecting, display, photography or heartfelt gifts.",
     materialsAndCare:
-      "Material: pintura acrílica de alta calidad con acabado protector.\nCuidado: cepillar el cabello suavemente con un cepillo suave para bebés si es necesario.",
-    shippingInfo: "La información de seguimiento se proporciona una vez que tu pedido ha sido enviado.",
+      "Material: high-quality acrylic paint with a protective finish.\nCare: brush the hair gently with a soft baby brush if needed.",
+    shippingInfo: "Tracking information is provided once your order has shipped.",
   },
   "logan-vans": {
     description:
-      "Conoce a Logan Vans, un bebé reborn de silicona de cuerpo completo increíblemente realista, hecho a mano con una atención notable al detalle. Desde sus delicados rasgos faciales y sus diminutos dedos hasta su suave cabello rizado y su pacífica expresión de sueño, está diseñado para capturar la belleza de un recién nacido real. Las muñecas reborn se hacen a mano para parecerse a bebés reales con pintura, peso y detalles altamente realistas, y brazos y piernas flexibles para posar de forma natural.",
+      "Meet Logan Vans, an incredibly realistic full-body silicone reborn baby, handmade with remarkable attention to detail. From his delicate facial features and tiny fingers to his soft curly hair and peaceful sleeping expression, he is designed to capture the beauty of a real newborn. Reborn dolls are handmade to resemble real babies with highly realistic painting, weighting and detail, plus flexible arms and legs for natural posing.",
     detailedDescription:
-      "* Nombre: Logan Vans\n* Género: Niño\n* Longitud: 18 pulgadas\n* Peso: 5.7 libras\n* Material: silicona ecológica premium de platino\n* Cuerpo: silicona de cuerpo completo\n* Cabello: mohair premium implantado a mano\n* Ojos: cerrados\n* Tono de piel: pintado a mano con moteado realista de recién nacido, venas y rubor",
+      "* Name: Logan Vans\n* Gender: Boy\n* Length: 18 inches\n* Weight: 5.7 pounds\n* Material: premium eco-friendly platinum silicone\n* Body: full-body silicone\n* Hair: premium hand-rooted mohair\n* Eyes: closed\n* Skin tone: hand-painted with realistic newborn mottling, veins and blush",
     materialsAndCare:
-      "Material: pintado profesionalmente a mano con pigmentos de silicona no tóxicos y permanentes.\nCuidado: evitar objetos afilados y ropa de colores oscuros que puedan manchar la silicona.",
-    shippingInfo: "Envío mundial disponible.",
+      "Material: professionally hand-painted with non-toxic, permanent silicone pigments.\nCare: avoid sharp objects and dark clothing that may stain the silicone.",
+    shippingInfo: "Worldwide shipping available.",
   },
 
-  // ── Categoría "accessories" ───────────────────────────────────────
+  // ── "accessories" category ─────────────────────────────────────────
   "hand-knit-newborn-blanket": {
-    name: "Manta de Recién Nacido Tejida a Mano",
+    name: "Hand-Knitted Newborn Blanket",
     description:
-      "Una manta suave tejida a mano en delicados tonos pastel, perfecta para tu bebé reborn.",
+      "A soft hand-knitted blanket in delicate pastel tones, perfect for your reborn baby.",
     detailedDescription:
-      "Creada con hilo premium de algodón, esta manta presenta un clásico patrón de punto de cable en suaves tonos pastel. Ideal para sesiones de fotos y exhibición.",
+      "Crafted from premium cotton yarn, this blanket features a classic cable knit pattern in soft pastel tones. Ideal for photo sessions and display.",
   },
   "reborn-baby-bottle-set": {
-    name: "Set de Biberones para Muñeca Reborn",
+    name: "Reborn Doll Bottle Set",
     description:
-      "Un set de biberones en miniatura realistas para exhibir con tu muñeca reborn.",
+      "A set of realistic miniature bottles for displaying with your reborn doll.",
     detailedDescription:
-      "Tres biberones en miniatura finamente detallados en transparente, rosa y azul. Rellenos con resina no tóxica para una sensación de peso realista.",
+      "Three finely detailed miniature bottles in clear, pink and blue. Filled with non-toxic resin for a realistic weighted feel.",
   },
 };

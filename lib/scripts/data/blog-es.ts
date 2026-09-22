@@ -1,6 +1,6 @@
 /**
- * Traducciones al español para las entradas del blog.
- * Claves = slug del post.
+ * English translations for blog posts.
+ * Keys = post slug.
  */
 
 export interface BlogTranslation {
@@ -13,232 +13,232 @@ export interface BlogTranslation {
 export const blogTranslations: Record<string, BlogTranslation> = {
   "complete-guide-caring-silicone-reborn-baby-doll": {
     title:
-      "La Guía Completa para el Cuidado de tu Muñeca Reborn de Silicona",
+      "The Complete Guide to Caring for Your Silicone Reborn Baby Doll",
     excerpt:
-      "Todo lo que necesitas saber sobre cómo manipular, limpiar, empolvar y guardar tu reborn de silicona de cuerpo completo para mantenerlo hermoso durante años.",
-    category: "Cuidado y Materiales",
-    content: `<p>Así que acabas de recibir en casa una muñeca reborn de silicona y quieres asegurarte de que se mantenga tan hermosa como el día en que llegó. No estás solo: esta es una de las preguntas más comunes que nos hacen los nuevos coleccionistas. La buena noticia es que cuidar un reborn de silicona no es complicado, pero sí requiere algunos hábitos específicos que protegerán tu inversión y mantendrán tu muñeca con aspecto realista durante años.</p>
+      "Everything you need to know about handling, cleaning, powdering and storing your full-body silicone reborn to keep it beautiful for years.",
+    category: "Care & Materials",
+    content: `<p>So you've just brought a silicone reborn doll home and want to make sure it stays as beautiful as the day it arrived. You're not alone: this is one of the most common questions we get from new collectors. The good news is that caring for a silicone reborn isn't complicated, but it does require a few specific habits that will protect your investment and keep your doll looking realistic for years.</p>
 
-<h2>Por qué la silicona necesita cuidados especiales</h2>
-<p>La silicona es un material notable. Es suave, flexible y tiene una translucidez natural que imita la piel humana de forma hermosa. Pero esas mismas cualidades la hacen más delicada que el vinilo. La silicona es ligeramente pegajosa por naturaleza: atrae el polvo y la pelusa, y es sensible al calor, la luz solar y ciertos productos químicos. Entender esto es el primer paso para cuidar tu muñeca correctamente.</p>
+<h2>Why silicone needs special care</h2>
+<p>Silicone is a remarkable material. It's soft, flexible and has a natural translucency that imitates human skin beautifully. But those same qualities make it more delicate than vinyl. Silicone is naturally a little tacky: it attracts dust and lint, and it's sensitive to heat, sunlight and certain chemicals. Understanding this is the first step in caring for your doll correctly.</p>
 
-<h2>Manipular tu reborn de silicona</h2>
-<p>Sostén siempre la cabeza y el cuello al levantar tu muñeca, igual que harías con un recién nacido real. Los bebés de silicona de cuerpo completo están pesados para sentirse realistas, lo que significa que la cabeza es pesada y cae de forma natural. Una mano detrás de la cabeza y el cuello, una mano debajo del trasero: esa es la forma segura de levantarlo.</p>
-<p>Evita tocar la muñeca con las manos que tengan loción, perfume o maquillaje. Los aceites y productos químicos de estos productos pueden interactuar con la superficie de silicona y causar pegajosidad o decoloración con el tiempo. Lávate y sécate las manos antes de manipular a tu bebé.</p>
+<h2>Handling your silicone reborn</h2>
+<p>Always support the head and neck when lifting your doll, just as you would with a real newborn. Full-body silicone babies are weighted to feel realistic, which means the head is heavy and falls naturally. One hand behind the head and neck, one hand under the bottom: that's the safe way to lift him.</p>
+<p>Avoid touching the doll with hands that have lotion, perfume or makeup on them. The oils and chemicals in these products can interact with the silicone surface and cause tackiness or discoloration over time. Wash and dry your hands before handling your baby.</p>
 
-<h2>Limpiar tu reborn de silicona</h2>
-<p>No necesitas limpiar tu muñeca con frecuencia. Un ligero quitado de polvo cada par de semanas y una limpieza adecuada una vez al mes es más que suficiente para la mayoría de los propietarios.</p>
+<h2>Cleaning your silicone reborn</h2>
+<p>You don't need to clean your doll often. A light dusting every couple of weeks and a proper clean once a month is more than enough for most owners.</p>
 <ul>
-<li><strong>Paso 1:</strong> Cepilla primero el polvo superficial con una brocha de maquillaje limpia y suave. Esto evita que las partículas se incrusten en la silicona durante la limpieza.</li>
-<li><strong>Paso 2:</strong> Mezcla unas gotas de jabón de platos suave y sin aroma en agua tibia. Nunca uses agua caliente: ablanda la silicona.</li>
-<li><strong>Paso 3:</strong> Usa las yemas de los dedos (no un paño) para trabajar suavemente el agua jabonosa sobre la superficie con movimientos circulares suaves. Usa un hisopo de algodón para los pliegues de las orejas, entre los dedos y alrededor de la nariz.</li>
-<li><strong>Paso 4:</strong> Enjuaga con un paño limpio y húmedo: sin escurrir, sin frotar.</li>
-<li><strong>Paso 5:</strong> Seca suavemente con una toalla suave y deja secar completamente al aire en un lugar fresco y sombreado antes de empolvar.</li>
+<li><strong>Step 1:</strong> Brush off surface dust first with a clean, soft makeup brush. This prevents particles from becoming embedded in the silicone during cleaning.</li>
+<li><strong>Step 2:</strong> Mix a few drops of mild, fragrance-free dish soap into warm water. Never use hot water: it softens the silicone.</li>
+<li><strong>Step 3:</strong> Use your fingertips (not a cloth) to gently work the soapy water over the surface in soft circular motions. Use a cotton swab for the folds of the ears, between the fingers and around the nose.</li>
+<li><strong>Step 4:</strong> Rinse with a clean, damp cloth: no wringing, no rubbing.</li>
+<li><strong>Step 5:</strong> Pat dry gently with a soft towel and allow to fully air dry in a cool, shaded spot before powdering.</li>
 </ul>
-<p>Nunca sumerjas la cabeza por completo si tu muñeca tiene los ojos abiertos: mantén el agua alejada de las cavidades oculares.</p>
+<p>Never fully submerge the head if your doll has open eyes: keep water away from the eye cavities.</p>
 
-<h2>El ritual del empolvado</h2>
-<p>Si hay un único hábito de cuidado que protege tu reborn de silicona más que cualquier otro, es el empolvado regular. La silicona se vuelve naturalmente pegajosa con la manipulación, atrayendo pelusa y polvo. El empolvado neutraliza esta pegajosidad y restaura el acabado suave, mate y similar a la piel.</p>
-<p>Usa una brocha de maquillaje limpia y suave cargada muy ligeramente con un polvo mateante de alta calidad para silicona (nunca talco ni polvo de bebé perfumado). Espolvorea suavemente sobre la superficie con movimientos ligeros y amplios, y luego retira el exceso con el cepillo. El objetivo es una capa invisible y uniforme, no un residuo blanco visible.</p>
-<p>Después de cada limpieza y siempre que la superficie empiece a sentirse ligeramente pegajosa de nuevo: típicamente una vez por semana para muñecas que se manipulan regularmente.</p>
+<h2>The powdering ritual</h2>
+<p>If there's one care habit that protects your silicone reborn more than any other, it's regular powdering. Silicone naturally becomes tacky with handling, attracting lint and dust. Powdering neutralizes this tackiness and restores the soft, matte, skin-like finish.</p>
+<p>Use a clean, soft makeup brush loaded very lightly with a high-quality matting powder made for silicone (never talcum or scented baby powder). Dust gently over the surface with light, sweeping motions, then brush off the excess. The goal is an invisible, even layer, not a visible white residue.</p>
+<p>After every cleaning and whenever the surface starts to feel slightly tacky again: typically once a week for dolls that are handled regularly.</p>
 
-<h2>Protección contra el sol y el calor</h2>
-<p>La radiación UV hace que la silicona se amarillee y que los detalles pintados se desvanezcan. Incluso unas pocas horas en una ventana soleada, repetidas con el tiempo, se acumulan. Exhibe tu muñeca lejos de la luz solar directa y considera una vitrina con filtro UV si planeas mantenerla en exhibición a largo plazo.</p>
-<p>Nunca coloques tu muñeca cerca de radiadores, salidas de calor o en un coche caliente. Las altas temperaturas pueden ablandar y eventualmente deformar la silicona.</p>
+<h2>Protecting from sun and heat</h2>
+<p>UV radiation makes silicone yellow and fades painted details. Even a few hours in a sunny window, repeated over time, adds up. Display your doll away from direct sunlight and consider a UV-filtering display case if you plan to keep it on long-term display.</p>
+<p>Never place your doll near radiators, heat vents or in a hot car. High temperatures can soften and eventually deform the silicone.</p>
 
-<h2>Vestir tu muñeca de forma segura</h2>
-<p>La silicona es naturalmente adherente, así que vestir requiere un poco de paciencia. Un ligero empolvado en las extremidades antes de vestir ayuda a que las prendas se deslicen más fácilmente sin estirar la silicona.</p>
-<p>Evita dejar ropa de colores oscuros en tu muñeca durante períodos prolongados. Los tintes de las telas pueden filtrarse en la silicona con el tiempo y crear manchas que son casi imposibles de eliminar. Si quieres usar conjuntos oscuros, lávalos dos veces antes y coloca siempre una capa suave de algodón blanco debajo.</p>
+<h2>Dressing your doll safely</h2>
+<p>Silicone is naturally grippy, so dressing takes a little patience. A light powdering on the limbs before dressing helps clothes slide on more easily without stretching the silicone.</p>
+<p>Avoid leaving dark-colored clothing on your doll for long periods. Fabric dyes can leach into the silicone over time and create stains that are almost impossible to remove. If you want to use dark outfits, wash them twice beforehand and always place a soft white cotton layer underneath.</p>
 
-<h2>Almacenamiento a largo plazo</h2>
-<p>Guarda tu muñeca en un espacio fresco, seco y bien ventilado; nunca sellada en plástico, que atrapa la humedad. Acuéstala plana o en una posición natural de descanso sobre una superficie suave, envuelta holgadamente en muselina de algodón de color claro. Reacomoda las extremidades suavemente cada par de semanas para evitar arrugas permanentes.</p>
+<h2>Long-term storage</h2>
+<p>Store your doll in a cool, dry, well-ventilated space; never sealed in plastic, which traps moisture. Lay it flat or in a natural resting position on a soft surface, loosely wrapped in light-colored cotton muslin. Gently reposition the limbs every couple of weeks to prevent permanent creases.</p>
 
-<h2>La conclusión</h2>
-<p>Cuidar un reborn de silicona consiste en crear algunos hábitos simples: manipular con delicadeza, empolvar regularmente, mantener alejado del sol y del calor, y limpiar con paciencia en lugar de con productos. Haz estas cosas de manera constante y tu hermoso bebé se mantendrá tan realista y vivo como el día en que fue creado.</p>
-<p>Si alguna vez tienes preguntas sobre el cuidado de tu bebé Dolores Silicone, no dudes en contactarnos. Siempre estamos aquí para ayudarte.</p>`,
+<h2>The takeaway</h2>
+<p>Caring for a silicone reborn is about building a few simple habits: handle gently, powder regularly, keep away from sun and heat, and clean with patience rather than products. Do these things consistently and your beautiful baby will stay as realistic and lifelike as the day it was created.</p>
+<p>If you ever have questions about caring for your Dolores Silicone baby, don't hesitate to reach out. We're always here to help.</p>`,
   },
 
   "vinyl-vs-silicone-reborn-dolls-difference": {
     title:
-      "Reborn de Vinilo vs Silicona: ¿Cuál es la Diferencia y Cuál es la Correcta para Ti?",
+      "Vinyl vs Silicone Reborns: What's the Difference and Which Is Right for You?",
     excerpt:
-      "Una comparación clara y honesta entre muñecas reborn de vinilo y de silicona: tacto, realismo, durabilidad, precio y qué material se adapta a tu estilo de coleccionismo.",
-    category: "Consejos de Coleccionismo",
-    content: `<p>Si eres nuevo en el mundo de las muñecas reborn, una de las primeras decisiones que enfrentarás es elegir entre vinilo y silicona. Ambos materiales se usan para crear muñecas bebé impresionantemente realistas, pero ofrecen experiencias muy diferentes. Esta guía desglosa las diferencias clave para que puedas tomar una decisión informada.</p>
+      "A clear and honest comparison of vinyl and silicone reborn dolls: feel, realism, durability, price and which material suits your collecting style.",
+    category: "Collecting Tips",
+    content: `<p>If you're new to the world of reborn dolls, one of the first decisions you'll face is choosing between vinyl and silicone. Both materials are used to create stunningly realistic baby dolls, but they offer very different experiences. This guide breaks down the key differences so you can make an informed decision.</p>
 
-<h2>¿Qué es una muñeca reborn de vinilo?</h2>
-<p>Las muñecas reborn de vinilo están hechas de un material plástico firme y duradero. Los artistas las pintan en capas para crear tonos de piel realistas, venas y rubor. El resultado es una muñeca que se ve increíblemente realista y conserva el detalle pintado de forma hermosa. El vinilo ha sido el material tradicional para las muñecas reborn durante décadas, y sigue siendo popular por una buena razón.</p>
+<h2>What is a vinyl reborn doll?</h2>
+<p>Vinyl reborn dolls are made of a firm, durable plastic material. Artists paint them in layers to create realistic skin tones, veins and blush. The result is a doll that looks incredibly realistic and holds painted detail beautifully. Vinyl has been the traditional material for reborn dolls for decades, and it remains popular for good reason.</p>
 
-<h2>¿Qué es una muñeca reborn de silicona?</h2>
-<p>Las muñecas reborn de silicona están hechas de un material suave y flexible que se siente notablemente cercano a la piel real. Las muñecas de silicona de cuerpo completo son blanditas, cálidas al tacto y pueden mantener poses naturales. El material tiene una translucidez natural que le da una cualidad orgánica y realista que la pintura por sí sola no puede lograr.</p>
+<h2>What is a silicone reborn doll?</h2>
+<p>Silicone reborn dolls are made of a soft, flexible material that feels remarkably close to real skin. Full-body silicone dolls are squishy, warm to the touch and can hold natural poses. The material has a natural translucency that gives it an organic, lifelike quality that paint alone cannot achieve.</p>
 
-<h2>Diferencias clave de un vistazo</h2>
-<p><strong>Tacto y textura:</strong> El vinilo es firme y suave. La silicona es blanda, apretable y cálida: incluso conserva el calor corporal brevemente cuando la levantas. Si la experiencia táctil te importa, la silicona es inigualable.</p>
-<p><strong>Detalle visual:</strong> Ambos materiales aceptan la pintura de forma hermosa, pero de maneras diferentes. El vinilo conserva el detalle pintado como las finas venas y el moteado excepcionalmente bien. La silicona tiene una textura de piel natural y translucidez que funde la pintura para un aspecto muy orgánico.</p>
-<p><strong>Durabilidad:</strong> El vinilo es resistente y de bajo mantenimiento. No atrae el polvo, se limpia fácilmente y soporta la manipulación regular. La silicona es más delicada: atrae la pelusa, necesita empolvado regular y requiere un manejo suave para evitar daños.</p>
-<p><strong>Peso y realismo:</strong> Ambas pueden tener peso para sentirse realistas, pero la flexibilidad de la silicona significa que se mueve y se deja caer más como un bebé real. Esto la hace sentir más viva al sostenerla.</p>
-<p><strong>Precio:</strong> Los reborn de vinilo son generalmente más asequibles, lo que los hace excelentes para principiantes. Los reborn de silicona, especialmente los de cuerpo completo, tienden a costar más debido a los mayores costos de material y al proceso de fabricación más complejo.</p>
+<h2>Key differences at a glance</h2>
+<p><strong>Feel and texture:</strong> Vinyl is firm and smooth. Silicone is soft, squeezable and warm: it even retains body heat briefly when you pick it up. If the tactile experience matters to you, silicone is unmatched.</p>
+<p><strong>Visual detail:</strong> Both materials take paint beautifully, but in different ways. Vinyl holds painted detail like fine veins and mottling exceptionally well. Silicone has a natural skin texture and translucency that blends the paint for a very organic look.</p>
+<p><strong>Durability:</strong> Vinyl is tough and low-maintenance. It doesn't attract dust, cleans easily and holds up to regular handling. Silicone is more delicate: it attracts lint, needs regular powdering and requires gentle handling to avoid damage.</p>
+<p><strong>Weight and realism:</strong> Both can be weighted to feel realistic, but silicone's flexibility means it moves and settles more like a real baby. This makes it feel more alive when held.</p>
+<p><strong>Price:</strong> Vinyl reborns are generally more affordable, making them great for beginners. Silicone reborns, especially full-body ones, tend to cost more due to higher material costs and the more complex manufacturing process.</p>
 
-<h2>¿Cuál deberías elegir?</h2>
-<p><strong>Elige vinilo si:</strong> quieres una muñeca duradera y de bajo mantenimiento; estás empezando tu colección; planeas cambiar de ropa con frecuencia; o quieres un excelente detalle pintado a un precio más bajo.</p>
-<p><strong>Elige silicona si:</strong> priorizas el tacto más realista; quieres un compañero de abrazos para el confort; aprecias la forma en que la silicona se mueve y flexiona; o eres un coleccionista que valora la experiencia premium.</p>
+<h2>Which should you choose?</h2>
+<p><strong>Choose vinyl if:</strong> you want a durable, low-maintenance doll; you're starting your collection; you plan to change outfits frequently; or you want excellent painted detail at a lower price.</p>
+<p><strong>Choose silicone if:</strong> you prioritize the most realistic feel; you want a cuddle companion for comfort; you appreciate the way silicone moves and flexes; or you're a collector who values the premium experience.</p>
 
-<h2>¿Puedes combinar ambas?</h2>
-<p>Muchos coleccionistas terminan con muñecas de vinilo y de silicona en su colección. Sirven para diferentes propósitos y ofrecen diferentes alegrías. Una muñeca de vinilo podría ser tu pieza de exhibición diaria, mientras que un bebé de silicona es tu compañero especial de abrazos.</p>
+<h2>Can you have both?</h2>
+<p>Many collectors end up with both vinyl and silicone dolls in their collection. They serve different purposes and offer different joys. A vinyl doll might be your everyday display piece, while a silicone baby is your special cuddle companion.</p>
 
-<h2>Lo que recomendamos en Dolores Silicone</h2>
-<p>En Dolores Silicone, nos especializamos en bebés reborn de silicona de cuerpo completo porque creemos que la experiencia de sostener una muñeca verdaderamente realista es algo especial. Pero también entendemos que el viaje de cada coleccionista es diferente. Si no estás seguro, siempre estaremos encantados de ayudarte a decidir qué material es el adecuado para tus necesidades.</p>`,
+<h2>What we recommend at Dolores Silicone</h2>
+<p>At Dolores Silicone, we specialize in full-body silicone reborn babies because we believe the experience of holding a truly realistic doll is something special. But we also understand that every collector's journey is different. If you're unsure, we'd be happy to help you decide which material is right for your needs.</p>`,
   },
 
   "5-common-mistakes-new-reborn-doll-owners": {
     title:
-      "5 Errores Comunes que Cometen los Nuevos Dueños de Muñecas Reborn (y Cómo Evitarlos)",
+      "5 Common Mistakes New Reborn Doll Owners Make (and How to Avoid Them)",
     excerpt:
-      "Desde manchas de ropa oscura hasta productos de limpieza equivocados: aprende los errores más frecuentes de los nuevos coleccionistas y cómo mantener tu bebé reborn a salvo.",
-    category: "Cuidado y Materiales",
-    content: `<p>Empezar tu viaje con las muñecas reborn es emocionante. Pero vemos los mismos errores una y otra vez, y la mayoría de ellos pueden dañar permanentemente a tu bebé si no tienes cuidado. Aquí están los cinco errores más comunes que cometen los nuevos propietarios y exactamente cómo evitarlos.</p>
+      "From dark clothing stains to the wrong cleaning products: learn the most frequent mistakes new collectors make and how to keep your reborn baby safe.",
+    category: "Care & Materials",
+    content: `<p>Starting your journey with reborn dolls is exciting. But we see the same mistakes over and over, and most of them can permanently damage your baby if you're not careful. Here are the five most common mistakes new owners make and exactly how to avoid them.</p>
 
-<h2>1. Vestir tu muñeca con ropa oscura o que destiñe</h2>
-<p>Este es, con diferencia, el error más común y más devastador. Las telas oscuras (especialmente el denim nuevo, el azul marino, el rojo y el negro) contienen exceso de tinte que se filtra en la silicona y el vinilo. El resultado son manchas permanentes que no pueden eliminarse.</p>
-<p><strong>Cómo evitarlo:</strong> Lava siempre la ropa nueva dos veces antes de ponérsela a tu muñeca. Usa una lámina captadora de color en el primer lavado: te sorprenderá cuánto tinte suelta. Como regla general, forra los conjuntos oscuros con una capa de algodón blanco debajo. En caso de duda, haz la prueba del pañuelo: frota un pañuelo blanco húmedo sobre la tela. Si transfiere color, no es seguro para la piel de tu muñeca.</p>
+<h2>1. Dressing your doll in dark or bleeding clothing</h2>
+<p>This is by far the most common and most devastating mistake. Dark fabrics (especially new denim, navy, red and black) contain excess dye that leaches into silicone and vinyl. The result is permanent stains that cannot be removed.</p>
+<p><strong>How to avoid it:</strong> Always wash new clothes twice before putting them on your doll. Use a color-catcher sheet in the first wash: you'll be surprised how much dye comes out. As a rule of thumb, line dark outfits with a white cotton layer underneath. When in doubt, do the tissue test: rub a damp white tissue over the fabric. If it transfers color, it isn't safe for your doll's skin.</p>
 
-<h2>2. Usar los productos de limpieza equivocados</h2>
-<p>Las toallitas para bebés, los limpiadores a base de alcohol, los sprays antibacterianos e incluso algunos limpiadores domésticos «suaves» contienen productos químicos que descomponen la silicona y eliminan la pintura. Una sola toallita con alcohol usada «solo esta vez» puede apagar permanentemente un detalle pintado.</p>
-<p><strong>Cómo evitarlo:</strong> Limítate al agua tibia con unas gotas de jabón de platos suave y sin aroma. Usa las yemas de los dedos, no paños ni toallitas. Para quitar el polvo rápidamente, una brocha de maquillaje suave es todo lo que necesitas.</p>
+<h2>2. Using the wrong cleaning products</h2>
+<p>Baby wipes, alcohol-based cleaners, antibacterial sprays and even some "gentle" household cleaners contain chemicals that break down silicone and strip paint. A single alcohol wipe used "just this once" can permanently dull a painted detail.</p>
+<p><strong>How to avoid it:</strong> Stick to warm water with a few drops of mild, fragrance-free dish soap. Use your fingertips, not cloths or wipes. For quick dusting, a soft makeup brush is all you need.</p>
 
-<h2>3. Dejar tu muñeca bajo la luz solar directa</h2>
-<p>La radiación UV hace que la silicona se amarillee y que los detalles pintados se desvanezcan con el tiempo. Exhibir tu muñeca en un alféizar soleado puede verse hermoso en las fotos, pero la está dañando lentamente.</p>
-<p><strong>Cómo evitarlo:</strong> Exhibe tu muñeca en un área sombreada, lejos de las ventanas directas. Si quieres exhibirla cerca de luz natural, usa cristal con filtro UV o mantenla detrás de cortinas. Piensa en «condiciones de museo»: luz suave e indirecta.</p>
+<h2>3. Leaving your doll in direct sunlight</h2>
+<p>UV radiation makes silicone yellow and fades painted details over time. Displaying your doll on a sunny windowsill may look beautiful in photos, but it's slowly damaging her.</p>
+<p><strong>How to avoid it:</strong> Display your doll in a shaded area, away from direct windows. If you want to display her near natural light, use UV-filtering glass or keep her behind curtains. Think "museum conditions": soft, indirect light.</p>
 
-<h2>4. No empolvar regularmente</h2>
-<p>La silicona es naturalmente pegajosa. Sin un empolvado regular, atrae polvo, pelusa y pelo de mascotas como un imán. Con el tiempo, esta acumulación puede incrustarse en la superficie y ser difícil de eliminar.</p>
-<p><strong>Cómo evitarlo:</strong> Convierte el empolvado en un hábito semanal. Usa una brocha de maquillaje limpia y suave con un polvo mateante de alta calidad para silicona. Espolvorea ligera y uniformemente y luego retira el exceso con el cepillo. Nunca uses talco, polvo de bebé perfumado ni maicena: pueden causar problemas de humedad o atraer insectos.</p>
+<h2>4. Not powdering regularly</h2>
+<p>Silicone is naturally tacky. Without regular powdering, it attracts dust, lint and pet hair like a magnet. Over time, this buildup can become embedded in the surface and be difficult to remove.</p>
+<p><strong>How to avoid it:</strong> Make powdering a weekly habit. Use a clean, soft makeup brush with a high-quality matting powder made for silicone. Dust lightly and evenly, then brush off the excess. Never use talcum, scented baby powder or cornstarch: they can cause moisture issues or attract insects.</p>
 
-<h2>5. Manipular con las manos sucias o grasientas</h2>
-<p>Loción, desinfectante de manos, aceites de cocina, perfume: todos dejan residuos en tus manos que se transfieren a la superficie de silicona. Con el tiempo, estos productos químicos pueden causar pegajosidad, decoloración o un deterioro de la capa de pintura.</p>
-<p><strong>Cómo evitarlo:</strong> Acostúmbrate a lavarte y secarte bien las manos antes de levantar tu muñeca. Lleva cinco segundos y marca una diferencia enorme en la longevidad del acabado de tu bebé.</p>
+<h2>5. Handling with dirty or greasy hands</h2>
+<p>Lotion, hand sanitizer, cooking oils, perfume: they all leave residue on your hands that transfers to the silicone surface. Over time, these chemicals can cause tackiness, discoloration or paint breakdown.</p>
+<p><strong>How to avoid it:</strong> Get into the habit of washing and drying your hands thoroughly before picking up your doll. It takes five seconds and makes an enormous difference in the longevity of your baby's finish.</p>
 
-<h2>Consejo extra: ten paciencia contigo mismo</h2>
-<p>Todos los coleccionistas cometen algunos de estos errores al principio: es parte del proceso de aprendizaje. Lo importante es aprender de ellos y construir mejores hábitos. Tu bebé reborn es una obra de arte, y tratarlo con cuidado te recompensará con años de disfrute.</p>`,
+<h2>Bonus tip: be patient with yourself</h2>
+<p>Every collector makes some of these mistakes at first: it's part of the learning process. What matters is learning from them and building better habits. Your reborn baby is a work of art, and treating it with care will reward you with years of enjoyment.</p>`,
   },
 
   "therapeutic-power-reborn-dolls-grief-anxiety-dementia": {
     title:
-      "El Poder Terapéutico de las Muñecas Reborn: Cómo Ayudan con el Duelo, la Ansiedad y la Demencia",
+      "The Therapeutic Power of Reborn Dolls: How They Help with Grief, Anxiety and Dementia",
     excerpt:
-      "Una mirada a cómo se usan las muñecas reborn de silicona realistas en entornos terapéuticos y sanación personal: desde el alivio de la ansiedad hasta los programas de cuidado de la demencia.",
-    category: "Detrás de Cámaras",
-    content: `<p>La mayoría de las personas descubren las muñecas reborn a través de las redes sociales o las comunidades de coleccionismo. Pero uno de los aspectos más profundos de estas creaciones realistas es su valor terapéutico. En todo el mundo, los bebés reborn de silicona se están utilizando en residencias de mayores, sesiones de terapia y sanación personal de maneras que podrían sorprenderte.</p>
+      "A look at how realistic silicone reborn dolls are used in therapeutic settings and personal healing: from anxiety relief to dementia care programs.",
+    category: "Behind the Scenes",
+    content: `<p>Most people discover reborn dolls through social media or collector communities. But one of the most profound aspects of these realistic creations is their therapeutic value. Around the world, silicone reborn babies are being used in nursing homes, therapy sessions and personal healing in ways that might surprise you.</p>
 
-<h2>Alivio de la ansiedad y el estrés</h2>
-<p>Hay algo casi instintivo en sostener una muñeca bebé realista y con peso. El peso se asienta en tus brazos, tus hombros se relajan y tu respiración se ralentiza. Esto no es solo una sensación: es una respuesta fisiológica documentada. El acto de acunar a un bebé realista desencadena la liberación de oxitocina, la misma hormona que une a los padres con sus hijos.</p>
-<p>Muchos de nuestros coleccionistas nos cuentan que recurren a su bebé de silicona en momentos de estrés: después de un día difícil en el trabajo, durante períodos de ansiedad o simplemente cuando necesitan consuelo. La sensación suave y cálida de la silicona combinada con el peso realista crea una experiencia sensorial calmante que muchas personas encuentran genuinamente reconfortante.</p>
+<h2>Anxiety and stress relief</h2>
+<p>There's something almost instinctive about holding a realistic, weighted baby doll. The weight settles into your arms, your shoulders relax and your breathing slows. This isn't just a feeling: it's a documented physiological response. The act of cradling a realistic baby triggers the release of oxytocin, the same hormone that bonds parents to their children.</p>
+<p>Many of our collectors tell us they turn to their silicone baby in moments of stress: after a hard day at work, during periods of anxiety, or simply when they need comfort. The soft, warm feel of silicone combined with realistic weight creates a calming sensory experience that many people find genuinely soothing.</p>
 
-<h2>Duelo y pérdida</h2>
-<p>Para algunas personas, una muñeca reborn proporciona consuelo durante el proceso de duelo. Esto puede ser tras la pérdida de un hijo, un aborto espontáneo o cuando los hijos adultos han dejado el hogar. Las muñecas ofrecen una forma de cuidar algo sin las complejidades de la situación real, proporcionando confort emocional durante tiempos difíciles.</p>
-<p>Este es un uso profundamente personal, y es uno que manejamos con gran respeto. Cada muñeca que creamos se hace con el entendimiento de que podría convertirse en una parte importante del proceso de sanación de alguien.</p>
+<h2>Grief and loss</h2>
+<p>For some people, a reborn doll provides comfort during the grieving process. This can be after the loss of a child, a miscarriage, or when adult children have left home. The dolls offer a way to care for something without the complexities of the real situation, providing emotional comfort during difficult times.</p>
+<p>This is a deeply personal use, and it's one we handle with great respect. Every doll we create is made with the understanding that it might become an important part of someone's healing process.</p>
 
-<h2>Cuidado de la demencia</h2>
-<p>Quizás la aplicación más sorprendente de las muñecas reborn es en el cuidado de la demencia. Las residencias de mayores han introducido programas de terapia con muñecas utilizando bebés de silicona realistas, y los resultados han sido notables.</p>
-<p>Para los pacientes con demencia, sostener un bebé realista puede reducir la agitación, calmar la ansiedad y desencadenar recuerdos emocionales positivos. Muchos pacientes mayores fueron padres ellos mismos, y el acto de cuidar a un bebé (incluso una muñeca) los reconecta con experiencias familiares y reconfortantes de su pasado.</p>
-<p>Los estudios clínicos han demostrado que la terapia con muñecas puede reducir la necesidad de medicación psicotrópica en algunos pacientes con demencia, mejorar la interacción social y dar a los pacientes un sentido de propósito y responsabilidad. No es una cura, pero es una mejora significativa de la calidad de vida que los profesionales de la salud reconocen cada vez más.</p>
+<h2>Dementia care</h2>
+<p>Perhaps the most surprising application of reborn dolls is in dementia care. Nursing homes have introduced doll therapy programs using realistic silicone babies, and the results have been remarkable.</p>
+<p>For dementia patients, holding a realistic baby can reduce agitation, calm anxiety and trigger positive emotional memories. Many elderly patients were parents themselves, and the act of caring for a baby (even a doll) reconnects them with familiar, comforting experiences from their past.</p>
+<p>Clinical studies have shown that doll therapy can reduce the need for psychotropic medication in some dementia patients, improve social interaction and give patients a sense of purpose and responsibility. It's not a cure, but it's a significant quality-of-life improvement that healthcare professionals increasingly recognize.</p>
 
-<h2>La ciencia detrás de esto</h2>
-<p>La efectividad de las muñecas reborn en entornos terapéuticos se reduce a varios factores:</p>
+<h2>The science behind it</h2>
+<p>The effectiveness of reborn dolls in therapeutic settings comes down to several factors:</p>
 <ul>
-<li><strong>Confort táctil:</strong> la sensación suave y cálida de la silicona imita el contacto con la piel real</li>
-<li><strong>Cuerpo con peso:</strong> el peso realista crea una sensación de conexión a tierra y calma</li>
-<li><strong>Realismo visual:</strong> la apariencia realista desencadena instintos de cuidado</li>
-<li><strong>Rutina y propósito:</strong> cuidar una muñeca proporciona estructura y responsabilidad</li>
+<li><strong>Tactile comfort:</strong> the soft, warm feel of silicone imitates real skin contact</li>
+<li><strong>Weighted body:</strong> realistic weight creates a grounding, calming sensation</li>
+<li><strong>Visual realism:</strong> the lifelike appearance triggers nurturing instincts</li>
+<li><strong>Routine and purpose:</strong> caring for a doll provides structure and responsibility</li>
 </ul>
 
-<h2>Cómo apoyamos este trabajo</h2>
-<p>En Dolores Silicone, estamos orgullosos de que nuestros bebés se utilicen en entornos terapéuticos. Si eres una residencia de mayores, terapeuta o proveedor de salud interesado en usar nuestras muñecas para programas de terapia, por favor ponte en contacto. Ofrecemos orientación sobre cómo seleccionar la muñeca adecuada para uso terapéutico y podemos asesorar sobre protocolos de cuidado para entornos clínicos.</p>
-<p>Cada persona que sostiene uno de nuestros bebés, ya sea para coleccionar, consolar o terapia, sostiene una pieza de arte creada con amor y propósito.</p>`,
+<h2>How we support this work</h2>
+<p>At Dolores Silicone, we're proud that our babies are used in therapeutic settings. If you're a nursing home, therapist or healthcare provider interested in using our dolls for therapy programs, please get in touch. We offer guidance on selecting the right doll for therapeutic use and can advise on care protocols for clinical environments.</p>
+<p>Every person who holds one of our babies, whether for collecting, comfort or therapy, holds a piece of art created with love and purpose.</p>`,
   },
 
   "how-reborn-dolls-are-made-art-silicone-sculpting": {
     title:
-      "Cómo se Fabrican las Muñecas Reborn: Dentro del Arte del Esculpido y la Pintura de Silicona",
+      "How Reborn Dolls Are Made: Inside the Art of Silicone Sculpting and Painting",
     excerpt:
-      "Una mirada detrás de cámaras a cómo un kit de silicona en blanco se convierte en un bebé realista: desde el esculpido y la pintura hasta implantar el cabello y dar peso al cuerpo.",
-    category: "Detrás de Cámaras",
-    content: `<p>¿Alguna vez te has preguntado qué implica crear una muñeca reborn de silicona? El proceso es laborioso, meticuloso y lleva entre 40 y más de 100 horas por muñeca. En este artículo, te mostraremos cómo un kit de silicona en blanco se transforma en los bebés realistas que ves en nuestra colección.</p>
+      "A behind-the-scenes look at how a blank silicone kit becomes a realistic baby: from sculpting and painting to rooting hair and weighting the body.",
+    category: "Behind the Scenes",
+    content: `<p>Have you ever wondered what goes into creating a silicone reborn doll? The process is labor-intensive, meticulous and takes anywhere from 40 to over 100 hours per doll. In this article, we'll show you how a blank silicone kit transforms into the realistic babies you see in our collection.</p>
 
-<h2>Comenzando con el escultor</h2>
-<p>Cada reborn comienza como un escultor: un lienzo en blanco diseñado por un artista. El escultor determina la pose, la expresión y los rasgos físicos del bebé. En Dolores Silicone, trabajamos con escultores cuidadosamente seleccionados que capturan las expresiones naturales y pacíficas de los recién nacidos reales. Cada escultor está diseñado para ser tan anatómicamente preciso como sea posible, desde las diminutas arrugas de los dedos hasta la delicada curva de las orejas.</p>
+<h2>Starting with the sculptor</h2>
+<p>Every reborn starts as a sculptor: a blank canvas designed by an artist. The sculptor determines the pose, expression and physical features of the baby. At Dolores Silicone, we work with carefully selected sculptors who capture the natural, peaceful expressions of real newborns. Each sculptor is designed to be as anatomically accurate as possible, from the tiny finger creases to the delicate curve of the ears.</p>
 
-<h2>El proceso de pintura</h2>
-<p>Aquí es donde ocurre la magia. Usando pinturas especializadas de silicona, los artistas aplican docenas de capas finas y translúcidas para construir tonos de piel realistas. Cada capa tiene un propósito:</p>
+<h2>The painting process</h2>
+<p>This is where the magic happens. Using specialized silicone paints, artists apply dozens of thin, translucent layers to build realistic skin tones. Each layer has a purpose:</p>
 <ul>
-<li><strong>Capas base</strong> establecen el tono general de la piel</li>
-<li><strong>Capas de moteado</strong> crean las sutiles variaciones de color que ves en la piel real de un recién nacido</li>
-<li><strong>Capas de venas</strong> añaden matices azules y verdes delicados visibles a través de la piel</li>
-<li><strong>Capas de rubor</strong> aportan calidez a las mejillas, la nariz, las manos y los pies</li>
-<li><strong>Capas de detalle</strong> añaden uñas, cutículas, color de labios y detalles de los ojos</li>
+<li><strong>Base layers</strong> establish the overall skin tone</li>
+<li><strong>Mottling layers</strong> create the subtle color variations you see in real newborn skin</li>
+<li><strong>Veining layers</strong> add delicate blue and green undertones visible through the skin</li>
+<li><strong>Blush layers</strong> bring warmth to the cheeks, nose, hands and feet</li>
+<li><strong>Detail layers</strong> add nails, cuticles, lip color and eye details</li>
 </ul>
-<p>Cada capa debe secarse y curarse antes de aplicar la siguiente. Apresurar este proceso arruina el acabado, razón por la cual los reborn de calidad tardan tanto en crearse.</p>
+<p>Each layer must dry and cure before the next is applied. Rushing this process ruins the finish, which is why quality reborns take so long to create.</p>
 
-<h2>Implantar el cabello</h2>
-<p>Para las muñecas con cabello implantado, este es uno de los pasos que más tiempo consume. Usando una aguja especial de implantación, el artista inserta hebras individuales de mohair o cabello humano en el cuero cabelludo, una a la vez. La dirección, la densidad y el ángulo de la implantación afectan el resultado final. Una cabeza completa de cabello implantado puede tardar de 10 a 20 horas en completarse.</p>
-<p>Algunas de nuestras muñecas presentan cabello pintado en su lugar: una técnica que requiere una habilidad increíble para lograr un aspecto realista sin la textura del cabello real. El cabello pintado requiere menos mantenimiento y no se desprende, lo que lo convierte en una opción práctica para algunos coleccionistas.</p>
+<h2>Rooting the hair</h2>
+<p>For dolls with rooted hair, this is one of the most time-consuming steps. Using a special rooting needle, the artist inserts individual strands of mohair or human hair into the scalp, one at a time. The direction, density and angle of the rooting all affect the final result. A full head of rooted hair can take 10 to 20 hours to complete.</p>
+<p>Some of our dolls feature painted hair instead: a technique that requires incredible skill to achieve a realistic look without the texture of real hair. Painted hair requires less maintenance and doesn't shed, making it a practical choice for some collectors.</p>
 
-<h2>Peso y ensamblaje</h2>
-<p>Para lograr ese «peso de bebé» realista, los artistas llenan cuidadosamente el cuerpo con una combinación de finas cuentas de cristal y relleno suave. La distribución importa: demasiado peso en los lugares equivocados hace que la muñeca se sienta poco natural. El objetivo es replicar la forma en que el peso de un bebé real se asienta cuando lo sostienes.</p>
-<p>Las extremidades se unen al cuerpo con articulaciones aseguradas cuidadosamente, y todo el conjunto se revisa para comprobar el equilibrio y el confort.</p>
+<h2>Weighting and assembly</h2>
+<p>To achieve that realistic "baby weight," artists carefully fill the body with a combination of fine glass beads and soft filling. Distribution matters: too much weight in the wrong places makes the doll feel unnatural. The goal is to replicate the way a real baby's weight settles when you hold it.</p>
+<p>Limbs are attached to the body with carefully secured joints, and the whole assembly is checked for balance and comfort.</p>
 
-<h2>Toques finales</h2>
-<p>Los pasos finales lo unen todo: se aplican las pestañas, se añade un ligero empolvado mate para eliminar el brillo, y la muñeca se viste con ropa de recién nacido. Muchos de nuestros bebés vienen con un certificado de nacimiento personalizado y un certificado de autenticidad.</p>
+<h2>Final touches</h2>
+<p>The final steps tie it all together: lashes are applied, a light matte powdering removes any sheen, and the doll is dressed in newborn clothing. Many of our babies come with a personalized birth certificate and a certificate of authenticity.</p>
 
-<h2>Por qué importa</h2>
-<p>Entender el proceso te ayuda a apreciar por qué las muñecas reborn cuestan lo que cuestan. Cada una representa horas de artesanía experta, materiales premium y cuidado genuino. Cuando sostienes un bebé Dolores Silicone, estás sosteniendo el trabajo de un artista que ha volcado su talento y su tiempo en crear algo verdaderamente especial.</p>`,
+<h2>Why it matters</h2>
+<p>Understanding the process helps you appreciate why reborn dolls cost what they cost. Each one represents hours of expert craftsmanship, premium materials and genuine care. When you hold a Dolores Silicone baby, you're holding the work of an artist who has poured their talent and time into creating something truly special.</p>`,
   },
 
   "starting-first-reborn-doll-collection-beginners-guide": {
     title:
-      "Empezando tu Primera Colección de Muñecas Reborn: Una Guía Honesta para Principiantes",
+      "Starting Your First Reborn Doll Collection: An Honest Beginner's Guide",
     excerpt:
-      "Consejos reales para nuevos coleccionistas: desde establecer un presupuesto y elegir tu primer bebé hasta entender qué hace que un reborn de calidad valga la inversión.",
-    category: "Consejos de Coleccionismo",
-    content: `<p>Así que has visto una muñeca reborn en línea y algo de ella te detuvo en seco. Quizás fue el realismo, la forma en que la luz acariciaba la piel, o la manera en que alguien describió sostener a su bebé por primera vez. Lo que sea que te haya traído aquí, bienvenido: estás a punto de descubrir uno de los pasatiempos más gratificantes del mundo.</p>
+      "Real tips for new collectors: from setting a budget and choosing your first baby to understanding what makes a quality reborn worth the investment.",
+    category: "Collecting Tips",
+    content: `<p>So you've seen a reborn doll online and something about it stopped you in your tracks. Maybe it was the realism, the way the light caressed the skin, or the way someone described holding their baby for the first time. Whatever brought you here, welcome: you're about to discover one of the most rewarding hobbies in the world.</p>
 
-<h2>Primero lo primero: ¿por qué quieres un reborn?</h2>
-<p>Antes de gastar un solo euro, tómate un momento para pensar qué te atrae de las muñecas reborn. Tu respuesta guiará cada decisión que tomes.</p>
-<p><strong>Amas el arte.</strong> Ves cada muñeca como una obra maestra: la pintura, los detalles, la artesanía. Aprecias las horas de trabajo que se necesitan para crear algo tan realista.</p>
-<p><strong>Quieres confort y compañía.</strong> Hay algo en sostener un bebé realista y con peso que te calma. Te atrae la experiencia sensorial: la silicona suave, el peso gentil, la sensación de cuidar algo.</p>
-<p><strong>Disfrutas la comunidad.</strong> Los coleccionistas de reborn son algunas de las personas más cálidas y acogedoras en línea. Quieres compartir fotos, intercambiar historias y conectar con otros que lo entienden.</p>
-<p><strong>Es para un niño.</strong> Algunos padres eligen reborns como regalos especiales para niños mayores que pueden apreciar y cuidar algo delicado. El juego de cuidado ayuda a desarrollar la empatía y la responsabilidad.</p>
+<h2>First things first: why do you want a reborn?</h2>
+<p>Before you spend a single dollar, take a moment to think about what draws you to reborn dolls. Your answer will guide every decision you make.</p>
+<p><strong>You love the art.</strong> You see each doll as a masterpiece: the painting, the details, the craftsmanship. You appreciate the hours of work it takes to create something so realistic.</p>
+<p><strong>You want comfort and companionship.</strong> There's something about holding a realistic, weighted baby that calms you. You're drawn to the sensory experience: the soft silicone, the gentle weight, the feeling of caring for something.</p>
+<p><strong>You enjoy the community.</strong> Reborn collectors are some of the warmest, most welcoming people online. You want to share photos, trade stories and connect with others who understand.</p>
+<p><strong>It's for a child.</strong> Some parents choose reborns as special gifts for older children who can appreciate and care for something delicate. Caregiving play helps build empathy and responsibility.</p>
 
-<h2>Estableciendo tu presupuesto</h2>
-<p>Las muñecas reborn varían enormemente en precio. Aquí tienes un desglose realista:</p>
+<h2>Setting your budget</h2>
+<p>Reborn dolls vary enormously in price. Here's a realistic breakdown:</p>
 <ul>
-<li><strong>Nivel de entrada (117 €–351 €):</strong> muñecas de calidad para principiantes de artistas más nuevos o muñecas de fábrica bien hechas. Excelentes para tu primera compra.</li>
-<li><strong>Nivel medio (351 €–936 €):</strong> trabajo detallado de artistas establecidos con técnicas refinadas y materiales premium.</li>
-<li><strong>Nivel alto (936 €–2.340 €+):</strong> trabajo de nivel obra maestra de artistas renombrados, a menudo con características personalizadas y disponibilidad limitada.</li>
+<li><strong>Entry level ($117–$351):</strong> quality beginner dolls from newer artists or well-made factory dolls. Great for your first purchase.</li>
+<li><strong>Mid level ($351–$936):</strong> detailed work from established artists with refined techniques and premium materials.</li>
+<li><strong>High level ($936–$2,340+):</strong> masterpiece-level work from renowned artists, often with customized features and limited availability.</li>
 </ul>
-<p>Nuestro consejo honesto: no empieces con tu muñeca más cara. Empieza con una que haga sonreír a tu corazón dentro de tu zona de confort. Aprenderás lo que prefieres (material, tamaño, peso, características) antes de invertir en tu pieza soñada.</p>
+<p>Our honest advice: don't start with your most expensive doll. Start with one that makes your heart smile within your comfort zone. You'll learn what you prefer (material, size, weight, features) before investing in your dream piece.</p>
 
-<h2>¿Vinilo o silicona?</h2>
-<p>Los dos materiales principales ofrecen experiencias diferentes. El vinilo es firme, duradero y de menor mantenimiento: perfecto para exhibir y fotografiar. La silicona es suave, flexible e increíblemente realista al sostenerla: ideal para el confort y los abrazos. Muchos coleccionistas terminan teniendo ambas. Hemos escrito una comparación detallada si quieres profundizar en esta elección.</p>
+<h2>Vinyl or silicone?</h2>
+<p>The two main materials offer different experiences. Vinyl is firm, durable and lower maintenance: perfect for display and photography. Silicone is soft, flexible and incredibly realistic to hold: ideal for comfort and cuddles. Many collectors end up with both. We've written a detailed comparison if you want to dig deeper into this choice.</p>
 
-<h2>Qué buscar al comprar</h2>
-<p>Cuando estés listo para comprar, esto es lo que importa:</p>
+<h2>What to look for when buying</h2>
+<p>When you're ready to buy, here's what matters:</p>
 <ul>
-<li><strong>Fotos claras desde varios ángulos.</strong> Si un vendedor solo muestra una foto borrosa, es una señal de alerta.</li>
-<li><strong>Descripción detallada.</strong> Los buenos vendedores te dicen el nombre del escultor, el artista, los materiales, el tamaño, el peso y lo que se incluye.</li>
-<li><strong>Reseñas y reputación.</strong> Busca comentarios de otros compradores. Los artistas y vendedores establecidos tendrán un historial.</li>
-<li><strong>Certificado de autenticidad.</strong> Muchos reborns de calidad vienen con un COA. No es esencial, pero es una buena señal.</li>
-<li><strong>Política de devoluciones.</strong> Entiende los términos antes de comprar.</li>
+<li><strong>Clear photos from multiple angles.</strong> If a seller only shows one blurry photo, that's a red flag.</li>
+<li><strong>Detailed description.</strong> Good sellers tell you the sculptor, artist, materials, size, weight and what's included.</li>
+<li><strong>Reviews and reputation.</strong> Look for feedback from other buyers. Established artists and sellers will have a track record.</li>
+<li><strong>Certificate of authenticity.</strong> Many quality reborns come with a COA. It's not essential, but it's a good sign.</li>
+<li><strong>Return policy.</strong> Understand the terms before you buy.</li>
 </ul>
 
-<h2>Dónde comprar de forma segura</h2>
-<p>Compra directamente en los sitios web de artistas establecidos, minoristas especializados de buena reputación o plataformas bien valoradas. Ten cuidado con los vendedores de redes sociales sin historial, y si una oferta parece demasiado buena para ser verdad, casi siempre lo es.</p>
+<h2>Where to buy safely</h2>
+<p>Buy directly from established artists' websites, reputable specialist retailers or well-reviewed platforms. Be wary of social media sellers with no track record, and if a deal seems too good to be true, it almost always is.</p>
 
-<h2>Qué esperar cuando llegue tu bebé</h2>
-<p>Nada te prepara del todo para el momento en que abres la caja. El peso, el detalle, el realismo: impacta de manera diferente que ver fotos en línea. La mayoría de los coleccionistas lo describen como una experiencia genuinamente emocional. Tómate tu tiempo, sostén a tu bebé y disfruta ese primer momento.</p>
+<h2>What to expect when your baby arrives</h2>
+<p>Nothing fully prepares you for the moment you open the box. The weight, the detail, the realism: it hits differently than looking at photos online. Most collectors describe it as a genuinely emotional experience. Take your time, hold your baby and enjoy that first moment.</p>
 
-<h2>El consejo más importante</h2>
-<p>No le des demasiadas vueltas. El primer reborn perfecto es el que te habla a ti. El precio, el material, la reputación del artista: todo importa, pero nada importa tanto como la sensación que tienes cuando sostienes a ese bebé en tus brazos. Confía en esa sensación. De eso se trata este pasatiempo.</p>
-<p>Bienvenido a la comunidad. Nos alegra que estés aquí.</p>`,
+<h2>The most important advice</h2>
+<p>Don't overthink it. The perfect first reborn is the one that speaks to you. Price, material, artist reputation: all of it matters, but nothing matters as much as how you feel when you hold that baby in your arms. Trust that feeling. That's what this hobby is about.</p>
+<p>Welcome to the community. We're glad you're here.</p>`,
   },
 };

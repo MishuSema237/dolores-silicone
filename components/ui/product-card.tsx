@@ -42,7 +42,7 @@ export function ProductCard({
       imageUrl,
       category,
     });
-    toast.success("Añadido al carrito");
+    toast.success("Added to cart");
   };
 
   const handleCardClick = () => {
@@ -69,7 +69,7 @@ export function ProductCard({
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-gray-100 text-gray-400">
-              Sin imagen
+              No image
             </div>
           )}
         </Link>
@@ -104,7 +104,7 @@ export function ProductCard({
         </div>
 
         <p className="text-gray-500 text-[10px] md:text-xs mb-4 line-clamp-2">
-          {description || "Muñeca reborn de silicona hecha a mano con detalles realistas."}
+          {description || "Handmade silicone reborn doll with realistic details."}
         </p>
 
         <Button
@@ -112,7 +112,7 @@ export function ProductCard({
           onClick={handleAddToCart}
           className="hidden min-[450px]:flex w-full border-purple-200 text-purple-600 hover:bg-purple-50 rounded-xl py-2 text-xs font-semibold h-10"
         >
-          Añadir al carrito
+          Add to Cart
         </Button>
 
         {/* Mobile (<450px) Layout */}
@@ -123,7 +123,7 @@ export function ProductCard({
           <button
             onClick={handleAddToCart}
             className="p-2 text-purple-600 hover:bg-purple-50 rounded-full transition-colors"
-            aria-label="Añadir al carrito"
+            aria-label="Add to Cart"
           >
             <FaShoppingCart size={18} />
           </button>

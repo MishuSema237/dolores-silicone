@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Política de Devoluciones - Dolores Silicone",
-  description: "Política de devoluciones y reembolsos de las muñecas reborn de silicona hechas a mano de Dolores Silicone.",
+  title: "Returns Policy - Dolores Silicone",
+  description: "Returns and refunds policy for Dolores Silicone's handcrafted silicone reborn dolls.",
 };
 
 export default function ReturnsPage() {
@@ -30,9 +30,9 @@ export default function ReturnsPage() {
 
         <div className="relative max-w-5xl mx-auto px-6 text-center">
           <div className="inline-flex items-center gap-2 text-purple-300/60 text-sm mb-8">
-            <Link href="/" className="hover:text-purple-200 transition-colors">Inicio</Link>
+            <Link href="/" className="hover:text-purple-200 transition-colors">Home</Link>
             <span>/</span>
-            <span className="text-purple-200">Devoluciones</span>
+            <span className="text-purple-200">Returns</span>
           </div>
 
           <div className="flex items-center justify-center gap-3 mb-8">
@@ -43,51 +43,51 @@ export default function ReturnsPage() {
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-6">
             <span className="bg-gradient-to-r from-white via-purple-100 to-violet-200 bg-clip-text text-transparent">
-              Política de
+              Returns
             </span>
             <br />
-            <span className="text-purple-400/80">Devoluciones</span>
+            <span className="text-purple-400/80">Policy</span>
           </h1>
 
           <p className="text-purple-200/50 text-lg md:text-xl max-w-xl mx-auto leading-relaxed mb-4">
-            Nuestro compromiso con tu satisfacción y el cuidado que ponemos en cada intercambio.
+            Our commitment to your satisfaction and the care we put into every transaction.
           </p>
 
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/20 bg-purple-500/5 text-purple-300/60 text-sm">
             <span className="w-1.5 h-1.5 bg-purple-400/60 rounded-full" />
-            Última actualización: enero de 2025
+            Last updated: January 2025
           </div>
         </div>
       </section>
 
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6 prose prose-gray max-w-none">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Nuestro Compromiso</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Commitment</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            En Dolores Silicone, ponemos gran cuidado en elaborar cada muñeca reborn con el más alto estándar. Queremos que estés completamente satisfecho con tu compra. Debido a la naturaleza artesanal e íntima de nuestros productos, nuestra política de devoluciones es la siguiente:
+            At Dolores Silicone, we take great care in crafting every reborn doll to the highest standard. We want you to be completely satisfied with your purchase. Due to the handcrafted and intimate nature of our products, our returns policy is as follows:
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Artículos Dañados o Defectuosos</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Damaged or Defective Items</h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            Si tu artículo llega dañado o tiene un defecto de fabricación, contáctanos dentro de los <strong>7 días</strong> siguientes a la recepción de tu pedido. Para procesar tu reclamación, proporciona:
+            If your item arrives damaged or has a manufacturing defect, please contact us within <strong>7 days</strong> of receiving your order. To process your claim, please provide:
           </p>
           <ul className="list-disc pl-6 text-gray-600 leading-relaxed mb-6 space-y-2">
-            <li>Tu número de referencia de pedido</li>
-            <li>Una descripción del daño o defecto</li>
-            <li>Fotografías que muestren el problema claramente</li>
+            <li>Your order reference number</li>
+            <li>A description of the damage or defect</li>
+            <li>Photographs clearly showing the issue</li>
           </ul>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Revisaremos tu reclamación y, si se aprueba, te ofreceremos un reemplazo o un reembolso completo a nuestra discreción. Podemos solicitar que el artículo nos sea devuelto para su inspección.
+            We will review your claim and, if approved, offer you a replacement or a full refund at our discretion. We may request that the item be returned to us for inspection.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Cambio de Opinión</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Change of Mind</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Como cada bebé reborn de Dolores Silicone es una creación única e hecha a mano, no podemos aceptar devoluciones por cambio de opinión, arrepentimiento del comprador o preferencia personal. Te animamos a revisar cuidadosamente todas las fotografías y descripciones del producto antes de realizar tu pedido.
+            As every Dolores Silicone reborn baby is a unique, handmade creation, we cannot accept returns for change of mind, buyer's remorse, or personal preference. We encourage you to carefully review all product photographs and descriptions before placing your order.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Cómo Iniciar una Devolución</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">How to Start a Return</h2>
           <ol className="list-decimal pl-6 text-gray-600 leading-relaxed mb-6 space-y-2">
-            <li>Contáctanos a través de{" "}
+            <li>Contact us via{" "}
               <a
                 href="https://wa.me/447380608611"
                 target="_blank"
@@ -96,38 +96,38 @@ export default function ReturnsPage() {
               >
                 WhatsApp
               </a>{" "}
-              o por correo electrónico en{" "}
+              or by email at{" "}
               <a href="mailto:support@doloressilicone.com" className="text-purple-600 hover:text-purple-700 underline">
                 support@doloressilicone.com
               </a>
             </li>
-            <li>Proporciona tu referencia de pedido y el motivo de la devolución</li>
-            <li>Espera nuestra respuesta con instrucciones antes de enviar cualquier artículo de vuelta</li>
+            <li>Provide your order reference and the reason for the return</li>
+            <li>Wait for our response with instructions before sending any item back</li>
           </ol>
           <p className="text-gray-600 leading-relaxed mb-6">
-            No envíes artículos de vuelta sin antes contactarnos, ya que no podemos aceptar devoluciones no solicitadas.
+            Do not send items back without contacting us first, as we cannot accept unsolicited returns.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Reembolsos</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Refunds</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Una vez recibida e inspeccionada tu devolución, te notificaremos la aprobación o el rechazo de tu reembolso. Los reembolsos aprobados se procesarán a tu método de pago original dentro de <strong>5–10 días laborables</strong>.
+            Once your return is received and inspected, we will notify you of the approval or rejection of your refund. Approved refunds will be processed to your original payment method within <strong>5–10 business days</strong>.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Artículos No Devolubles</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Non-Returnable Items</h2>
           <ul className="list-disc pl-6 text-gray-600 leading-relaxed mb-6 space-y-2">
-            <li>Artículos que hayan sido usados, lavados o alterados de cualquier manera</li>
-            <li>Artículos sin su embalaje original (salvo daños)</li>
-            <li>Piezas personalizadas o por encargo</li>
-            <li>Tarjetas de regalo</li>
+            <li>Items that have been used, washed, or altered in any way</li>
+            <li>Items without their original packaging (unless damaged)</li>
+            <li>Custom or made-to-order pieces</li>
+            <li>Gift cards</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Contáctanos</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Contact Us</h2>
           <p className="text-gray-600 leading-relaxed">
-            Si tienes alguna pregunta sobre nuestra política de devoluciones, contáctanos a través de nuestra{" "}
+            If you have any questions about our returns policy, please contact us via our{" "}
             <Link href="/contact" className="text-purple-600 hover:text-purple-700 underline">
-              página de Contacto
+              Contact page
             </Link>{" "}
-            o por{" "}
+            or by{" "}
             <a
               href="https://wa.me/447380608611"
               target="_blank"

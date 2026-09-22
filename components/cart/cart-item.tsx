@@ -33,7 +33,7 @@ export function CartItemComponent({ item }: CartItemProps) {
               className="w-full h-full object-cover"
             />
           ) : (
-            <span className="text-gray-400 text-xs">Imagen del producto</span>
+            <span className="text-gray-400 text-xs">Product image</span>
           )}
         </div>
 
@@ -59,7 +59,7 @@ export function CartItemComponent({ item }: CartItemProps) {
             type="button"
             onClick={() => handleQuantityChange(-1)}
             className="bg-transparent border-0 text-black h-full w-8 cursor-pointer p-0 text-base hover:bg-gray-100 flex items-center justify-center"
-            aria-label="Disminuir cantidad"
+            aria-label="Decrease quantity"
           >
             -
           </button>
@@ -70,7 +70,7 @@ export function CartItemComponent({ item }: CartItemProps) {
             type="button"
             onClick={() => handleQuantityChange(1)}
             className="bg-transparent border-0 text-black h-full w-8 cursor-pointer p-0 text-base hover:bg-gray-100 flex items-center justify-center"
-            aria-label="Aumentar cantidad"
+            aria-label="Increase quantity"
           >
             +
           </button>
@@ -87,7 +87,7 @@ export function CartItemComponent({ item }: CartItemProps) {
             type="button"
             onClick={() => removeItem(item.id)}
             className="bg-transparent border-0 text-gray-500 cursor-pointer text-sm hover:text-red-600 p-2"
-            aria-label="Quitar artículo"
+            aria-label="Remove item"
           >
             <FaTimes />
           </button>

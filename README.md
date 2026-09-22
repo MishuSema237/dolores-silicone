@@ -1,6 +1,6 @@
-# Joanas Reborn Babies
+# Dolores Silicone
 
-A modern E-commerce website for selling high-quality newborn reborn baby dolls. Built with Next.js 15+, MongoDB, and Cloudinary for a premium user experience.
+A modern E-commerce website for selling high-quality handmade silicone reborn baby dolls. Built with Next.js 15+, MongoDB, and Cloudinary for a premium user experience.
 
 ## ✨ Features
 
@@ -15,8 +15,8 @@ A modern E-commerce website for selling high-quality newborn reborn baby dolls. 
 1. **Clone the repo**
 2. **Install dependencies**: `npm install` (or `pnpm install`)
 3. **Configure Environment**: 
-   - Follow the [Setup Instructions](file:///c:/Users/HP/Desktop/MISHAEL_SEMA_EKOM/Websites/reborn_babies/webapp/SETUP_INSTRUCTIONS.md) to create your `.env.local` file.
-   - Use [ENV_TEMPLATE.txt](file:///c:/Users/HP/Desktop/MISHAEL_SEMA_EKOM/Websites/reborn_babies/webapp/ENV_TEMPLATE.txt) as a guide.
+   - Follow the [Setup Instructions](SETUP_INSTRUCTIONS.md) to create your `.env.local` file.
+   - Use [ENV_TEMPLATE.txt](ENV_TEMPLATE.txt) as a guide.
 4. **Seed Database**: `npm run seed`
 5. **Run Development**: `npm run dev`
 
@@ -30,9 +30,9 @@ A modern E-commerce website for selling high-quality newborn reborn baby dolls. 
 
 ## 📄 Documentation
 
-- [Setup Guide](file:///c:/Users/HP/Desktop/MISHAEL_SEMA_EKOM/Websites/reborn_babies/webapp/SETUP_INSTRUCTIONS.md)
-- [Project Structure](file:///c:/Users/HP/Desktop/MISHAEL_SEMA_EKOM/Websites/reborn_babies/webapp/PROJECT_STRUCTURE.md)
-- [Database Setup](file:///c:/Users/HP/Desktop/MISHAEL_SEMA_EKOM/Websites/reborn_babies/webapp/DATABASE_SETUP.md)
+- [Setup Guide](SETUP_INSTRUCTIONS.md)
+- [Project Structure](PROJECT_STRUCTURE.md)
+- [Database Setup](DATABASE_SETUP.md)
 
 ---
-© 2026 Joanas Reborn Babies. All rights reserved.
+© 2026 Dolores Silicone. All rights reserved.

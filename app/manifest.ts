@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
     return {
         name: "Dolores Silicone",
         short_name: "Dolores Silicone",
-        description: "Bebés reborn de silicona hechos a mano con pasión y precisión.",
+        description: "Handmade silicone reborn dolls crafted with passion and precision.",
         start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',

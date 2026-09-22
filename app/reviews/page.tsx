@@ -72,13 +72,13 @@ export default function ReviewsPage() {
       });
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data.error || "No se pudo enviar la opinión");
+        throw new Error(data.error || "The review could not be submitted");
       }
-      toast.success("¡Gracias! Tu opinión ha sido enviada para aprobación.");
+      toast.success("Thank you! Your review has been submitted for approval.");
       setFormData({ customer: "", rating: "5", comment: "" });
       fetchReviews();
     } catch (error: any) {
-      toast.error(error.message || "No se pudo enviar la opinión. Inténtalo de nuevo.");
+      toast.error(error.message || "The review could not be submitted. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -113,14 +113,14 @@ export default function ReviewsPage() {
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-6">
             <span className="bg-gradient-to-r from-white via-purple-100 to-violet-200 bg-clip-text text-transparent">
-              Lo que Dicen
+              What Our
             </span>
             <br />
-            <span className="text-purple-400/80">Nuestros Coleccionistas</span>
+            <span className="text-purple-400/80">Collectors Say</span>
           </h1>
           <p className="text-purple-200/50 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Palabras reales de las familias, coleccionistas y terapeutas que han
-            dado la bienvenida a un bebé de Dolores Silicone a sus vidas.
+            Real words from the families, collectors, and therapists who have
+            welcomed a Dolores Silicone baby into their lives.
           </p>
         </div>
       </section>
@@ -134,15 +134,15 @@ export default function ReviewsPage() {
               <div className="flex justify-center mt-2">
                 <StarRating rating={Math.round(parseFloat(averageRating))} />
               </div>
-              <p className="text-sm text-gray-500 mt-2">Calificación Promedio</p>
+              <p className="text-sm text-gray-500 mt-2">Average Rating</p>
             </div>
             <div className="text-center">
               <p className="text-5xl font-bold text-gray-900">{totalReviews}</p>
-              <p className="text-sm text-gray-500 mt-2">Total de Opiniones</p>
+              <p className="text-sm text-gray-500 mt-2">Total Reviews</p>
             </div>
             <div className="text-center">
               <p className="text-5xl font-bold text-gray-900">100%</p>
-              <p className="text-sm text-gray-500 mt-2">Recomendaría</p>
+              <p className="text-sm text-gray-500 mt-2">Would Recommend</p>
             </div>
           </div>
         )}
@@ -150,7 +150,7 @@ export default function ReviewsPage() {
         {/* Reviews Grid */}
         {isLoading ? (
           <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">Cargando opiniones...</p>
+            <p className="text-gray-500 text-lg">Loading reviews...</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
@@ -171,12 +171,12 @@ export default function ReviewsPage() {
                 {review.image && (
                   <img
                     src={review.image}
-                    alt={`Opinión de ${review.customer}`}
+                    alt={`Review by ${review.customer}`}
                     className="w-full h-48 object-cover rounded-xl mb-4"
                   />
                 )}
                 <p className="text-xs text-gray-400">
-                  {new Date(review.createdAt).toLocaleDateString("es-ES", {
+                  {new Date(review.createdAt).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
@@ -191,10 +191,10 @@ export default function ReviewsPage() {
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-              Comparte Tu Experiencia
+              Share Your Experience
             </h2>
             <p className="text-gray-500">
-              Tu opinión ayuda a otros coleccionistas a encontrar su bebé perfecto.
+              Your review helps other collectors find their perfect baby.
             </p>
           </div>
           <form
@@ -206,13 +206,13 @@ export default function ReviewsPage() {
                 htmlFor="customer"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                Tu Nombre
+                Your Name
               </label>
               <input
                 id="customer"
                 type="text"
                 required
-                placeholder="Tu nombre"
+                placeholder="Your name"
                 value={formData.customer}
                 onChange={(e) =>
                   setFormData({ ...formData, customer: e.target.value })
@@ -226,7 +226,7 @@ export default function ReviewsPage() {
                 htmlFor="rating"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                Calificación
+                Rating
               </label>
               <select
                 id="rating"
@@ -236,11 +236,11 @@ export default function ReviewsPage() {
                 }
                 className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none bg-white"
               >
-                <option value="5">5 Estrellas</option>
-                <option value="4">4 Estrellas</option>
-                <option value="3">3 Estrellas</option>
-                <option value="2">2 Estrellas</option>
-                <option value="1">1 Estrella</option>
+                <option value="5">5 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="2">2 Stars</option>
+                <option value="1">1 Star</option>
               </select>
             </div>
 
@@ -249,13 +249,13 @@ export default function ReviewsPage() {
                 htmlFor="comment"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                Tu Opinión
+                Your Review
               </label>
               <textarea
                 id="comment"
                 required
                 rows={4}
-                placeholder="Cuéntanos tu experiencia con Dolores Silicone..."
+                placeholder="Tell us about your experience with Dolores Silicone..."
                 value={formData.comment}
                 onChange={(e) =>
                   setFormData({ ...formData, comment: e.target.value })
@@ -270,7 +270,7 @@ export default function ReviewsPage() {
                 disabled={isSubmitting}
                 className="bg-purple-600 text-white px-8 py-3 rounded-xl hover:bg-purple-700 font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
-                {isSubmitting ? "Enviando..." : "Enviar Opinión"}
+                {isSubmitting ? "Submitting..." : "Submit Review"}
               </button>
             </div>
           </form>

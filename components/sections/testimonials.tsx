@@ -43,10 +43,10 @@ export function TestimonialsSection() {
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-12 md:mb-24 max-w-3xl mx-auto">
-            <span className="text-purple-600 font-black uppercase tracking-widest text-sm mb-4 block">Testimonios de coleccionistas</span>
-            <h2 className="mb-6 font-display">Escucha a nuestra familia <br /> global, cada vez más grande</h2>
+            <span className="text-purple-600 font-black uppercase tracking-widest text-sm mb-4 block">Collector testimonials</span>
+            <h2 className="mb-6 font-display">Hear from our growing <br /> global family</h2>
             <p className="text-sm md:text-xl text-gray-500 font-light">
-              Nos enorgullece cada conexión realizada. Descubre cómo nuestros bebés han traído calidez y alegría a hogares de todo el mundo.
+              We are proud of every connection made. Discover how our babies have brought warmth and joy to homes all over the world.
             </p>
           </div>
 
@@ -88,7 +88,7 @@ export function TestimonialsSection() {
               onClick={() => setModalOpen(true)}
               className="h-10 px-6 rounded-md md:h-14 md:px-10 md:rounded-2xl border-purple-200 text-purple-700 hover:bg-purple-50 font-semibold md:font-bold tracking-wide"
             >
-              Leer todas las historias
+              Read all stories
             </Button>
           </div>
         </div>
@@ -97,7 +97,7 @@ export function TestimonialsSection() {
       <Modal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
-        title="Lo que dicen nuestros coleccionistas"
+        title="What our collectors say"
       >
         <TestimonialsModalContent />
       </Modal>

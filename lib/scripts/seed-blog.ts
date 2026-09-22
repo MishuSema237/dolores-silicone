@@ -1,7 +1,7 @@
 /**
- * Seed script: Reemplaza los posts existentes con contenido en español
- * sobre muñecas reborn de silicona. Cada post tiene una fecha distinta.
- * El contenido se toma de lib/scripts/data/blog-es.ts.
+ * Seed script: Replaces existing posts with English content
+ * about silicone reborn dolls. Each post has a different date.
+ * Content is taken from lib/scripts/data/blog-es.ts.
  */
 
 import mongoose from "mongoose";
@@ -43,22 +43,22 @@ const POSTS = [
 ];
 
 async function main() {
-  console.log("🔗 Conectando a la BD de destino...");
+  console.log("🔗 Connecting to destination DB...");
   const conn = await mongoose.createConnection(DEST_URI).asPromise();
-  console.log("✅ Conectado");
+  console.log("✅ Connected");
 
   const Blog = conn.model("Blog", BlogSchema);
 
-  // Eliminar posts existentes
+  // Delete existing posts
   const deleteResult = await Blog.deleteMany({});
-  console.log(`\n🗑  Eliminados ${deleteResult.deletedCount} posts existentes`);
+  console.log(`\n🗑  Deleted ${deleteResult.deletedCount} existing posts`);
 
-  // Crear nuevos posts
+  // Create new posts
   let created = 0;
   for (const post of POSTS) {
     const t = blogTranslations[post.slug];
     if (!t) {
-      console.log(`  ⚠️  Sin traducción para: ${post.slug}`);
+      console.log(`  ⚠️  No translation for: ${post.slug}`);
       continue;
     }
     await Blog.create({
@@ -72,16 +72,16 @@ async function main() {
       publishedAt: post.publishedAt,
       content: t.content,
     });
-    console.log(`  ✅ Creado: "${t.title}" (${post.publishedAt.toISOString().split("T")[0]})`);
+    console.log(`  ✅ Created: "${t.title}" (${post.publishedAt.toISOString().split("T")[0]})`);
     created++;
   }
 
-  console.log(`\n📊 Creados ${created} posts`);
+  console.log(`\n📊 Created ${created} posts`);
   await conn.close();
-  console.log("✅ Listo.");
+  console.log("✅ Done.");
 }
 
 main().catch((err) => {
-  console.error("❌ Falló:", err);
+  console.error("❌ Failed:", err);
   process.exit(1);
 });

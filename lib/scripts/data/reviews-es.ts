@@ -1,6 +1,6 @@
 /**
- * Traducciones al español para reseñas, testimonios y bloques de contenido.
- * Las reseñas se relacionan por el nombre del cliente (nombres únicos).
+ * English translations for reviews, testimonials and content blocks.
+ * Reviews are matched by customer name (unique names).
  */
 
 export interface ReviewTranslation {
@@ -10,126 +10,126 @@ export interface ReviewTranslation {
 export const reviewTranslations: Record<string, ReviewTranslation> = {
   "Sarah Mitchell": {
     comment:
-      "Llevo más de diez años coleccionando muñecas reborn, y la calidad de los bebés Dolores Silicone no se parece a nada que haya sostenido antes. El peso, la textura de la piel, la forma en que la luz atraviesa las orejas y las yemas de los dedos. La pintura en múltiples capas crea una profundidad que las fotografías simplemente no pueden capturar. Artesanía de nivel museo.",
+      "I've been collecting reborn dolls for over ten years, and the quality of Dolores Silicone babies is unlike anything I've held before. The weight, the skin texture, the way light passes through the ears and fingertips. The multi-layered painting creates a depth that photographs simply cannot capture. Museum-level craftsmanship.",
   },
   "Dr. James Whitfield": {
     comment:
-      "Usamos tres bebés Dolores Silicone en nuestra unidad de cuidados de demencia. Los residentes responden a ellos con una ternura increíble. Despiertan recuerdos, conversación y calma en pacientes que de otro modo se habían retraído. Han mejorado genuinamente la calidad de vida en nuestra planta. Un valor terapéutico excepcional.",
+      "We use three Dolores Silicone babies in our dementia care unit. The residents respond to them with incredible tenderness. They awaken memories, conversation and calm in patients who had otherwise withdrawn. They have genuinely improved the quality of life on our ward. Exceptional therapeutic value.",
   },
   "Marco DeLuca": {
     comment:
-      "Sorprendí a mi pareja con un bebé Dolores Silicone para Navidad. Había admirado las muñecas reborn durante años, pero nunca pensó que tendría una. La expresión de su rostro al desenvolverla es un recuerdo que atesoraré para siempre. El empaque era hermoso, y el pequeño certificado de autenticidad fue un detalle encantador.",
+      "I surprised my partner with a Dolores Silicone baby for Christmas. She had admired reborn dolls for years but never thought she'd own one. The expression on her face as she unwrapped it is a memory I'll treasure forever. The packaging was beautiful, and the little certificate of authenticity was a lovely touch.",
   },
   "Yuki Tanaka": {
     comment:
-      "Descubrí Dolores Silicone a través de Instagram y quedé asombrada por el portafolio. Cuando mi bebé llegó del Reino Unido a Japón, estaba perfectamente empaquetado y absolutamente impresionante. El detalle de la piel, especialmente alrededor de las uñas y los labios, es extraordinario. He recomendado este estudio a todos los coleccionistas que conozco.",
+      "I discovered Dolores Silicone through Instagram and was amazed by the portfolio. When my baby arrived from the UK to Japan, it was perfectly packaged and absolutely stunning. The skin detail, especially around the nails and lips, is extraordinary. I've recommended this studio to every collector I know.",
   },
   "Emma Rodriguez": {
     comment:
-      "Después de perder a mi hija, un bebé Dolores Silicone me ayudó a atravesar el período más oscuro de mi vida. La terapeuta de mi grupo de apoyo para el duelo me recomendó uno, y no puedo explicar el consuelo que me trajo. No es solo una muñeca. Es sanación. Estaré eternamente agradecida a Dolores por el cuidado y la sensibilidad que mostró durante todo mi pedido.",
+      "After losing my daughter, a Dolores Silicone baby helped me through the darkest period of my life. The therapist in my grief support group recommended one, and I can't explain the comfort it brought me. It's not just a doll. It's healing. I will be forever grateful to Dolores for the care and sensitivity shown throughout my entire order.",
   },
   "Thomas Reid": {
     comment:
-      "Mi esposa y yo llevamos tres años coleccionando. Tenemos bebés de varios artistas, pero las piezas de Dolores Silicone son las que exhibimos con mayor prominencia. La silicona de platino tiene una calidez que el vinilo simplemente no puede replicar. Cada vez que alguien nos visita, no pueden creer que no sean reales.",
+      "My wife and I have been collecting for three years. We have babies from several artists, but the Dolores Silicone pieces are the ones we display most prominently. The platinum silicone has a warmth that vinyl simply cannot replicate. Every time someone visits, they can't believe they aren't real.",
   },
   "Priya Nair": {
     comment:
-      "Pedí una bebé personalizada que se pareciera a mi sobrina recién nacida. Dolores me envió fotos del progreso en cada etapa, lo que hizo la experiencia muy personal. Cuando llegó el bebé, mi hermana rompió en llanto. El parecido era increíble. El cabello implantado a mano es increíblemente fino y suave. Vale cada céntimo.",
+      "I ordered a custom baby that resembled my newborn niece. Dolores sent me progress photos at every stage, which made the experience very personal. When the baby arrived, my sister burst into tears. The likeness was incredible. The hand-rooted hair is incredibly fine and soft. Worth every penny.",
   },
   "Linda Crawford": {
     comment:
-      "Como enfermera jubilada, puedo decirte que estos bebés están hechos con un estándar increíblemente alto. La silicona es de grado médico, el peso está perfectamente equilibrado y la expresión facial tiene una calidez maravillosa. Uso la mía en un café de la memoria donde soy voluntaria. A los asistentes les encanta sostenerlos.",
+      "As a retired nurse, I can tell you these babies are made to an incredibly high standard. The silicone is medical grade, the weight is perfectly balanced and the facial expression has a wonderful warmth. I use mine at a memory café where I volunteer. The attendees love holding them.",
   },
   "Caroline Hughes": {
     comment:
-      "Compré un bebé niño como regalo para mi madre, que ha estado luchando contra la ansiedad. En el momento en que lo sostuvo, se relajó visiblemente. Le habla, le ajusta la manta, y le ha dado un sentido de propósito que le faltaba. La sensación de peso es muy realista. Hermosa artesanía.",
+      "I bought a baby boy as a gift for my mother, who has been struggling with anxiety. The moment she held him, she visibly relaxed. She talks to him, adjusts his blanket, and he has given her a sense of purpose she was missing. The weighted feel is very realistic. Beautiful craftsmanship.",
   },
   "Amanda Lewis": {
     comment:
-      "Sinceramente, me quedé sin palabras cuando llegó Victoria. ¡Los detalles de sus diminutos dedos de manos y pies son increíbles! Se siente tan real y abrazable. Joanna hizo un trabajo realmente asombroso con este bebé de silicona.",
+      "Honestly, I was speechless when Victoria arrived. The details on her tiny fingers and toes are incredible! She feels so real and huggable. Joanna did a truly amazing job with this silicone baby.",
   },
   "Amanda H.": {
     comment:
-      "Este bebé me salvó. Después de mi pérdida, me estaba ahogando en el duelo y ahora tengo algo a lo que abrazarme. Se siente real en mis brazos y el peso es perfecto. Gracias, Mia Catherine.",
+      "This baby saved me. After my loss, I was drowning in grief and now I have something to hold onto. She feels real in my arms and the weight is perfect. Thank you, Mia Catherine.",
   },
   "Marcus W.": {
     comment:
-      "Llevo 8 años coleccionando. Esta es, sin duda, la mejor silicona de calidad que he visto. Las venas y la textura de la piel son increíbles. Vale cada euro.",
+      "I've been collecting for 8 years. This is hands down the best quality silicone I've ever seen. The veins and skin texture are incredible. Worth every dollar.",
   },
   "Janet K.": {
     comment:
-      "La compré para el sexto cumpleaños de mi nieta. La llamó 'Princesa' y se la lleva a todas partes. La expresión en su cara no tiene precio. Gran calidad por el precio.",
+      "I bought her for my granddaughter's sixth birthday. She named her 'Princess' and takes her everywhere. The look on her face is priceless. Great quality for the price.",
   },
   "Robert M.": {
     comment:
-      "La compré para mi hija que tiene autismo. Se ha convertido en su objeto de confort. Ahora duerme mejor. La silicona es suave y segura.",
+      "I bought her for my daughter who has autism. She has become her comfort object. She now sleeps better. The silicone is soft and safe.",
   },
   "Patricia L.": {
     comment:
-      "Después de mi bebé nacido muerto, necesitaba algo que me ayudara a sanar. Este bebé me lo dio. La artesanía es hermosa.",
+      "After my stillborn baby, I needed something to help me heal. This baby gave me that. The craftsmanship is beautiful.",
   },
   "James R.": {
     comment:
-      "La calidad es sólida, pero el envío tardó muchísimo. Esperé 3 semanas, que es demasiado tiempo. Aun así, el bebé en sí es precioso.",
+      "The quality is solid, but shipping took far too long. I waited 3 weeks, which is too long. Still, the baby itself is lovely.",
   },
   "Susan T.": {
     comment:
-      "La compré para mi amiga que perdió a su bebé a las 20 semanas. Lloró cuando la abrió, pero dijo que era exactamente lo que necesitaba.",
+      "I bought her for my friend who lost her baby at 20 weeks. She cried when she opened her, but said it was exactly what she needed.",
   },
   "Linda P.": {
     comment:
-      "Las cejas se ven más claras que en la foto. Aun así es linda. La calidad es buena para el punto de precio.",
+      "The brows look lighter than in the photo. Still, she's cute. The quality is good for the price point.",
   },
   "Michelle S.": {
     comment:
-      "Mi bebé duerme conmigo todas las noches. El cuerpo con peso se siente igual que un recién nacido real. La mejor decisión que he tomado.",
+      "My baby sleeps with me every night. The weighted body feels just like a real newborn. The best decision I've made.",
   },
   "David C.": {
     comment:
-      "Al principio era escéptico, pero mi esposa quería una para su sanación. Ahora los dos la amamos. Los detalles realistas son asombrosos.",
+      "I was skeptical at first, but my wife wanted one for her healing. Now we both love her. The realistic details are amazing.",
   },
   "Karen B.": {
     comment:
-      "Recibí un bebé diferente al que pedí. El que estaba en mi caja debía ser un niño con cabello castaño, pero recibí una niña rubia. Me puse en contacto con el soporte y aún no he recibido respuesta.",
+      "I received a different baby than the one I ordered. The one in my box was supposed to be a boy with brown hair, but I received a blonde girl. I contacted support and haven't heard back yet.",
   },
   "Jennifer F.": {
     comment:
-      "¡Pesa casi exactamente igual que un recién nacido real! Puedo sentirla cuando la sostengo. El realismo es alucinante. La amo muchísimo.",
+      "She weighs almost exactly like a real newborn! I can feel it when I hold her. The realism is mind-blowing. I love her so much.",
   },
   "Thomas G.": {
     comment:
-      "Como coleccionista profesional, le doy 5 estrellas. La artista realmente sabe lo que hace. El cabello implantado y los ojos de cristal son perfectos.",
+      "As a professional collector, I give her 5 stars. The artist really knows what she's doing. The rooted hair and crystal eyes are perfect.",
   },
   "Michelle R.": {
     comment:
-      "Las extremidades son un poco rígidas en comparación con mis otros reborns, pero en general estoy contenta. Buena bebé para empezar por el precio.",
+      "The limbs are a bit stiff compared to my other reborns, but overall I'm happy. Good starter baby for the price.",
   },
   "Sarah L.": {
     comment:
-      "Este bebé ayudó muchísimo a mi hermana después de su pérdida. Dice que sostenerlo le da paz. Un regalo hermoso y significativo.",
+      "This baby helped my sister so much after her loss. She says holding him brings her peace. A beautiful, meaningful gift.",
   },
   "Brian K.": {
     comment:
-      "La caja llegó dañada y el bebé tenía un rasguño en la mejilla. El servicio al cliente está enviando un reemplazo. Espero que sea mejor la próxima vez.",
+      "The box arrived damaged and the baby had a scratch on her cheek. Customer service is sending a replacement. Hopefully it's better next time.",
   },
   "Elizabeth W.": {
     comment:
-      "El regalo perfecto para mi hija, que no pudo tener hijos. Trata a este bebé como si fuera suyo. La calidad es sobresaliente.",
+      "The perfect gift for my daughter, who couldn't have children. She treats this baby as her own. The quality is outstanding.",
   },
   "Christopher P.": {
     comment:
-      "He comprado docenas y esta está en el top 5 de calidad. El mecanismo de respiración realista es alucinante. El mejor reborn que he tenido.",
+      "I've bought dozens and this one is in the top 5 for quality. The realistic breathing mechanism is amazing. The best reborn I've owned.",
   },
   "Nancy D.": {
     comment:
-      "Estaba nerviosa por comprar en línea, pero me alegro muchísimo de haberlo hecho. Superó mis expectativas. Los detalles son dignos de un museo.",
+      "I was nervous about buying online, but I'm so glad I did. It exceeded my expectations. The details are museum-worthy.",
   },
   "Steven M.": {
     comment:
-      "El envío a Canadá tardó más de un mes, lo que fue frustrante. El bebé es hermoso cuando llegó. Solo desearía que el envío fuera más rápido.",
+      "Shipping to Canada took over a month, which was frustrating. The baby is beautiful when she arrived. I just wish shipping were faster.",
   },
   Boominati: {
-    comment: "Prueba",
+    comment: "Test",
   },
 };
 
@@ -140,19 +140,19 @@ export interface TestimonialTranslation {
 
 export const testimonialTranslations: Record<string, TestimonialTranslation> = {
   "Sarah Jenkins": {
-    role: "Abuela y Compradora por Primera Vez",
+    role: "Grandmother and First-Time Buyer",
     content:
-      "Pedí la muñeca 'Little Blossom' para el cumpleaños de mi nieta, ¡y es absolutamente adorable! La silicona se siente increíblemente real y los detalles pintados son impresionantes. Incluso huele a polvo de bebé real. Ella la adora, y estoy muy impresionada con la artesanía. Lo recomiendo encarecidamente.",
+      "I ordered the 'Little Blossom' doll for my granddaughter's birthday, and it is absolutely adorable! The silicone feels incredibly real and the painted details are stunning. It even smells like real baby powder. She adores it, and I'm so impressed with the craftsmanship. Highly recommend.",
   },
   "Mark Chen": {
-    role: "Coleccionista Entusiasta",
+    role: "Enthusiast Collector",
     content:
-      "Como coleccionista, tengo varios reborns, pero la calidad de este bebé de silicona de cuerpo completo es inigualable. El peso es perfecto, lo que hace que se sienta como sostener a un bebé real. La implantación del cabello es meticulosa y las articulaciones son sorprendentemente posables. Una verdadera obra maestra para cualquier coleccionista serio.",
+      "As a collector, I own several reborns, but the quality of this full-body silicone baby is unmatched. The weight is perfect, making it feel like holding a real baby. The hair rooting is meticulous and the joints are surprisingly poseable. A true masterpiece for any serious collector.",
   },
   "Maria Rodriguez": {
-    role: "Entusiasta",
+    role: "Enthusiast",
     content:
-      "Estaba un poco indecisa al comprar en línea, pero el servicio al cliente fue fantástico, y el bebé llegó rápido y bellamente empaquetado. El realismo es impresionante; las venas y las variaciones del tono de piel son increíblemente realistas. Trae mucha alegría. ¡Superó todas mis expectativas!",
+      "I was a little hesitant buying online, but the customer service was fantastic, and the baby arrived quickly and beautifully packaged. The realism is stunning; the veins and skin tone variations are incredibly realistic. It brings so much joy. It exceeded all my expectations!",
   },
 };
 
@@ -163,11 +163,11 @@ export interface ContentBlockTranslation {
 
 export const contentBlockTranslations: Record<string, ContentBlockTranslation> = {
   homepage_hero_title: {
-    title: "Título del Héroe",
-    content: "Descubre Nuestra Colección de Bebés Reborn Realistas",
+    title: "Hero Title",
+    content: "Discover Our Collection of Realistic Reborn Babies",
   },
   homepage_about_title: {
-    title: "Título de la Sección Acerca de",
-    content: "Creando Sueños, un Bebé a la Vez",
+    title: "About Section Title",
+    content: "Creating Dreams, One Baby at a Time",
   },
 };

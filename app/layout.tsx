@@ -32,55 +32,55 @@ const parisienne = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://doloressilicone.com"),
   title: {
-    default: "Dolores Silicone | Bebés Reborn de Silicona Hechos a Mano",
+    default: "Dolores Silicone | Handmade Silicone Reborn Babies",
     template: "%s | Dolores Silicone",
   },
   description:
-    "Bebés reborn de silicona de platino hechos a mano. Cada bebé es una obra maestra única creada con amor y cuidado.",
+    "Handmade platinum silicone reborn babies. Each baby is a unique masterpiece created with love and care.",
   keywords: [
-    "muñecas reborn de silicona",
-    "muñecas reborn",
-    "muñecas bebé realistas",
-    "muñecas bebé realistas de silicona",
-    "bebé de silicona de cuerpo completo",
-    "bebés reborn hechos a mano",
-    "comprar muñeca reborn online",
-    "muñeca de silicona de platino",
-    "muñecas reborn de colección",
-    "muñecas pintadas a mano",
-    "muñecas con peso",
-    "muñecas reborn en venta",
-    "tienda de muñecas reborn",
-    "muñecas reborn terapéuticas",
-    "muñecas para terapia de duelo",
-    "muñecas para cuidado de demencia",
-    "muñecas de consuelo para ansiedad",
-    "guía de cuidado de muñecas reborn",
-    "muñeca reborn certificada CE",
+    "silicone reborn dolls",
+    "reborn dolls",
+    "realistic baby dolls",
+    "realistic silicone baby dolls",
+    "full body silicone baby",
+    "handmade reborn babies",
+    "buy reborn doll online",
+    "platinum silicone doll",
+    "collector reborn dolls",
+    "hand-painted dolls",
+    "weighted dolls",
+    "reborn dolls for sale",
+    "reborn doll shop",
+    "therapeutic reborn dolls",
+    "grief therapy dolls",
+    "dementia care dolls",
+    "comfort dolls for anxiety",
+    "reborn doll care guide",
+    "CE certified reborn doll",
   ],
   authors: [{ name: "Dolores Silicone" }],
   creator: "Dolores Silicone",
   publisher: "Dolores Silicone",
   openGraph: {
     type: "website",
-    locale: "es_ES",
+    locale: "en_US",
     url: "https://doloressilicone.com",
-    title: "Dolores Silicone | Bebés Reborn de Silicona Hechos a Mano",
-    description: "Experimenta el arte de las muñecas reborn de silicona realistas. Hechas a mano para coleccionistas y familias que buscan consuelo y alegría.",
+    title: "Dolores Silicone | Handmade Silicone Reborn Babies",
+    description: "Experience the art of realistic silicone reborn dolls. Handmade for collectors and families seeking comfort and joy.",
     siteName: "Dolores Silicone",
     images: [
       {
         url: '/assets/og-logo.png',
         width: 1200,
         height: 630,
-        alt: "Dolores Silicone - Muñecas Reborn Realistas",
+        alt: "Dolores Silicone - Realistic Reborn Dolls",
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Dolores Silicone | Muñecas Realistas Hechas a Mano",
-    description: "La cima del realismo en el arte reborn de silicona. Bebés hechos a mano que se sienten reales en tus brazos.",
+    title: "Dolores Silicone | Handmade Realistic Dolls",
+    description: "The pinnacle of realism in silicone reborn art. Handmade babies that feel real in your arms.",
     images: ['/assets/og-logo.png'],
     creator: '@doloressilicone',
   },
@@ -115,7 +115,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="en">
       <body
         className={`${bodyFont.variable} ${displayFont.variable} ${parisienne.variable} bg-white text-black antialiased`}
       >

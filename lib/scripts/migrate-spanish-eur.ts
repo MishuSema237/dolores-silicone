@@ -1,17 +1,20 @@
 /**
- * Migración: Dolores Silicone → Español / EUR
+ * Migration: Dolores Silicone → English / USD
  *
- * Convierte toda la base de datos a español y euro:
- *  1. Productos:  precio × 1.17 (GBP → EUR), normaliza categorías al enum
- *     del modelo (boys | girls | accessories) y traduce todos los campos.
- *  2. Blogs:      traduce título, extracto, categoría y contenido.
- *  3. Reseñas:    traduce los comentarios (mantiene el nombre del cliente).
- *  4. Testimonios: traduce rol y contenido.
- *  5. Bloques de contenido: traduce título y contenido.
+ * Applies English translations to the entire database:
+ *  1. Products:   normalizes categories to the model enum
+ *     (boys | girls | accessories) and translates all fields.
+ *  2. Blogs:      translates title, excerpt, category and content.
+ *  3. Reviews:    translates comments (keeps the customer name).
+ *  4. Testimonials: translates role and content.
+ *  5. Content blocks: translates title and content.
  *
- * No se tocan: pedidos, mensajes ni clientes (datos reales de usuarios).
+ * Prices are kept unchanged (amounts stay the same; the currency
+ * symbol is '$' at display time).
  *
- * Ejecutar: npx tsx lib/scripts/migrate-spanish-eur.ts
+ * Not touched: orders, messages or customers (real user data).
+ *
+ * Run: npx tsx lib/scripts/migrate-spanish-eur.ts
  */
 
 import dotenv from "dotenv";
@@ -29,7 +32,7 @@ import { productTranslations } from "./data/product-es";
 import { blogTranslations } from "./data/blog-es";
 import { reviewTranslations, testimonialTranslations, contentBlockTranslations } from "./data/reviews-es";
 
-const GBP_TO_EUR = 1.17;
+const GBP_TO_EUR = 1.0;
 
 function round2(n: number): number {
   return Math.round(n * 100) / 100;
@@ -54,13 +57,13 @@ interface ProductUpdates {
 
 async function migrate() {
   const uri = process.env.MONGODB_URI;
-  if (!uri) throw new Error("MONGODB_URI no definida en .env.local");
+  if (!uri) throw new Error("MONGODB_URI not set in .env.local");
 
   await mongoose.connect(uri);
-  console.log("✅ Conectado a MongoDB");
+  console.log("✅ Connected to MongoDB");
 
   // ── 1. PRODUCTOS ─────────────────────────────────────────────────
-  console.log("\n━━━ PRODUCTOS ━━━");
+  console.log("\n━━━ PRODUCTS ━━━");
   const products = await Product.find({}).lean();
   let productsUpdated = 0;
   let productsWithTranslation = 0;
@@ -100,12 +103,12 @@ async function migrate() {
       await Product.updateOne({ _id: p._id }, { $set: updates });
       productsUpdated++;
       console.log(
-        `  ✅ ${slug}: ${p.price} → ${updates.price !== undefined ? updates.price : p.price} € | cat: ${p.category} → ${updates.category || p.category}`
+        `  ✅ ${slug}: ${p.price} → ${updates.price !== undefined ? updates.price : p.price} $ | cat: ${p.category} → ${updates.category || p.category}`
       );
     }
   }
 
-  console.log(`Productos: ${productsUpdated} actualizados (${productsWithTranslation} con traducción)`);
+  console.log(`Products: ${productsUpdated} updated (${productsWithTranslation} with translation)`);
 
   // ── 2. BLOGS ─────────────────────────────────────────────────────
   console.log("\n━━━ BLOGS ━━━");
@@ -115,7 +118,7 @@ async function migrate() {
   for (const b of blogs) {
     const t = blogTranslations[b.slug];
     if (!t) {
-      console.log(`  ⏭  Sin traducción: ${b.slug}`);
+      console.log(`  ⏭  No translation: ${b.slug}`);
       continue;
     }
     await Blog.updateOne(
@@ -125,10 +128,10 @@ async function migrate() {
     blogsUpdated++;
     console.log(`  ✅ ${b.slug}`);
   }
-  console.log(`Blogs: ${blogsUpdated} actualizados`);
+  console.log(`Blogs: ${blogsUpdated} updated`);
 
-  // ── 3. RESEÑAS ───────────────────────────────────────────────────
-  console.log("\n━━━ RESEÑAS ━━━");
+  // ── 3. REVIEWS ───────────────────────────────────────────────────
+  console.log("\n━━━ REVIEWS ━━━");
   const reviews = await Review.find({}).lean();
   let reviewsUpdated = 0;
   let reviewsSkipped = 0;
@@ -137,65 +140,65 @@ async function migrate() {
     const t = reviewTranslations[r.customer];
     if (!t) {
       reviewsSkipped++;
-      console.log(`  ⏭  Sin traducción: ${r.customer}`);
+      console.log(`  ⏭  No translation: ${r.customer}`);
       continue;
     }
     await Review.updateOne({ _id: r._id }, { $set: { comment: t.comment } });
     reviewsUpdated++;
     console.log(`  ✅ ${r.customer}`);
   }
-  console.log(`Reseñas: ${reviewsUpdated} actualizadas, ${reviewsSkipped} sin traducción`);
+  console.log(`Reviews: ${reviewsUpdated} updated, ${reviewsSkipped} without translation`);
 
-  // ── 4. TESTIMONIOS ───────────────────────────────────────────────
-  console.log("\n━━━ TESTIMONIOS ━━━");
+  // ── 4. TESTIMONIALS ──────────────────────────────────────────────
+  console.log("\n━━━ TESTIMONIALS ━━━");
   const testimonials = await Testimonial.find({}).lean();
   let testimonialsUpdated = 0;
 
   for (const tst of testimonials) {
     const t = testimonialTranslations[tst.name];
     if (!t) {
-      console.log(`  ⏭  Sin traducción: ${tst.name}`);
+      console.log(`  ⏭  No translation: ${tst.name}`);
       continue;
     }
     await Testimonial.updateOne({ _id: tst._id }, { $set: { role: t.role, content: t.content } });
     testimonialsUpdated++;
     console.log(`  ✅ ${tst.name}`);
   }
-  console.log(`Testimonios: ${testimonialsUpdated} actualizados`);
+  console.log(`Testimonials: ${testimonialsUpdated} updated`);
 
-  // ── 5. BLOQUES DE CONTENIDO ──────────────────────────────────────
-  console.log("\n━━━ BLOQUES DE CONTENIDO ━━━");
+  // ── 5. CONTENT BLOCKS ────────────────────────────────────────────
+  console.log("\n━━━ CONTENT BLOCKS ━━━");
   const contentBlocks = await ContentBlock.find({}).lean();
   let contentBlocksUpdated = 0;
 
   for (const cb of contentBlocks) {
     const t = contentBlockTranslations[cb.key];
     if (!t) {
-      console.log(`  ⏭  Sin traducción: ${cb.key}`);
+      console.log(`  ⏭  No translation: ${cb.key}`);
       continue;
     }
     await ContentBlock.updateOne({ _id: cb._id }, { $set: { title: t.title, content: t.content } });
     contentBlocksUpdated++;
     console.log(`  ✅ ${cb.key}`);
   }
-  console.log(`Bloques de contenido: ${contentBlocksUpdated} actualizados`);
+  console.log(`Content blocks: ${contentBlocksUpdated} updated`);
 
-  // ── RESUMEN ──────────────────────────────────────────────────────
+  // ── SUMMARY ──────────────────────────────────────────────────────
   console.log("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-  console.log("📊 RESUMEN DE MIGRACIÓN");
+  console.log("📊 MIGRATION SUMMARY");
   console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-  console.log(`Productos:      ${productsUpdated} actualizados`);
-  console.log(`Blogs:          ${blogsUpdated} actualizados`);
-  console.log(`Reseñas:        ${reviewsUpdated} actualizadas`);
-  console.log(`Testimonios:    ${testimonialsUpdated} actualizados`);
-  console.log(`Bloques cont.:  ${contentBlocksUpdated} actualizados`);
+  console.log(`Products:     ${productsUpdated} updated`);
+  console.log(`Blogs:        ${blogsUpdated} updated`);
+  console.log(`Reviews:      ${reviewsUpdated} updated`);
+  console.log(`Testimonials: ${testimonialsUpdated} updated`);
+  console.log(`Content blk.: ${contentBlocksUpdated} updated`);
   console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
 
   await mongoose.disconnect();
-  console.log("\n✅ Migración completada.");
+  console.log("\n✅ Migration completed.");
 }
 
 migrate().catch((err) => {
-  console.error("❌ Migración falló:", err);
+  console.error("❌ Migration failed:", err);
   process.exit(1);
 });

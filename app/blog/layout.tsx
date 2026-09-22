@@ -3,21 +3,21 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Perspectivas sobre el mundo del arte reborn, el cuidado de los bebés de silicona, los usos terapéuticos y la artesanía detrás de cada creación de Dolores. Guías y consejos de expertos.",
+    "Insights into the world of reborn art, silicone baby care, therapeutic uses, and the craftsmanship behind every Dolores creation. Guides and expert tips.",
   keywords: [
-    "blog de muñecas reborn",
-    "guía de cuidado de bebés de silicona",
-    "consejos sobre muñecas reborn",
-    "coleccionismo de muñecas reborn",
-    "muñecas reborn terapéuticas",
-    "muñecas de vinilo vs silicona",
-    "mantenimiento de muñecas reborn",
-    "cómo se hacen las muñecas reborn",
+    "reborn dolls blog",
+    "silicone baby care guide",
+    "reborn dolls tips",
+    "reborn doll collecting",
+    "therapeutic reborn dolls",
+    "vinyl vs silicone dolls",
+    "reborn doll maintenance",
+    "how reborn dolls are made",
   ],
   openGraph: {
     title: "Blog | Dolores Silicone",
     description:
-      "Perspectivas sobre el mundo del arte reborn, el cuidado de los bebés de silicona, los usos terapéuticos y la artesanía detrás de cada creación de Dolores.",
+      "Insights into the world of reborn art, silicone baby care, therapeutic uses, and the craftsmanship behind every Dolores creation.",
     url: "https://doloressilicone.com/blog",
     siteName: "Dolores Silicone",
     images: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: "/assets/og-logo.png",
         width: 1200,
         height: 630,
-        alt: "Blog de Dolores Silicone",
+        alt: "Dolores Silicone blog",
       },
     ],
     type: "website",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Blog | Dolores Silicone",
     description:
-      "Perspectivas sobre el mundo del arte reborn, el cuidado de los bebés de silicona y la artesanía detrás de cada creación de Dolores.",
+      "Insights into the world of reborn art, silicone baby care, and the craftsmanship behind every Dolores creation.",
     images: ["/assets/og-logo.png"],
   },
 };

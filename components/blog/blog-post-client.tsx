@@ -21,12 +21,12 @@ function estimateReadingTime(html: string): string {
   const text = html.replace(/<[^>]+>/g, "");
   const words = text.split(/\s+/).filter(Boolean).length;
   const minutes = Math.max(1, Math.round(words / 200));
-  return `${minutes} min de lectura`;
+  return `${minutes} min read`;
 }
 
 function formatDate(dateStr?: string) {
   if (!dateStr) return "";
-  return new Date(dateStr).toLocaleDateString("es-ES", {
+  return new Date(dateStr).toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
     year: "numeric",
@@ -99,7 +99,7 @@ export function BlogPostClient({ initialPost }: { initialPost: BlogPost | null }
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-pulse text-purple-400 text-lg">Cargando...</div>
+        <div className="animate-pulse text-purple-400 text-lg">Loading...</div>
       </div>
     );
   }
@@ -109,12 +109,12 @@ export function BlogPostClient({ initialPost }: { initialPost: BlogPost | null }
       <main className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <p className="text-6xl font-bold text-purple-200 mb-4">404</p>
-          <p className="text-xl text-gray-500 mb-8">Publicación no encontrada.</p>
+          <p className="text-xl text-gray-500 mb-8">Post not found.</p>
           <Link
             href="/blog"
             className="text-purple-600 hover:text-purple-700 font-medium"
           >
-            &larr; Volver al blog
+            &larr; Back to the blog
           </Link>
         </div>
       </main>
@@ -128,7 +128,7 @@ export function BlogPostClient({ initialPost }: { initialPost: BlogPost | null }
           href="/blog"
           className="inline-block text-purple-600 hover:text-purple-700 font-medium mb-8 transition-colors"
         >
-          &larr; Volver al blog
+          &larr; Back to the blog
         </Link>
 
         {post.image && (
@@ -166,19 +166,19 @@ export function BlogPostClient({ initialPost }: { initialPost: BlogPost | null }
         </div>
 
         <div className="max-w-3xl mx-auto mt-12 pt-8 border-t border-gray-100">
-          <p className="text-sm font-medium text-gray-900 mb-3">Comparte este artículo</p>
+          <p className="text-sm font-medium text-gray-900 mb-3">Share this article</p>
           <div className="flex gap-6">
             <button
               onClick={handleCopyLink}
               className="text-sm text-purple-600 hover:text-purple-700 transition-colors"
             >
-              {copied ? "¡Copiado!" : "Copiar enlace"}
+              {copied ? "Copied!" : "Copy link"}
             </button>
             <button
               onClick={handleShareTwitter}
               className="text-sm text-purple-600 hover:text-purple-700 transition-colors"
             >
-              Compartir en Twitter
+              Share on Twitter
             </button>
           </div>
         </div>
@@ -186,7 +186,7 @@ export function BlogPostClient({ initialPost }: { initialPost: BlogPost | null }
         {related.length > 0 && (
           <div className="mt-20 pt-12 border-t border-gray-100">
             <h2 className="text-2xl font-bold text-gray-900 mb-8">
-              Más del blog
+              More from the blog
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {related.map((r) => (

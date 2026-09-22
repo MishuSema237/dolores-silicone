@@ -2,27 +2,27 @@ export function ProcessModalContent() {
   return (
     <>
       <p>
-        Nuestro viaje comienza seleccionando la silicona de mayor calidad. Cada
-        bebé Dolores empieza como un kit en blanco, elegido cuidadosamente por su
-        precisión anatómica y su potencial para una transformación realista.
-        Priorizamos la seguridad y durabilidad de nuestros materiales,
-        asegurando que no sean tóxicos y duren mucho tiempo.
+        Our journey begins with selecting the highest quality silicone. Each
+        Dolores baby starts as a blank kit, carefully chosen for its
+        anatomical precision and its potential for a realistic transformation.
+        We prioritize the safety and durability of our materials, making sure
+        they are non-toxic and long-lasting.
       </p>
       <p>
-        El siguiente paso es el meticuloso proceso de pintura. Nuestros
-        artistas expertos aplican múltiples capas finas de pinturas especializadas
-        para silicona, construyendo gradualmente tonos de piel realistas,
-        veteado, venas y delicados rubores. Esta técnica detallada captura los
-        matices sutiles de la piel de un recién nacido, haciendo que cada bebé
-        sea verdaderamente único.
+        The next step is the meticulous painting process. Our
+        expert artists apply multiple thin layers of specialized silicone
+        paints, gradually building realistic skin tones,
+        veining, veins, and delicate blushes. This detailed technique captures
+        the subtle nuances of a newborn's skin, making each baby
+        truly unique.
       </p>
       <p>
-        Luego se realiza el implante de cabello, hebra a hebra, utilizando
-        mohair o cabello humano de alta calidad para crear una línea de cabello
-        natural. Finalmente, cada bebé se pesa cuidadosamente con microesferas
-        de vidrio, dándole la sensación y el equilibrio realistas de un bebé
-        real. Cada puntada, cada pincelada, cada detalle es un testimonio de
-        nuestra dedicación al arte y al realismo.
+        The hair is then implanted strand by strand, using
+        high-quality mohair or human hair to create a natural hairline.
+        Finally, each baby is carefully weighted with glass microbeads,
+        giving it the realistic feel and balance of a real
+        baby. Every stitch, every brushstroke, every detail is a testament to
+        our dedication to artistry and realism.
       </p>
     </>
   );

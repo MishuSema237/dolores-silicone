@@ -61,24 +61,24 @@ export function AccessoryUpsellModal({ isOpen, onClose, product }: AccessoryUpse
             imageUrl: accessory.images[0],
             parentProductId: product.id, // Linking to the baby
         });
-        toast.success(`¡Añadido ${accessory.name} para ${product.name}!`);
+        toast.success(`Added ${accessory.name} for ${product.name}!`);
     };
 
     return (
         <Modal
             isOpen={isOpen}
             onClose={onClose}
-            title="Completa tu pedido"
+            title="Complete your order"
         >
             <div className="space-y-6">
                 <div className="text-center">
                     <p className="text-gray-600 mb-6">
-                        ¿Te gustaría añadir accesorios premium para <strong>{product.name}</strong>?
+                        Would you like to add premium accessories for <strong>{product.name}</strong>?
                     </p>
                 </div>
 
                 {isLoading ? (
-                    <div className="text-center py-8 text-gray-500">Cargando accesorios...</div>
+                    <div className="text-center py-8 text-gray-500">Loading accessories...</div>
                 ) : accessories.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[400px] overflow-y-auto p-2">
                         {accessories.map((acc) => (
@@ -106,27 +106,27 @@ export function AccessoryUpsellModal({ isOpen, onClose, product }: AccessoryUpse
                                     onClick={() => handleAddAccessory(acc)}
                                     className="w-full mt-auto text-xs py-1 h-8"
                                 >
-                                    Añadir al carrito
+                                    Add to Cart
                                 </Button>
                             </div>
                         ))}
                     </div>
                 ) : (
                     <div className="text-center py-8 text-gray-500 italic">
-                        No hay accesorios disponibles actualmente.
+                        No accessories are currently available.
                     </div>
                 )}
 
                 <div className="flex flex-col gap-3 pt-4 border-t border-gray-100 px-2 lg:px-0">
                     <Button href="/cart" className="w-full">
-                        Ir al carrito
+                        Go to cart
                     </Button>
                     <Button
                         variant="ghost"
                         onClick={onClose}
                         className="w-full text-gray-500 hover:text-gray-900"
                     >
-                        No, gracias, solo el bebé
+                        No thanks, just the baby
                     </Button>
                 </div>
             </div>

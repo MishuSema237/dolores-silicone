@@ -6,21 +6,21 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export const metadata: Metadata = {
-  title: "Tienda",
-  description: "Explora nuestra colección completa de muñecas reborn de silicona hechas a mano y accesorios — niñas, niños y más. Compra las mejores muñecas reborn.",
+  title: "Shop",
+  description: "Explore our complete collection of handcrafted silicone reborn dolls and accessories — girls, boys, and more. Shop the best reborn dolls.",
   keywords: [
-    "comprar muñecas reborn",
-    "muñeca de silicona en venta",
-    "muñecas reborn niñas",
-    "muñecas reborn niños",
-    "accesorios para muñecas reborn",
-    "muñecas reborn de silicona en venta",
-    "muñecas hechas a mano",
-    "tienda de muñecas realistas",
+    "buy reborn dolls",
+    "silicone doll for sale",
+    "reborn dolls for girls",
+    "reborn dolls for boys",
+    "reborn doll accessories",
+    "silicone reborn dolls for sale",
+    "handmade dolls",
+    "realistic doll shop",
   ],
   openGraph: {
-    title: "Tienda | Dolores Silicone",
-    description: "Explora nuestra colección completa de muñecas reborn de silicona hechas a mano y accesorios.",
+    title: "Shop | Dolores Silicone",
+    description: "Explore our complete collection of handcrafted silicone reborn dolls and accessories.",
     url: "https://doloressilicone.com/shop",
     siteName: "Dolores Silicone",
     images: [
@@ -28,15 +28,15 @@ export const metadata: Metadata = {
         url: "/assets/og-logo.png",
         width: 1200,
         height: 630,
-        alt: "Tienda Dolores Silicone",
+        alt: "Dolores Silicone shop",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tienda | Dolores Silicone",
-    description: "Explora nuestra colección completa de muñecas reborn de silicona hechas a mano y accesorios.",
+    title: "Shop | Dolores Silicone",
+    description: "Explore our complete collection of handcrafted silicone reborn dolls and accessories.",
     images: ["/assets/og-logo.png"],
   },
 };

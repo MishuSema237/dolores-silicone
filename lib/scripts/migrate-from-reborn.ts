@@ -2,7 +2,7 @@
  * Migration script: Reborn (joanas-reborn-babies) → Dolores Silicone
  *
  * Transforms and seeds:
- * 1. Products (adds category from gender, USD→GBP)
+ * 1. Products (adds category from gender, keeps prices in USD)
  * 2. Testimonials → Reviews (renames fields)
  * 3. Gallery items (direct copy)
  */
@@ -14,7 +14,7 @@ import mongoose from "mongoose";
 const SOURCE_URI = process.env.SOURCE_MONGODB_URI || "";
 const DEST_URI = process.env.DEST_MONGODB_URI || process.env.MONGODB_URI || "";
 
-const USD_TO_GBP = 0.79;
+const USD_TO_GBP = 1.0;
 
 // ── Minimal schemas (match both DBs) ────────────────────────────────
 const SourceProductSchema = new mongoose.Schema({}, { strict: false, timestamps: true });
@@ -165,7 +165,7 @@ async function main() {
     transformed.slug = slug;
 
     await DestProduct.create(transformed);
-    console.log(`  ✅ Created: ${transformed.name} [${transformed.category}] £${transformed.price}`);
+    console.log(`  ✅ Created: ${transformed.name} [${transformed.category}] $${transformed.price}`);
     productsCreated++;
   }
 

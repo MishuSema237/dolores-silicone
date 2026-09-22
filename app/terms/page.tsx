@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Términos de Servicio - Dolores Silicone",
-  description: "Términos de Servicio de las muñecas reborn de silicona hechas a mano de Dolores Silicone.",
+  title: "Terms of Service - Dolores Silicone",
+  description: "Terms of Service for Dolores Silicone's handcrafted silicone reborn dolls.",
 };
 
 export default function TermsPage() {
@@ -30,9 +30,9 @@ export default function TermsPage() {
 
         <div className="relative max-w-5xl mx-auto px-6 text-center">
           <div className="inline-flex items-center gap-2 text-purple-300/60 text-sm mb-8">
-            <Link href="/" className="hover:text-purple-200 transition-colors">Inicio</Link>
+            <Link href="/" className="hover:text-purple-200 transition-colors">Home</Link>
             <span>/</span>
-            <span className="text-purple-200">Términos</span>
+            <span className="text-purple-200">Terms</span>
           </div>
 
           <div className="flex items-center justify-center gap-3 mb-8">
@@ -43,84 +43,84 @@ export default function TermsPage() {
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-6">
             <span className="bg-gradient-to-r from-white via-violet-100 to-purple-200 bg-clip-text text-transparent">
-              Términos de
+              Terms of
             </span>
             <br />
-            <span className="text-violet-400/80">Servicio</span>
+            <span className="text-violet-400/80">Service</span>
           </h1>
 
           <p className="text-purple-200/50 text-lg md:text-xl max-w-xl mx-auto leading-relaxed mb-4">
-            Las pautas que rigen tu uso de nuestro sitio web y nuestros servicios.
+            The guidelines that govern your use of our website and our services.
           </p>
 
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-violet-500/20 bg-violet-500/5 text-purple-300/60 text-sm">
             <span className="w-1.5 h-1.5 bg-violet-400/60 rounded-full" />
-            Última actualización: enero de 2025
+            Last updated: January 2025
           </div>
         </div>
       </section>
 
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6 prose prose-gray max-w-none">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Resumen</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Overview</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Este sitio web es operado por Dolores Silicone. A lo largo del sitio, los términos &quot;nosotros&quot; y &quot;nuestro&quot; se refieren a Dolores Silicone. Al visitar nuestro sitio y/o comprar algo de nosotros, te acoges a nuestro &quot;Servicio&quot; y aceptas estar sujeto a los siguientes términos y condiciones.
+            This website is operated by Dolores Silicone. Throughout the site, the terms &quot;we&quot; and &quot;our&quot; refer to Dolores Silicone. By visiting our site and/or purchasing something from us, you engage in our &quot;Service&quot; and agree to be bound by the following terms and conditions.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">2. Productos</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">2. Products</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Todos los productos vendidos en este sitio son muñecas reborn de silicona hechas a mano. Debido a la naturaleza artesanal de nuestros productos, las ligeras variaciones en apariencia, color y detalle son normales y añaden al carácter único de cada pieza. Las imágenes de los productos son ilustrativas; el producto real puede variar ligeramente.
+            All products sold on this site are handcrafted silicone reborn dolls. Due to the handcrafted nature of our products, slight variations in appearance, color, and detail are normal and add to the unique character of each piece. Product images are for illustration; the actual product may vary slightly.
           </p>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Nos reservamos el derecho de modificar o descontinuar cualquier producto en cualquier momento sin previo aviso. No seremos responsables ante ti ni ante terceros por cualquier modificación, cambio de precio, suspensión o discontinuación de un producto.
-          </p>
-
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">3. Pedidos y Pago</h2>
-          <p className="text-gray-600 leading-relaxed mb-6">
-            Al realizar un pedido, estás haciendo una oferta para comprar un producto. Todos los pedidos están sujetos a disponibilidad y a la confirmación del precio del pedido. Nos reservamos el derecho de rechazar o cancelar cualquier pedido por cualquier motivo, incluyendo limitaciones de cantidades disponibles, inexactitudes en la información del producto o del precio, o errores identificados por nuestro sistema de detección de fraude.
-          </p>
-          <p className="text-gray-600 leading-relaxed mb-6">
-            Todos los precios se muestran en euros (EUR) e incluyen el IVA aplicable salvo que se indique lo contrario. El pago se procesa de forma segura a través de nuestros métodos de pago aprobados. No almacenamos los datos de tu tarjeta de pago en nuestros servidores.
+            We reserve the right to modify or discontinue any product at any time without prior notice. We will not be liable to you or to any third party for any modification, price change, suspension, or discontinuation of a product.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">4. Envío</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">3. Orders and Payment</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Consulta nuestra{" "}
+            By placing an order, you are making an offer to purchase a product. All orders are subject to availability and order price confirmation. We reserve the right to refuse or cancel any order for any reason, including limitations on available quantities, inaccuracies in product or pricing information, or errors identified by our fraud detection system.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-6">
+            All prices are shown in US dollars (USD) and include applicable VAT unless otherwise stated. Payment is securely processed through our approved payment methods. We do not store your payment card details on our servers.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">4. Shipping</h2>
+          <p className="text-gray-600 leading-relaxed mb-6">
+            See our{" "}
             <Link href="/shipping-policy" className="text-purple-600 hover:text-purple-700 underline">
-              Política de Envío
+              Shipping Policy
             </Link>{" "}
-            para obtener información detallada sobre métodos de envío, costos y tiempos de entrega estimados.
+            for detailed information on shipping methods, costs, and estimated delivery times.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">5. Devoluciones y Reembolsos</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">5. Returns and Refunds</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Debido a la naturaleza artesanal y personalizada de nuestros productos, todas las ventas son definitivas salvo que el producto llegue dañado o defectuoso. Revisa nuestra{" "}
+            Due to the handcrafted and personalized nature of our products, all sales are final unless the product arrives damaged or defective. Review our{" "}
             <Link href="/returns" className="text-purple-600 hover:text-purple-700 underline">
-              Política de Devoluciones
+              Returns Policy
             </Link>{" "}
-            para más información.
+            for more information.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">6. Propiedad Intelectual</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">6. Intellectual Property</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Todo el contenido incluido en este sitio, como textos, gráficos, logotipos, imágenes y software, es propiedad de Dolores Silicone o de sus proveedores de contenido y está protegido por las leyes de derechos de autor del Reino Unido e internacionales. No puedes reproducir, duplicar, copiar, vender o explotar ninguna parte del Servicio sin permiso escrito expreso.
+            All content included on this site, such as text, graphics, logos, images, and software, is the property of Dolores Silicone or its content suppliers and is protected by UK and international copyright laws. You may not reproduce, duplicate, copy, sell, or exploit any part of the Service without express written permission.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">7. Limitación de Responsabilidad</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">7. Limitation of Liability</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            En ningún caso Dolores Silicone será responsable de daños indirectos, incidentales, especiales, consecuentes o punitivos resultantes de tu uso del servicio o de cualquier producto adquirido a través del servicio. Nuestra responsabilidad se limitará a la extensión máxima permitida por la ley.
+            In no event shall Dolores Silicone be liable for indirect, incidental, special, consequential, or punitive damages arising from your use of the service or any product purchased through the service. Our liability shall be limited to the maximum extent permitted by law.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">8. Legislación Aplicable</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">8. Governing Law</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Estos Términos de Servicio se rigen e interpretan de acuerdo con las leyes del Reino Unido. Cualquier disputa derivada de estos términos estará sujeta a la jurisdicción exclusiva de los tribunales del Reino Unido.
+            These Terms of Service are governed by and construed in accordance with the laws of the United Kingdom. Any dispute arising from these terms shall be subject to the exclusive jurisdiction of the courts of the United Kingdom.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">9. Contacto</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">9. Contact</h2>
           <p className="text-gray-600 leading-relaxed">
-            Las preguntas sobre los Términos de Servicio deben enviarse a través de nuestra{" "}
+            Questions about the Terms of Service should be sent through our{" "}
             <Link href="/contact" className="text-purple-600 hover:text-purple-700 underline">
-              página de Contacto
+              Contact page
             </Link>.
           </p>
         </div>

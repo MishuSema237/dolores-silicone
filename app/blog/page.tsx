@@ -42,7 +42,7 @@ export default function BlogPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-pulse text-purple-400 text-lg">Cargando...</div>
+        <div className="animate-pulse text-purple-400 text-lg">Loading...</div>
       </div>
     );
   }
@@ -67,14 +67,14 @@ export default function BlogPage() {
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-6">
             <span className="bg-gradient-to-r from-white via-purple-100 to-violet-200 bg-clip-text text-transparent">
-              El Blog de
+              The Blog of
             </span>
             <br />
             <span className="text-purple-400/80">Dolores Silicone</span>
           </h1>
           <p className="text-purple-200/50 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Perspectivas sobre el mundo del arte reborn, el cuidado de los bebés de silicona,
-            los usos terapéuticos y la artesanía detrás de cada creación de Dolores.
+            Insights into the world of reborn art, silicone baby care,
+            therapeutic uses, and the craftsmanship behind every Dolores creation.
           </p>
         </div>
       </section>
@@ -111,7 +111,7 @@ export default function BlogPage() {
                   {featured.publishedAt && (
                     <time>
                       {new Date(featured.publishedAt).toLocaleDateString(
-                        "es-ES",
+                        "en-US",
                         { month: "long", day: "numeric", year: "numeric" }
                       )}
                     </time>
@@ -158,7 +158,7 @@ export default function BlogPage() {
                     {post.author && <span>{post.author}</span>}
                     {post.publishedAt && (
                       <time>
-                      {new Date(post.publishedAt).toLocaleDateString("es-ES", {
+                      {new Date(post.publishedAt).toLocaleDateString("en-US", {
                         month: "long",
                         day: "numeric",
                         year: "numeric",

@@ -43,11 +43,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = await getPost(slug);
 
   if (!post) {
-    return { title: "Publicación No Encontrada" };
+    return { title: "Post Not Found" };
   }
 
-  const title = `${post.title} | Blog de Dolores Silicone`;
-  const description = post.excerpt || `Lee ${post.title} en el blog de Dolores Silicone.`;
+  const title = `${post.title} | Dolores Silicone Blog`;
+  const description = post.excerpt || `Read ${post.title} on the Dolores Silicone blog.`;
   const ogImage = post.image || "/assets/og-logo.png";
 
   return {
@@ -55,11 +55,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description,
     keywords: [
       post.title,
-      post.category || "artículo sobre muñecas reborn",
-      "muñecas reborn de silicona",
-      "cuidado de muñecas reborn",
-      "consejos sobre muñecas reborn",
-      "blog de Dolores Silicone",
+      post.category || "article about reborn dolls",
+      "silicone reborn dolls",
+      "reborn doll care",
+      "reborn doll tips",
+      "Dolores Silicone blog",
     ],
     openGraph: {
       title,
@@ -125,7 +125,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               "@type": "WebPage",
               "@id": `https://doloressilicone.com/blog/${slug}`,
             },
-            keywords: "cuidado de muñecas reborn, muñecas bebé de silicona, coleccionismo reborn, muñecas terapéuticas",
+            keywords: "reborn doll care, silicone baby dolls, reborn collecting, therapeutic dolls",
             articleSection: post.category || "Blog",
           }),
         }}

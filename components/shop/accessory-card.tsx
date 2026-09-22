@@ -40,7 +40,7 @@ export function AccessoryCard({
             imageUrl,
             category: "accessory",
         });
-        toast.success(`${name} añadido al carrito`);
+        toast.success(`${name} added to cart`);
     };
 
     return (
@@ -92,7 +92,7 @@ export function AccessoryCard({
                 </div>
 
                 <p className="text-gray-500 text-[10px] md:text-xs mb-4 line-clamp-2">
-                    {description || "Accesorio premium para tu colección."}
+                    {description || "Premium accessory for your collection."}
                 </p>
 
                 <Button
@@ -100,7 +100,7 @@ export function AccessoryCard({
                     onClick={handleAddToCart}
                     className="hidden min-[450px]:flex w-full border-purple-200 text-purple-600 hover:bg-purple-50 rounded-xl py-2 text-xs font-semibold"
                 >
-                    Añadir al carrito
+                    Add to Cart
                 </Button>
 
                 {/* Mobile (<450px) Layout */}
@@ -111,7 +111,7 @@ export function AccessoryCard({
                     <button
                         onClick={handleAddToCart}
                         className="p-2 text-purple-600 hover:bg-purple-50 rounded-full transition-colors"
-                        aria-label="Añadir al carrito"
+                        aria-label="Add to Cart"
                     >
                         <FaShoppingCart size={18} />
                     </button>
