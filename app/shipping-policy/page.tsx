@@ -70,7 +70,7 @@ export default function ShippingPolicyPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Shipping in the United Kingdom</h2>
           <p className="text-gray-600 leading-relaxed mb-4">We offer the following shipping options within the United Kingdom:</p>
           <ul className="list-disc pl-6 text-gray-600 leading-relaxed mb-6 space-y-2">
-            <li><strong>Standard Shipping:</strong> 3–5 business days — Free on orders over $117</li>
+            <li><strong>Standard Shipping:</strong> 3–5 business days — Free on orders over $100</li>
             <li><strong>Express Shipping:</strong> 1–2 business days — Calculated at checkout</li>
           </ul>
           <p className="text-gray-600 leading-relaxed mb-6">
@@ -108,7 +108,7 @@ export default function ShippingPolicyPage() {
             </Link>{" "}
             or by{" "}
             <a
-              href="https://wa.me/447380608611"
+              href="https://wa.me/17822044536"
               target="_blank"
               rel="noopener noreferrer"
               className="text-purple-600 hover:text-purple-700 underline"

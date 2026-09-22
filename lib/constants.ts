@@ -6,15 +6,15 @@ export const BRAND = {
 } as const;
 
 export const WHATSAPP = {
-  phone: "447380608611",
-  displayPhone: "+44 738 060 8611",
-  link: "https://wa.me/447380608611",
+  phone: "17822044536",
+  displayPhone: "+1 (782) 204-4536",
+  link: "https://wa.me/17822044536",
   preFilledMessage: "Hello Dolores Silicone! I have a question about your products.",
 } as const;
 
 export const CONTACT = {
   email: "support@doloressilicone.com",
-  phone: "+44 738 060 8611",
+  phone: "+1 (782) 204-4536",
   address: "Shipping worldwide",
 } as const;
 

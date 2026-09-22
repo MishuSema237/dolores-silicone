@@ -275,10 +275,10 @@ export default function ContactPage() {
                 <div>
                   <p className="font-semibold text-gray-900 mb-1">Call Us</p>
                   <a
-                    href="tel:+447380608611"
+                    href="tel:+17822044536"
                     className="text-gray-600 hover:text-purple-600 transition-colors no-underline"
                   >
-                    +44 738 060 8611
+                    +1 (782) 204-4536
                   </a>
                 </div>
               </div>
@@ -303,7 +303,7 @@ export default function ContactPage() {
 
           {/* WhatsApp Quick Link */}
           <a
-            href="https://wa.me/447380608611?text=Hello%20Dolores%20Silicone!%20I%20have%20a%20question."
+            href="https://wa.me/17822044536?text=Hello%20Dolores%20Silicone!%20I%20have%20a%20question."
             target="_blank"
             rel="noopener noreferrer"
             className="block bg-green-50 p-4 md:p-8 rounded-md md:rounded-2xl border border-green-200 shadow-sm hover:shadow-md transition-shadow"
@@ -315,7 +315,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-bold text-gray-900 mb-1">Contact Us on WhatsApp</h3>
                 <p className="text-sm text-gray-500">The fastest response for custom orders and quick questions.</p>
-                <p className="text-sm text-green-600 font-semibold mt-1">+44 738 060 8611</p>
+                <p className="text-sm text-green-600 font-semibold mt-1">+1 (782) 204-4536</p>
               </div>
             </div>
           </a>

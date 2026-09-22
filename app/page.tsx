@@ -100,7 +100,7 @@ export default function Home() {
             ],
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+447380608611",
+              telephone: "+17822044536",
               contactType: "customer service",
               availableLanguage: "English",
             },
@@ -582,7 +582,7 @@ export default function Home() {
                 Explore the Collection
               </Button>
               <a
-                href="https://wa.me/447380608611?text=Hello%20Dolores%20Silicone!%20I%27d%20like%20to%20discuss%20a%20custom%20baby."
+                href="https://wa.me/17822044536?text=Hello%20Dolores%20Silicone!%20I%27d%20like%20to%20discuss%20a%20custom%20baby."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-white text-white bg-transparent hover:bg-white/10 h-10 px-6 rounded-md md:h-16 md:px-12 md:rounded-2xl text-sm md:text-lg font-semibold inline-flex items-center justify-center transition-colors"

@@ -303,7 +303,7 @@ export default function AboutPage() {
               Explore the Shop
             </Link>
             <a
-              href="https://wa.me/447380608611?text=Hello%20Dolores%20Silicone!%20I%27d%20like%20to%20discuss%20a%20custom%20baby."
+              href="https://wa.me/17822044536?text=Hello%20Dolores%20Silicone!%20I%27d%20like%20to%20discuss%20a%20custom%20baby."
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-purple-700 font-semibold inline-block transition-colors"

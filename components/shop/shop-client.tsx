@@ -257,7 +257,7 @@ export function ShopClient({ initialProducts }: ShopClientProps) {
                             Reset filters
                         </button>
                         <a
-                            href="https://wa.me/447380608611?text=Hello%20Dolores%20Silicone!%20I%27m%20interested%20in%20a%20custom%20baby."
+                            href="https://wa.me/17822044536?text=Hello%20Dolores%20Silicone!%20I%27m%20interested%20in%20a%20custom%20baby."
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-8 py-3 bg-white text-purple-600 border-2 border-purple-200 rounded-full font-bold hover:bg-purple-50 transition-all"

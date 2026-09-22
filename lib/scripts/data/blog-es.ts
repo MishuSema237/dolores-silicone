@@ -212,9 +212,9 @@ export const blogTranslations: Record<string, BlogTranslation> = {
 <h2>Setting your budget</h2>
 <p>Reborn dolls vary enormously in price. Here's a realistic breakdown:</p>
 <ul>
-<li><strong>Entry level ($117–$351):</strong> quality beginner dolls from newer artists or well-made factory dolls. Great for your first purchase.</li>
-<li><strong>Mid level ($351–$936):</strong> detailed work from established artists with refined techniques and premium materials.</li>
-<li><strong>High level ($936–$2,340+):</strong> masterpiece-level work from renowned artists, often with customized features and limited availability.</li>
+<li><strong>Entry level ($100–$300):</strong> quality beginner dolls from newer artists or well-made factory dolls. Great for your first purchase.</li>
+<li><strong>Mid level ($300–$800):</strong> detailed work from established artists with refined techniques and premium materials.</li>
+<li><strong>High level ($800–$2,000+):</strong> masterpiece-level work from renowned artists, often with customized features and limited availability.</li>
 </ul>
 <p>Our honest advice: don't start with your most expensive doll. Start with one that makes your heart smile within your comfort zone. You'll learn what you prefer (material, size, weight, features) before investing in your dream piece.</p>
 

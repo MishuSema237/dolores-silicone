@@ -89,7 +89,7 @@ export default function ReturnsPage() {
           <ol className="list-decimal pl-6 text-gray-600 leading-relaxed mb-6 space-y-2">
             <li>Contact us via{" "}
               <a
-                href="https://wa.me/447380608611"
+                href="https://wa.me/17822044536"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-purple-600 hover:text-purple-700 underline"
@@ -129,7 +129,7 @@ export default function ReturnsPage() {
             </Link>{" "}
             or by{" "}
             <a
-              href="https://wa.me/447380608611"
+              href="https://wa.me/17822044536"
               target="_blank"
               rel="noopener noreferrer"
               className="text-purple-600 hover:text-purple-700 underline"

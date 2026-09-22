@@ -19,7 +19,7 @@ async function seed() {
       {
         name: "Ella – Realistic Newborn",
         slug: "ella-realistic-newborn",
-        price: 1404,
+        price: 1200,
         description:
           "Meet Ella, a beautifully crafted silicone reborn baby with intricate details that mimic a real newborn.",
         detailedDescription:
@@ -43,7 +43,7 @@ async function seed() {
       {
         name: "Liam – Peaceful Sleeper",
         slug: "liam-peaceful-sleeper",
-        price: 1579.5,
+        price: 1350,
         description: "A calm, sleeping baby with realistic features.",
         images: [],
         attributes: {
@@ -59,7 +59,7 @@ async function seed() {
       {
         name: "Hand-Knitted Newborn Blanket",
         slug: "hand-knit-newborn-blanket",
-        price: 52.65,
+        price: 45,
         description: "A soft hand-knitted blanket in delicate pastel tones, perfect for your reborn baby.",
         detailedDescription: "Crafted from premium cotton yarn, this blanket features a classic cable knit pattern in soft pastel tones. Ideal for photo sessions and display.",
         images: [],
@@ -70,7 +70,7 @@ async function seed() {
       {
         name: "Reborn Doll Bottle Set",
         slug: "reborn-baby-bottle-set",
-        price: 29.25,
+        price: 25,
         description: "A set of realistic miniature bottles for displaying with your reborn doll.",
         detailedDescription: "Three finely detailed miniature bottles in clear, pink and blue. Filled with non-toxic resin for a realistic weighted feel.",
         images: [],
